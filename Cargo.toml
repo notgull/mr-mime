@@ -1,0 +1,16 @@
+[package]
+name = "mr-mime"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+intern-str = { path = "../intern-str" }
+memchr = { version = "2.5.0", default-features = false }
+
+[workspace]
+members = ["generator"]
+
+[features]
+default = ["std"]
+alloc = []
+std = ["alloc"]

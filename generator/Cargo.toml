@@ -1,0 +1,10 @@
+[package]
+name = "mr-mime-generator"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+heck = "0.4.0"
+intern-str = { path = "../../intern-str", features = ["builder"] }
+intern-str-codegen = { path = "../../intern-str/codegen" }
+memchr = "2.5.0"
