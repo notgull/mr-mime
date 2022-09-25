@@ -124,7 +124,7 @@ impl core::str::FromStr for TypeIntern {
         GRAPH
             .process(intern_str::CaseInsensitive(s))
             .as_ref()
-            .copied()
+            .map(|&c| c)
             .ok_or(crate::InvalidName)
     }
 }
@@ -38377,7 +38377,7 @@ impl core::str::FromStr for SubtypeIntern {
         GRAPH
             .process(intern_str::CaseInsensitive(s))
             .as_ref()
-            .copied()
+            .map(|&c| c)
             .ok_or(crate::InvalidName)
     }
 }
@@ -52629,7 +52629,7 @@ impl core::str::FromStr for SuffixIntern {
         GRAPH
             .process(intern_str::CaseInsensitive(s))
             .as_ref()
-            .copied()
+            .map(|&c| c)
             .ok_or(crate::InvalidName)
     }
 }
@@ -120641,5 +120641,5 @@ pub(super) fn guess_mime_type(ext: &str) -> Option<&'static [crate::Mime<'static
     GRAPH
         .process(intern_str::CaseInsensitive(ext))
         .as_ref()
-        .copied()
+        .map(|&c| c)
 }

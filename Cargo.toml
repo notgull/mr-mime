@@ -1,11 +1,10 @@
 [package]
 name = "mr-mime"
 version = "0.1.0"
-edition = "2021"
+edition = "2018"
 
 [dependencies]
-intern-str = { path = "../intern-str" }
-memchr = { version = "2.5.0", default-features = false }
+intern-str = { version = "0.1", default-features = true }
 
 [workspace]
 members = ["generator"]
@@ -14,3 +13,6 @@ members = ["generator"]
 default = ["std"]
 alloc = []
 std = ["alloc"]
+
+[build-dependencies]
+autocfg = "1.1.0"

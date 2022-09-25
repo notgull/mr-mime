@@ -1,4 +1,7 @@
 //! Generates the `segments.rs` file for interned strings.
+//!
+//! This uses the Apache HTTP server's mime.types file, stored in the
+//! parent directory of this file.
 
 use fastrand::Rng;
 use heck::{AsShoutySnakeCase, AsSnakeCase, AsUpperCamelCase, ToUpperCamelCase};
@@ -405,7 +408,7 @@ fn write_mime_part(
     // Write out the lookup.
     writeln!(
         output,
-        "{}GRAPH.process(intern_str::CaseInsensitive(s)).as_ref().copied().ok_or(crate::InvalidName)",
+        "{}GRAPH.process(intern_str::CaseInsensitive(s)).as_ref().map(|&c| c).ok_or(crate::InvalidName)",
         Indent(2)
     )?;
     writeln!(output, "{}}}", Indent(1))?;
@@ -565,7 +568,7 @@ fn guess_function(out: &mut impl Write, mimes: &[Mime]) -> io::Result<()> {
 
     writeln!(
         out,
-        "{}GRAPH.process(intern_str::CaseInsensitive(ext)).as_ref().copied()",
+        "{}GRAPH.process(intern_str::CaseInsensitive(ext)).as_ref().map(|&c| c)",
         Indent(1)
     )?;
 

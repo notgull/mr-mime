@@ -39,6 +39,13 @@
     missing_debug_implementations,
     missing_docs
 )]
+// copied() only stabilized later on
+#![allow(clippy::map_clone)]
+
+#[cfg(all(feature = "alloc", not(mr_mime_no_alloc)))]
+extern crate alloc;
+#[cfg(all(feature = "alloc", mr_mime_no_alloc))]
+extern crate std as alloc;
 
 #[cfg(feature = "std")]
 extern crate std;
@@ -58,7 +65,7 @@ use core::write;
 
 /// MIME type parsing error.
 #[derive(Debug, Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash)]
-#[non_exhaustive]
+#[cfg_attr(not(mr_mime_no_non_exhaustive), non_exhaustive)]
 pub enum ParseError {
     /// There is no slash in the type.
     NoSlash,
@@ -68,14 +75,20 @@ pub enum ParseError {
 
     /// The MIME type is missing the subtype.
     MissingSubtype,
+
+    #[cfg(mr_mime_no_non_exhaustive)]
+    #[doc(hidden)]
+    NonExhaustive,
 }
 
 impl fmt::Display for ParseError {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         match self {
-            Self::NoSlash => write!(f, "no slash in MIME type"),
-            Self::MissingType => write!(f, "missing MIME type"),
-            Self::MissingSubtype => write!(f, "missing MIME subtype"),
+            ParseError::NoSlash => write!(f, "no slash in MIME type"),
+            ParseError::MissingType => write!(f, "missing MIME type"),
+            ParseError::MissingSubtype => write!(f, "missing MIME subtype"),
+            #[cfg(mr_mime_no_non_exhaustive)]
+            ParseError::NonExhaustive => unreachable!(),
         }
     }
 }
@@ -251,7 +264,7 @@ impl<'a> Mime<'a> {
     /// ```
     pub fn parameters(&self) -> impl DoubleEndedIterator<Item = (&str, &str)> + FusedIterator {
         match self.0 {
-            Repr::Parts { parameters, .. } => Either::Left(parameters.iter().copied()),
+            Repr::Parts { parameters, .. } => Either::Left(parameters.iter().map(|&c| c)),
             Repr::Buffer {
                 buffer, semicolon, ..
             } => Either::Right({
@@ -370,7 +383,7 @@ impl Mime<'static> {
         segments::guess_mime_type(extension)
             .unwrap_or(&[])
             .iter()
-            .copied()
+            .map(|&c| c)
     }
 }
 
@@ -522,18 +535,12 @@ macro_rules! name_wrappers {
             pub struct $name <'a> ( Name<'a, $ty> );
 
             impl<'a> $name<'a> {
-                #[doc = concat!("Create a new `", stringify!($name), "` from a string.")]
-                ///
-                /// ## Example
-                ///
+                /// Create a new name from a string.
                 pub fn new(s: &'a str) -> Self {
-                    Self(Name::new(s))
+                    $name(Name::new(s))
                 }
 
-                #[doc = concat!("Get the `", stringify!($name), "` as a string slice.")]
-                ///
-                /// ## Example
-                ///
+                /// Get the string representation of this name.
                 pub fn into_str(self) -> &'a str {
                     self.0.into_str()
                 }
@@ -561,7 +568,7 @@ macro_rules! name_wrappers {
 
             impl<'a> From<Name<'a, $ty>> for $name<'a> {
                 fn from(name: Name<'a, $ty>) -> Self {
-                    Self(name)
+                    $name(name)
                 }
             }
 
@@ -633,7 +640,7 @@ enum Repr<'a> {
 }
 
 /// Either an interned string or a dynamic string.
-#[derive(Clone, Copy)]
+#[derive(Debug, Clone, Copy)]
 enum Name<'a, Intern> {
     /// An interned string.
     Interned(Intern),
@@ -678,11 +685,11 @@ impl<'a, T: FromStr<Err = InvalidName>> Name<'a, T> {
 impl<'a, T: AsRef<str> + PartialEq> PartialEq for Name<'a, T> {
     fn eq(&self, other: &Self) -> bool {
         match (self, other) {
-            (Self::Interned(this), Self::Interned(other)) => this == other,
-            (Self::Dynamic(s), Self::Interned(i)) | (Self::Interned(i), Self::Dynamic(s)) => {
+            (Name::Interned(this), Name::Interned(other)) => this == other,
+            (Name::Dynamic(s), Name::Interned(i)) | (Name::Interned(i), Name::Dynamic(s)) => {
                 s.eq_ignore_ascii_case(i.as_ref())
             }
-            (Self::Dynamic(this), Self::Dynamic(other)) => this.eq_ignore_ascii_case(other),
+            (Name::Dynamic(this), Name::Dynamic(other)) => this.eq_ignore_ascii_case(other),
         }
     }
 }
@@ -693,11 +700,11 @@ impl<'a, T: AsRef<str> + Eq> Eq for Name<'a, T> {}
 impl<'a, T: AsRef<str> + PartialOrd> PartialOrd for Name<'a, T> {
     fn partial_cmp(&self, other: &Self) -> Option<core::cmp::Ordering> {
         match (self, other) {
-            (Self::Interned(this), Self::Interned(other)) => this.partial_cmp(other),
-            (Self::Dynamic(s), Self::Interned(i)) | (Self::Interned(i), Self::Dynamic(s)) => {
+            (Name::Interned(this), Name::Interned(other)) => this.partial_cmp(other),
+            (Name::Dynamic(s), Name::Interned(i)) | (Name::Interned(i), Name::Dynamic(s)) => {
                 Some(cmp_str_ignore_case(s, i.as_ref()))
             }
-            (Self::Dynamic(this), Self::Dynamic(other)) => Some(cmp_str_ignore_case(this, other)),
+            (Name::Dynamic(this), Name::Dynamic(other)) => Some(cmp_str_ignore_case(this, other)),
         }
     }
 }
@@ -705,11 +712,11 @@ impl<'a, T: AsRef<str> + PartialOrd> PartialOrd for Name<'a, T> {
 impl<'a, T: AsRef<str> + Ord> Ord for Name<'a, T> {
     fn cmp(&self, other: &Self) -> core::cmp::Ordering {
         match (self, other) {
-            (Self::Interned(this), Self::Interned(other)) => this.cmp(other),
-            (Self::Dynamic(s), Self::Interned(i)) | (Self::Interned(i), Self::Dynamic(s)) => {
+            (Name::Interned(this), Name::Interned(other)) => this.cmp(other),
+            (Name::Dynamic(s), Name::Interned(i)) | (Name::Interned(i), Name::Dynamic(s)) => {
                 cmp_str_ignore_case(s, i.as_ref())
             }
-            (Self::Dynamic(this), Self::Dynamic(other)) => cmp_str_ignore_case(this, other),
+            (Name::Dynamic(this), Name::Dynamic(other)) => cmp_str_ignore_case(this, other),
         }
     }
 }
@@ -774,9 +781,6 @@ fn cmp_params_ignore_case<'a, 'b, 'c, 'd>(
 
 /// Hash a string in such a way that it ignores case.
 fn hash_ignore_case(a: &str, state: &mut impl Hasher) {
-    #[cfg(feature = "alloc")]
-    extern crate alloc;
-
     #[cfg(feature = "alloc")]
     use alloc::string::String;
 
@@ -843,9 +847,10 @@ impl Comparison for cmp::Ordering {
 }
 
 /// Error for generated code to use for unmatched names.
-#[derive(Debug, PartialEq, Eq)]
+#[derive(Debug, PartialEq, Eq, Clone, Copy)]
 struct InvalidName;
 
+#[derive(Debug)]
 enum Either<A, B> {
     Left(A),
     Right(B),
@@ -938,6 +943,7 @@ where
         }
     }
 
+    #[cfg(not(mr_mime_no_nth_back))]
     fn nth_back(&mut self, n: usize) -> Option<Self::Item> {
         match self {
             Either::Left(a) => a.nth_back(n),
