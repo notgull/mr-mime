@@ -5,7 +5,10 @@ use heck::{AsShoutySnakeCase, AsSnakeCase, AsUpperCamelCase, ToUpperCamelCase};
 use intern_str::builder::{Builder, IgnoreCase, Utf8Graph};
 use memchr::memchr;
 
-use std::collections::HashSet;
+use std::collections::{
+    hash_map::{Entry, HashMap},
+    HashSet,
+};
 use std::env;
 use std::fmt;
 use std::fs::File;
@@ -33,8 +36,10 @@ fn main() -> io::Result<()> {
                 if line.is_empty() || line.starts_with('#') {
                     None
                 } else {
-                    let ty = line.split_whitespace().next().unwrap().to_string();
-                    Mime::parse(ty)
+                    let mut parts = line.split_whitespace();
+                    let ty = parts.next().unwrap().to_string();
+
+                    Mime::parse(ty, parts.map(|s| s.to_string()).collect())
                 }
             })
             .transpose()
@@ -81,9 +86,110 @@ fn main() -> io::Result<()> {
     writeln!(output)?;
     writeln!(output, "/// Constants for common MIME types and subtypes.")?;
     writeln!(output, "pub mod constants {{")?;
-    let mut existing_names = HashSet::new();
 
-    for mime in mime_types {
+    let mut existing_names = HashSet::new();
+    let mut existing_types = HashSet::new();
+
+    // Write the primary types.
+
+    writeln!(output, "{}/// Common MIME type prefixes.", Indent(1))?;
+    writeln!(output, "{}pub mod types {{", Indent(1))?;
+
+    for mime in &mime_types {
+        if !existing_types.insert(mime.ty.clone()) {
+            continue;
+        }
+
+        writeln!(output, "{}/// The `{}` MIME type.", Indent(2), mime.ty)?;
+        writeln!(
+            output,
+            "{}pub const {}: crate::Type<'static> = crate::Type(crate::Name::Interned(crate::TypeIntern::{}));",
+            Indent(2),
+            AsShoutySnakeCase(&mime.ty),
+            AsUpperCamelCase(&mime.ty),
+        )?;
+        writeln!(output)?;
+    }
+
+    writeln!(output, "{}}}", Indent(1))?;
+    writeln!(output)?;
+
+    // Write the subtypes.
+    existing_types.clear();
+    writeln!(output, "{}/// Common MIME subtypes.", Indent(1))?;
+    writeln!(output, "{}pub mod subtypes {{", Indent(1))?;
+
+    for mime in &mime_types {
+        if mime
+            .subtype
+            .chars()
+            .next()
+            .filter(|c| c.is_ascii_alphabetic())
+            .is_none()
+        {
+            continue;
+        }
+
+        if !existing_types.insert(mime.subtype.to_ascii_lowercase()) {
+            continue;
+        }
+
+        writeln!(
+            output,
+            "{}/// The `{}` MIME subtype.",
+            Indent(2),
+            mime.subtype
+        )?;
+        writeln!(
+            output,
+            "{}pub const {}: crate::Subtype<'static> = crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::{}));",
+            Indent(2),
+            AsShoutySnakeCase(&mime.subtype),
+            AsUpperCamelCase(&mime.subtype),
+        )?;
+        writeln!(output)?;
+    }
+
+    writeln!(output, "{}}}", Indent(1))?;
+    writeln!(output)?;
+
+    // Write the suffixes.
+    existing_types.clear();
+    writeln!(output, "{}/// Common MIME suffixes.", Indent(1))?;
+    writeln!(output, "{}pub mod suffixes {{", Indent(1))?;
+
+    for mime in &mime_types {
+        if let Some(suffix) = &mime.suffix {
+            if !existing_types.insert(suffix.to_ascii_lowercase()) {
+                continue;
+            }
+
+            match mime
+                .suffix
+                .as_ref()
+                .map(|s| s.to_upper_camel_case().to_lowercase())
+                .as_deref()
+            {
+                Some("hdr") | Some("src") => continue,
+                _ => {}
+            }
+
+            writeln!(output, "{}/// The `{}` MIME suffix.", Indent(2), suffix)?;
+            writeln!(
+                output,
+                "{}pub const {}: crate::Suffix<'static> = crate::Suffix(crate::Name::Interned(crate::SuffixIntern::{}));",
+                Indent(2),
+                AsShoutySnakeCase(suffix),
+                AsUpperCamelCase(suffix),
+            )?;
+            writeln!(output)?;
+        }
+    }
+
+    writeln!(output, "{}}}", Indent(1))?;
+    writeln!(output)?;
+
+    for mime in &mime_types {
         if mime
             .subtype
             .chars()
@@ -104,15 +210,7 @@ fn main() -> io::Result<()> {
             _ => {}
         }
 
-        let name = format!(
-            "{}_{}{}",
-            AsShoutySnakeCase(&mime.ty),
-            AsShoutySnakeCase(&mime.subtype),
-            match mime.suffix {
-                Some(ref suffix) => format!("_{}", AsShoutySnakeCase(suffix)),
-                None => String::new(),
-            },
-        );
+        let name = mime.name();
 
         if !existing_names.insert(name.clone()) {
             continue;
@@ -180,6 +278,10 @@ fn main() -> io::Result<()> {
     }
 
     writeln!(output, "}}")?;
+
+    // Write the "guess" method.
+    guess_function(&mut output, &mime_types)?;
+    writeln!(output)?;
 
     Ok(())
 }
@@ -377,6 +479,101 @@ fn write_mime_part(
     Ok(())
 }
 
+/// Write the "guess" function for MIME types.
+fn guess_function(out: &mut impl Write, mimes: &[Mime]) -> io::Result<()> {
+    // We want a map between the extension and the MIME type, so reverse the slice.
+    let mut map: HashMap<_, Vec<&Mime>> = HashMap::new();
+
+    for mime in mimes {
+        if mime
+            .subtype
+            .chars()
+            .next()
+            .filter(|c| c.is_ascii_alphabetic())
+            .is_none()
+        {
+            continue;
+        }
+
+        match mime
+            .suffix
+            .as_ref()
+            .map(|s| s.to_upper_camel_case().to_lowercase())
+            .as_deref()
+        {
+            Some("hdr") | Some("src") => continue,
+            _ => {}
+        }
+
+        for ext in &mime.extensions {
+            match map.entry(ext) {
+                Entry::Occupied(mut entry) => {
+                    entry.get_mut().push(mime);
+                }
+                Entry::Vacant(entry) => {
+                    entry.insert(vec![mime]);
+                }
+            }
+        }
+    }
+
+    // Create a case-insensitive string intern map.
+    let mut builder = Builder::<_, IgnoreCase<Utf8Graph>>::new();
+
+    for (ext, entries) in map.iter() {
+        builder.add(ext.to_string(), entries).ok();
+    }
+
+    let mut buffer = vec![];
+    let graph = builder.build(&mut buffer);
+
+    // Begin writing the function.
+    writeln!(
+        out,
+        "pub(super) fn guess_mime_type(ext: &str) -> Option<&'static [crate::Mime<'static>]> {{"
+    )?;
+
+    // Write out the graph.
+    let input_name = "intern_str::CaseInsensitive<&'static str>";
+    let output_name = "Option<&'static [crate::Mime<'static>]>";
+
+    let generated = intern_str_codegen::generate(&graph, input_name, output_name, |f, n| match n {
+        None => write!(f, "None"),
+        Some(n) => {
+            write!(f, "Some(&[")?;
+
+            for (i, mime) in n.iter().enumerate() {
+                if i != 0 {
+                    write!(f, ", ")?;
+                }
+
+                write!(f, "constants::{}", mime.name())?;
+            }
+
+            write!(f, "])")
+        }
+    });
+
+    writeln!(
+        out,
+        "{}const GRAPH: intern_str::Graph<'static, 'static, {}, {}> = {};",
+        Indent(1),
+        input_name,
+        output_name,
+        generated
+    )?;
+
+    writeln!(
+        out,
+        "{}GRAPH.process(intern_str::CaseInsensitive(ext)).as_ref().copied()",
+        Indent(1)
+    )?;
+
+    writeln!(out, "}}")?;
+
+    Ok(())
+}
+
 struct Mime {
     /// The MIME type.
     ty: String,
@@ -386,11 +583,14 @@ struct Mime {
 
     /// The MIME suffix.
     suffix: Option<String>,
+
+    /// The MIME extensions.
+    extensions: Vec<String>,
 }
 
 impl Mime {
     /// Parses a MIME type from a string.
-    fn parse(mut s: String) -> Option<Self> {
+    fn parse(mut s: String, extensions: Vec<String>) -> Option<Self> {
         // Split the MIME type off.
         let slash = memchr(b'/', s.as_bytes())?;
         let rest = s.split_off(slash + 1);
@@ -416,7 +616,20 @@ impl Mime {
             ty,
             subtype,
             suffix,
+            extensions,
         })
+    }
+
+    fn name(&self) -> String {
+        format!(
+            "{}_{}{}",
+            AsShoutySnakeCase(&self.ty),
+            AsShoutySnakeCase(&self.subtype),
+            match self.suffix {
+                Some(ref suffix) => format!("_{}", AsShoutySnakeCase(suffix)),
+                None => String::new(),
+            },
+        )
     }
 }
 

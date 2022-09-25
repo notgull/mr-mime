@@ -52696,6 +52696,9179 @@ impl From<SuffixIntern> for &'static str {
 
 /// Constants for common MIME types and subtypes.
 pub mod constants {
+    /// Common MIME type prefixes.
+    pub mod types {
+        /// The `application` MIME type.
+        pub const APPLICATION: crate::Type<'static> =
+            crate::Type(crate::Name::Interned(crate::TypeIntern::Application));
+
+        /// The `audio` MIME type.
+        pub const AUDIO: crate::Type<'static> =
+            crate::Type(crate::Name::Interned(crate::TypeIntern::Audio));
+
+        /// The `chemical` MIME type.
+        pub const CHEMICAL: crate::Type<'static> =
+            crate::Type(crate::Name::Interned(crate::TypeIntern::Chemical));
+
+        /// The `font` MIME type.
+        pub const FONT: crate::Type<'static> =
+            crate::Type(crate::Name::Interned(crate::TypeIntern::Font));
+
+        /// The `image` MIME type.
+        pub const IMAGE: crate::Type<'static> =
+            crate::Type(crate::Name::Interned(crate::TypeIntern::Image));
+
+        /// The `inode` MIME type.
+        pub const INODE: crate::Type<'static> =
+            crate::Type(crate::Name::Interned(crate::TypeIntern::Inode));
+
+        /// The `message` MIME type.
+        pub const MESSAGE: crate::Type<'static> =
+            crate::Type(crate::Name::Interned(crate::TypeIntern::Message));
+
+        /// The `model` MIME type.
+        pub const MODEL: crate::Type<'static> =
+            crate::Type(crate::Name::Interned(crate::TypeIntern::Model));
+
+        /// The `multipart` MIME type.
+        pub const MULTIPART: crate::Type<'static> =
+            crate::Type(crate::Name::Interned(crate::TypeIntern::Multipart));
+
+        /// The `text` MIME type.
+        pub const TEXT: crate::Type<'static> =
+            crate::Type(crate::Name::Interned(crate::TypeIntern::Text));
+
+        /// The `video` MIME type.
+        pub const VIDEO: crate::Type<'static> =
+            crate::Type(crate::Name::Interned(crate::TypeIntern::Video));
+    }
+
+    /// Common MIME subtypes.
+    pub mod subtypes {
+        /// The `A2L` MIME subtype.
+        pub const A2L: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::A2l));
+
+        /// The `ace` MIME subtype.
+        pub const ACE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Ace));
+
+        /// The `activemessage` MIME subtype.
+        pub const ACTIVEMESSAGE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Activemessage));
+
+        /// The `activity` MIME subtype.
+        pub const ACTIVITY: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Activity));
+
+        /// The `alto-cdni` MIME subtype.
+        pub const ALTO_CDNI: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::AltoCdni));
+
+        /// The `alto-cdnifilter` MIME subtype.
+        pub const ALTO_CDNIFILTER: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::AltoCdnifilter));
+
+        /// The `alto-costmap` MIME subtype.
+        pub const ALTO_COSTMAP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::AltoCostmap));
+
+        /// The `alto-costmapfilter` MIME subtype.
+        pub const ALTO_COSTMAPFILTER: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::AltoCostmapfilter),
+        );
+
+        /// The `alto-directory` MIME subtype.
+        pub const ALTO_DIRECTORY: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::AltoDirectory));
+
+        /// The `alto-endpointcost` MIME subtype.
+        pub const ALTO_ENDPOINTCOST: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::AltoEndpointcost),
+        );
+
+        /// The `alto-endpointcostparams` MIME subtype.
+        pub const ALTO_ENDPOINTCOSTPARAMS: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::AltoEndpointcostparams),
+        );
+
+        /// The `alto-endpointprop` MIME subtype.
+        pub const ALTO_ENDPOINTPROP: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::AltoEndpointprop),
+        );
+
+        /// The `alto-endpointpropparams` MIME subtype.
+        pub const ALTO_ENDPOINTPROPPARAMS: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::AltoEndpointpropparams),
+        );
+
+        /// The `alto-error` MIME subtype.
+        pub const ALTO_ERROR: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::AltoError));
+
+        /// The `alto-networkmap` MIME subtype.
+        pub const ALTO_NETWORKMAP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::AltoNetworkmap));
+
+        /// The `alto-networkmapfilter` MIME subtype.
+        pub const ALTO_NETWORKMAPFILTER: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::AltoNetworkmapfilter),
+        );
+
+        /// The `alto-propmap` MIME subtype.
+        pub const ALTO_PROPMAP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::AltoPropmap));
+
+        /// The `alto-propmapparams` MIME subtype.
+        pub const ALTO_PROPMAPPARAMS: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::AltoPropmapparams),
+        );
+
+        /// The `alto-updatestreamcontrol` MIME subtype.
+        pub const ALTO_UPDATESTREAMCONTROL: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::AltoUpdatestreamcontrol),
+        );
+
+        /// The `alto-updatestreamparams` MIME subtype.
+        pub const ALTO_UPDATESTREAMPARAMS: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::AltoUpdatestreamparams),
+        );
+
+        /// The `AML` MIME subtype.
+        pub const AML: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Aml));
+
+        /// The `andrew-inset` MIME subtype.
+        pub const ANDREW_INSET: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::AndrewInset));
+
+        /// The `annodex` MIME subtype.
+        pub const ANNODEX: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Annodex));
+
+        /// The `applefile` MIME subtype.
+        pub const APPLEFILE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Applefile));
+
+        /// The `at` MIME subtype.
+        pub const AT: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::At));
+
+        /// The `ATF` MIME subtype.
+        pub const ATF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Atf));
+
+        /// The `ATFX` MIME subtype.
+        pub const ATFX: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Atfx));
+
+        /// The `atom` MIME subtype.
+        pub const ATOM: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Atom));
+
+        /// The `atomcat` MIME subtype.
+        pub const ATOMCAT: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Atomcat));
+
+        /// The `atomdeleted` MIME subtype.
+        pub const ATOMDELETED: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Atomdeleted));
+
+        /// The `atomicmail` MIME subtype.
+        pub const ATOMICMAIL: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Atomicmail));
+
+        /// The `atomserv` MIME subtype.
+        pub const ATOMSERV: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Atomserv));
+
+        /// The `atomsvc` MIME subtype.
+        pub const ATOMSVC: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Atomsvc));
+
+        /// The `atsc-dwd` MIME subtype.
+        pub const ATSC_DWD: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::AtscDwd));
+
+        /// The `atsc-dynamic-event-message` MIME subtype.
+        pub const ATSC_DYNAMIC_EVENT_MESSAGE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::AtscDynamicEventMessage),
+        );
+
+        /// The `atsc-held` MIME subtype.
+        pub const ATSC_HELD: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::AtscHeld));
+
+        /// The `atsc-rdt` MIME subtype.
+        pub const ATSC_RDT: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::AtscRdt));
+
+        /// The `atsc-rsat` MIME subtype.
+        pub const ATSC_RSAT: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::AtscRsat));
+
+        /// The `ATXML` MIME subtype.
+        pub const ATXML: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Atxml));
+
+        /// The `auth-policy` MIME subtype.
+        pub const AUTH_POLICY: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::AuthPolicy));
+
+        /// The `bacnet-xdd` MIME subtype.
+        pub const BACNET_XDD: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::BacnetXdd));
+
+        /// The `batch-SMTP` MIME subtype.
+        pub const BATCH_SMTP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::BatchSmtp));
+
+        /// The `bbolin` MIME subtype.
+        pub const BBOLIN: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Bbolin));
+
+        /// The `beep` MIME subtype.
+        pub const BEEP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Beep));
+
+        /// The `calendar` MIME subtype.
+        pub const CALENDAR: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Calendar));
+
+        /// The `call-completion` MIME subtype.
+        pub const CALL_COMPLETION: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::CallCompletion));
+
+        /// The `CALS-1840` MIME subtype.
+        pub const CALS_1840: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Cals1840));
+
+        /// The `captive` MIME subtype.
+        pub const CAPTIVE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Captive));
+
+        /// The `cbor` MIME subtype.
+        pub const CBOR: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Cbor));
+
+        /// The `cbor-seq` MIME subtype.
+        pub const CBOR_SEQ: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::CborSeq));
+
+        /// The `cccex` MIME subtype.
+        pub const CCCEX: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Cccex));
+
+        /// The `ccmp` MIME subtype.
+        pub const CCMP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Ccmp));
+
+        /// The `ccxml` MIME subtype.
+        pub const CCXML: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Ccxml));
+
+        /// The `CDFX` MIME subtype.
+        pub const CDFX: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Cdfx));
+
+        /// The `cdmi-capability` MIME subtype.
+        pub const CDMI_CAPABILITY: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::CdmiCapability));
+
+        /// The `cdmi-container` MIME subtype.
+        pub const CDMI_CONTAINER: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::CdmiContainer));
+
+        /// The `cdmi-domain` MIME subtype.
+        pub const CDMI_DOMAIN: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::CdmiDomain));
+
+        /// The `cdmi-object` MIME subtype.
+        pub const CDMI_OBJECT: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::CdmiObject));
+
+        /// The `cdmi-queue` MIME subtype.
+        pub const CDMI_QUEUE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::CdmiQueue));
+
+        /// The `cdni` MIME subtype.
+        pub const CDNI: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Cdni));
+
+        /// The `CEA` MIME subtype.
+        pub const CEA: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Cea));
+
+        /// The `cea-2018` MIME subtype.
+        pub const CEA_2018: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Cea2018));
+
+        /// The `cellml` MIME subtype.
+        pub const CELLML: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Cellml));
+
+        /// The `cfw` MIME subtype.
+        pub const CFW: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Cfw));
+
+        /// The `city` MIME subtype.
+        pub const CITY: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::City));
+
+        /// The `clr` MIME subtype.
+        pub const CLR: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Clr));
+
+        /// The `clue` MIME subtype.
+        pub const CLUE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Clue));
+
+        /// The `clue_info` MIME subtype.
+        pub const CLUE_INFO: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::ClueInfo));
+
+        /// The `cms` MIME subtype.
+        pub const CMS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Cms));
+
+        /// The `cnrp` MIME subtype.
+        pub const CNRP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Cnrp));
+
+        /// The `coap-group` MIME subtype.
+        pub const COAP_GROUP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::CoapGroup));
+
+        /// The `coap-payload` MIME subtype.
+        pub const COAP_PAYLOAD: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::CoapPayload));
+
+        /// The `commonground` MIME subtype.
+        pub const COMMONGROUND: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Commonground));
+
+        /// The `conference-info` MIME subtype.
+        pub const CONFERENCE_INFO: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::ConferenceInfo));
+
+        /// The `cose` MIME subtype.
+        pub const COSE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Cose));
+
+        /// The `cose-key` MIME subtype.
+        pub const COSE_KEY: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::CoseKey));
+
+        /// The `cose-key-set` MIME subtype.
+        pub const COSE_KEY_SET: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::CoseKeySet));
+
+        /// The `cpl` MIME subtype.
+        pub const CPL: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Cpl));
+
+        /// The `csrattrs` MIME subtype.
+        pub const CSRATTRS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Csrattrs));
+
+        /// The `csta` MIME subtype.
+        pub const CSTA: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Csta));
+
+        /// The `CSTAdata` MIME subtype.
+        pub const CST_ADATA: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::CstAdata));
+
+        /// The `csvm` MIME subtype.
+        pub const CSVM: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Csvm));
+
+        /// The `cu-seeme` MIME subtype.
+        pub const CU_SEEME: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::CuSeeme));
+
+        /// The `cwt` MIME subtype.
+        pub const CWT: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Cwt));
+
+        /// The `cybercash` MIME subtype.
+        pub const CYBERCASH: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Cybercash));
+
+        /// The `dash` MIME subtype.
+        pub const DASH: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Dash));
+
+        /// The `dash-patch` MIME subtype.
+        pub const DASH_PATCH: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::DashPatch));
+
+        /// The `dashdelta` MIME subtype.
+        pub const DASHDELTA: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Dashdelta));
+
+        /// The `davmount` MIME subtype.
+        pub const DAVMOUNT: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Davmount));
+
+        /// The `dca-rft` MIME subtype.
+        pub const DCA_RFT: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::DcaRft));
+
+        /// The `DCD` MIME subtype.
+        pub const DCD: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Dcd));
+
+        /// The `dec-dx` MIME subtype.
+        pub const DEC_DX: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::DecDx));
+
+        /// The `dialog-info` MIME subtype.
+        pub const DIALOG_INFO: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::DialogInfo));
+
+        /// The `dicom` MIME subtype.
+        pub const DICOM: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Dicom));
+
+        /// The `DII` MIME subtype.
+        pub const DII: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Dii));
+
+        /// The `DIT` MIME subtype.
+        pub const DIT: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Dit));
+
+        /// The `dns` MIME subtype.
+        pub const DNS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Dns));
+
+        /// The `dns-message` MIME subtype.
+        pub const DNS_MESSAGE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::DnsMessage));
+
+        /// The `dots` MIME subtype.
+        pub const DOTS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Dots));
+
+        /// The `dskpp` MIME subtype.
+        pub const DSKPP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Dskpp));
+
+        /// The `dsptype` MIME subtype.
+        pub const DSPTYPE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Dsptype));
+
+        /// The `dssc` MIME subtype.
+        pub const DSSC: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Dssc));
+
+        /// The `dvcs` MIME subtype.
+        pub const DVCS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Dvcs));
+
+        /// The `EDI-consent` MIME subtype.
+        pub const EDI_CONSENT: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::EdiConsent));
+
+        /// The `EDI-X12` MIME subtype.
+        pub const EDI_X12: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::EdiX12));
+
+        /// The `EDIFACT` MIME subtype.
+        pub const EDIFACT: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Edifact));
+
+        /// The `efi` MIME subtype.
+        pub const EFI: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Efi));
+
+        /// The `elm` MIME subtype.
+        pub const ELM: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Elm));
+
+        /// The `EmergencyCallData.cap` MIME subtype.
+        pub const EMERGENCY_CALL_DATA_CAP: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::EmergencyCallDataCap),
+        );
+
+        /// The `EmergencyCallData.Comment` MIME subtype.
+        pub const EMERGENCY_CALL_DATA_COMMENT: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::EmergencyCallDataComment),
+        );
+
+        /// The `EmergencyCallData.Control` MIME subtype.
+        pub const EMERGENCY_CALL_DATA_CONTROL: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::EmergencyCallDataControl),
+        );
+
+        /// The `EmergencyCallData.DeviceInfo` MIME subtype.
+        pub const EMERGENCY_CALL_DATA_DEVICE_INFO: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::EmergencyCallDataDeviceInfo),
+        );
+
+        /// The `EmergencyCallData.eCall.MSD` MIME subtype.
+        pub const EMERGENCY_CALL_DATA_E_CALL_MSD: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::EmergencyCallDataECallMsd),
+        );
+
+        /// The `EmergencyCallData.ProviderInfo` MIME subtype.
+        pub const EMERGENCY_CALL_DATA_PROVIDER_INFO: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::EmergencyCallDataProviderInfo),
+        );
+
+        /// The `EmergencyCallData.ServiceInfo` MIME subtype.
+        pub const EMERGENCY_CALL_DATA_SERVICE_INFO: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::EmergencyCallDataServiceInfo),
+        );
+
+        /// The `EmergencyCallData.SubscriberInfo` MIME subtype.
+        pub const EMERGENCY_CALL_DATA_SUBSCRIBER_INFO: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::EmergencyCallDataSubscriberInfo),
+        );
+
+        /// The `EmergencyCallData.VEDS` MIME subtype.
+        pub const EMERGENCY_CALL_DATA_VEDS: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::EmergencyCallDataVeds),
+        );
+
+        /// The `emma` MIME subtype.
+        pub const EMMA: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Emma));
+
+        /// The `emotionml` MIME subtype.
+        pub const EMOTIONML: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Emotionml));
+
+        /// The `encaprtp` MIME subtype.
+        pub const ENCAPRTP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Encaprtp));
+
+        /// The `epp` MIME subtype.
+        pub const EPP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Epp));
+
+        /// The `epub` MIME subtype.
+        pub const EPUB: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Epub));
+
+        /// The `eshop` MIME subtype.
+        pub const ESHOP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Eshop));
+
+        /// The `example` MIME subtype.
+        pub const EXAMPLE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Example));
+
+        /// The `exi` MIME subtype.
+        pub const EXI: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Exi));
+
+        /// The `expect-ct-report` MIME subtype.
+        pub const EXPECT_CT_REPORT: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::ExpectCtReport));
+
+        /// The `express` MIME subtype.
+        pub const EXPRESS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Express));
+
+        /// The `fastinfoset` MIME subtype.
+        pub const FASTINFOSET: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Fastinfoset));
+
+        /// The `fastsoap` MIME subtype.
+        pub const FASTSOAP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Fastsoap));
+
+        /// The `fdt` MIME subtype.
+        pub const FDT: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Fdt));
+
+        /// The `fhir` MIME subtype.
+        pub const FHIR: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Fhir));
+
+        /// The `fits` MIME subtype.
+        pub const FITS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Fits));
+
+        /// The `flexfec` MIME subtype.
+        pub const FLEXFEC: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Flexfec));
+
+        /// The `font-tdpfr` MIME subtype.
+        pub const FONT_TDPFR: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::FontTdpfr));
+
+        /// The `framework-attributes` MIME subtype.
+        pub const FRAMEWORK_ATTRIBUTES: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::FrameworkAttributes),
+        );
+
+        /// The `futuresplash` MIME subtype.
+        pub const FUTURESPLASH: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Futuresplash));
+
+        /// The `geo` MIME subtype.
+        pub const GEO: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Geo));
+
+        /// The `geopackage` MIME subtype.
+        pub const GEOPACKAGE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Geopackage));
+
+        /// The `geoxacml` MIME subtype.
+        pub const GEOXACML: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Geoxacml));
+
+        /// The `gltf-buffer` MIME subtype.
+        pub const GLTF_BUFFER: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::GltfBuffer));
+
+        /// The `gml` MIME subtype.
+        pub const GML: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Gml));
+
+        /// The `gzip` MIME subtype.
+        pub const GZIP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Gzip));
+
+        /// The `H224` MIME subtype.
+        pub const H224: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::H224));
+
+        /// The `held` MIME subtype.
+        pub const HELD: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Held));
+
+        /// The `hta` MIME subtype.
+        pub const HTA: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Hta));
+
+        /// The `http` MIME subtype.
+        pub const HTTP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Http));
+
+        /// The `hyperstudio` MIME subtype.
+        pub const HYPERSTUDIO: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Hyperstudio));
+
+        /// The `ibe-key-request` MIME subtype.
+        pub const IBE_KEY_REQUEST: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::IbeKeyRequest));
+
+        /// The `ibe-pkg-reply` MIME subtype.
+        pub const IBE_PKG_REPLY: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::IbePkgReply));
+
+        /// The `ibe-pp-data` MIME subtype.
+        pub const IBE_PP_DATA: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::IbePpData));
+
+        /// The `iges` MIME subtype.
+        pub const IGES: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Iges));
+
+        /// The `im-iscomposing` MIME subtype.
+        pub const IM_ISCOMPOSING: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::ImIscomposing));
+
+        /// The `index` MIME subtype.
+        pub const INDEX: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Index));
+
+        /// The `index.cmd` MIME subtype.
+        pub const INDEX_CMD: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::IndexCmd));
+
+        /// The `index.obj` MIME subtype.
+        pub const INDEX_OBJ: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::IndexObj));
+
+        /// The `index.response` MIME subtype.
+        pub const INDEX_RESPONSE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::IndexResponse));
+
+        /// The `index.vnd` MIME subtype.
+        pub const INDEX_VND: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::IndexVnd));
+
+        /// The `inkml` MIME subtype.
+        pub const INKML: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Inkml));
+
+        /// The `IOTP` MIME subtype.
+        pub const IOTP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Iotp));
+
+        /// The `ipfix` MIME subtype.
+        pub const IPFIX: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Ipfix));
+
+        /// The `ipp` MIME subtype.
+        pub const IPP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Ipp));
+
+        /// The `ISUP` MIME subtype.
+        pub const ISUP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Isup));
+
+        /// The `its` MIME subtype.
+        pub const ITS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Its));
+
+        /// The `java-archive` MIME subtype.
+        pub const JAVA_ARCHIVE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::JavaArchive));
+
+        /// The `java-serialized-object` MIME subtype.
+        pub const JAVA_SERIALIZED_OBJECT: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::JavaSerializedObject),
+        );
+
+        /// The `java-vm` MIME subtype.
+        pub const JAVA_VM: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::JavaVm));
+
+        /// The `jf2feed` MIME subtype.
+        pub const JF2FEED: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Jf2feed));
+
+        /// The `jose` MIME subtype.
+        pub const JOSE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Jose));
+
+        /// The `jrd` MIME subtype.
+        pub const JRD: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Jrd));
+
+        /// The `jscalendar` MIME subtype.
+        pub const JSCALENDAR: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Jscalendar));
+
+        /// The `json` MIME subtype.
+        pub const JSON: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Json));
+
+        /// The `json-patch` MIME subtype.
+        pub const JSON_PATCH: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::JsonPatch));
+
+        /// The `json-seq` MIME subtype.
+        pub const JSON_SEQ: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::JsonSeq));
+
+        /// The `jwk` MIME subtype.
+        pub const JWK: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Jwk));
+
+        /// The `jwk-set` MIME subtype.
+        pub const JWK_SET: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::JwkSet));
+
+        /// The `jwt` MIME subtype.
+        pub const JWT: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Jwt));
+
+        /// The `kpml-request` MIME subtype.
+        pub const KPML_REQUEST: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::KpmlRequest));
+
+        /// The `kpml-response` MIME subtype.
+        pub const KPML_RESPONSE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::KpmlResponse));
+
+        /// The `ld` MIME subtype.
+        pub const LD: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Ld));
+
+        /// The `lgr` MIME subtype.
+        pub const LGR: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Lgr));
+
+        /// The `link-format` MIME subtype.
+        pub const LINK_FORMAT: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::LinkFormat));
+
+        /// The `load-control` MIME subtype.
+        pub const LOAD_CONTROL: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::LoadControl));
+
+        /// The `lost` MIME subtype.
+        pub const LOST: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Lost));
+
+        /// The `lostsync` MIME subtype.
+        pub const LOSTSYNC: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Lostsync));
+
+        /// The `lpf` MIME subtype.
+        pub const LPF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Lpf));
+
+        /// The `LXF` MIME subtype.
+        pub const LXF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Lxf));
+
+        /// The `m3g` MIME subtype.
+        pub const M3G: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::M3g));
+
+        /// The `mac-binhex40` MIME subtype.
+        pub const MAC_BINHEX40: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::MacBinhex40));
+
+        /// The `mac-compactpro` MIME subtype.
+        pub const MAC_COMPACTPRO: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::MacCompactpro));
+
+        /// The `macwriteii` MIME subtype.
+        pub const MACWRITEII: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Macwriteii));
+
+        /// The `mads` MIME subtype.
+        pub const MADS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Mads));
+
+        /// The `manifest` MIME subtype.
+        pub const MANIFEST: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Manifest));
+
+        /// The `marc` MIME subtype.
+        pub const MARC: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Marc));
+
+        /// The `marcxml` MIME subtype.
+        pub const MARCXML: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Marcxml));
+
+        /// The `mathematica` MIME subtype.
+        pub const MATHEMATICA: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Mathematica));
+
+        /// The `mathml` MIME subtype.
+        pub const MATHML: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Mathml));
+
+        /// The `mathml-content` MIME subtype.
+        pub const MATHML_CONTENT: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::MathmlContent));
+
+        /// The `mathml-presentation` MIME subtype.
+        pub const MATHML_PRESENTATION: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::MathmlPresentation),
+        );
+
+        /// The `mbms-associated-procedure-description` MIME subtype.
+        pub const MBMS_ASSOCIATED_PROCEDURE_DESCRIPTION: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::MbmsAssociatedProcedureDescription),
+        );
+
+        /// The `mbms-deregister` MIME subtype.
+        pub const MBMS_DEREGISTER: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::MbmsDeregister));
+
+        /// The `mbms-envelope` MIME subtype.
+        pub const MBMS_ENVELOPE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::MbmsEnvelope));
+
+        /// The `mbms-msk` MIME subtype.
+        pub const MBMS_MSK: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::MbmsMsk));
+
+        /// The `mbms-msk-response` MIME subtype.
+        pub const MBMS_MSK_RESPONSE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::MbmsMskResponse));
+
+        /// The `mbms-protection-description` MIME subtype.
+        pub const MBMS_PROTECTION_DESCRIPTION: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::MbmsProtectionDescription),
+        );
+
+        /// The `mbms-reception-report` MIME subtype.
+        pub const MBMS_RECEPTION_REPORT: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::MbmsReceptionReport),
+        );
+
+        /// The `mbms-register` MIME subtype.
+        pub const MBMS_REGISTER: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::MbmsRegister));
+
+        /// The `mbms-register-response` MIME subtype.
+        pub const MBMS_REGISTER_RESPONSE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::MbmsRegisterResponse),
+        );
+
+        /// The `mbms-schedule` MIME subtype.
+        pub const MBMS_SCHEDULE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::MbmsSchedule));
+
+        /// The `mbms-user-service-description` MIME subtype.
+        pub const MBMS_USER_SERVICE_DESCRIPTION: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::MbmsUserServiceDescription),
+        );
+
+        /// The `mbox` MIME subtype.
+        pub const MBOX: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Mbox));
+
+        /// The `media-policy-dataset` MIME subtype.
+        pub const MEDIA_POLICY_DATASET: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::MediaPolicyDataset),
+        );
+
+        /// The `mediaservercontrol` MIME subtype.
+        pub const MEDIASERVERCONTROL: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::Mediaservercontrol),
+        );
+
+        /// The `media_control` MIME subtype.
+        pub const MEDIA_CONTROL: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::MediaControl));
+
+        /// The `merge-patch` MIME subtype.
+        pub const MERGE_PATCH: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::MergePatch));
+
+        /// The `metalink4` MIME subtype.
+        pub const METALINK4: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Metalink4));
+
+        /// The `mets` MIME subtype.
+        pub const METS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Mets));
+
+        /// The `MF4` MIME subtype.
+        pub const MF4: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Mf4));
+
+        /// The `mikey` MIME subtype.
+        pub const MIKEY: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Mikey));
+
+        /// The `mipc` MIME subtype.
+        pub const MIPC: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Mipc));
+
+        /// The `missing-blocks` MIME subtype.
+        pub const MISSING_BLOCKS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::MissingBlocks));
+
+        /// The `mmt-aei` MIME subtype.
+        pub const MMT_AEI: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::MmtAei));
+
+        /// The `mmt-usd` MIME subtype.
+        pub const MMT_USD: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::MmtUsd));
+
+        /// The `mods` MIME subtype.
+        pub const MODS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Mods));
+
+        /// The `moss-keys` MIME subtype.
+        pub const MOSS_KEYS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::MossKeys));
+
+        /// The `moss-signature` MIME subtype.
+        pub const MOSS_SIGNATURE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::MossSignature));
+
+        /// The `mosskey-data` MIME subtype.
+        pub const MOSSKEY_DATA: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::MosskeyData));
+
+        /// The `mosskey-request` MIME subtype.
+        pub const MOSSKEY_REQUEST: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::MosskeyRequest));
+
+        /// The `mp21` MIME subtype.
+        pub const MP21: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Mp21));
+
+        /// The `mp4` MIME subtype.
+        pub const MP4: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Mp4));
+
+        /// The `mpeg4-generic` MIME subtype.
+        pub const MPEG4_GENERIC: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Mpeg4Generic));
+
+        /// The `mpeg4-iod` MIME subtype.
+        pub const MPEG4_IOD: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Mpeg4Iod));
+
+        /// The `mpeg4-iod-xmt` MIME subtype.
+        pub const MPEG4_IOD_XMT: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Mpeg4IodXmt));
+
+        /// The `mrb-consumer` MIME subtype.
+        pub const MRB_CONSUMER: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::MrbConsumer));
+
+        /// The `mrb-publish` MIME subtype.
+        pub const MRB_PUBLISH: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::MrbPublish));
+
+        /// The `msaccess` MIME subtype.
+        pub const MSACCESS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Msaccess));
+
+        /// The `msc-ivr` MIME subtype.
+        pub const MSC_IVR: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::MscIvr));
+
+        /// The `msc-mixer` MIME subtype.
+        pub const MSC_MIXER: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::MscMixer));
+
+        /// The `msword` MIME subtype.
+        pub const MSWORD: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Msword));
+
+        /// The `mud` MIME subtype.
+        pub const MUD: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Mud));
+
+        /// The `multipart-core` MIME subtype.
+        pub const MULTIPART_CORE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::MultipartCore));
+
+        /// The `mxf` MIME subtype.
+        pub const MXF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Mxf));
+
+        /// The `n-quads` MIME subtype.
+        pub const N_QUADS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::NQuads));
+
+        /// The `n-triples` MIME subtype.
+        pub const N_TRIPLES: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::NTriples));
+
+        /// The `nasdata` MIME subtype.
+        pub const NASDATA: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Nasdata));
+
+        /// The `news-checkgroups` MIME subtype.
+        pub const NEWS_CHECKGROUPS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::NewsCheckgroups));
+
+        /// The `news-groupinfo` MIME subtype.
+        pub const NEWS_GROUPINFO: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::NewsGroupinfo));
+
+        /// The `news-transmission` MIME subtype.
+        pub const NEWS_TRANSMISSION: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::NewsTransmission),
+        );
+
+        /// The `nlsml` MIME subtype.
+        pub const NLSML: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Nlsml));
+
+        /// The `node` MIME subtype.
+        pub const NODE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Node));
+
+        /// The `nss` MIME subtype.
+        pub const NSS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Nss));
+
+        /// The `oauth-authz-req` MIME subtype.
+        pub const OAUTH_AUTHZ_REQ: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::OauthAuthzReq));
+
+        /// The `oblivious-dns-message` MIME subtype.
+        pub const OBLIVIOUS_DNS_MESSAGE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::ObliviousDnsMessage),
+        );
+
+        /// The `ocsp-request` MIME subtype.
+        pub const OCSP_REQUEST: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::OcspRequest));
+
+        /// The `ocsp-response` MIME subtype.
+        pub const OCSP_RESPONSE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::OcspResponse));
+
+        /// The `octet-stream` MIME subtype.
+        pub const OCTET_STREAM: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::OctetStream));
+
+        /// The `ODA` MIME subtype.
+        pub const ODA: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Oda));
+
+        /// The `odm` MIME subtype.
+        pub const ODM: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Odm));
+
+        /// The `ODX` MIME subtype.
+        pub const ODX: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Odx));
+
+        /// The `oebps-package` MIME subtype.
+        pub const OEBPS_PACKAGE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::OebpsPackage));
+
+        /// The `ogg` MIME subtype.
+        pub const OGG: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Ogg));
+
+        /// The `onenote` MIME subtype.
+        pub const ONENOTE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Onenote));
+
+        /// The `opc-nodeset` MIME subtype.
+        pub const OPC_NODESET: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::OpcNodeset));
+
+        /// The `oscore` MIME subtype.
+        pub const OSCORE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Oscore));
+
+        /// The `oxps` MIME subtype.
+        pub const OXPS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Oxps));
+
+        /// The `p21` MIME subtype.
+        pub const P21: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::P21));
+
+        /// The `p2p-overlay` MIME subtype.
+        pub const P2P_OVERLAY: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::P2pOverlay));
+
+        /// The `parityfec` MIME subtype.
+        pub const PARITYFEC: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Parityfec));
+
+        /// The `passport` MIME subtype.
+        pub const PASSPORT: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Passport));
+
+        /// The `patch-ops-error` MIME subtype.
+        pub const PATCH_OPS_ERROR: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::PatchOpsError));
+
+        /// The `pdf` MIME subtype.
+        pub const PDF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Pdf));
+
+        /// The `PDX` MIME subtype.
+        pub const PDX: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Pdx));
+
+        /// The `pem-certificate-chain` MIME subtype.
+        pub const PEM_CERTIFICATE_CHAIN: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::PemCertificateChain),
+        );
+
+        /// The `pgp-encrypted` MIME subtype.
+        pub const PGP_ENCRYPTED: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::PgpEncrypted));
+
+        /// The `pgp-keys` MIME subtype.
+        pub const PGP_KEYS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::PgpKeys));
+
+        /// The `pgp-signature` MIME subtype.
+        pub const PGP_SIGNATURE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::PgpSignature));
+
+        /// The `pics-rules` MIME subtype.
+        pub const PICS_RULES: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::PicsRules));
+
+        /// The `pidf` MIME subtype.
+        pub const PIDF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Pidf));
+
+        /// The `pidf-diff` MIME subtype.
+        pub const PIDF_DIFF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::PidfDiff));
+
+        /// The `pkcs10` MIME subtype.
+        pub const PKCS10: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Pkcs10));
+
+        /// The `pkcs12` MIME subtype.
+        pub const PKCS12: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Pkcs12));
+
+        /// The `pkcs7-mime` MIME subtype.
+        pub const PKCS7_MIME: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Pkcs7Mime));
+
+        /// The `pkcs7-signature` MIME subtype.
+        pub const PKCS7_SIGNATURE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Pkcs7Signature));
+
+        /// The `pkcs8` MIME subtype.
+        pub const PKCS8: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Pkcs8));
+
+        /// The `pkcs8-encrypted` MIME subtype.
+        pub const PKCS8_ENCRYPTED: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Pkcs8Encrypted));
+
+        /// The `pkix-attr-cert` MIME subtype.
+        pub const PKIX_ATTR_CERT: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::PkixAttrCert));
+
+        /// The `pkix-cert` MIME subtype.
+        pub const PKIX_CERT: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::PkixCert));
+
+        /// The `pkix-crl` MIME subtype.
+        pub const PKIX_CRL: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::PkixCrl));
+
+        /// The `pkix-pkipath` MIME subtype.
+        pub const PKIX_PKIPATH: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::PkixPkipath));
+
+        /// The `pkixcmp` MIME subtype.
+        pub const PKIXCMP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Pkixcmp));
+
+        /// The `pls` MIME subtype.
+        pub const PLS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Pls));
+
+        /// The `poc-settings` MIME subtype.
+        pub const POC_SETTINGS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::PocSettings));
+
+        /// The `postscript` MIME subtype.
+        pub const POSTSCRIPT: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Postscript));
+
+        /// The `ppsp-tracker` MIME subtype.
+        pub const PPSP_TRACKER: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::PpspTracker));
+
+        /// The `problem` MIME subtype.
+        pub const PROBLEM: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Problem));
+
+        /// The `provenance` MIME subtype.
+        pub const PROVENANCE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Provenance));
+
+        /// The `prs.alvestrand.titrax-sheet` MIME subtype.
+        pub const PRS_ALVESTRAND_TITRAX_SHEET: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::PrsAlvestrandTitraxSheet),
+        );
+
+        /// The `prs.cww` MIME subtype.
+        pub const PRS_CWW: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::PrsCww));
+
+        /// The `prs.cyn` MIME subtype.
+        pub const PRS_CYN: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::PrsCyn));
+
+        /// The `prs.hpub` MIME subtype.
+        pub const PRS_HPUB: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::PrsHpub));
+
+        /// The `prs.nprend` MIME subtype.
+        pub const PRS_NPREND: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::PrsNprend));
+
+        /// The `prs.plucker` MIME subtype.
+        pub const PRS_PLUCKER: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::PrsPlucker));
+
+        /// The `prs.rdf-xml-crypt` MIME subtype.
+        pub const PRS_RDF_XML_CRYPT: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::PrsRdfXmlCrypt));
+
+        /// The `prs.xsf` MIME subtype.
+        pub const PRS_XSF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::PrsXsf));
+
+        /// The `pskc` MIME subtype.
+        pub const PSKC: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Pskc));
+
+        /// The `pvd` MIME subtype.
+        pub const PVD: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Pvd));
+
+        /// The `QSIG` MIME subtype.
+        pub const QSIG: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Qsig));
+
+        /// The `raptorfec` MIME subtype.
+        pub const RAPTORFEC: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Raptorfec));
+
+        /// The `rdap` MIME subtype.
+        pub const RDAP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Rdap));
+
+        /// The `rdf` MIME subtype.
+        pub const RDF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Rdf));
+
+        /// The `reginfo` MIME subtype.
+        pub const REGINFO: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Reginfo));
+
+        /// The `relax-ng-compact-syntax` MIME subtype.
+        pub const RELAX_NG_COMPACT_SYNTAX: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::RelaxNgCompactSyntax),
+        );
+
+        /// The `remote-printing` MIME subtype.
+        pub const REMOTE_PRINTING: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::RemotePrinting));
+
+        /// The `reputon` MIME subtype.
+        pub const REPUTON: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Reputon));
+
+        /// The `resource-lists` MIME subtype.
+        pub const RESOURCE_LISTS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::ResourceLists));
+
+        /// The `resource-lists-diff` MIME subtype.
+        pub const RESOURCE_LISTS_DIFF: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::ResourceListsDiff),
+        );
+
+        /// The `rfc` MIME subtype.
+        pub const RFC: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Rfc));
+
+        /// The `riscos` MIME subtype.
+        pub const RISCOS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Riscos));
+
+        /// The `rlmi` MIME subtype.
+        pub const RLMI: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Rlmi));
+
+        /// The `rls-services` MIME subtype.
+        pub const RLS_SERVICES: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::RlsServices));
+
+        /// The `route-apd` MIME subtype.
+        pub const ROUTE_APD: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::RouteApd));
+
+        /// The `route-s-tsid` MIME subtype.
+        pub const ROUTE_S_TSID: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::RouteSTsid));
+
+        /// The `route-usd` MIME subtype.
+        pub const ROUTE_USD: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::RouteUsd));
+
+        /// The `rpki-ghostbusters` MIME subtype.
+        pub const RPKI_GHOSTBUSTERS: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::RpkiGhostbusters),
+        );
+
+        /// The `rpki-manifest` MIME subtype.
+        pub const RPKI_MANIFEST: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::RpkiManifest));
+
+        /// The `rpki-publication` MIME subtype.
+        pub const RPKI_PUBLICATION: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::RpkiPublication));
+
+        /// The `rpki-roa` MIME subtype.
+        pub const RPKI_ROA: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::RpkiRoa));
+
+        /// The `rpki-updown` MIME subtype.
+        pub const RPKI_UPDOWN: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::RpkiUpdown));
+
+        /// The `rtf` MIME subtype.
+        pub const RTF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Rtf));
+
+        /// The `rtploopback` MIME subtype.
+        pub const RTPLOOPBACK: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Rtploopback));
+
+        /// The `rtx` MIME subtype.
+        pub const RTX: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Rtx));
+
+        /// The `samlassertion` MIME subtype.
+        pub const SAMLASSERTION: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Samlassertion));
+
+        /// The `samlmetadata` MIME subtype.
+        pub const SAMLMETADATA: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Samlmetadata));
+
+        /// The `sarif` MIME subtype.
+        pub const SARIF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Sarif));
+
+        /// The `sarif-external-properties` MIME subtype.
+        pub const SARIF_EXTERNAL_PROPERTIES: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::SarifExternalProperties),
+        );
+
+        /// The `sbe` MIME subtype.
+        pub const SBE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Sbe));
+
+        /// The `sbml` MIME subtype.
+        pub const SBML: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Sbml));
+
+        /// The `scaip` MIME subtype.
+        pub const SCAIP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Scaip));
+
+        /// The `scim` MIME subtype.
+        pub const SCIM: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Scim));
+
+        /// The `scvp-cv-request` MIME subtype.
+        pub const SCVP_CV_REQUEST: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::ScvpCvRequest));
+
+        /// The `scvp-cv-response` MIME subtype.
+        pub const SCVP_CV_RESPONSE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::ScvpCvResponse));
+
+        /// The `scvp-vp-request` MIME subtype.
+        pub const SCVP_VP_REQUEST: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::ScvpVpRequest));
+
+        /// The `scvp-vp-response` MIME subtype.
+        pub const SCVP_VP_RESPONSE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::ScvpVpResponse));
+
+        /// The `sdp` MIME subtype.
+        pub const SDP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Sdp));
+
+        /// The `secevent` MIME subtype.
+        pub const SECEVENT: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Secevent));
+
+        /// The `senml` MIME subtype.
+        pub const SENML: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Senml));
+
+        /// The `senml-etch` MIME subtype.
+        pub const SENML_ETCH: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::SenmlEtch));
+
+        /// The `senml-exi` MIME subtype.
+        pub const SENML_EXI: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::SenmlExi));
+
+        /// The `sensml` MIME subtype.
+        pub const SENSML: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Sensml));
+
+        /// The `sensml-exi` MIME subtype.
+        pub const SENSML_EXI: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::SensmlExi));
+
+        /// The `sep` MIME subtype.
+        pub const SEP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Sep));
+
+        /// The `sep-exi` MIME subtype.
+        pub const SEP_EXI: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::SepExi));
+
+        /// The `session-info` MIME subtype.
+        pub const SESSION_INFO: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::SessionInfo));
+
+        /// The `set-payment` MIME subtype.
+        pub const SET_PAYMENT: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::SetPayment));
+
+        /// The `set-payment-initiation` MIME subtype.
+        pub const SET_PAYMENT_INITIATION: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::SetPaymentInitiation),
+        );
+
+        /// The `set-registration` MIME subtype.
+        pub const SET_REGISTRATION: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::SetRegistration));
+
+        /// The `set-registration-initiation` MIME subtype.
+        pub const SET_REGISTRATION_INITIATION: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::SetRegistrationInitiation),
+        );
+
+        /// The `SGML` MIME subtype.
+        pub const SGML: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Sgml));
+
+        /// The `sgml-open-catalog` MIME subtype.
+        pub const SGML_OPEN_CATALOG: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::SgmlOpenCatalog));
+
+        /// The `shf` MIME subtype.
+        pub const SHF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Shf));
+
+        /// The `sieve` MIME subtype.
+        pub const SIEVE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Sieve));
+
+        /// The `simple-filter` MIME subtype.
+        pub const SIMPLE_FILTER: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::SimpleFilter));
+
+        /// The `simple-message-summary` MIME subtype.
+        pub const SIMPLE_MESSAGE_SUMMARY: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::SimpleMessageSummary),
+        );
+
+        /// The `simpleSymbolContainer` MIME subtype.
+        pub const SIMPLE_SYMBOL_CONTAINER: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::SimpleSymbolContainer),
+        );
+
+        /// The `sipc` MIME subtype.
+        pub const SIPC: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Sipc));
+
+        /// The `slate` MIME subtype.
+        pub const SLATE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Slate));
+
+        /// The `smil` MIME subtype.
+        pub const SMIL: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Smil));
+
+        /// The `smpte336m` MIME subtype.
+        pub const SMPTE336M: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Smpte336m));
+
+        /// The `soap` MIME subtype.
+        pub const SOAP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Soap));
+
+        /// The `sparql-query` MIME subtype.
+        pub const SPARQL_QUERY: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::SparqlQuery));
+
+        /// The `sparql-results` MIME subtype.
+        pub const SPARQL_RESULTS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::SparqlResults));
+
+        /// The `spdx` MIME subtype.
+        pub const SPDX: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Spdx));
+
+        /// The `spirits-event` MIME subtype.
+        pub const SPIRITS_EVENT: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::SpiritsEvent));
+
+        /// The `sql` MIME subtype.
+        pub const SQL: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Sql));
+
+        /// The `srgs` MIME subtype.
+        pub const SRGS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Srgs));
+
+        /// The `sru` MIME subtype.
+        pub const SRU: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Sru));
+
+        /// The `ssml` MIME subtype.
+        pub const SSML: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Ssml));
+
+        /// The `stix` MIME subtype.
+        pub const STIX: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Stix));
+
+        /// The `swid` MIME subtype.
+        pub const SWID: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Swid));
+
+        /// The `tamp-apex-update` MIME subtype.
+        pub const TAMP_APEX_UPDATE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::TampApexUpdate));
+
+        /// The `tamp-apex-update-confirm` MIME subtype.
+        pub const TAMP_APEX_UPDATE_CONFIRM: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::TampApexUpdateConfirm),
+        );
+
+        /// The `tamp-community-update` MIME subtype.
+        pub const TAMP_COMMUNITY_UPDATE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::TampCommunityUpdate),
+        );
+
+        /// The `tamp-community-update-confirm` MIME subtype.
+        pub const TAMP_COMMUNITY_UPDATE_CONFIRM: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::TampCommunityUpdateConfirm),
+        );
+
+        /// The `tamp-error` MIME subtype.
+        pub const TAMP_ERROR: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::TampError));
+
+        /// The `tamp-sequence-adjust` MIME subtype.
+        pub const TAMP_SEQUENCE_ADJUST: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::TampSequenceAdjust),
+        );
+
+        /// The `tamp-sequence-adjust-confirm` MIME subtype.
+        pub const TAMP_SEQUENCE_ADJUST_CONFIRM: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::TampSequenceAdjustConfirm),
+        );
+
+        /// The `tamp-status-query` MIME subtype.
+        pub const TAMP_STATUS_QUERY: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::TampStatusQuery));
+
+        /// The `tamp-status-response` MIME subtype.
+        pub const TAMP_STATUS_RESPONSE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::TampStatusResponse),
+        );
+
+        /// The `tamp-update` MIME subtype.
+        pub const TAMP_UPDATE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::TampUpdate));
+
+        /// The `tamp-update-confirm` MIME subtype.
+        pub const TAMP_UPDATE_CONFIRM: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::TampUpdateConfirm),
+        );
+
+        /// The `taxii` MIME subtype.
+        pub const TAXII: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Taxii));
+
+        /// The `td` MIME subtype.
+        pub const TD: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Td));
+
+        /// The `tei` MIME subtype.
+        pub const TEI: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Tei));
+
+        /// The `TETRA_ISI` MIME subtype.
+        pub const TETRA_ISI: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::TetraIsi));
+
+        /// The `thraud` MIME subtype.
+        pub const THRAUD: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Thraud));
+
+        /// The `timestamp-query` MIME subtype.
+        pub const TIMESTAMP_QUERY: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::TimestampQuery));
+
+        /// The `timestamp-reply` MIME subtype.
+        pub const TIMESTAMP_REPLY: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::TimestampReply));
+
+        /// The `timestamped-data` MIME subtype.
+        pub const TIMESTAMPED_DATA: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::TimestampedData));
+
+        /// The `tlsrpt` MIME subtype.
+        pub const TLSRPT: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Tlsrpt));
+
+        /// The `tnauthlist` MIME subtype.
+        pub const TNAUTHLIST: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Tnauthlist));
+
+        /// The `token-introspection` MIME subtype.
+        pub const TOKEN_INTROSPECTION: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::TokenIntrospection),
+        );
+
+        /// The `trickle-ice-sdpfrag` MIME subtype.
+        pub const TRICKLE_ICE_SDPFRAG: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::TrickleIceSdpfrag),
+        );
+
+        /// The `trig` MIME subtype.
+        pub const TRIG: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Trig));
+
+        /// The `ttml` MIME subtype.
+        pub const TTML: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Ttml));
+
+        /// The `tve-trigger` MIME subtype.
+        pub const TVE_TRIGGER: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::TveTrigger));
+
+        /// The `tzif` MIME subtype.
+        pub const TZIF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Tzif));
+
+        /// The `tzif-leap` MIME subtype.
+        pub const TZIF_LEAP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::TzifLeap));
+
+        /// The `ulpfec` MIME subtype.
+        pub const ULPFEC: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Ulpfec));
+
+        /// The `urc-grpsheet` MIME subtype.
+        pub const URC_GRPSHEET: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::UrcGrpsheet));
+
+        /// The `urc-ressheet` MIME subtype.
+        pub const URC_RESSHEET: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::UrcRessheet));
+
+        /// The `urc-targetdesc` MIME subtype.
+        pub const URC_TARGETDESC: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::UrcTargetdesc));
+
+        /// The `urc-uisocketdesc` MIME subtype.
+        pub const URC_UISOCKETDESC: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::UrcUisocketdesc));
+
+        /// The `vcard` MIME subtype.
+        pub const VCARD: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Vcard));
+
+        /// The `vemmi` MIME subtype.
+        pub const VEMMI: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Vemmi));
+
+        /// The `vnd.1000minds.decision-model` MIME subtype.
+        pub const VND_1000MINDS_DECISION_MODEL: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::Vnd1000mindsDecisionModel),
+        );
+
+        /// The `vnd.3gpp-prose` MIME subtype.
+        pub const VND_3GPP_PROSE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Vnd3gppProse));
+
+        /// The `vnd.3gpp-prose-pc3ch` MIME subtype.
+        pub const VND_3GPP_PROSE_PC3CH: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::Vnd3gppProsePc3ch),
+        );
+
+        /// The `vnd.3gpp-v2x-local-service-information` MIME subtype.
+        pub const VND_3GPP_V2X_LOCAL_SERVICE_INFORMATION: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::Vnd3gppV2xLocalServiceInformation),
+        );
+
+        /// The `vnd.3gpp.5gnas` MIME subtype.
+        pub const VND_3GPP_5GNAS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Vnd3gpp5gnas));
+
+        /// The `vnd.3gpp.access-transfer-events` MIME subtype.
+        pub const VND_3GPP_ACCESS_TRANSFER_EVENTS: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::Vnd3gppAccessTransferEvents),
+        );
+
+        /// The `vnd.3gpp.bsf` MIME subtype.
+        pub const VND_3GPP_BSF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Vnd3gppBsf));
+
+        /// The `vnd.3gpp.GMOP` MIME subtype.
+        pub const VND_3GPP_GMOP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Vnd3gppGmop));
+
+        /// The `vnd.3gpp.gtpc` MIME subtype.
+        pub const VND_3GPP_GTPC: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Vnd3gppGtpc));
+
+        /// The `vnd.3gpp.interworking-data` MIME subtype.
+        pub const VND_3GPP_INTERWORKING_DATA: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::Vnd3gppInterworkingData),
+        );
+
+        /// The `vnd.3gpp.lpp` MIME subtype.
+        pub const VND_3GPP_LPP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Vnd3gppLpp));
+
+        /// The `vnd.3gpp.mc-signalling-ear` MIME subtype.
+        pub const VND_3GPP_MC_SIGNALLING_EAR: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::Vnd3gppMcSignallingEar),
+        );
+
+        /// The `vnd.3gpp.mcdata-affiliation-command` MIME subtype.
+        pub const VND_3GPP_MCDATA_AFFILIATION_COMMAND: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::Vnd3gppMcdataAffiliationCommand),
+        );
+
+        /// The `vnd.3gpp.mcdata-info` MIME subtype.
+        pub const VND_3GPP_MCDATA_INFO: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::Vnd3gppMcdataInfo),
+        );
+
+        /// The `vnd.3gpp.mcdata-payload` MIME subtype.
+        pub const VND_3GPP_MCDATA_PAYLOAD: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::Vnd3gppMcdataPayload),
+        );
+
+        /// The `vnd.3gpp.mcdata-service-config` MIME subtype.
+        pub const VND_3GPP_MCDATA_SERVICE_CONFIG: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::Vnd3gppMcdataServiceConfig),
+        );
+
+        /// The `vnd.3gpp.mcdata-signalling` MIME subtype.
+        pub const VND_3GPP_MCDATA_SIGNALLING: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::Vnd3gppMcdataSignalling),
+        );
+
+        /// The `vnd.3gpp.mcdata-ue-config` MIME subtype.
+        pub const VND_3GPP_MCDATA_UE_CONFIG: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::Vnd3gppMcdataUeConfig),
+        );
+
+        /// The `vnd.3gpp.mcdata-user-profile` MIME subtype.
+        pub const VND_3GPP_MCDATA_USER_PROFILE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::Vnd3gppMcdataUserProfile),
+        );
+
+        /// The `vnd.3gpp.mcptt-affiliation-command` MIME subtype.
+        pub const VND_3GPP_MCPTT_AFFILIATION_COMMAND: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::Vnd3gppMcpttAffiliationCommand),
+        );
+
+        /// The `vnd.3gpp.mcptt-floor-request` MIME subtype.
+        pub const VND_3GPP_MCPTT_FLOOR_REQUEST: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::Vnd3gppMcpttFloorRequest),
+        );
+
+        /// The `vnd.3gpp.mcptt-info` MIME subtype.
+        pub const VND_3GPP_MCPTT_INFO: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::Vnd3gppMcpttInfo),
+        );
+
+        /// The `vnd.3gpp.mcptt-location-info` MIME subtype.
+        pub const VND_3GPP_MCPTT_LOCATION_INFO: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::Vnd3gppMcpttLocationInfo),
+        );
+
+        /// The `vnd.3gpp.mcptt-mbms-usage-info` MIME subtype.
+        pub const VND_3GPP_MCPTT_MBMS_USAGE_INFO: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::Vnd3gppMcpttMbmsUsageInfo),
+        );
+
+        /// The `vnd.3gpp.mcptt-service-config` MIME subtype.
+        pub const VND_3GPP_MCPTT_SERVICE_CONFIG: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::Vnd3gppMcpttServiceConfig),
+        );
+
+        /// The `vnd.3gpp.mcptt-signed` MIME subtype.
+        pub const VND_3GPP_MCPTT_SIGNED: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::Vnd3gppMcpttSigned),
+        );
+
+        /// The `vnd.3gpp.mcptt-ue-config` MIME subtype.
+        pub const VND_3GPP_MCPTT_UE_CONFIG: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::Vnd3gppMcpttUeConfig),
+        );
+
+        /// The `vnd.3gpp.mcptt-ue-init-config` MIME subtype.
+        pub const VND_3GPP_MCPTT_UE_INIT_CONFIG: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::Vnd3gppMcpttUeInitConfig),
+        );
+
+        /// The `vnd.3gpp.mcptt-user-profile` MIME subtype.
+        pub const VND_3GPP_MCPTT_USER_PROFILE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::Vnd3gppMcpttUserProfile),
+        );
+
+        /// The `vnd.3gpp.mcvideo-affiliation-command` MIME subtype.
+        pub const VND_3GPP_MCVIDEO_AFFILIATION_COMMAND: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::Vnd3gppMcvideoAffiliationCommand),
+        );
+
+        /// The `vnd.3gpp.mcvideo-info` MIME subtype.
+        pub const VND_3GPP_MCVIDEO_INFO: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::Vnd3gppMcvideoInfo),
+        );
+
+        /// The `vnd.3gpp.mcvideo-location-info` MIME subtype.
+        pub const VND_3GPP_MCVIDEO_LOCATION_INFO: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::Vnd3gppMcvideoLocationInfo),
+        );
+
+        /// The `vnd.3gpp.mcvideo-mbms-usage-info` MIME subtype.
+        pub const VND_3GPP_MCVIDEO_MBMS_USAGE_INFO: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::Vnd3gppMcvideoMbmsUsageInfo),
+        );
+
+        /// The `vnd.3gpp.mcvideo-service-config` MIME subtype.
+        pub const VND_3GPP_MCVIDEO_SERVICE_CONFIG: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::Vnd3gppMcvideoServiceConfig),
+        );
+
+        /// The `vnd.3gpp.mcvideo-transmission-request` MIME subtype.
+        pub const VND_3GPP_MCVIDEO_TRANSMISSION_REQUEST: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::Vnd3gppMcvideoTransmissionRequest),
+        );
+
+        /// The `vnd.3gpp.mcvideo-ue-config` MIME subtype.
+        pub const VND_3GPP_MCVIDEO_UE_CONFIG: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::Vnd3gppMcvideoUeConfig),
+        );
+
+        /// The `vnd.3gpp.mcvideo-user-profile` MIME subtype.
+        pub const VND_3GPP_MCVIDEO_USER_PROFILE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::Vnd3gppMcvideoUserProfile),
+        );
+
+        /// The `vnd.3gpp.mid-call` MIME subtype.
+        pub const VND_3GPP_MID_CALL: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Vnd3gppMidCall));
+
+        /// The `vnd.3gpp.ngap` MIME subtype.
+        pub const VND_3GPP_NGAP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Vnd3gppNgap));
+
+        /// The `vnd.3gpp.pfcp` MIME subtype.
+        pub const VND_3GPP_PFCP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Vnd3gppPfcp));
+
+        /// The `vnd.3gpp.pic-bw-large` MIME subtype.
+        pub const VND_3GPP_PIC_BW_LARGE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::Vnd3gppPicBwLarge),
+        );
+
+        /// The `vnd.3gpp.pic-bw-small` MIME subtype.
+        pub const VND_3GPP_PIC_BW_SMALL: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::Vnd3gppPicBwSmall),
+        );
+
+        /// The `vnd.3gpp.pic-bw-var` MIME subtype.
+        pub const VND_3GPP_PIC_BW_VAR: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Vnd3gppPicBwVar));
+
+        /// The `vnd.3gpp.s1ap` MIME subtype.
+        pub const VND_3GPP_S1AP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Vnd3gppS1ap));
+
+        /// The `vnd.3gpp.sms` MIME subtype.
+        pub const VND_3GPP_SMS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Vnd3gppSms));
+
+        /// The `vnd.3gpp.srvcc-ext` MIME subtype.
+        pub const VND_3GPP_SRVCC_EXT: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Vnd3gppSrvccExt));
+
+        /// The `vnd.3gpp.SRVCC-info` MIME subtype.
+        pub const VND_3GPP_SRVCC_INFO: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::Vnd3gppSrvccInfo),
+        );
+
+        /// The `vnd.3gpp.state-and-event-info` MIME subtype.
+        pub const VND_3GPP_STATE_AND_EVENT_INFO: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::Vnd3gppStateAndEventInfo),
+        );
+
+        /// The `vnd.3gpp.ussd` MIME subtype.
+        pub const VND_3GPP_USSD: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Vnd3gppUssd));
+
+        /// The `vnd.3gpp2.bcmcsinfo` MIME subtype.
+        pub const VND_3GPP2_BCMCSINFO: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::Vnd3gpp2Bcmcsinfo),
+        );
+
+        /// The `vnd.3gpp2.sms` MIME subtype.
+        pub const VND_3GPP2_SMS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Vnd3gpp2Sms));
+
+        /// The `vnd.3gpp2.tcap` MIME subtype.
+        pub const VND_3GPP2_TCAP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Vnd3gpp2Tcap));
+
+        /// The `vnd.3lightssoftware.imagescal` MIME subtype.
+        pub const VND_3LIGHTSSOFTWARE_IMAGESCAL: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::Vnd3lightssoftwareImagescal),
+        );
+
+        /// The `vnd.3M.Post-it-Notes` MIME subtype.
+        pub const VND_3M_POST_IT_NOTES: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::Vnd3mPostItNotes),
+        );
+
+        /// The `vnd.accpac.simply.aso` MIME subtype.
+        pub const VND_ACCPAC_SIMPLY_ASO: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndAccpacSimplyAso),
+        );
+
+        /// The `vnd.accpac.simply.imp` MIME subtype.
+        pub const VND_ACCPAC_SIMPLY_IMP: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndAccpacSimplyImp),
+        );
+
+        /// The `vnd.acucobol` MIME subtype.
+        pub const VND_ACUCOBOL: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndAcucobol));
+
+        /// The `vnd.acucorp` MIME subtype.
+        pub const VND_ACUCORP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndAcucorp));
+
+        /// The `vnd.adobe.flash.movie` MIME subtype.
+        pub const VND_ADOBE_FLASH_MOVIE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndAdobeFlashMovie),
+        );
+
+        /// The `vnd.adobe.formscentral.fcdt` MIME subtype.
+        pub const VND_ADOBE_FORMSCENTRAL_FCDT: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndAdobeFormscentralFcdt),
+        );
+
+        /// The `vnd.adobe.fxp` MIME subtype.
+        pub const VND_ADOBE_FXP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndAdobeFxp));
+
+        /// The `vnd.adobe.partial-upload` MIME subtype.
+        pub const VND_ADOBE_PARTIAL_UPLOAD: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndAdobePartialUpload),
+        );
+
+        /// The `vnd.adobe.xdp` MIME subtype.
+        pub const VND_ADOBE_XDP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndAdobeXdp));
+
+        /// The `vnd.adobe.xfdf` MIME subtype.
+        pub const VND_ADOBE_XFDF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndAdobeXfdf));
+
+        /// The `vnd.aether.imp` MIME subtype.
+        pub const VND_AETHER_IMP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndAetherImp));
+
+        /// The `vnd.afpc.afplinedata` MIME subtype.
+        pub const VND_AFPC_AFPLINEDATA: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndAfpcAfplinedata),
+        );
+
+        /// The `vnd.afpc.afplinedata-pagedef` MIME subtype.
+        pub const VND_AFPC_AFPLINEDATA_PAGEDEF: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndAfpcAfplinedataPagedef),
+        );
+
+        /// The `vnd.afpc.cmoca-cmresource` MIME subtype.
+        pub const VND_AFPC_CMOCA_CMRESOURCE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndAfpcCmocaCmresource),
+        );
+
+        /// The `vnd.afpc.foca-charset` MIME subtype.
+        pub const VND_AFPC_FOCA_CHARSET: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndAfpcFocaCharset),
+        );
+
+        /// The `vnd.afpc.foca-codedfont` MIME subtype.
+        pub const VND_AFPC_FOCA_CODEDFONT: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndAfpcFocaCodedfont),
+        );
+
+        /// The `vnd.afpc.foca-codepage` MIME subtype.
+        pub const VND_AFPC_FOCA_CODEPAGE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndAfpcFocaCodepage),
+        );
+
+        /// The `vnd.afpc.modca` MIME subtype.
+        pub const VND_AFPC_MODCA: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndAfpcModca));
+
+        /// The `vnd.afpc.modca-formdef` MIME subtype.
+        pub const VND_AFPC_MODCA_FORMDEF: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndAfpcModcaFormdef),
+        );
+
+        /// The `vnd.afpc.modca-mediummap` MIME subtype.
+        pub const VND_AFPC_MODCA_MEDIUMMAP: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndAfpcModcaMediummap),
+        );
+
+        /// The `vnd.afpc.modca-objectcontainer` MIME subtype.
+        pub const VND_AFPC_MODCA_OBJECTCONTAINER: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndAfpcModcaObjectcontainer),
+        );
+
+        /// The `vnd.afpc.modca-overlay` MIME subtype.
+        pub const VND_AFPC_MODCA_OVERLAY: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndAfpcModcaOverlay),
+        );
+
+        /// The `vnd.afpc.modca-pagesegment` MIME subtype.
+        pub const VND_AFPC_MODCA_PAGESEGMENT: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndAfpcModcaPagesegment),
+        );
+
+        /// The `vnd.age` MIME subtype.
+        pub const VND_AGE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndAge));
+
+        /// The `vnd.ah-barcode` MIME subtype.
+        pub const VND_AH_BARCODE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndAhBarcode));
+
+        /// The `vnd.ahead.space` MIME subtype.
+        pub const VND_AHEAD_SPACE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndAheadSpace));
+
+        /// The `vnd.airzip.filesecure.azf` MIME subtype.
+        pub const VND_AIRZIP_FILESECURE_AZF: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndAirzipFilesecureAzf),
+        );
+
+        /// The `vnd.airzip.filesecure.azs` MIME subtype.
+        pub const VND_AIRZIP_FILESECURE_AZS: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndAirzipFilesecureAzs),
+        );
+
+        /// The `vnd.amadeus` MIME subtype.
+        pub const VND_AMADEUS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndAmadeus));
+
+        /// The `vnd.amazon.mobi8-ebook` MIME subtype.
+        pub const VND_AMAZON_MOBI8_EBOOK: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndAmazonMobi8Ebook),
+        );
+
+        /// The `vnd.americandynamics.acc` MIME subtype.
+        pub const VND_AMERICANDYNAMICS_ACC: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndAmericandynamicsAcc),
+        );
+
+        /// The `vnd.amiga.ami` MIME subtype.
+        pub const VND_AMIGA_AMI: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndAmigaAmi));
+
+        /// The `vnd.amundsen.maze` MIME subtype.
+        pub const VND_AMUNDSEN_MAZE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndAmundsenMaze));
+
+        /// The `vnd.android.ota` MIME subtype.
+        pub const VND_ANDROID_OTA: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndAndroidOta));
+
+        /// The `vnd.android.package-archive` MIME subtype.
+        pub const VND_ANDROID_PACKAGE_ARCHIVE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndAndroidPackageArchive),
+        );
+
+        /// The `vnd.anki` MIME subtype.
+        pub const VND_ANKI: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndAnki));
+
+        /// The `vnd.anser-web-certificate-issue-initiation` MIME subtype.
+        pub const VND_ANSER_WEB_CERTIFICATE_ISSUE_INITIATION: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(
+                crate::SubtypeIntern::VndAnserWebCertificateIssueInitiation,
+            ));
+
+        /// The `vnd.anser-web-funds-transfer-initiation` MIME subtype.
+        pub const VND_ANSER_WEB_FUNDS_TRANSFER_INITIATION: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndAnserWebFundsTransferInitiation),
+        );
+
+        /// The `vnd.antix.game-component` MIME subtype.
+        pub const VND_ANTIX_GAME_COMPONENT: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndAntixGameComponent),
+        );
+
+        /// The `vnd.apache.arrow.file` MIME subtype.
+        pub const VND_APACHE_ARROW_FILE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndApacheArrowFile),
+        );
+
+        /// The `vnd.apache.arrow.stream` MIME subtype.
+        pub const VND_APACHE_ARROW_STREAM: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndApacheArrowStream),
+        );
+
+        /// The `vnd.apache.thrift.binary` MIME subtype.
+        pub const VND_APACHE_THRIFT_BINARY: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndApacheThriftBinary),
+        );
+
+        /// The `vnd.apache.thrift.compact` MIME subtype.
+        pub const VND_APACHE_THRIFT_COMPACT: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndApacheThriftCompact),
+        );
+
+        /// The `vnd.apache.thrift.json` MIME subtype.
+        pub const VND_APACHE_THRIFT_JSON: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndApacheThriftJson),
+        );
+
+        /// The `vnd.api` MIME subtype.
+        pub const VND_API: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndApi));
+
+        /// The `vnd.aplextor.warrp` MIME subtype.
+        pub const VND_APLEXTOR_WARRP: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndAplextorWarrp),
+        );
+
+        /// The `vnd.apothekende.reservation` MIME subtype.
+        pub const VND_APOTHEKENDE_RESERVATION: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndApothekendeReservation),
+        );
+
+        /// The `vnd.apple.installer` MIME subtype.
+        pub const VND_APPLE_INSTALLER: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndAppleInstaller),
+        );
+
+        /// The `vnd.apple.keynote` MIME subtype.
+        pub const VND_APPLE_KEYNOTE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndAppleKeynote));
+
+        /// The `vnd.apple.mpegurl` MIME subtype.
+        pub const VND_APPLE_MPEGURL: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndAppleMpegurl));
+
+        /// The `vnd.apple.numbers` MIME subtype.
+        pub const VND_APPLE_NUMBERS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndAppleNumbers));
+
+        /// The `vnd.apple.pages` MIME subtype.
+        pub const VND_APPLE_PAGES: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndApplePages));
+
+        /// The `vnd.aristanetworks.swi` MIME subtype.
+        pub const VND_ARISTANETWORKS_SWI: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndAristanetworksSwi),
+        );
+
+        /// The `vnd.artisan` MIME subtype.
+        pub const VND_ARTISAN: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndArtisan));
+
+        /// The `vnd.artsquare` MIME subtype.
+        pub const VND_ARTSQUARE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndArtsquare));
+
+        /// The `vnd.astraea-software.iota` MIME subtype.
+        pub const VND_ASTRAEA_SOFTWARE_IOTA: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndAstraeaSoftwareIota),
+        );
+
+        /// The `vnd.audiograph` MIME subtype.
+        pub const VND_AUDIOGRAPH: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndAudiograph));
+
+        /// The `vnd.autopackage` MIME subtype.
+        pub const VND_AUTOPACKAGE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndAutopackage));
+
+        /// The `vnd.avalon` MIME subtype.
+        pub const VND_AVALON: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndAvalon));
+
+        /// The `vnd.avistar` MIME subtype.
+        pub const VND_AVISTAR: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndAvistar));
+
+        /// The `vnd.balsamiq.bmml` MIME subtype.
+        pub const VND_BALSAMIQ_BMML: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndBalsamiqBmml));
+
+        /// The `vnd.balsamiq.bmpr` MIME subtype.
+        pub const VND_BALSAMIQ_BMPR: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndBalsamiqBmpr));
+
+        /// The `vnd.banana-accounting` MIME subtype.
+        pub const VND_BANANA_ACCOUNTING: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndBananaAccounting),
+        );
+
+        /// The `vnd.bbf.usp.error` MIME subtype.
+        pub const VND_BBF_USP_ERROR: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndBbfUspError));
+
+        /// The `vnd.bbf.usp.msg` MIME subtype.
+        pub const VND_BBF_USP_MSG: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndBbfUspMsg));
+
+        /// The `vnd.bekitzur-stech` MIME subtype.
+        pub const VND_BEKITZUR_STECH: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndBekitzurStech),
+        );
+
+        /// The `vnd.bint.med-content` MIME subtype.
+        pub const VND_BINT_MED_CONTENT: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndBintMedContent),
+        );
+
+        /// The `vnd.biopax.rdf` MIME subtype.
+        pub const VND_BIOPAX_RDF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndBiopaxRdf));
+
+        /// The `vnd.blink-idb-value-wrapper` MIME subtype.
+        pub const VND_BLINK_IDB_VALUE_WRAPPER: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndBlinkIdbValueWrapper),
+        );
+
+        /// The `vnd.blueice.multipass` MIME subtype.
+        pub const VND_BLUEICE_MULTIPASS: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndBlueiceMultipass),
+        );
+
+        /// The `vnd.bluetooth.ep.oob` MIME subtype.
+        pub const VND_BLUETOOTH_EP_OOB: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndBluetoothEpOob),
+        );
+
+        /// The `vnd.bluetooth.le.oob` MIME subtype.
+        pub const VND_BLUETOOTH_LE_OOB: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndBluetoothLeOob),
+        );
+
+        /// The `vnd.bmi` MIME subtype.
+        pub const VND_BMI: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndBmi));
+
+        /// The `vnd.bpf` MIME subtype.
+        pub const VND_BPF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndBpf));
+
+        /// The `vnd.bpf3` MIME subtype.
+        pub const VND_BPF3: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndBpf3));
+
+        /// The `vnd.businessobjects` MIME subtype.
+        pub const VND_BUSINESSOBJECTS: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndBusinessobjects),
+        );
+
+        /// The `vnd.byu.uapi` MIME subtype.
+        pub const VND_BYU_UAPI: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndByuUapi));
+
+        /// The `vnd.cab-jscript` MIME subtype.
+        pub const VND_CAB_JSCRIPT: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndCabJscript));
+
+        /// The `vnd.canon-cpdl` MIME subtype.
+        pub const VND_CANON_CPDL: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndCanonCpdl));
+
+        /// The `vnd.canon-lips` MIME subtype.
+        pub const VND_CANON_LIPS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndCanonLips));
+
+        /// The `vnd.capasystems-pg` MIME subtype.
+        pub const VND_CAPASYSTEMS_PG: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndCapasystemsPg),
+        );
+
+        /// The `vnd.cendio.thinlinc.clientconf` MIME subtype.
+        pub const VND_CENDIO_THINLINC_CLIENTCONF: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndCendioThinlincClientconf),
+        );
+
+        /// The `vnd.century-systems.tcp_stream` MIME subtype.
+        pub const VND_CENTURY_SYSTEMS_TCP_STREAM: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndCenturySystemsTcpStream),
+        );
+
+        /// The `vnd.chemdraw` MIME subtype.
+        pub const VND_CHEMDRAW: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndChemdraw));
+
+        /// The `vnd.chess-pgn` MIME subtype.
+        pub const VND_CHESS_PGN: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndChessPgn));
+
+        /// The `vnd.chipnuts.karaoke-mmd` MIME subtype.
+        pub const VND_CHIPNUTS_KARAOKE_MMD: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndChipnutsKaraokeMmd),
+        );
+
+        /// The `vnd.ciedi` MIME subtype.
+        pub const VND_CIEDI: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndCiedi));
+
+        /// The `vnd.cinderella` MIME subtype.
+        pub const VND_CINDERELLA: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndCinderella));
+
+        /// The `vnd.cirpack.isdn-ext` MIME subtype.
+        pub const VND_CIRPACK_ISDN_EXT: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndCirpackIsdnExt),
+        );
+
+        /// The `vnd.citationstyles.style` MIME subtype.
+        pub const VND_CITATIONSTYLES_STYLE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndCitationstylesStyle),
+        );
+
+        /// The `vnd.claymore` MIME subtype.
+        pub const VND_CLAYMORE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndClaymore));
+
+        /// The `vnd.cloanto.rp9` MIME subtype.
+        pub const VND_CLOANTO_RP9: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndCloantoRp9));
+
+        /// The `vnd.clonk.c4group` MIME subtype.
+        pub const VND_CLONK_C4GROUP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndClonkC4group));
+
+        /// The `vnd.cluetrust.cartomobile-config` MIME subtype.
+        pub const VND_CLUETRUST_CARTOMOBILE_CONFIG: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndCluetrustCartomobileConfig),
+        );
+
+        /// The `vnd.cluetrust.cartomobile-config-pkg` MIME subtype.
+        pub const VND_CLUETRUST_CARTOMOBILE_CONFIG_PKG: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndCluetrustCartomobileConfigPkg),
+        );
+
+        /// The `vnd.coffeescript` MIME subtype.
+        pub const VND_COFFEESCRIPT: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndCoffeescript));
+
+        /// The `vnd.collabio.xodocuments.document` MIME subtype.
+        pub const VND_COLLABIO_XODOCUMENTS_DOCUMENT: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndCollabioXodocumentsDocument),
+        );
+
+        /// The `vnd.collabio.xodocuments.document-template` MIME subtype.
+        pub const VND_COLLABIO_XODOCUMENTS_DOCUMENT_TEMPLATE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(
+                crate::SubtypeIntern::VndCollabioXodocumentsDocumentTemplate,
+            ));
+
+        /// The `vnd.collabio.xodocuments.presentation` MIME subtype.
+        pub const VND_COLLABIO_XODOCUMENTS_PRESENTATION: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndCollabioXodocumentsPresentation),
+        );
+
+        /// The `vnd.collabio.xodocuments.presentation-template` MIME subtype.
+        pub const VND_COLLABIO_XODOCUMENTS_PRESENTATION_TEMPLATE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(
+                crate::SubtypeIntern::VndCollabioXodocumentsPresentationTemplate,
+            ));
+
+        /// The `vnd.collabio.xodocuments.spreadsheet` MIME subtype.
+        pub const VND_COLLABIO_XODOCUMENTS_SPREADSHEET: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndCollabioXodocumentsSpreadsheet),
+        );
+
+        /// The `vnd.collabio.xodocuments.spreadsheet-template` MIME subtype.
+        pub const VND_COLLABIO_XODOCUMENTS_SPREADSHEET_TEMPLATE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(
+                crate::SubtypeIntern::VndCollabioXodocumentsSpreadsheetTemplate,
+            ));
+
+        /// The `vnd.collection` MIME subtype.
+        pub const VND_COLLECTION: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndCollection));
+
+        /// The `vnd.collection.doc` MIME subtype.
+        pub const VND_COLLECTION_DOC: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndCollectionDoc),
+        );
+
+        /// The `vnd.collection.next` MIME subtype.
+        pub const VND_COLLECTION_NEXT: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndCollectionNext),
+        );
+
+        /// The `vnd.comicbook` MIME subtype.
+        pub const VND_COMICBOOK: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndComicbook));
+
+        /// The `vnd.comicbook-rar` MIME subtype.
+        pub const VND_COMICBOOK_RAR: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndComicbookRar));
+
+        /// The `vnd.commerce-battelle` MIME subtype.
+        pub const VND_COMMERCE_BATTELLE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndCommerceBattelle),
+        );
+
+        /// The `vnd.commonspace` MIME subtype.
+        pub const VND_COMMONSPACE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndCommonspace));
+
+        /// The `vnd.contact.cmsg` MIME subtype.
+        pub const VND_CONTACT_CMSG: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndContactCmsg));
+
+        /// The `vnd.coreos.ignition` MIME subtype.
+        pub const VND_COREOS_IGNITION: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndCoreosIgnition),
+        );
+
+        /// The `vnd.cosmocaller` MIME subtype.
+        pub const VND_COSMOCALLER: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndCosmocaller));
+
+        /// The `vnd.crick.clicker` MIME subtype.
+        pub const VND_CRICK_CLICKER: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndCrickClicker));
+
+        /// The `vnd.crick.clicker.keyboard` MIME subtype.
+        pub const VND_CRICK_CLICKER_KEYBOARD: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndCrickClickerKeyboard),
+        );
+
+        /// The `vnd.crick.clicker.palette` MIME subtype.
+        pub const VND_CRICK_CLICKER_PALETTE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndCrickClickerPalette),
+        );
+
+        /// The `vnd.crick.clicker.template` MIME subtype.
+        pub const VND_CRICK_CLICKER_TEMPLATE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndCrickClickerTemplate),
+        );
+
+        /// The `vnd.crick.clicker.wordbank` MIME subtype.
+        pub const VND_CRICK_CLICKER_WORDBANK: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndCrickClickerWordbank),
+        );
+
+        /// The `vnd.criticaltools.wbs` MIME subtype.
+        pub const VND_CRITICALTOOLS_WBS: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndCriticaltoolsWbs),
+        );
+
+        /// The `vnd.cryptii.pipe` MIME subtype.
+        pub const VND_CRYPTII_PIPE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndCryptiiPipe));
+
+        /// The `vnd.crypto-shade-file` MIME subtype.
+        pub const VND_CRYPTO_SHADE_FILE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndCryptoShadeFile),
+        );
+
+        /// The `vnd.cryptomator.encrypted` MIME subtype.
+        pub const VND_CRYPTOMATOR_ENCRYPTED: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndCryptomatorEncrypted),
+        );
+
+        /// The `vnd.cryptomator.vault` MIME subtype.
+        pub const VND_CRYPTOMATOR_VAULT: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndCryptomatorVault),
+        );
+
+        /// The `vnd.ctc-posml` MIME subtype.
+        pub const VND_CTC_POSML: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndCtcPosml));
+
+        /// The `vnd.ctct.ws` MIME subtype.
+        pub const VND_CTCT_WS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndCtctWs));
+
+        /// The `vnd.cups-pdf` MIME subtype.
+        pub const VND_CUPS_PDF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndCupsPdf));
+
+        /// The `vnd.cups-postscript` MIME subtype.
+        pub const VND_CUPS_POSTSCRIPT: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndCupsPostscript),
+        );
+
+        /// The `vnd.cups-ppd` MIME subtype.
+        pub const VND_CUPS_PPD: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndCupsPpd));
+
+        /// The `vnd.cups-raster` MIME subtype.
+        pub const VND_CUPS_RASTER: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndCupsRaster));
+
+        /// The `vnd.cups-raw` MIME subtype.
+        pub const VND_CUPS_RAW: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndCupsRaw));
+
+        /// The `vnd.curl` MIME subtype.
+        pub const VND_CURL: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndCurl));
+
+        /// The `vnd.cyan.dean.root` MIME subtype.
+        pub const VND_CYAN_DEAN_ROOT: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndCyanDeanRoot));
+
+        /// The `vnd.cybank` MIME subtype.
+        pub const VND_CYBANK: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndCybank));
+
+        /// The `vnd.cyclonedx` MIME subtype.
+        pub const VND_CYCLONEDX: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndCyclonedx));
+
+        /// The `vnd.d2l.coursepackage1p0` MIME subtype.
+        pub const VND_D2L_COURSEPACKAGE1P0: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndD2lCoursepackage1p0),
+        );
+
+        /// The `vnd.d3m-dataset` MIME subtype.
+        pub const VND_D3M_DATASET: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndD3mDataset));
+
+        /// The `vnd.d3m-problem` MIME subtype.
+        pub const VND_D3M_PROBLEM: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndD3mProblem));
+
+        /// The `vnd.dart` MIME subtype.
+        pub const VND_DART: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndDart));
+
+        /// The `vnd.data-vision.rdz` MIME subtype.
+        pub const VND_DATA_VISION_RDZ: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndDataVisionRdz),
+        );
+
+        /// The `vnd.datapackage` MIME subtype.
+        pub const VND_DATAPACKAGE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndDatapackage));
+
+        /// The `vnd.dataresource` MIME subtype.
+        pub const VND_DATARESOURCE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndDataresource));
+
+        /// The `vnd.dbf` MIME subtype.
+        pub const VND_DBF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndDbf));
+
+        /// The `vnd.debian.binary-package` MIME subtype.
+        pub const VND_DEBIAN_BINARY_PACKAGE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndDebianBinaryPackage),
+        );
+
+        /// The `vnd.dece.data` MIME subtype.
+        pub const VND_DECE_DATA: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndDeceData));
+
+        /// The `vnd.dece.ttml` MIME subtype.
+        pub const VND_DECE_TTML: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndDeceTtml));
+
+        /// The `vnd.dece.unspecified` MIME subtype.
+        pub const VND_DECE_UNSPECIFIED: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndDeceUnspecified),
+        );
+
+        /// The `vnd.dece.zip` MIME subtype.
+        pub const VND_DECE_ZIP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndDeceZip));
+
+        /// The `vnd.denovo.fcselayout-link` MIME subtype.
+        pub const VND_DENOVO_FCSELAYOUT_LINK: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndDenovoFcselayoutLink),
+        );
+
+        /// The `vnd.desmume.movie` MIME subtype.
+        pub const VND_DESMUME_MOVIE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndDesmumeMovie));
+
+        /// The `vnd.dir-bi.plate-dl-nosuffix` MIME subtype.
+        pub const VND_DIR_BI_PLATE_DL_NOSUFFIX: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndDirBiPlateDlNosuffix),
+        );
+
+        /// The `vnd.dm.delegation` MIME subtype.
+        pub const VND_DM_DELEGATION: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndDmDelegation));
+
+        /// The `vnd.dna` MIME subtype.
+        pub const VND_DNA: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndDna));
+
+        /// The `vnd.document` MIME subtype.
+        pub const VND_DOCUMENT: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndDocument));
+
+        /// The `vnd.dolby.mobile.1` MIME subtype.
+        pub const VND_DOLBY_MOBILE_1: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndDolbyMobile1));
+
+        /// The `vnd.dolby.mobile.2` MIME subtype.
+        pub const VND_DOLBY_MOBILE_2: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndDolbyMobile2));
+
+        /// The `vnd.doremir.scorecloud-binary-document` MIME subtype.
+        pub const VND_DOREMIR_SCORECLOUD_BINARY_DOCUMENT: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndDoremirScorecloudBinaryDocument),
+        );
+
+        /// The `vnd.dpgraph` MIME subtype.
+        pub const VND_DPGRAPH: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndDpgraph));
+
+        /// The `vnd.dreamfactory` MIME subtype.
+        pub const VND_DREAMFACTORY: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndDreamfactory));
+
+        /// The `vnd.drive` MIME subtype.
+        pub const VND_DRIVE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndDrive));
+
+        /// The `vnd.dtg.local` MIME subtype.
+        pub const VND_DTG_LOCAL: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndDtgLocal));
+
+        /// The `vnd.dtg.local.flash` MIME subtype.
+        pub const VND_DTG_LOCAL_FLASH: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndDtgLocalFlash),
+        );
+
+        /// The `vnd.dtg.local.html` MIME subtype.
+        pub const VND_DTG_LOCAL_HTML: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndDtgLocalHtml));
+
+        /// The `vnd.dvb.ait` MIME subtype.
+        pub const VND_DVB_AIT: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndDvbAit));
+
+        /// The `vnd.dvb.dvbisl` MIME subtype.
+        pub const VND_DVB_DVBISL: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndDvbDvbisl));
+
+        /// The `vnd.dvb.dvbj` MIME subtype.
+        pub const VND_DVB_DVBJ: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndDvbDvbj));
+
+        /// The `vnd.dvb.esgcontainer` MIME subtype.
+        pub const VND_DVB_ESGCONTAINER: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndDvbEsgcontainer),
+        );
+
+        /// The `vnd.dvb.ipdcdftnotifaccess` MIME subtype.
+        pub const VND_DVB_IPDCDFTNOTIFACCESS: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndDvbIpdcdftnotifaccess),
+        );
+
+        /// The `vnd.dvb.ipdcesgaccess` MIME subtype.
+        pub const VND_DVB_IPDCESGACCESS: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndDvbIpdcesgaccess),
+        );
+
+        /// The `vnd.dvb.ipdcesgaccess2` MIME subtype.
+        pub const VND_DVB_IPDCESGACCESS2: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndDvbIpdcesgaccess2),
+        );
+
+        /// The `vnd.dvb.ipdcesgpdd` MIME subtype.
+        pub const VND_DVB_IPDCESGPDD: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndDvbIpdcesgpdd),
+        );
+
+        /// The `vnd.dvb.ipdcroaming` MIME subtype.
+        pub const VND_DVB_IPDCROAMING: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndDvbIpdcroaming),
+        );
+
+        /// The `vnd.dvb.iptv.alfec-base` MIME subtype.
+        pub const VND_DVB_IPTV_ALFEC_BASE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndDvbIptvAlfecBase),
+        );
+
+        /// The `vnd.dvb.iptv.alfec-enhancement` MIME subtype.
+        pub const VND_DVB_IPTV_ALFEC_ENHANCEMENT: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndDvbIptvAlfecEnhancement),
+        );
+
+        /// The `vnd.dvb.notif-aggregate-root` MIME subtype.
+        pub const VND_DVB_NOTIF_AGGREGATE_ROOT: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndDvbNotifAggregateRoot),
+        );
+
+        /// The `vnd.dvb.notif-container` MIME subtype.
+        pub const VND_DVB_NOTIF_CONTAINER: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndDvbNotifContainer),
+        );
+
+        /// The `vnd.dvb.notif-generic` MIME subtype.
+        pub const VND_DVB_NOTIF_GENERIC: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndDvbNotifGeneric),
+        );
+
+        /// The `vnd.dvb.notif-ia-msglist` MIME subtype.
+        pub const VND_DVB_NOTIF_IA_MSGLIST: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndDvbNotifIaMsglist),
+        );
+
+        /// The `vnd.dvb.notif-ia-registration-request` MIME subtype.
+        pub const VND_DVB_NOTIF_IA_REGISTRATION_REQUEST: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndDvbNotifIaRegistrationRequest),
+        );
+
+        /// The `vnd.dvb.notif-ia-registration-response` MIME subtype.
+        pub const VND_DVB_NOTIF_IA_REGISTRATION_RESPONSE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndDvbNotifIaRegistrationResponse),
+        );
+
+        /// The `vnd.dvb.notif-init` MIME subtype.
+        pub const VND_DVB_NOTIF_INIT: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndDvbNotifInit));
+
+        /// The `vnd.dvb.pfr` MIME subtype.
+        pub const VND_DVB_PFR: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndDvbPfr));
+
+        /// The `vnd.dvb.service` MIME subtype.
+        pub const VND_DVB_SERVICE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndDvbService));
+
+        /// The `vnd.dxr` MIME subtype.
+        pub const VND_DXR: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndDxr));
+
+        /// The `vnd.dynageo` MIME subtype.
+        pub const VND_DYNAGEO: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndDynageo));
+
+        /// The `vnd.dzr` MIME subtype.
+        pub const VND_DZR: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndDzr));
+
+        /// The `vnd.easykaraoke.cdgdownload` MIME subtype.
+        pub const VND_EASYKARAOKE_CDGDOWNLOAD: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndEasykaraokeCdgdownload),
+        );
+
+        /// The `vnd.ecdis-update` MIME subtype.
+        pub const VND_ECDIS_UPDATE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndEcdisUpdate));
+
+        /// The `vnd.ecip.rlp` MIME subtype.
+        pub const VND_ECIP_RLP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndEcipRlp));
+
+        /// The `vnd.eclipse.ditto` MIME subtype.
+        pub const VND_ECLIPSE_DITTO: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndEclipseDitto));
+
+        /// The `vnd.ecowin.chart` MIME subtype.
+        pub const VND_ECOWIN_CHART: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndEcowinChart));
+
+        /// The `vnd.ecowin.filerequest` MIME subtype.
+        pub const VND_ECOWIN_FILEREQUEST: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndEcowinFilerequest),
+        );
+
+        /// The `vnd.ecowin.fileupdate` MIME subtype.
+        pub const VND_ECOWIN_FILEUPDATE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndEcowinFileupdate),
+        );
+
+        /// The `vnd.ecowin.series` MIME subtype.
+        pub const VND_ECOWIN_SERIES: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndEcowinSeries));
+
+        /// The `vnd.ecowin.seriesrequest` MIME subtype.
+        pub const VND_ECOWIN_SERIESREQUEST: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndEcowinSeriesrequest),
+        );
+
+        /// The `vnd.ecowin.seriesupdate` MIME subtype.
+        pub const VND_ECOWIN_SERIESUPDATE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndEcowinSeriesupdate),
+        );
+
+        /// The `vnd.efi.img` MIME subtype.
+        pub const VND_EFI_IMG: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndEfiImg));
+
+        /// The `vnd.efi.iso` MIME subtype.
+        pub const VND_EFI_ISO: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndEfiIso));
+
+        /// The `vnd.emclient.accessrequest` MIME subtype.
+        pub const VND_EMCLIENT_ACCESSREQUEST: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndEmclientAccessrequest),
+        );
+
+        /// The `vnd.enliven` MIME subtype.
+        pub const VND_ENLIVEN: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndEnliven));
+
+        /// The `vnd.enphase.envoy` MIME subtype.
+        pub const VND_ENPHASE_ENVOY: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndEnphaseEnvoy));
+
+        /// The `vnd.eprints.data` MIME subtype.
+        pub const VND_EPRINTS_DATA: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndEprintsData));
+
+        /// The `vnd.epson.esf` MIME subtype.
+        pub const VND_EPSON_ESF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndEpsonEsf));
+
+        /// The `vnd.epson.msf` MIME subtype.
+        pub const VND_EPSON_MSF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndEpsonMsf));
+
+        /// The `vnd.epson.quickanime` MIME subtype.
+        pub const VND_EPSON_QUICKANIME: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndEpsonQuickanime),
+        );
+
+        /// The `vnd.epson.salt` MIME subtype.
+        pub const VND_EPSON_SALT: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndEpsonSalt));
+
+        /// The `vnd.epson.ssf` MIME subtype.
+        pub const VND_EPSON_SSF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndEpsonSsf));
+
+        /// The `vnd.ericsson.quickcall` MIME subtype.
+        pub const VND_ERICSSON_QUICKCALL: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndEricssonQuickcall),
+        );
+
+        /// The `vnd.espass-espass` MIME subtype.
+        pub const VND_ESPASS_ESPASS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndEspassEspass));
+
+        /// The `vnd.eszigno3` MIME subtype.
+        pub const VND_ESZIGNO3: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndEszigno3));
+
+        /// The `vnd.etsi.aoc` MIME subtype.
+        pub const VND_ETSI_AOC: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndEtsiAoc));
+
+        /// The `vnd.etsi.asic-e` MIME subtype.
+        pub const VND_ETSI_ASIC_E: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndEtsiAsicE));
+
+        /// The `vnd.etsi.asic-s` MIME subtype.
+        pub const VND_ETSI_ASIC_S: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndEtsiAsicS));
+
+        /// The `vnd.etsi.cug` MIME subtype.
+        pub const VND_ETSI_CUG: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndEtsiCug));
+
+        /// The `vnd.etsi.iptvcommand` MIME subtype.
+        pub const VND_ETSI_IPTVCOMMAND: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndEtsiIptvcommand),
+        );
+
+        /// The `vnd.etsi.iptvdiscovery` MIME subtype.
+        pub const VND_ETSI_IPTVDISCOVERY: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndEtsiIptvdiscovery),
+        );
+
+        /// The `vnd.etsi.iptvprofile` MIME subtype.
+        pub const VND_ETSI_IPTVPROFILE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndEtsiIptvprofile),
+        );
+
+        /// The `vnd.etsi.iptvsad-bc` MIME subtype.
+        pub const VND_ETSI_IPTVSAD_BC: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndEtsiIptvsadBc),
+        );
+
+        /// The `vnd.etsi.iptvsad-cod` MIME subtype.
+        pub const VND_ETSI_IPTVSAD_COD: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndEtsiIptvsadCod),
+        );
+
+        /// The `vnd.etsi.iptvsad-npvr` MIME subtype.
+        pub const VND_ETSI_IPTVSAD_NPVR: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndEtsiIptvsadNpvr),
+        );
+
+        /// The `vnd.etsi.iptvservice` MIME subtype.
+        pub const VND_ETSI_IPTVSERVICE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndEtsiIptvservice),
+        );
+
+        /// The `vnd.etsi.iptvsync` MIME subtype.
+        pub const VND_ETSI_IPTVSYNC: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndEtsiIptvsync));
+
+        /// The `vnd.etsi.iptvueprofile` MIME subtype.
+        pub const VND_ETSI_IPTVUEPROFILE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndEtsiIptvueprofile),
+        );
+
+        /// The `vnd.etsi.mcid` MIME subtype.
+        pub const VND_ETSI_MCID: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndEtsiMcid));
+
+        /// The `vnd.etsi.mheg5` MIME subtype.
+        pub const VND_ETSI_MHEG5: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndEtsiMheg5));
+
+        /// The `vnd.etsi.overload-control-policy-dataset` MIME subtype.
+        pub const VND_ETSI_OVERLOAD_CONTROL_POLICY_DATASET: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(
+                crate::SubtypeIntern::VndEtsiOverloadControlPolicyDataset,
+            ));
+
+        /// The `vnd.etsi.pstn` MIME subtype.
+        pub const VND_ETSI_PSTN: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndEtsiPstn));
+
+        /// The `vnd.etsi.sci` MIME subtype.
+        pub const VND_ETSI_SCI: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndEtsiSci));
+
+        /// The `vnd.etsi.simservs` MIME subtype.
+        pub const VND_ETSI_SIMSERVS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndEtsiSimservs));
+
+        /// The `vnd.etsi.timestamp-token` MIME subtype.
+        pub const VND_ETSI_TIMESTAMP_TOKEN: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndEtsiTimestampToken),
+        );
+
+        /// The `vnd.etsi.tsl` MIME subtype.
+        pub const VND_ETSI_TSL: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndEtsiTsl));
+
+        /// The `vnd.etsi.tsl.der` MIME subtype.
+        pub const VND_ETSI_TSL_DER: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndEtsiTslDer));
+
+        /// The `vnd.eu.kasparian.car` MIME subtype.
+        pub const VND_EU_KASPARIAN_CAR: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndEuKasparianCar),
+        );
+
+        /// The `vnd.eudora.data` MIME subtype.
+        pub const VND_EUDORA_DATA: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndEudoraData));
+
+        /// The `vnd.evolv.ecig.profile` MIME subtype.
+        pub const VND_EVOLV_ECIG_PROFILE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndEvolvEcigProfile),
+        );
+
+        /// The `vnd.evolv.ecig.settings` MIME subtype.
+        pub const VND_EVOLV_ECIG_SETTINGS: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndEvolvEcigSettings),
+        );
+
+        /// The `vnd.evolv.ecig.theme` MIME subtype.
+        pub const VND_EVOLV_ECIG_THEME: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndEvolvEcigTheme),
+        );
+
+        /// The `vnd.exstream-empower` MIME subtype.
+        pub const VND_EXSTREAM_EMPOWER: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndExstreamEmpower),
+        );
+
+        /// The `vnd.exstream-package` MIME subtype.
+        pub const VND_EXSTREAM_PACKAGE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndExstreamPackage),
+        );
+
+        /// The `vnd.ezpix-album` MIME subtype.
+        pub const VND_EZPIX_ALBUM: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndEzpixAlbum));
+
+        /// The `vnd.ezpix-package` MIME subtype.
+        pub const VND_EZPIX_PACKAGE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndEzpixPackage));
+
+        /// The `vnd.f-secure.mobile` MIME subtype.
+        pub const VND_F_SECURE_MOBILE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndFSecureMobile),
+        );
+
+        /// The `vnd.familysearch.gedcom` MIME subtype.
+        pub const VND_FAMILYSEARCH_GEDCOM: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndFamilysearchGedcom),
+        );
+
+        /// The `vnd.fastcopy-disk-image` MIME subtype.
+        pub const VND_FASTCOPY_DISK_IMAGE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndFastcopyDiskImage),
+        );
+
+        /// The `vnd.fdf` MIME subtype.
+        pub const VND_FDF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndFdf));
+
+        /// The `vnd.fdsn.mseed` MIME subtype.
+        pub const VND_FDSN_MSEED: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndFdsnMseed));
+
+        /// The `vnd.fdsn.seed` MIME subtype.
+        pub const VND_FDSN_SEED: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndFdsnSeed));
+
+        /// The `vnd.ffsns` MIME subtype.
+        pub const VND_FFSNS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndFfsns));
+
+        /// The `vnd.ficlab.flb` MIME subtype.
+        pub const VND_FICLAB_FLB: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndFiclabFlb));
+
+        /// The `vnd.filmit.zfc` MIME subtype.
+        pub const VND_FILMIT_ZFC: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndFilmitZfc));
+
+        /// The `vnd.fints` MIME subtype.
+        pub const VND_FINTS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndFints));
+
+        /// The `vnd.firemonkeys.cloudcell` MIME subtype.
+        pub const VND_FIREMONKEYS_CLOUDCELL: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndFiremonkeysCloudcell),
+        );
+
+        /// The `vnd.FloGraphIt` MIME subtype.
+        pub const VND_FLO_GRAPH_IT: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndFloGraphIt));
+
+        /// The `vnd.fluxtime.clip` MIME subtype.
+        pub const VND_FLUXTIME_CLIP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndFluxtimeClip));
+
+        /// The `vnd.font-fontforge-sfd` MIME subtype.
+        pub const VND_FONT_FONTFORGE_SFD: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndFontFontforgeSfd),
+        );
+
+        /// The `vnd.framemaker` MIME subtype.
+        pub const VND_FRAMEMAKER: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndFramemaker));
+
+        /// The `vnd.fsc.weblaunch` MIME subtype.
+        pub const VND_FSC_WEBLAUNCH: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndFscWeblaunch));
+
+        /// The `vnd.fujifilm.fb.docuworks` MIME subtype.
+        pub const VND_FUJIFILM_FB_DOCUWORKS: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndFujifilmFbDocuworks),
+        );
+
+        /// The `vnd.fujifilm.fb.docuworks.binder` MIME subtype.
+        pub const VND_FUJIFILM_FB_DOCUWORKS_BINDER: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndFujifilmFbDocuworksBinder),
+        );
+
+        /// The `vnd.fujifilm.fb.docuworks.container` MIME subtype.
+        pub const VND_FUJIFILM_FB_DOCUWORKS_CONTAINER: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndFujifilmFbDocuworksContainer),
+        );
+
+        /// The `vnd.fujifilm.fb.jfi` MIME subtype.
+        pub const VND_FUJIFILM_FB_JFI: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndFujifilmFbJfi),
+        );
+
+        /// The `vnd.fujitsu.oasys` MIME subtype.
+        pub const VND_FUJITSU_OASYS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndFujitsuOasys));
+
+        /// The `vnd.fujitsu.oasys2` MIME subtype.
+        pub const VND_FUJITSU_OASYS2: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndFujitsuOasys2),
+        );
+
+        /// The `vnd.fujitsu.oasys3` MIME subtype.
+        pub const VND_FUJITSU_OASYS3: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndFujitsuOasys3),
+        );
+
+        /// The `vnd.fujitsu.oasysgp` MIME subtype.
+        pub const VND_FUJITSU_OASYSGP: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndFujitsuOasysgp),
+        );
+
+        /// The `vnd.fujitsu.oasysprs` MIME subtype.
+        pub const VND_FUJITSU_OASYSPRS: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndFujitsuOasysprs),
+        );
+
+        /// The `vnd.fujixerox.ART-EX` MIME subtype.
+        pub const VND_FUJIXEROX_ART_EX: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndFujixeroxArtEx),
+        );
+
+        /// The `vnd.fujixerox.ART4` MIME subtype.
+        pub const VND_FUJIXEROX_ART4: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndFujixeroxArt4),
+        );
+
+        /// The `vnd.fujixerox.ddd` MIME subtype.
+        pub const VND_FUJIXEROX_DDD: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndFujixeroxDdd));
+
+        /// The `vnd.fujixerox.docuworks` MIME subtype.
+        pub const VND_FUJIXEROX_DOCUWORKS: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndFujixeroxDocuworks),
+        );
+
+        /// The `vnd.fujixerox.docuworks.binder` MIME subtype.
+        pub const VND_FUJIXEROX_DOCUWORKS_BINDER: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndFujixeroxDocuworksBinder),
+        );
+
+        /// The `vnd.fujixerox.docuworks.container` MIME subtype.
+        pub const VND_FUJIXEROX_DOCUWORKS_CONTAINER: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndFujixeroxDocuworksContainer),
+        );
+
+        /// The `vnd.fujixerox.HBPL` MIME subtype.
+        pub const VND_FUJIXEROX_HBPL: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndFujixeroxHbpl),
+        );
+
+        /// The `vnd.fut-misnet` MIME subtype.
+        pub const VND_FUT_MISNET: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndFutMisnet));
+
+        /// The `vnd.futoin` MIME subtype.
+        pub const VND_FUTOIN: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndFutoin));
+
+        /// The `vnd.fuzzysheet` MIME subtype.
+        pub const VND_FUZZYSHEET: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndFuzzysheet));
+
+        /// The `vnd.genomatix.tuxedo` MIME subtype.
+        pub const VND_GENOMATIX_TUXEDO: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndGenomatixTuxedo),
+        );
+
+        /// The `vnd.gentics.grd` MIME subtype.
+        pub const VND_GENTICS_GRD: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndGenticsGrd));
+
+        /// The `vnd.geogebra.file` MIME subtype.
+        pub const VND_GEOGEBRA_FILE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndGeogebraFile));
+
+        /// The `vnd.geogebra.slides` MIME subtype.
+        pub const VND_GEOGEBRA_SLIDES: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndGeogebraSlides),
+        );
+
+        /// The `vnd.geogebra.tool` MIME subtype.
+        pub const VND_GEOGEBRA_TOOL: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndGeogebraTool));
+
+        /// The `vnd.geometry-explorer` MIME subtype.
+        pub const VND_GEOMETRY_EXPLORER: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndGeometryExplorer),
+        );
+
+        /// The `vnd.geonext` MIME subtype.
+        pub const VND_GEONEXT: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndGeonext));
+
+        /// The `vnd.geoplan` MIME subtype.
+        pub const VND_GEOPLAN: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndGeoplan));
+
+        /// The `vnd.geospace` MIME subtype.
+        pub const VND_GEOSPACE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndGeospace));
+
+        /// The `vnd.gerber` MIME subtype.
+        pub const VND_GERBER: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndGerber));
+
+        /// The `vnd.globalplatform.card-content-mgt` MIME subtype.
+        pub const VND_GLOBALPLATFORM_CARD_CONTENT_MGT: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndGlobalplatformCardContentMgt),
+        );
+
+        /// The `vnd.globalplatform.card-content-mgt-response` MIME subtype.
+        pub const VND_GLOBALPLATFORM_CARD_CONTENT_MGT_RESPONSE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(
+                crate::SubtypeIntern::VndGlobalplatformCardContentMgtResponse,
+            ));
+
+        /// The `vnd.gnu.taler.exchange` MIME subtype.
+        pub const VND_GNU_TALER_EXCHANGE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndGnuTalerExchange),
+        );
+
+        /// The `vnd.gnu.taler.merchant` MIME subtype.
+        pub const VND_GNU_TALER_MERCHANT: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndGnuTalerMerchant),
+        );
+
+        /// The `vnd.google-earth.kml` MIME subtype.
+        pub const VND_GOOGLE_EARTH_KML: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndGoogleEarthKml),
+        );
+
+        /// The `vnd.google-earth.kmz` MIME subtype.
+        pub const VND_GOOGLE_EARTH_KMZ: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndGoogleEarthKmz),
+        );
+
+        /// The `vnd.gov.sk.e-form` MIME subtype.
+        pub const VND_GOV_SK_E_FORM: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndGovSkEForm));
+
+        /// The `vnd.gov.sk.xmldatacontainer` MIME subtype.
+        pub const VND_GOV_SK_XMLDATACONTAINER: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndGovSkXmldatacontainer),
+        );
+
+        /// The `vnd.grafeq` MIME subtype.
+        pub const VND_GRAFEQ: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndGrafeq));
+
+        /// The `vnd.gridmp` MIME subtype.
+        pub const VND_GRIDMP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndGridmp));
+
+        /// The `vnd.groove-account` MIME subtype.
+        pub const VND_GROOVE_ACCOUNT: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndGrooveAccount),
+        );
+
+        /// The `vnd.groove-help` MIME subtype.
+        pub const VND_GROOVE_HELP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndGrooveHelp));
+
+        /// The `vnd.groove-identity-message` MIME subtype.
+        pub const VND_GROOVE_IDENTITY_MESSAGE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndGrooveIdentityMessage),
+        );
+
+        /// The `vnd.groove-injector` MIME subtype.
+        pub const VND_GROOVE_INJECTOR: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndGrooveInjector),
+        );
+
+        /// The `vnd.groove-tool-message` MIME subtype.
+        pub const VND_GROOVE_TOOL_MESSAGE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndGrooveToolMessage),
+        );
+
+        /// The `vnd.groove-tool-template` MIME subtype.
+        pub const VND_GROOVE_TOOL_TEMPLATE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndGrooveToolTemplate),
+        );
+
+        /// The `vnd.groove-vcard` MIME subtype.
+        pub const VND_GROOVE_VCARD: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndGrooveVcard));
+
+        /// The `vnd.hal` MIME subtype.
+        pub const VND_HAL: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndHal));
+
+        /// The `vnd.HandHeld-Entertainment` MIME subtype.
+        pub const VND_HAND_HELD_ENTERTAINMENT: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndHandHeldEntertainment),
+        );
+
+        /// The `vnd.hbci` MIME subtype.
+        pub const VND_HBCI: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndHbci));
+
+        /// The `vnd.hc` MIME subtype.
+        pub const VND_HC: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndHc));
+
+        /// The `vnd.hcl-bireports` MIME subtype.
+        pub const VND_HCL_BIREPORTS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndHclBireports));
+
+        /// The `vnd.hdt` MIME subtype.
+        pub const VND_HDT: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndHdt));
+
+        /// The `vnd.heroku` MIME subtype.
+        pub const VND_HEROKU: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndHeroku));
+
+        /// The `vnd.hhe.lesson-player` MIME subtype.
+        pub const VND_HHE_LESSON_PLAYER: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndHheLessonPlayer),
+        );
+
+        /// The `vnd.hl7cda` MIME subtype.
+        pub const VND_HL7CDA: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndHl7cda));
+
+        /// The `vnd.hl7v2` MIME subtype.
+        pub const VND_HL7V2: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndHl7v2));
+
+        /// The `vnd.hp-HPGL` MIME subtype.
+        pub const VND_HP_HPGL: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndHpHpgl));
+
+        /// The `vnd.hp-hpid` MIME subtype.
+        pub const VND_HP_HPID: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndHpHpid));
+
+        /// The `vnd.hp-hps` MIME subtype.
+        pub const VND_HP_HPS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndHpHps));
+
+        /// The `vnd.hp-jlyt` MIME subtype.
+        pub const VND_HP_JLYT: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndHpJlyt));
+
+        /// The `vnd.hp-PCL` MIME subtype.
+        pub const VND_HP_PCL: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndHpPcl));
+
+        /// The `vnd.hp-PCLXL` MIME subtype.
+        pub const VND_HP_PCLXL: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndHpPclxl));
+
+        /// The `vnd.httphone` MIME subtype.
+        pub const VND_HTTPHONE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndHttphone));
+
+        /// The `vnd.hydrostatix.sof-data` MIME subtype.
+        pub const VND_HYDROSTATIX_SOF_DATA: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndHydrostatixSofData),
+        );
+
+        /// The `vnd.hyper` MIME subtype.
+        pub const VND_HYPER: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndHyper));
+
+        /// The `vnd.hyper-item` MIME subtype.
+        pub const VND_HYPER_ITEM: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndHyperItem));
+
+        /// The `vnd.hyperdrive` MIME subtype.
+        pub const VND_HYPERDRIVE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndHyperdrive));
+
+        /// The `vnd.hzn-3d-crossword` MIME subtype.
+        pub const VND_HZN_3D_CROSSWORD: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndHzn3dCrossword),
+        );
+
+        /// The `vnd.ibm.electronic-media` MIME subtype.
+        pub const VND_IBM_ELECTRONIC_MEDIA: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndIbmElectronicMedia),
+        );
+
+        /// The `vnd.ibm.MiniPay` MIME subtype.
+        pub const VND_IBM_MINI_PAY: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndIbmMiniPay));
+
+        /// The `vnd.ibm.rights-management` MIME subtype.
+        pub const VND_IBM_RIGHTS_MANAGEMENT: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndIbmRightsManagement),
+        );
+
+        /// The `vnd.ibm.secure-container` MIME subtype.
+        pub const VND_IBM_SECURE_CONTAINER: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndIbmSecureContainer),
+        );
+
+        /// The `vnd.iccprofile` MIME subtype.
+        pub const VND_ICCPROFILE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndIccprofile));
+
+        /// The `vnd.ieee.1905` MIME subtype.
+        pub const VND_IEEE_1905: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndIeee1905));
+
+        /// The `vnd.igloader` MIME subtype.
+        pub const VND_IGLOADER: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndIgloader));
+
+        /// The `vnd.imagemeter.folder` MIME subtype.
+        pub const VND_IMAGEMETER_FOLDER: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndImagemeterFolder),
+        );
+
+        /// The `vnd.imagemeter.image` MIME subtype.
+        pub const VND_IMAGEMETER_IMAGE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndImagemeterImage),
+        );
+
+        /// The `vnd.immervision-ivp` MIME subtype.
+        pub const VND_IMMERVISION_IVP: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndImmervisionIvp),
+        );
+
+        /// The `vnd.immervision-ivu` MIME subtype.
+        pub const VND_IMMERVISION_IVU: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndImmervisionIvu),
+        );
+
+        /// The `vnd.ims.imsccv1p1` MIME subtype.
+        pub const VND_IMS_IMSCCV1P1: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndImsImsccv1p1));
+
+        /// The `vnd.ims.imsccv1p2` MIME subtype.
+        pub const VND_IMS_IMSCCV1P2: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndImsImsccv1p2));
+
+        /// The `vnd.ims.imsccv1p3` MIME subtype.
+        pub const VND_IMS_IMSCCV1P3: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndImsImsccv1p3));
+
+        /// The `vnd.ims.lis.v2.result` MIME subtype.
+        pub const VND_IMS_LIS_V2_RESULT: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndImsLisV2Result),
+        );
+
+        /// The `vnd.ims.lti.v2.toolconsumerprofile` MIME subtype.
+        pub const VND_IMS_LTI_V2_TOOLCONSUMERPROFILE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndImsLtiV2Toolconsumerprofile),
+        );
+
+        /// The `vnd.ims.lti.v2.toolproxy` MIME subtype.
+        pub const VND_IMS_LTI_V2_TOOLPROXY: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndImsLtiV2Toolproxy),
+        );
+
+        /// The `vnd.ims.lti.v2.toolproxy.id` MIME subtype.
+        pub const VND_IMS_LTI_V2_TOOLPROXY_ID: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndImsLtiV2ToolproxyId),
+        );
+
+        /// The `vnd.ims.lti.v2.toolsettings` MIME subtype.
+        pub const VND_IMS_LTI_V2_TOOLSETTINGS: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndImsLtiV2Toolsettings),
+        );
+
+        /// The `vnd.ims.lti.v2.toolsettings.simple` MIME subtype.
+        pub const VND_IMS_LTI_V2_TOOLSETTINGS_SIMPLE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndImsLtiV2ToolsettingsSimple),
+        );
+
+        /// The `vnd.informedcontrol.rms` MIME subtype.
+        pub const VND_INFORMEDCONTROL_RMS: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndInformedcontrolRms),
+        );
+
+        /// The `vnd.infotech.project` MIME subtype.
+        pub const VND_INFOTECH_PROJECT: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndInfotechProject),
+        );
+
+        /// The `vnd.innopath.wamp.notification` MIME subtype.
+        pub const VND_INNOPATH_WAMP_NOTIFICATION: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndInnopathWampNotification),
+        );
+
+        /// The `vnd.insors.igm` MIME subtype.
+        pub const VND_INSORS_IGM: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndInsorsIgm));
+
+        /// The `vnd.intercon.formnet` MIME subtype.
+        pub const VND_INTERCON_FORMNET: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndInterconFormnet),
+        );
+
+        /// The `vnd.intergeo` MIME subtype.
+        pub const VND_INTERGEO: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndIntergeo));
+
+        /// The `vnd.intertrust.digibox` MIME subtype.
+        pub const VND_INTERTRUST_DIGIBOX: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndIntertrustDigibox),
+        );
+
+        /// The `vnd.intertrust.nncp` MIME subtype.
+        pub const VND_INTERTRUST_NNCP: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndIntertrustNncp),
+        );
+
+        /// The `vnd.intu.qbo` MIME subtype.
+        pub const VND_INTU_QBO: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndIntuQbo));
+
+        /// The `vnd.intu.qfx` MIME subtype.
+        pub const VND_INTU_QFX: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndIntuQfx));
+
+        /// The `vnd.iptc.g2.catalogitem` MIME subtype.
+        pub const VND_IPTC_G2_CATALOGITEM: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndIptcG2Catalogitem),
+        );
+
+        /// The `vnd.iptc.g2.conceptitem` MIME subtype.
+        pub const VND_IPTC_G2_CONCEPTITEM: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndIptcG2Conceptitem),
+        );
+
+        /// The `vnd.iptc.g2.knowledgeitem` MIME subtype.
+        pub const VND_IPTC_G2_KNOWLEDGEITEM: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndIptcG2Knowledgeitem),
+        );
+
+        /// The `vnd.iptc.g2.newsitem` MIME subtype.
+        pub const VND_IPTC_G2_NEWSITEM: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndIptcG2Newsitem),
+        );
+
+        /// The `vnd.iptc.g2.newsmessage` MIME subtype.
+        pub const VND_IPTC_G2_NEWSMESSAGE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndIptcG2Newsmessage),
+        );
+
+        /// The `vnd.iptc.g2.packageitem` MIME subtype.
+        pub const VND_IPTC_G2_PACKAGEITEM: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndIptcG2Packageitem),
+        );
+
+        /// The `vnd.iptc.g2.planningitem` MIME subtype.
+        pub const VND_IPTC_G2_PLANNINGITEM: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndIptcG2Planningitem),
+        );
+
+        /// The `vnd.ipunplugged.rcprofile` MIME subtype.
+        pub const VND_IPUNPLUGGED_RCPROFILE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndIpunpluggedRcprofile),
+        );
+
+        /// The `vnd.irepository.package` MIME subtype.
+        pub const VND_IREPOSITORY_PACKAGE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndIrepositoryPackage),
+        );
+
+        /// The `vnd.is-xpr` MIME subtype.
+        pub const VND_IS_XPR: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndIsXpr));
+
+        /// The `vnd.isac.fcs` MIME subtype.
+        pub const VND_ISAC_FCS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndIsacFcs));
+
+        /// The `vnd.iso11783-10` MIME subtype.
+        pub const VND_ISO11783_10: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndIso1178310));
+
+        /// The `vnd.jam` MIME subtype.
+        pub const VND_JAM: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndJam));
+
+        /// The `vnd.japannet-directory-service` MIME subtype.
+        pub const VND_JAPANNET_DIRECTORY_SERVICE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndJapannetDirectoryService),
+        );
+
+        /// The `vnd.japannet-jpnstore-wakeup` MIME subtype.
+        pub const VND_JAPANNET_JPNSTORE_WAKEUP: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndJapannetJpnstoreWakeup),
+        );
+
+        /// The `vnd.japannet-payment-wakeup` MIME subtype.
+        pub const VND_JAPANNET_PAYMENT_WAKEUP: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndJapannetPaymentWakeup),
+        );
+
+        /// The `vnd.japannet-registration` MIME subtype.
+        pub const VND_JAPANNET_REGISTRATION: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndJapannetRegistration),
+        );
+
+        /// The `vnd.japannet-registration-wakeup` MIME subtype.
+        pub const VND_JAPANNET_REGISTRATION_WAKEUP: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndJapannetRegistrationWakeup),
+        );
+
+        /// The `vnd.japannet-setstore-wakeup` MIME subtype.
+        pub const VND_JAPANNET_SETSTORE_WAKEUP: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndJapannetSetstoreWakeup),
+        );
+
+        /// The `vnd.japannet-verification` MIME subtype.
+        pub const VND_JAPANNET_VERIFICATION: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndJapannetVerification),
+        );
+
+        /// The `vnd.japannet-verification-wakeup` MIME subtype.
+        pub const VND_JAPANNET_VERIFICATION_WAKEUP: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndJapannetVerificationWakeup),
+        );
+
+        /// The `vnd.jcp.javame.midlet-rms` MIME subtype.
+        pub const VND_JCP_JAVAME_MIDLET_RMS: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndJcpJavameMidletRms),
+        );
+
+        /// The `vnd.jisp` MIME subtype.
+        pub const VND_JISP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndJisp));
+
+        /// The `vnd.joost.joda-archive` MIME subtype.
+        pub const VND_JOOST_JODA_ARCHIVE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndJoostJodaArchive),
+        );
+
+        /// The `vnd.jsk.isdn-ngn` MIME subtype.
+        pub const VND_JSK_ISDN_NGN: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndJskIsdnNgn));
+
+        /// The `vnd.kahootz` MIME subtype.
+        pub const VND_KAHOOTZ: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndKahootz));
+
+        /// The `vnd.kde.karbon` MIME subtype.
+        pub const VND_KDE_KARBON: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndKdeKarbon));
+
+        /// The `vnd.kde.kchart` MIME subtype.
+        pub const VND_KDE_KCHART: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndKdeKchart));
+
+        /// The `vnd.kde.kformula` MIME subtype.
+        pub const VND_KDE_KFORMULA: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndKdeKformula));
+
+        /// The `vnd.kde.kivio` MIME subtype.
+        pub const VND_KDE_KIVIO: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndKdeKivio));
+
+        /// The `vnd.kde.kontour` MIME subtype.
+        pub const VND_KDE_KONTOUR: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndKdeKontour));
+
+        /// The `vnd.kde.kpresenter` MIME subtype.
+        pub const VND_KDE_KPRESENTER: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndKdeKpresenter),
+        );
+
+        /// The `vnd.kde.kspread` MIME subtype.
+        pub const VND_KDE_KSPREAD: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndKdeKspread));
+
+        /// The `vnd.kde.kword` MIME subtype.
+        pub const VND_KDE_KWORD: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndKdeKword));
+
+        /// The `vnd.kenameaapp` MIME subtype.
+        pub const VND_KENAMEAAPP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndKenameaapp));
+
+        /// The `vnd.kidspiration` MIME subtype.
+        pub const VND_KIDSPIRATION: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndKidspiration));
+
+        /// The `vnd.Kinar` MIME subtype.
+        pub const VND_KINAR: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndKinar));
+
+        /// The `vnd.koan` MIME subtype.
+        pub const VND_KOAN: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndKoan));
+
+        /// The `vnd.kodak-descriptor` MIME subtype.
+        pub const VND_KODAK_DESCRIPTOR: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndKodakDescriptor),
+        );
+
+        /// The `vnd.las` MIME subtype.
+        pub const VND_LAS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndLas));
+
+        /// The `vnd.las.las` MIME subtype.
+        pub const VND_LAS_LAS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndLasLas));
+
+        /// The `vnd.laszip` MIME subtype.
+        pub const VND_LASZIP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndLaszip));
+
+        /// The `vnd.leap` MIME subtype.
+        pub const VND_LEAP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndLeap));
+
+        /// The `vnd.liberty-request` MIME subtype.
+        pub const VND_LIBERTY_REQUEST: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndLibertyRequest),
+        );
+
+        /// The `vnd.llamagraphics.life-balance.desktop` MIME subtype.
+        pub const VND_LLAMAGRAPHICS_LIFE_BALANCE_DESKTOP: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndLlamagraphicsLifeBalanceDesktop),
+        );
+
+        /// The `vnd.llamagraphics.life-balance.exchange` MIME subtype.
+        pub const VND_LLAMAGRAPHICS_LIFE_BALANCE_EXCHANGE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndLlamagraphicsLifeBalanceExchange),
+        );
+
+        /// The `vnd.logipipe.circuit` MIME subtype.
+        pub const VND_LOGIPIPE_CIRCUIT: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndLogipipeCircuit),
+        );
+
+        /// The `vnd.loom` MIME subtype.
+        pub const VND_LOOM: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndLoom));
+
+        /// The `vnd.lotus-1-2-3` MIME subtype.
+        pub const VND_LOTUS_1_2_3: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndLotus123));
+
+        /// The `vnd.lotus-approach` MIME subtype.
+        pub const VND_LOTUS_APPROACH: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndLotusApproach),
+        );
+
+        /// The `vnd.lotus-freelance` MIME subtype.
+        pub const VND_LOTUS_FREELANCE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndLotusFreelance),
+        );
+
+        /// The `vnd.lotus-notes` MIME subtype.
+        pub const VND_LOTUS_NOTES: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndLotusNotes));
+
+        /// The `vnd.lotus-organizer` MIME subtype.
+        pub const VND_LOTUS_ORGANIZER: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndLotusOrganizer),
+        );
+
+        /// The `vnd.lotus-screencam` MIME subtype.
+        pub const VND_LOTUS_SCREENCAM: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndLotusScreencam),
+        );
+
+        /// The `vnd.lotus-wordpro` MIME subtype.
+        pub const VND_LOTUS_WORDPRO: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndLotusWordpro));
+
+        /// The `vnd.macports.portpkg` MIME subtype.
+        pub const VND_MACPORTS_PORTPKG: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndMacportsPortpkg),
+        );
+
+        /// The `vnd.mapbox-vector-tile` MIME subtype.
+        pub const VND_MAPBOX_VECTOR_TILE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndMapboxVectorTile),
+        );
+
+        /// The `vnd.marlin.drm.actiontoken` MIME subtype.
+        pub const VND_MARLIN_DRM_ACTIONTOKEN: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndMarlinDrmActiontoken),
+        );
+
+        /// The `vnd.marlin.drm.conftoken` MIME subtype.
+        pub const VND_MARLIN_DRM_CONFTOKEN: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndMarlinDrmConftoken),
+        );
+
+        /// The `vnd.marlin.drm.license` MIME subtype.
+        pub const VND_MARLIN_DRM_LICENSE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndMarlinDrmLicense),
+        );
+
+        /// The `vnd.marlin.drm.mdcf` MIME subtype.
+        pub const VND_MARLIN_DRM_MDCF: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndMarlinDrmMdcf),
+        );
+
+        /// The `vnd.mason` MIME subtype.
+        pub const VND_MASON: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndMason));
+
+        /// The `vnd.maxar.archive.3tz` MIME subtype.
+        pub const VND_MAXAR_ARCHIVE_3TZ: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndMaxarArchive3tz),
+        );
+
+        /// The `vnd.maxmind.maxmind-db` MIME subtype.
+        pub const VND_MAXMIND_MAXMIND_DB: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndMaxmindMaxmindDb),
+        );
+
+        /// The `vnd.mcd` MIME subtype.
+        pub const VND_MCD: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndMcd));
+
+        /// The `vnd.medcalcdata` MIME subtype.
+        pub const VND_MEDCALCDATA: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndMedcalcdata));
+
+        /// The `vnd.mediastation.cdkey` MIME subtype.
+        pub const VND_MEDIASTATION_CDKEY: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndMediastationCdkey),
+        );
+
+        /// The `vnd.meridian-slingshot` MIME subtype.
+        pub const VND_MERIDIAN_SLINGSHOT: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndMeridianSlingshot),
+        );
+
+        /// The `vnd.MFER` MIME subtype.
+        pub const VND_MFER: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndMfer));
+
+        /// The `vnd.mfmp` MIME subtype.
+        pub const VND_MFMP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndMfmp));
+
+        /// The `vnd.micro` MIME subtype.
+        pub const VND_MICRO: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndMicro));
+
+        /// The `vnd.micrografx.flo` MIME subtype.
+        pub const VND_MICROGRAFX_FLO: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndMicrografxFlo),
+        );
+
+        /// The `vnd.micrografx.igx` MIME subtype.
+        pub const VND_MICROGRAFX_IGX: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndMicrografxIgx),
+        );
+
+        /// The `vnd.microsoft.portable-executable` MIME subtype.
+        pub const VND_MICROSOFT_PORTABLE_EXECUTABLE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndMicrosoftPortableExecutable),
+        );
+
+        /// The `vnd.microsoft.windows.thumbnail-cache` MIME subtype.
+        pub const VND_MICROSOFT_WINDOWS_THUMBNAIL_CACHE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndMicrosoftWindowsThumbnailCache),
+        );
+
+        /// The `vnd.miele` MIME subtype.
+        pub const VND_MIELE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndMiele));
+
+        /// The `vnd.mif` MIME subtype.
+        pub const VND_MIF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndMif));
+
+        /// The `vnd.minisoft-hp3000-save` MIME subtype.
+        pub const VND_MINISOFT_HP3000_SAVE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndMinisoftHp3000Save),
+        );
+
+        /// The `vnd.mitsubishi.misty-guard.trustweb` MIME subtype.
+        pub const VND_MITSUBISHI_MISTY_GUARD_TRUSTWEB: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndMitsubishiMistyGuardTrustweb),
+        );
+
+        /// The `vnd.Mobius.DAF` MIME subtype.
+        pub const VND_MOBIUS_DAF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndMobiusDaf));
+
+        /// The `vnd.Mobius.DIS` MIME subtype.
+        pub const VND_MOBIUS_DIS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndMobiusDis));
+
+        /// The `vnd.Mobius.MBK` MIME subtype.
+        pub const VND_MOBIUS_MBK: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndMobiusMbk));
+
+        /// The `vnd.Mobius.MQY` MIME subtype.
+        pub const VND_MOBIUS_MQY: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndMobiusMqy));
+
+        /// The `vnd.Mobius.MSL` MIME subtype.
+        pub const VND_MOBIUS_MSL: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndMobiusMsl));
+
+        /// The `vnd.Mobius.PLC` MIME subtype.
+        pub const VND_MOBIUS_PLC: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndMobiusPlc));
+
+        /// The `vnd.Mobius.TXF` MIME subtype.
+        pub const VND_MOBIUS_TXF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndMobiusTxf));
+
+        /// The `vnd.mophun.application` MIME subtype.
+        pub const VND_MOPHUN_APPLICATION: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndMophunApplication),
+        );
+
+        /// The `vnd.mophun.certificate` MIME subtype.
+        pub const VND_MOPHUN_CERTIFICATE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndMophunCertificate),
+        );
+
+        /// The `vnd.motorola.flexsuite` MIME subtype.
+        pub const VND_MOTOROLA_FLEXSUITE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndMotorolaFlexsuite),
+        );
+
+        /// The `vnd.motorola.flexsuite.adsi` MIME subtype.
+        pub const VND_MOTOROLA_FLEXSUITE_ADSI: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndMotorolaFlexsuiteAdsi),
+        );
+
+        /// The `vnd.motorola.flexsuite.fis` MIME subtype.
+        pub const VND_MOTOROLA_FLEXSUITE_FIS: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndMotorolaFlexsuiteFis),
+        );
+
+        /// The `vnd.motorola.flexsuite.gotap` MIME subtype.
+        pub const VND_MOTOROLA_FLEXSUITE_GOTAP: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndMotorolaFlexsuiteGotap),
+        );
+
+        /// The `vnd.motorola.flexsuite.kmr` MIME subtype.
+        pub const VND_MOTOROLA_FLEXSUITE_KMR: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndMotorolaFlexsuiteKmr),
+        );
+
+        /// The `vnd.motorola.flexsuite.ttc` MIME subtype.
+        pub const VND_MOTOROLA_FLEXSUITE_TTC: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndMotorolaFlexsuiteTtc),
+        );
+
+        /// The `vnd.motorola.flexsuite.wem` MIME subtype.
+        pub const VND_MOTOROLA_FLEXSUITE_WEM: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndMotorolaFlexsuiteWem),
+        );
+
+        /// The `vnd.motorola.iprm` MIME subtype.
+        pub const VND_MOTOROLA_IPRM: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndMotorolaIprm));
+
+        /// The `vnd.mozilla.xul` MIME subtype.
+        pub const VND_MOZILLA_XUL: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndMozillaXul));
+
+        /// The `vnd.ms-3mfdocument` MIME subtype.
+        pub const VND_MS_3MFDOCUMENT: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndMs3mfdocument),
+        );
+
+        /// The `vnd.ms-artgalry` MIME subtype.
+        pub const VND_MS_ARTGALRY: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndMsArtgalry));
+
+        /// The `vnd.ms-asf` MIME subtype.
+        pub const VND_MS_ASF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndMsAsf));
+
+        /// The `vnd.ms-cab-compressed` MIME subtype.
+        pub const VND_MS_CAB_COMPRESSED: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndMsCabCompressed),
+        );
+
+        /// The `vnd.ms-excel` MIME subtype.
+        pub const VND_MS_EXCEL: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndMsExcel));
+
+        /// The `vnd.ms-excel.addin.macroEnabled.12` MIME subtype.
+        pub const VND_MS_EXCEL_ADDIN_MACRO_ENABLED_12: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndMsExcelAddinMacroEnabled12),
+        );
+
+        /// The `vnd.ms-excel.sheet.binary.macroEnabled.12` MIME subtype.
+        pub const VND_MS_EXCEL_SHEET_BINARY_MACRO_ENABLED_12: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(
+                crate::SubtypeIntern::VndMsExcelSheetBinaryMacroEnabled12,
+            ));
+
+        /// The `vnd.ms-excel.sheet.macroEnabled.12` MIME subtype.
+        pub const VND_MS_EXCEL_SHEET_MACRO_ENABLED_12: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndMsExcelSheetMacroEnabled12),
+        );
+
+        /// The `vnd.ms-excel.template.macroEnabled.12` MIME subtype.
+        pub const VND_MS_EXCEL_TEMPLATE_MACRO_ENABLED_12: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndMsExcelTemplateMacroEnabled12),
+        );
+
+        /// The `vnd.ms-fontobject` MIME subtype.
+        pub const VND_MS_FONTOBJECT: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndMsFontobject));
+
+        /// The `vnd.ms-htmlhelp` MIME subtype.
+        pub const VND_MS_HTMLHELP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndMsHtmlhelp));
+
+        /// The `vnd.ms-ims` MIME subtype.
+        pub const VND_MS_IMS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndMsIms));
+
+        /// The `vnd.ms-lrm` MIME subtype.
+        pub const VND_MS_LRM: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndMsLrm));
+
+        /// The `vnd.ms-office.activeX` MIME subtype.
+        pub const VND_MS_OFFICE_ACTIVE_X: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndMsOfficeActiveX),
+        );
+
+        /// The `vnd.ms-officetheme` MIME subtype.
+        pub const VND_MS_OFFICETHEME: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndMsOfficetheme),
+        );
+
+        /// The `vnd.ms-pki.seccat` MIME subtype.
+        pub const VND_MS_PKI_SECCAT: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndMsPkiSeccat));
+
+        /// The `vnd.ms-playready.initiator` MIME subtype.
+        pub const VND_MS_PLAYREADY_INITIATOR: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndMsPlayreadyInitiator),
+        );
+
+        /// The `vnd.ms-powerpoint` MIME subtype.
+        pub const VND_MS_POWERPOINT: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndMsPowerpoint));
+
+        /// The `vnd.ms-powerpoint.addin.macroEnabled.12` MIME subtype.
+        pub const VND_MS_POWERPOINT_ADDIN_MACRO_ENABLED_12: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(
+                crate::SubtypeIntern::VndMsPowerpointAddinMacroEnabled12,
+            ));
+
+        /// The `vnd.ms-powerpoint.presentation.macroEnabled.12` MIME subtype.
+        pub const VND_MS_POWERPOINT_PRESENTATION_MACRO_ENABLED_12: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(
+                crate::SubtypeIntern::VndMsPowerpointPresentationMacroEnabled12,
+            ));
+
+        /// The `vnd.ms-powerpoint.slide.macroEnabled.12` MIME subtype.
+        pub const VND_MS_POWERPOINT_SLIDE_MACRO_ENABLED_12: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(
+                crate::SubtypeIntern::VndMsPowerpointSlideMacroEnabled12,
+            ));
+
+        /// The `vnd.ms-powerpoint.slideshow.macroEnabled.12` MIME subtype.
+        pub const VND_MS_POWERPOINT_SLIDESHOW_MACRO_ENABLED_12: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(
+                crate::SubtypeIntern::VndMsPowerpointSlideshowMacroEnabled12,
+            ));
+
+        /// The `vnd.ms-powerpoint.template.macroEnabled.12` MIME subtype.
+        pub const VND_MS_POWERPOINT_TEMPLATE_MACRO_ENABLED_12: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(
+                crate::SubtypeIntern::VndMsPowerpointTemplateMacroEnabled12,
+            ));
+
+        /// The `vnd.ms-PrintDeviceCapabilities` MIME subtype.
+        pub const VND_MS_PRINT_DEVICE_CAPABILITIES: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndMsPrintDeviceCapabilities),
+        );
+
+        /// The `vnd.ms-PrintSchemaTicket` MIME subtype.
+        pub const VND_MS_PRINT_SCHEMA_TICKET: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndMsPrintSchemaTicket),
+        );
+
+        /// The `vnd.ms-project` MIME subtype.
+        pub const VND_MS_PROJECT: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndMsProject));
+
+        /// The `vnd.ms-tnef` MIME subtype.
+        pub const VND_MS_TNEF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndMsTnef));
+
+        /// The `vnd.ms-windows.devicepairing` MIME subtype.
+        pub const VND_MS_WINDOWS_DEVICEPAIRING: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndMsWindowsDevicepairing),
+        );
+
+        /// The `vnd.ms-windows.nwprinting.oob` MIME subtype.
+        pub const VND_MS_WINDOWS_NWPRINTING_OOB: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndMsWindowsNwprintingOob),
+        );
+
+        /// The `vnd.ms-windows.printerpairing` MIME subtype.
+        pub const VND_MS_WINDOWS_PRINTERPAIRING: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndMsWindowsPrinterpairing),
+        );
+
+        /// The `vnd.ms-windows.wsd.oob` MIME subtype.
+        pub const VND_MS_WINDOWS_WSD_OOB: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndMsWindowsWsdOob),
+        );
+
+        /// The `vnd.ms-wmdrm.lic-chlg-req` MIME subtype.
+        pub const VND_MS_WMDRM_LIC_CHLG_REQ: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndMsWmdrmLicChlgReq),
+        );
+
+        /// The `vnd.ms-wmdrm.lic-resp` MIME subtype.
+        pub const VND_MS_WMDRM_LIC_RESP: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndMsWmdrmLicResp),
+        );
+
+        /// The `vnd.ms-wmdrm.meter-chlg-req` MIME subtype.
+        pub const VND_MS_WMDRM_METER_CHLG_REQ: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndMsWmdrmMeterChlgReq),
+        );
+
+        /// The `vnd.ms-wmdrm.meter-resp` MIME subtype.
+        pub const VND_MS_WMDRM_METER_RESP: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndMsWmdrmMeterResp),
+        );
+
+        /// The `vnd.ms-word.document.macroEnabled.12` MIME subtype.
+        pub const VND_MS_WORD_DOCUMENT_MACRO_ENABLED_12: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndMsWordDocumentMacroEnabled12),
+        );
+
+        /// The `vnd.ms-word.template.macroEnabled.12` MIME subtype.
+        pub const VND_MS_WORD_TEMPLATE_MACRO_ENABLED_12: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndMsWordTemplateMacroEnabled12),
+        );
+
+        /// The `vnd.ms-works` MIME subtype.
+        pub const VND_MS_WORKS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndMsWorks));
+
+        /// The `vnd.ms-wpl` MIME subtype.
+        pub const VND_MS_WPL: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndMsWpl));
+
+        /// The `vnd.ms-xpsdocument` MIME subtype.
+        pub const VND_MS_XPSDOCUMENT: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndMsXpsdocument),
+        );
+
+        /// The `vnd.msa-disk-image` MIME subtype.
+        pub const VND_MSA_DISK_IMAGE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndMsaDiskImage));
+
+        /// The `vnd.mseq` MIME subtype.
+        pub const VND_MSEQ: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndMseq));
+
+        /// The `vnd.msign` MIME subtype.
+        pub const VND_MSIGN: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndMsign));
+
+        /// The `vnd.multiad.creator` MIME subtype.
+        pub const VND_MULTIAD_CREATOR: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndMultiadCreator),
+        );
+
+        /// The `vnd.multiad.creator.cif` MIME subtype.
+        pub const VND_MULTIAD_CREATOR_CIF: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndMultiadCreatorCif),
+        );
+
+        /// The `vnd.music-niff` MIME subtype.
+        pub const VND_MUSIC_NIFF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndMusicNiff));
+
+        /// The `vnd.musician` MIME subtype.
+        pub const VND_MUSICIAN: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndMusician));
+
+        /// The `vnd.muvee.style` MIME subtype.
+        pub const VND_MUVEE_STYLE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndMuveeStyle));
+
+        /// The `vnd.mynfc` MIME subtype.
+        pub const VND_MYNFC: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndMynfc));
+
+        /// The `vnd.nacamar.ybrid` MIME subtype.
+        pub const VND_NACAMAR_YBRID: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndNacamarYbrid));
+
+        /// The `vnd.ncd.control` MIME subtype.
+        pub const VND_NCD_CONTROL: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndNcdControl));
+
+        /// The `vnd.ncd.reference` MIME subtype.
+        pub const VND_NCD_REFERENCE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndNcdReference));
+
+        /// The `vnd.nearst.inv` MIME subtype.
+        pub const VND_NEARST_INV: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndNearstInv));
+
+        /// The `vnd.nebumind.line` MIME subtype.
+        pub const VND_NEBUMIND_LINE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndNebumindLine));
+
+        /// The `vnd.nervana` MIME subtype.
+        pub const VND_NERVANA: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndNervana));
+
+        /// The `vnd.netfpx` MIME subtype.
+        pub const VND_NETFPX: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndNetfpx));
+
+        /// The `vnd.neurolanguage.nlu` MIME subtype.
+        pub const VND_NEUROLANGUAGE_NLU: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndNeurolanguageNlu),
+        );
+
+        /// The `vnd.nimn` MIME subtype.
+        pub const VND_NIMN: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndNimn));
+
+        /// The `vnd.nintendo.nitro.rom` MIME subtype.
+        pub const VND_NINTENDO_NITRO_ROM: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndNintendoNitroRom),
+        );
+
+        /// The `vnd.nintendo.snes.rom` MIME subtype.
+        pub const VND_NINTENDO_SNES_ROM: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndNintendoSnesRom),
+        );
+
+        /// The `vnd.nitf` MIME subtype.
+        pub const VND_NITF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndNitf));
+
+        /// The `vnd.noblenet-directory` MIME subtype.
+        pub const VND_NOBLENET_DIRECTORY: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndNoblenetDirectory),
+        );
+
+        /// The `vnd.noblenet-sealer` MIME subtype.
+        pub const VND_NOBLENET_SEALER: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndNoblenetSealer),
+        );
+
+        /// The `vnd.noblenet-web` MIME subtype.
+        pub const VND_NOBLENET_WEB: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndNoblenetWeb));
+
+        /// The `vnd.nokia.catalogs` MIME subtype.
+        pub const VND_NOKIA_CATALOGS: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndNokiaCatalogs),
+        );
+
+        /// The `vnd.nokia.conml` MIME subtype.
+        pub const VND_NOKIA_CONML: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndNokiaConml));
+
+        /// The `vnd.nokia.iptv.config` MIME subtype.
+        pub const VND_NOKIA_IPTV_CONFIG: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndNokiaIptvConfig),
+        );
+
+        /// The `vnd.nokia.iSDS-radio-presets` MIME subtype.
+        pub const VND_NOKIA_I_SDS_RADIO_PRESETS: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndNokiaISdsRadioPresets),
+        );
+
+        /// The `vnd.nokia.landmark` MIME subtype.
+        pub const VND_NOKIA_LANDMARK: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndNokiaLandmark),
+        );
+
+        /// The `vnd.nokia.landmarkcollection` MIME subtype.
+        pub const VND_NOKIA_LANDMARKCOLLECTION: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndNokiaLandmarkcollection),
+        );
+
+        /// The `vnd.nokia.n-gage.ac` MIME subtype.
+        pub const VND_NOKIA_N_GAGE_AC: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndNokiaNGageAc));
+
+        /// The `vnd.nokia.n-gage.data` MIME subtype.
+        pub const VND_NOKIA_N_GAGE_DATA: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndNokiaNGageData),
+        );
+
+        /// The `vnd.nokia.ncd` MIME subtype.
+        pub const VND_NOKIA_NCD: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndNokiaNcd));
+
+        /// The `vnd.nokia.pcd` MIME subtype.
+        pub const VND_NOKIA_PCD: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndNokiaPcd));
+
+        /// The `vnd.nokia.radio-preset` MIME subtype.
+        pub const VND_NOKIA_RADIO_PRESET: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndNokiaRadioPreset),
+        );
+
+        /// The `vnd.nokia.radio-presets` MIME subtype.
+        pub const VND_NOKIA_RADIO_PRESETS: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndNokiaRadioPresets),
+        );
+
+        /// The `vnd.novadigm.EDM` MIME subtype.
+        pub const VND_NOVADIGM_EDM: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndNovadigmEdm));
+
+        /// The `vnd.novadigm.EDX` MIME subtype.
+        pub const VND_NOVADIGM_EDX: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndNovadigmEdx));
+
+        /// The `vnd.novadigm.EXT` MIME subtype.
+        pub const VND_NOVADIGM_EXT: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndNovadigmExt));
+
+        /// The `vnd.ntt-local.content-share` MIME subtype.
+        pub const VND_NTT_LOCAL_CONTENT_SHARE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndNttLocalContentShare),
+        );
+
+        /// The `vnd.ntt-local.file-transfer` MIME subtype.
+        pub const VND_NTT_LOCAL_FILE_TRANSFER: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndNttLocalFileTransfer),
+        );
+
+        /// The `vnd.ntt-local.ogw_remote-access` MIME subtype.
+        pub const VND_NTT_LOCAL_OGW_REMOTE_ACCESS: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndNttLocalOgwRemoteAccess),
+        );
+
+        /// The `vnd.ntt-local.sip-ta_remote` MIME subtype.
+        pub const VND_NTT_LOCAL_SIP_TA_REMOTE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndNttLocalSipTaRemote),
+        );
+
+        /// The `vnd.ntt-local.sip-ta_tcp_stream` MIME subtype.
+        pub const VND_NTT_LOCAL_SIP_TA_TCP_STREAM: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndNttLocalSipTaTcpStream),
+        );
+
+        /// The `vnd.oasis.opendocument.chart` MIME subtype.
+        pub const VND_OASIS_OPENDOCUMENT_CHART: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndOasisOpendocumentChart),
+        );
+
+        /// The `vnd.oasis.opendocument.chart-template` MIME subtype.
+        pub const VND_OASIS_OPENDOCUMENT_CHART_TEMPLATE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndOasisOpendocumentChartTemplate),
+        );
+
+        /// The `vnd.oasis.opendocument.database` MIME subtype.
+        pub const VND_OASIS_OPENDOCUMENT_DATABASE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndOasisOpendocumentDatabase),
+        );
+
+        /// The `vnd.oasis.opendocument.formula` MIME subtype.
+        pub const VND_OASIS_OPENDOCUMENT_FORMULA: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndOasisOpendocumentFormula),
+        );
+
+        /// The `vnd.oasis.opendocument.formula-template` MIME subtype.
+        pub const VND_OASIS_OPENDOCUMENT_FORMULA_TEMPLATE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndOasisOpendocumentFormulaTemplate),
+        );
+
+        /// The `vnd.oasis.opendocument.graphics` MIME subtype.
+        pub const VND_OASIS_OPENDOCUMENT_GRAPHICS: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndOasisOpendocumentGraphics),
+        );
+
+        /// The `vnd.oasis.opendocument.graphics-template` MIME subtype.
+        pub const VND_OASIS_OPENDOCUMENT_GRAPHICS_TEMPLATE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(
+                crate::SubtypeIntern::VndOasisOpendocumentGraphicsTemplate,
+            ));
+
+        /// The `vnd.oasis.opendocument.image` MIME subtype.
+        pub const VND_OASIS_OPENDOCUMENT_IMAGE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndOasisOpendocumentImage),
+        );
+
+        /// The `vnd.oasis.opendocument.image-template` MIME subtype.
+        pub const VND_OASIS_OPENDOCUMENT_IMAGE_TEMPLATE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndOasisOpendocumentImageTemplate),
+        );
+
+        /// The `vnd.oasis.opendocument.presentation` MIME subtype.
+        pub const VND_OASIS_OPENDOCUMENT_PRESENTATION: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndOasisOpendocumentPresentation),
+        );
+
+        /// The `vnd.oasis.opendocument.presentation-template` MIME subtype.
+        pub const VND_OASIS_OPENDOCUMENT_PRESENTATION_TEMPLATE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(
+                crate::SubtypeIntern::VndOasisOpendocumentPresentationTemplate,
+            ));
+
+        /// The `vnd.oasis.opendocument.spreadsheet` MIME subtype.
+        pub const VND_OASIS_OPENDOCUMENT_SPREADSHEET: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndOasisOpendocumentSpreadsheet),
+        );
+
+        /// The `vnd.oasis.opendocument.spreadsheet-template` MIME subtype.
+        pub const VND_OASIS_OPENDOCUMENT_SPREADSHEET_TEMPLATE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(
+                crate::SubtypeIntern::VndOasisOpendocumentSpreadsheetTemplate,
+            ));
+
+        /// The `vnd.oasis.opendocument.text` MIME subtype.
+        pub const VND_OASIS_OPENDOCUMENT_TEXT: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndOasisOpendocumentText),
+        );
+
+        /// The `vnd.oasis.opendocument.text-master` MIME subtype.
+        pub const VND_OASIS_OPENDOCUMENT_TEXT_MASTER: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndOasisOpendocumentTextMaster),
+        );
+
+        /// The `vnd.oasis.opendocument.text-template` MIME subtype.
+        pub const VND_OASIS_OPENDOCUMENT_TEXT_TEMPLATE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndOasisOpendocumentTextTemplate),
+        );
+
+        /// The `vnd.oasis.opendocument.text-web` MIME subtype.
+        pub const VND_OASIS_OPENDOCUMENT_TEXT_WEB: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndOasisOpendocumentTextWeb),
+        );
+
+        /// The `vnd.obn` MIME subtype.
+        pub const VND_OBN: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndObn));
+
+        /// The `vnd.ocf` MIME subtype.
+        pub const VND_OCF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndOcf));
+
+        /// The `vnd.oci.image.manifest.v1` MIME subtype.
+        pub const VND_OCI_IMAGE_MANIFEST_V1: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndOciImageManifestV1),
+        );
+
+        /// The `vnd.oftn.l10n` MIME subtype.
+        pub const VND_OFTN_L10N: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndOftnL10n));
+
+        /// The `vnd.oipf.contentaccessdownload` MIME subtype.
+        pub const VND_OIPF_CONTENTACCESSDOWNLOAD: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndOipfContentaccessdownload),
+        );
+
+        /// The `vnd.oipf.contentaccessstreaming` MIME subtype.
+        pub const VND_OIPF_CONTENTACCESSSTREAMING: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndOipfContentaccessstreaming),
+        );
+
+        /// The `vnd.oipf.cspg-hexbinary` MIME subtype.
+        pub const VND_OIPF_CSPG_HEXBINARY: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndOipfCspgHexbinary),
+        );
+
+        /// The `vnd.oipf.dae.svg` MIME subtype.
+        pub const VND_OIPF_DAE_SVG: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndOipfDaeSvg));
+
+        /// The `vnd.oipf.dae.xhtml` MIME subtype.
+        pub const VND_OIPF_DAE_XHTML: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndOipfDaeXhtml));
+
+        /// The `vnd.oipf.mippvcontrolmessage` MIME subtype.
+        pub const VND_OIPF_MIPPVCONTROLMESSAGE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndOipfMippvcontrolmessage),
+        );
+
+        /// The `vnd.oipf.pae.gem` MIME subtype.
+        pub const VND_OIPF_PAE_GEM: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndOipfPaeGem));
+
+        /// The `vnd.oipf.spdiscovery` MIME subtype.
+        pub const VND_OIPF_SPDISCOVERY: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndOipfSpdiscovery),
+        );
+
+        /// The `vnd.oipf.spdlist` MIME subtype.
+        pub const VND_OIPF_SPDLIST: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndOipfSpdlist));
+
+        /// The `vnd.oipf.ueprofile` MIME subtype.
+        pub const VND_OIPF_UEPROFILE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndOipfUeprofile),
+        );
+
+        /// The `vnd.oipf.userprofile` MIME subtype.
+        pub const VND_OIPF_USERPROFILE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndOipfUserprofile),
+        );
+
+        /// The `vnd.olpc-sugar` MIME subtype.
+        pub const VND_OLPC_SUGAR: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndOlpcSugar));
+
+        /// The `vnd.oma-scws-config` MIME subtype.
+        pub const VND_OMA_SCWS_CONFIG: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndOmaScwsConfig),
+        );
+
+        /// The `vnd.oma-scws-http-request` MIME subtype.
+        pub const VND_OMA_SCWS_HTTP_REQUEST: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndOmaScwsHttpRequest),
+        );
+
+        /// The `vnd.oma-scws-http-response` MIME subtype.
+        pub const VND_OMA_SCWS_HTTP_RESPONSE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndOmaScwsHttpResponse),
+        );
+
+        /// The `vnd.oma.bcast.associated-procedure-parameter` MIME subtype.
+        pub const VND_OMA_BCAST_ASSOCIATED_PROCEDURE_PARAMETER: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(
+                crate::SubtypeIntern::VndOmaBcastAssociatedProcedureParameter,
+            ));
+
+        /// The `vnd.oma.bcast.drm-trigger` MIME subtype.
+        pub const VND_OMA_BCAST_DRM_TRIGGER: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndOmaBcastDrmTrigger),
+        );
+
+        /// The `vnd.oma.bcast.imd` MIME subtype.
+        pub const VND_OMA_BCAST_IMD: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndOmaBcastImd));
+
+        /// The `vnd.oma.bcast.ltkm` MIME subtype.
+        pub const VND_OMA_BCAST_LTKM: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndOmaBcastLtkm));
+
+        /// The `vnd.oma.bcast.notification` MIME subtype.
+        pub const VND_OMA_BCAST_NOTIFICATION: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndOmaBcastNotification),
+        );
+
+        /// The `vnd.oma.bcast.provisioningtrigger` MIME subtype.
+        pub const VND_OMA_BCAST_PROVISIONINGTRIGGER: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndOmaBcastProvisioningtrigger),
+        );
+
+        /// The `vnd.oma.bcast.sgboot` MIME subtype.
+        pub const VND_OMA_BCAST_SGBOOT: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndOmaBcastSgboot),
+        );
+
+        /// The `vnd.oma.bcast.sgdd` MIME subtype.
+        pub const VND_OMA_BCAST_SGDD: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndOmaBcastSgdd));
+
+        /// The `vnd.oma.bcast.sgdu` MIME subtype.
+        pub const VND_OMA_BCAST_SGDU: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndOmaBcastSgdu));
+
+        /// The `vnd.oma.bcast.simple-symbol-container` MIME subtype.
+        pub const VND_OMA_BCAST_SIMPLE_SYMBOL_CONTAINER: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndOmaBcastSimpleSymbolContainer),
+        );
+
+        /// The `vnd.oma.bcast.smartcard-trigger` MIME subtype.
+        pub const VND_OMA_BCAST_SMARTCARD_TRIGGER: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndOmaBcastSmartcardTrigger),
+        );
+
+        /// The `vnd.oma.bcast.sprov` MIME subtype.
+        pub const VND_OMA_BCAST_SPROV: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndOmaBcastSprov),
+        );
+
+        /// The `vnd.oma.bcast.stkm` MIME subtype.
+        pub const VND_OMA_BCAST_STKM: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndOmaBcastStkm));
+
+        /// The `vnd.oma.cab-address-book` MIME subtype.
+        pub const VND_OMA_CAB_ADDRESS_BOOK: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndOmaCabAddressBook),
+        );
+
+        /// The `vnd.oma.cab-feature-handler` MIME subtype.
+        pub const VND_OMA_CAB_FEATURE_HANDLER: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndOmaCabFeatureHandler),
+        );
+
+        /// The `vnd.oma.cab-pcc` MIME subtype.
+        pub const VND_OMA_CAB_PCC: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndOmaCabPcc));
+
+        /// The `vnd.oma.cab-subs-invite` MIME subtype.
+        pub const VND_OMA_CAB_SUBS_INVITE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndOmaCabSubsInvite),
+        );
+
+        /// The `vnd.oma.cab-user-prefs` MIME subtype.
+        pub const VND_OMA_CAB_USER_PREFS: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndOmaCabUserPrefs),
+        );
+
+        /// The `vnd.oma.dcd` MIME subtype.
+        pub const VND_OMA_DCD: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndOmaDcd));
+
+        /// The `vnd.oma.dcdc` MIME subtype.
+        pub const VND_OMA_DCDC: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndOmaDcdc));
+
+        /// The `vnd.oma.dd2` MIME subtype.
+        pub const VND_OMA_DD2: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndOmaDd2));
+
+        /// The `vnd.oma.drm.risd` MIME subtype.
+        pub const VND_OMA_DRM_RISD: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndOmaDrmRisd));
+
+        /// The `vnd.oma.group-usage-list` MIME subtype.
+        pub const VND_OMA_GROUP_USAGE_LIST: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndOmaGroupUsageList),
+        );
+
+        /// The `vnd.oma.lwm2m` MIME subtype.
+        pub const VND_OMA_LWM2M: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndOmaLwm2m));
+
+        /// The `vnd.oma.pal` MIME subtype.
+        pub const VND_OMA_PAL: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndOmaPal));
+
+        /// The `vnd.oma.poc.detailed-progress-report` MIME subtype.
+        pub const VND_OMA_POC_DETAILED_PROGRESS_REPORT: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndOmaPocDetailedProgressReport),
+        );
+
+        /// The `vnd.oma.poc.final-report` MIME subtype.
+        pub const VND_OMA_POC_FINAL_REPORT: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndOmaPocFinalReport),
+        );
+
+        /// The `vnd.oma.poc.groups` MIME subtype.
+        pub const VND_OMA_POC_GROUPS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndOmaPocGroups));
+
+        /// The `vnd.oma.poc.invocation-descriptor` MIME subtype.
+        pub const VND_OMA_POC_INVOCATION_DESCRIPTOR: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndOmaPocInvocationDescriptor),
+        );
+
+        /// The `vnd.oma.poc.optimized-progress-report` MIME subtype.
+        pub const VND_OMA_POC_OPTIMIZED_PROGRESS_REPORT: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndOmaPocOptimizedProgressReport),
+        );
+
+        /// The `vnd.oma.push` MIME subtype.
+        pub const VND_OMA_PUSH: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndOmaPush));
+
+        /// The `vnd.oma.scidm.messages` MIME subtype.
+        pub const VND_OMA_SCIDM_MESSAGES: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndOmaScidmMessages),
+        );
+
+        /// The `vnd.oma.xcap-directory` MIME subtype.
+        pub const VND_OMA_XCAP_DIRECTORY: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndOmaXcapDirectory),
+        );
+
+        /// The `vnd.omads-email` MIME subtype.
+        pub const VND_OMADS_EMAIL: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndOmadsEmail));
+
+        /// The `vnd.omads-file` MIME subtype.
+        pub const VND_OMADS_FILE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndOmadsFile));
+
+        /// The `vnd.omads-folder` MIME subtype.
+        pub const VND_OMADS_FOLDER: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndOmadsFolder));
+
+        /// The `vnd.omaloc-supl-init` MIME subtype.
+        pub const VND_OMALOC_SUPL_INIT: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndOmalocSuplInit),
+        );
+
+        /// The `vnd.onepager` MIME subtype.
+        pub const VND_ONEPAGER: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndOnepager));
+
+        /// The `vnd.onepagertamp` MIME subtype.
+        pub const VND_ONEPAGERTAMP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndOnepagertamp));
+
+        /// The `vnd.onepagertamx` MIME subtype.
+        pub const VND_ONEPAGERTAMX: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndOnepagertamx));
+
+        /// The `vnd.onepagertat` MIME subtype.
+        pub const VND_ONEPAGERTAT: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndOnepagertat));
+
+        /// The `vnd.onepagertatp` MIME subtype.
+        pub const VND_ONEPAGERTATP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndOnepagertatp));
+
+        /// The `vnd.onepagertatx` MIME subtype.
+        pub const VND_ONEPAGERTATX: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndOnepagertatx));
+
+        /// The `vnd.openblox.game` MIME subtype.
+        pub const VND_OPENBLOX_GAME: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndOpenbloxGame));
+
+        /// The `vnd.openblox.game-binary` MIME subtype.
+        pub const VND_OPENBLOX_GAME_BINARY: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndOpenbloxGameBinary),
+        );
+
+        /// The `vnd.openeye.oeb` MIME subtype.
+        pub const VND_OPENEYE_OEB: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndOpeneyeOeb));
+
+        /// The `vnd.openofficeorg.extension` MIME subtype.
+        pub const VND_OPENOFFICEORG_EXTENSION: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndOpenofficeorgExtension),
+        );
+
+        /// The `vnd.openstreetmap.data` MIME subtype.
+        pub const VND_OPENSTREETMAP_DATA: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndOpenstreetmapData),
+        );
+
+        /// The `vnd.opentimestamps.ots` MIME subtype.
+        pub const VND_OPENTIMESTAMPS_OTS: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndOpentimestampsOts),
+        );
+
+        /// The `vnd.openxmlformats-officedocument.custom-properties` MIME subtype.
+        pub const VND_OPENXMLFORMATS_OFFICEDOCUMENT_CUSTOM_PROPERTIES: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(
+                crate::SubtypeIntern::VndOpenxmlformatsOfficedocumentCustomProperties,
+            ));
+
+        /// The `vnd.openxmlformats-officedocument.customXmlProperties` MIME subtype.
+        pub const VND_OPENXMLFORMATS_OFFICEDOCUMENT_CUSTOM_XML_PROPERTIES: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(
+                crate::SubtypeIntern::VndOpenxmlformatsOfficedocumentCustomXmlProperties,
+            ));
+
+        /// The `vnd.openxmlformats-officedocument.drawing` MIME subtype.
+        pub const VND_OPENXMLFORMATS_OFFICEDOCUMENT_DRAWING: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(
+                crate::SubtypeIntern::VndOpenxmlformatsOfficedocumentDrawing,
+            ));
+
+        /// The `vnd.openxmlformats-officedocument.drawingml.chart` MIME subtype.
+        pub const VND_OPENXMLFORMATS_OFFICEDOCUMENT_DRAWINGML_CHART: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(
+                crate::SubtypeIntern::VndOpenxmlformatsOfficedocumentDrawingmlChart,
+            ));
+
+        /// The `vnd.openxmlformats-officedocument.drawingml.chartshapes` MIME subtype.
+        pub const VND_OPENXMLFORMATS_OFFICEDOCUMENT_DRAWINGML_CHARTSHAPES: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(
+                crate::SubtypeIntern::VndOpenxmlformatsOfficedocumentDrawingmlChartshapes,
+            ));
+
+        /// The `vnd.openxmlformats-officedocument.drawingml.diagramColors` MIME subtype.
+        pub const VND_OPENXMLFORMATS_OFFICEDOCUMENT_DRAWINGML_DIAGRAM_COLORS: crate::Subtype<
+            'static,
+        > = crate::Subtype(crate::Name::Interned(
+            crate::SubtypeIntern::VndOpenxmlformatsOfficedocumentDrawingmlDiagramColors,
+        ));
+
+        /// The `vnd.openxmlformats-officedocument.drawingml.diagramData` MIME subtype.
+        pub const VND_OPENXMLFORMATS_OFFICEDOCUMENT_DRAWINGML_DIAGRAM_DATA: crate::Subtype<
+            'static,
+        > = crate::Subtype(crate::Name::Interned(
+            crate::SubtypeIntern::VndOpenxmlformatsOfficedocumentDrawingmlDiagramData,
+        ));
+
+        /// The `vnd.openxmlformats-officedocument.drawingml.diagramLayout` MIME subtype.
+        pub const VND_OPENXMLFORMATS_OFFICEDOCUMENT_DRAWINGML_DIAGRAM_LAYOUT: crate::Subtype<
+            'static,
+        > = crate::Subtype(crate::Name::Interned(
+            crate::SubtypeIntern::VndOpenxmlformatsOfficedocumentDrawingmlDiagramLayout,
+        ));
+
+        /// The `vnd.openxmlformats-officedocument.drawingml.diagramStyle` MIME subtype.
+        pub const VND_OPENXMLFORMATS_OFFICEDOCUMENT_DRAWINGML_DIAGRAM_STYLE: crate::Subtype<
+            'static,
+        > = crate::Subtype(crate::Name::Interned(
+            crate::SubtypeIntern::VndOpenxmlformatsOfficedocumentDrawingmlDiagramStyle,
+        ));
+
+        /// The `vnd.openxmlformats-officedocument.extended-properties` MIME subtype.
+        pub const VND_OPENXMLFORMATS_OFFICEDOCUMENT_EXTENDED_PROPERTIES: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(
+                crate::SubtypeIntern::VndOpenxmlformatsOfficedocumentExtendedProperties,
+            ));
+
+        /// The `vnd.openxmlformats-officedocument.presentationml.commentAuthors` MIME subtype.
+        pub const VND_OPENXMLFORMATS_OFFICEDOCUMENT_PRESENTATIONML_COMMENT_AUTHORS: crate::Subtype<
+            'static,
+        > = crate::Subtype(crate::Name::Interned(
+            crate::SubtypeIntern::VndOpenxmlformatsOfficedocumentPresentationmlCommentAuthors,
+        ));
+
+        /// The `vnd.openxmlformats-officedocument.presentationml.comments` MIME subtype.
+        pub const VND_OPENXMLFORMATS_OFFICEDOCUMENT_PRESENTATIONML_COMMENTS: crate::Subtype<
+            'static,
+        > = crate::Subtype(crate::Name::Interned(
+            crate::SubtypeIntern::VndOpenxmlformatsOfficedocumentPresentationmlComments,
+        ));
+
+        /// The `vnd.openxmlformats-officedocument.presentationml.handoutMaster` MIME subtype.
+        pub const VND_OPENXMLFORMATS_OFFICEDOCUMENT_PRESENTATIONML_HANDOUT_MASTER: crate::Subtype<
+            'static,
+        > = crate::Subtype(crate::Name::Interned(
+            crate::SubtypeIntern::VndOpenxmlformatsOfficedocumentPresentationmlHandoutMaster,
+        ));
+
+        /// The `vnd.openxmlformats-officedocument.presentationml.notesMaster` MIME subtype.
+        pub const VND_OPENXMLFORMATS_OFFICEDOCUMENT_PRESENTATIONML_NOTES_MASTER: crate::Subtype<
+            'static,
+        > = crate::Subtype(crate::Name::Interned(
+            crate::SubtypeIntern::VndOpenxmlformatsOfficedocumentPresentationmlNotesMaster,
+        ));
+
+        /// The `vnd.openxmlformats-officedocument.presentationml.notesSlide` MIME subtype.
+        pub const VND_OPENXMLFORMATS_OFFICEDOCUMENT_PRESENTATIONML_NOTES_SLIDE: crate::Subtype<
+            'static,
+        > = crate::Subtype(crate::Name::Interned(
+            crate::SubtypeIntern::VndOpenxmlformatsOfficedocumentPresentationmlNotesSlide,
+        ));
+
+        /// The `vnd.openxmlformats-officedocument.presentationml.presentation` MIME subtype.
+        pub const VND_OPENXMLFORMATS_OFFICEDOCUMENT_PRESENTATIONML_PRESENTATION: crate::Subtype<
+            'static,
+        > = crate::Subtype(crate::Name::Interned(
+            crate::SubtypeIntern::VndOpenxmlformatsOfficedocumentPresentationmlPresentation,
+        ));
+
+        /// The `vnd.openxmlformats-officedocument.presentationml.presentation.main` MIME subtype.
+        pub const VND_OPENXMLFORMATS_OFFICEDOCUMENT_PRESENTATIONML_PRESENTATION_MAIN:
+            crate::Subtype<'static> = crate::Subtype(crate::Name::Interned(
+            crate::SubtypeIntern::VndOpenxmlformatsOfficedocumentPresentationmlPresentationMain,
+        ));
+
+        /// The `vnd.openxmlformats-officedocument.presentationml.presProps` MIME subtype.
+        pub const VND_OPENXMLFORMATS_OFFICEDOCUMENT_PRESENTATIONML_PRES_PROPS: crate::Subtype<
+            'static,
+        > = crate::Subtype(crate::Name::Interned(
+            crate::SubtypeIntern::VndOpenxmlformatsOfficedocumentPresentationmlPresProps,
+        ));
+
+        /// The `vnd.openxmlformats-officedocument.presentationml.slide` MIME subtype.
+        pub const VND_OPENXMLFORMATS_OFFICEDOCUMENT_PRESENTATIONML_SLIDE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(
+                crate::SubtypeIntern::VndOpenxmlformatsOfficedocumentPresentationmlSlide,
+            ));
+
+        /// The `vnd.openxmlformats-officedocument.presentationml.slideLayout` MIME subtype.
+        pub const VND_OPENXMLFORMATS_OFFICEDOCUMENT_PRESENTATIONML_SLIDE_LAYOUT: crate::Subtype<
+            'static,
+        > = crate::Subtype(crate::Name::Interned(
+            crate::SubtypeIntern::VndOpenxmlformatsOfficedocumentPresentationmlSlideLayout,
+        ));
+
+        /// The `vnd.openxmlformats-officedocument.presentationml.slideMaster` MIME subtype.
+        pub const VND_OPENXMLFORMATS_OFFICEDOCUMENT_PRESENTATIONML_SLIDE_MASTER: crate::Subtype<
+            'static,
+        > = crate::Subtype(crate::Name::Interned(
+            crate::SubtypeIntern::VndOpenxmlformatsOfficedocumentPresentationmlSlideMaster,
+        ));
+
+        /// The `vnd.openxmlformats-officedocument.presentationml.slideshow` MIME subtype.
+        pub const VND_OPENXMLFORMATS_OFFICEDOCUMENT_PRESENTATIONML_SLIDESHOW: crate::Subtype<
+            'static,
+        > = crate::Subtype(crate::Name::Interned(
+            crate::SubtypeIntern::VndOpenxmlformatsOfficedocumentPresentationmlSlideshow,
+        ));
+
+        /// The `vnd.openxmlformats-officedocument.presentationml.slideshow.main` MIME subtype.
+        pub const VND_OPENXMLFORMATS_OFFICEDOCUMENT_PRESENTATIONML_SLIDESHOW_MAIN: crate::Subtype<
+            'static,
+        > = crate::Subtype(crate::Name::Interned(
+            crate::SubtypeIntern::VndOpenxmlformatsOfficedocumentPresentationmlSlideshowMain,
+        ));
+
+        /// The `vnd.openxmlformats-officedocument.presentationml.slideUpdateInfo` MIME subtype.
+        pub const VND_OPENXMLFORMATS_OFFICEDOCUMENT_PRESENTATIONML_SLIDE_UPDATE_INFO:
+            crate::Subtype<'static> = crate::Subtype(crate::Name::Interned(
+            crate::SubtypeIntern::VndOpenxmlformatsOfficedocumentPresentationmlSlideUpdateInfo,
+        ));
+
+        /// The `vnd.openxmlformats-officedocument.presentationml.tableStyles` MIME subtype.
+        pub const VND_OPENXMLFORMATS_OFFICEDOCUMENT_PRESENTATIONML_TABLE_STYLES: crate::Subtype<
+            'static,
+        > = crate::Subtype(crate::Name::Interned(
+            crate::SubtypeIntern::VndOpenxmlformatsOfficedocumentPresentationmlTableStyles,
+        ));
+
+        /// The `vnd.openxmlformats-officedocument.presentationml.tags` MIME subtype.
+        pub const VND_OPENXMLFORMATS_OFFICEDOCUMENT_PRESENTATIONML_TAGS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(
+                crate::SubtypeIntern::VndOpenxmlformatsOfficedocumentPresentationmlTags,
+            ));
+
+        /// The `vnd.openxmlformats-officedocument.presentationml.template` MIME subtype.
+        pub const VND_OPENXMLFORMATS_OFFICEDOCUMENT_PRESENTATIONML_TEMPLATE: crate::Subtype<
+            'static,
+        > = crate::Subtype(crate::Name::Interned(
+            crate::SubtypeIntern::VndOpenxmlformatsOfficedocumentPresentationmlTemplate,
+        ));
+
+        /// The `vnd.openxmlformats-officedocument.presentationml.template.main` MIME subtype.
+        pub const VND_OPENXMLFORMATS_OFFICEDOCUMENT_PRESENTATIONML_TEMPLATE_MAIN: crate::Subtype<
+            'static,
+        > = crate::Subtype(crate::Name::Interned(
+            crate::SubtypeIntern::VndOpenxmlformatsOfficedocumentPresentationmlTemplateMain,
+        ));
+
+        /// The `vnd.openxmlformats-officedocument.presentationml.viewProps` MIME subtype.
+        pub const VND_OPENXMLFORMATS_OFFICEDOCUMENT_PRESENTATIONML_VIEW_PROPS: crate::Subtype<
+            'static,
+        > = crate::Subtype(crate::Name::Interned(
+            crate::SubtypeIntern::VndOpenxmlformatsOfficedocumentPresentationmlViewProps,
+        ));
+
+        /// The `vnd.openxmlformats-officedocument.spreadsheetml.calcChain` MIME subtype.
+        pub const VND_OPENXMLFORMATS_OFFICEDOCUMENT_SPREADSHEETML_CALC_CHAIN: crate::Subtype<
+            'static,
+        > = crate::Subtype(crate::Name::Interned(
+            crate::SubtypeIntern::VndOpenxmlformatsOfficedocumentSpreadsheetmlCalcChain,
+        ));
+
+        /// The `vnd.openxmlformats-officedocument.spreadsheetml.chartsheet` MIME subtype.
+        pub const VND_OPENXMLFORMATS_OFFICEDOCUMENT_SPREADSHEETML_CHARTSHEET: crate::Subtype<
+            'static,
+        > = crate::Subtype(crate::Name::Interned(
+            crate::SubtypeIntern::VndOpenxmlformatsOfficedocumentSpreadsheetmlChartsheet,
+        ));
+
+        /// The `vnd.openxmlformats-officedocument.spreadsheetml.comments` MIME subtype.
+        pub const VND_OPENXMLFORMATS_OFFICEDOCUMENT_SPREADSHEETML_COMMENTS: crate::Subtype<
+            'static,
+        > = crate::Subtype(crate::Name::Interned(
+            crate::SubtypeIntern::VndOpenxmlformatsOfficedocumentSpreadsheetmlComments,
+        ));
+
+        /// The `vnd.openxmlformats-officedocument.spreadsheetml.connections` MIME subtype.
+        pub const VND_OPENXMLFORMATS_OFFICEDOCUMENT_SPREADSHEETML_CONNECTIONS: crate::Subtype<
+            'static,
+        > = crate::Subtype(crate::Name::Interned(
+            crate::SubtypeIntern::VndOpenxmlformatsOfficedocumentSpreadsheetmlConnections,
+        ));
+
+        /// The `vnd.openxmlformats-officedocument.spreadsheetml.dialogsheet` MIME subtype.
+        pub const VND_OPENXMLFORMATS_OFFICEDOCUMENT_SPREADSHEETML_DIALOGSHEET: crate::Subtype<
+            'static,
+        > = crate::Subtype(crate::Name::Interned(
+            crate::SubtypeIntern::VndOpenxmlformatsOfficedocumentSpreadsheetmlDialogsheet,
+        ));
+
+        /// The `vnd.openxmlformats-officedocument.spreadsheetml.externalLink` MIME subtype.
+        pub const VND_OPENXMLFORMATS_OFFICEDOCUMENT_SPREADSHEETML_EXTERNAL_LINK: crate::Subtype<
+            'static,
+        > = crate::Subtype(crate::Name::Interned(
+            crate::SubtypeIntern::VndOpenxmlformatsOfficedocumentSpreadsheetmlExternalLink,
+        ));
+
+        /// The `vnd.openxmlformats-officedocument.spreadsheetml.pivotCacheDefinition` MIME subtype.
+        pub const VND_OPENXMLFORMATS_OFFICEDOCUMENT_SPREADSHEETML_PIVOT_CACHE_DEFINITION:
+            crate::Subtype<'static> = crate::Subtype(crate::Name::Interned(
+            crate::SubtypeIntern::VndOpenxmlformatsOfficedocumentSpreadsheetmlPivotCacheDefinition,
+        ));
+
+        /// The `vnd.openxmlformats-officedocument.spreadsheetml.pivotCacheRecords` MIME subtype.
+        pub const VND_OPENXMLFORMATS_OFFICEDOCUMENT_SPREADSHEETML_PIVOT_CACHE_RECORDS:
+            crate::Subtype<'static> = crate::Subtype(crate::Name::Interned(
+            crate::SubtypeIntern::VndOpenxmlformatsOfficedocumentSpreadsheetmlPivotCacheRecords,
+        ));
+
+        /// The `vnd.openxmlformats-officedocument.spreadsheetml.pivotTable` MIME subtype.
+        pub const VND_OPENXMLFORMATS_OFFICEDOCUMENT_SPREADSHEETML_PIVOT_TABLE: crate::Subtype<
+            'static,
+        > = crate::Subtype(crate::Name::Interned(
+            crate::SubtypeIntern::VndOpenxmlformatsOfficedocumentSpreadsheetmlPivotTable,
+        ));
+
+        /// The `vnd.openxmlformats-officedocument.spreadsheetml.queryTable` MIME subtype.
+        pub const VND_OPENXMLFORMATS_OFFICEDOCUMENT_SPREADSHEETML_QUERY_TABLE: crate::Subtype<
+            'static,
+        > = crate::Subtype(crate::Name::Interned(
+            crate::SubtypeIntern::VndOpenxmlformatsOfficedocumentSpreadsheetmlQueryTable,
+        ));
+
+        /// The `vnd.openxmlformats-officedocument.spreadsheetml.revisionHeaders` MIME subtype.
+        pub const VND_OPENXMLFORMATS_OFFICEDOCUMENT_SPREADSHEETML_REVISION_HEADERS: crate::Subtype<
+            'static,
+        > = crate::Subtype(crate::Name::Interned(
+            crate::SubtypeIntern::VndOpenxmlformatsOfficedocumentSpreadsheetmlRevisionHeaders,
+        ));
+
+        /// The `vnd.openxmlformats-officedocument.spreadsheetml.revisionLog` MIME subtype.
+        pub const VND_OPENXMLFORMATS_OFFICEDOCUMENT_SPREADSHEETML_REVISION_LOG: crate::Subtype<
+            'static,
+        > = crate::Subtype(crate::Name::Interned(
+            crate::SubtypeIntern::VndOpenxmlformatsOfficedocumentSpreadsheetmlRevisionLog,
+        ));
+
+        /// The `vnd.openxmlformats-officedocument.spreadsheetml.sharedStrings` MIME subtype.
+        pub const VND_OPENXMLFORMATS_OFFICEDOCUMENT_SPREADSHEETML_SHARED_STRINGS: crate::Subtype<
+            'static,
+        > = crate::Subtype(crate::Name::Interned(
+            crate::SubtypeIntern::VndOpenxmlformatsOfficedocumentSpreadsheetmlSharedStrings,
+        ));
+
+        /// The `vnd.openxmlformats-officedocument.spreadsheetml.sheet` MIME subtype.
+        pub const VND_OPENXMLFORMATS_OFFICEDOCUMENT_SPREADSHEETML_SHEET: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(
+                crate::SubtypeIntern::VndOpenxmlformatsOfficedocumentSpreadsheetmlSheet,
+            ));
+
+        /// The `vnd.openxmlformats-officedocument.spreadsheetml.sheet.main` MIME subtype.
+        pub const VND_OPENXMLFORMATS_OFFICEDOCUMENT_SPREADSHEETML_SHEET_MAIN: crate::Subtype<
+            'static,
+        > = crate::Subtype(crate::Name::Interned(
+            crate::SubtypeIntern::VndOpenxmlformatsOfficedocumentSpreadsheetmlSheetMain,
+        ));
+
+        /// The `vnd.openxmlformats-officedocument.spreadsheetml.sheetMetadata` MIME subtype.
+        pub const VND_OPENXMLFORMATS_OFFICEDOCUMENT_SPREADSHEETML_SHEET_METADATA: crate::Subtype<
+            'static,
+        > = crate::Subtype(crate::Name::Interned(
+            crate::SubtypeIntern::VndOpenxmlformatsOfficedocumentSpreadsheetmlSheetMetadata,
+        ));
+
+        /// The `vnd.openxmlformats-officedocument.spreadsheetml.styles` MIME subtype.
+        pub const VND_OPENXMLFORMATS_OFFICEDOCUMENT_SPREADSHEETML_STYLES: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(
+                crate::SubtypeIntern::VndOpenxmlformatsOfficedocumentSpreadsheetmlStyles,
+            ));
+
+        /// The `vnd.openxmlformats-officedocument.spreadsheetml.table` MIME subtype.
+        pub const VND_OPENXMLFORMATS_OFFICEDOCUMENT_SPREADSHEETML_TABLE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(
+                crate::SubtypeIntern::VndOpenxmlformatsOfficedocumentSpreadsheetmlTable,
+            ));
+
+        /// The `vnd.openxmlformats-officedocument.spreadsheetml.tableSingleCells` MIME subtype.
+        pub const VND_OPENXMLFORMATS_OFFICEDOCUMENT_SPREADSHEETML_TABLE_SINGLE_CELLS:
+            crate::Subtype<'static> = crate::Subtype(crate::Name::Interned(
+            crate::SubtypeIntern::VndOpenxmlformatsOfficedocumentSpreadsheetmlTableSingleCells,
+        ));
+
+        /// The `vnd.openxmlformats-officedocument.spreadsheetml.template` MIME subtype.
+        pub const VND_OPENXMLFORMATS_OFFICEDOCUMENT_SPREADSHEETML_TEMPLATE: crate::Subtype<
+            'static,
+        > = crate::Subtype(crate::Name::Interned(
+            crate::SubtypeIntern::VndOpenxmlformatsOfficedocumentSpreadsheetmlTemplate,
+        ));
+
+        /// The `vnd.openxmlformats-officedocument.spreadsheetml.template.main` MIME subtype.
+        pub const VND_OPENXMLFORMATS_OFFICEDOCUMENT_SPREADSHEETML_TEMPLATE_MAIN: crate::Subtype<
+            'static,
+        > = crate::Subtype(crate::Name::Interned(
+            crate::SubtypeIntern::VndOpenxmlformatsOfficedocumentSpreadsheetmlTemplateMain,
+        ));
+
+        /// The `vnd.openxmlformats-officedocument.spreadsheetml.userNames` MIME subtype.
+        pub const VND_OPENXMLFORMATS_OFFICEDOCUMENT_SPREADSHEETML_USER_NAMES: crate::Subtype<
+            'static,
+        > = crate::Subtype(crate::Name::Interned(
+            crate::SubtypeIntern::VndOpenxmlformatsOfficedocumentSpreadsheetmlUserNames,
+        ));
+
+        /// The `vnd.openxmlformats-officedocument.spreadsheetml.volatileDependencies` MIME subtype.
+        pub const VND_OPENXMLFORMATS_OFFICEDOCUMENT_SPREADSHEETML_VOLATILE_DEPENDENCIES:
+            crate::Subtype<'static> = crate::Subtype(crate::Name::Interned(
+            crate::SubtypeIntern::VndOpenxmlformatsOfficedocumentSpreadsheetmlVolatileDependencies,
+        ));
+
+        /// The `vnd.openxmlformats-officedocument.spreadsheetml.worksheet` MIME subtype.
+        pub const VND_OPENXMLFORMATS_OFFICEDOCUMENT_SPREADSHEETML_WORKSHEET: crate::Subtype<
+            'static,
+        > = crate::Subtype(crate::Name::Interned(
+            crate::SubtypeIntern::VndOpenxmlformatsOfficedocumentSpreadsheetmlWorksheet,
+        ));
+
+        /// The `vnd.openxmlformats-officedocument.theme` MIME subtype.
+        pub const VND_OPENXMLFORMATS_OFFICEDOCUMENT_THEME: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndOpenxmlformatsOfficedocumentTheme),
+        );
+
+        /// The `vnd.openxmlformats-officedocument.themeOverride` MIME subtype.
+        pub const VND_OPENXMLFORMATS_OFFICEDOCUMENT_THEME_OVERRIDE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(
+                crate::SubtypeIntern::VndOpenxmlformatsOfficedocumentThemeOverride,
+            ));
+
+        /// The `vnd.openxmlformats-officedocument.vmlDrawing` MIME subtype.
+        pub const VND_OPENXMLFORMATS_OFFICEDOCUMENT_VML_DRAWING: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(
+                crate::SubtypeIntern::VndOpenxmlformatsOfficedocumentVmlDrawing,
+            ));
+
+        /// The `vnd.openxmlformats-officedocument.wordprocessingml.comments` MIME subtype.
+        pub const VND_OPENXMLFORMATS_OFFICEDOCUMENT_WORDPROCESSINGML_COMMENTS: crate::Subtype<
+            'static,
+        > = crate::Subtype(crate::Name::Interned(
+            crate::SubtypeIntern::VndOpenxmlformatsOfficedocumentWordprocessingmlComments,
+        ));
+
+        /// The `vnd.openxmlformats-officedocument.wordprocessingml.document` MIME subtype.
+        pub const VND_OPENXMLFORMATS_OFFICEDOCUMENT_WORDPROCESSINGML_DOCUMENT: crate::Subtype<
+            'static,
+        > = crate::Subtype(crate::Name::Interned(
+            crate::SubtypeIntern::VndOpenxmlformatsOfficedocumentWordprocessingmlDocument,
+        ));
+
+        /// The `vnd.openxmlformats-officedocument.wordprocessingml.document.glossary` MIME subtype.
+        pub const VND_OPENXMLFORMATS_OFFICEDOCUMENT_WORDPROCESSINGML_DOCUMENT_GLOSSARY:
+            crate::Subtype<'static> = crate::Subtype(crate::Name::Interned(
+            crate::SubtypeIntern::VndOpenxmlformatsOfficedocumentWordprocessingmlDocumentGlossary,
+        ));
+
+        /// The `vnd.openxmlformats-officedocument.wordprocessingml.document.main` MIME subtype.
+        pub const VND_OPENXMLFORMATS_OFFICEDOCUMENT_WORDPROCESSINGML_DOCUMENT_MAIN: crate::Subtype<
+            'static,
+        > = crate::Subtype(crate::Name::Interned(
+            crate::SubtypeIntern::VndOpenxmlformatsOfficedocumentWordprocessingmlDocumentMain,
+        ));
+
+        /// The `vnd.openxmlformats-officedocument.wordprocessingml.endnotes` MIME subtype.
+        pub const VND_OPENXMLFORMATS_OFFICEDOCUMENT_WORDPROCESSINGML_ENDNOTES: crate::Subtype<
+            'static,
+        > = crate::Subtype(crate::Name::Interned(
+            crate::SubtypeIntern::VndOpenxmlformatsOfficedocumentWordprocessingmlEndnotes,
+        ));
+
+        /// The `vnd.openxmlformats-officedocument.wordprocessingml.fontTable` MIME subtype.
+        pub const VND_OPENXMLFORMATS_OFFICEDOCUMENT_WORDPROCESSINGML_FONT_TABLE: crate::Subtype<
+            'static,
+        > = crate::Subtype(crate::Name::Interned(
+            crate::SubtypeIntern::VndOpenxmlformatsOfficedocumentWordprocessingmlFontTable,
+        ));
+
+        /// The `vnd.openxmlformats-officedocument.wordprocessingml.footer` MIME subtype.
+        pub const VND_OPENXMLFORMATS_OFFICEDOCUMENT_WORDPROCESSINGML_FOOTER: crate::Subtype<
+            'static,
+        > = crate::Subtype(crate::Name::Interned(
+            crate::SubtypeIntern::VndOpenxmlformatsOfficedocumentWordprocessingmlFooter,
+        ));
+
+        /// The `vnd.openxmlformats-officedocument.wordprocessingml.footnotes` MIME subtype.
+        pub const VND_OPENXMLFORMATS_OFFICEDOCUMENT_WORDPROCESSINGML_FOOTNOTES: crate::Subtype<
+            'static,
+        > = crate::Subtype(crate::Name::Interned(
+            crate::SubtypeIntern::VndOpenxmlformatsOfficedocumentWordprocessingmlFootnotes,
+        ));
+
+        /// The `vnd.openxmlformats-officedocument.wordprocessingml.numbering` MIME subtype.
+        pub const VND_OPENXMLFORMATS_OFFICEDOCUMENT_WORDPROCESSINGML_NUMBERING: crate::Subtype<
+            'static,
+        > = crate::Subtype(crate::Name::Interned(
+            crate::SubtypeIntern::VndOpenxmlformatsOfficedocumentWordprocessingmlNumbering,
+        ));
+
+        /// The `vnd.openxmlformats-officedocument.wordprocessingml.settings` MIME subtype.
+        pub const VND_OPENXMLFORMATS_OFFICEDOCUMENT_WORDPROCESSINGML_SETTINGS: crate::Subtype<
+            'static,
+        > = crate::Subtype(crate::Name::Interned(
+            crate::SubtypeIntern::VndOpenxmlformatsOfficedocumentWordprocessingmlSettings,
+        ));
+
+        /// The `vnd.openxmlformats-officedocument.wordprocessingml.styles` MIME subtype.
+        pub const VND_OPENXMLFORMATS_OFFICEDOCUMENT_WORDPROCESSINGML_STYLES: crate::Subtype<
+            'static,
+        > = crate::Subtype(crate::Name::Interned(
+            crate::SubtypeIntern::VndOpenxmlformatsOfficedocumentWordprocessingmlStyles,
+        ));
+
+        /// The `vnd.openxmlformats-officedocument.wordprocessingml.template` MIME subtype.
+        pub const VND_OPENXMLFORMATS_OFFICEDOCUMENT_WORDPROCESSINGML_TEMPLATE: crate::Subtype<
+            'static,
+        > = crate::Subtype(crate::Name::Interned(
+            crate::SubtypeIntern::VndOpenxmlformatsOfficedocumentWordprocessingmlTemplate,
+        ));
+
+        /// The `vnd.openxmlformats-officedocument.wordprocessingml.template.main` MIME subtype.
+        pub const VND_OPENXMLFORMATS_OFFICEDOCUMENT_WORDPROCESSINGML_TEMPLATE_MAIN: crate::Subtype<
+            'static,
+        > = crate::Subtype(crate::Name::Interned(
+            crate::SubtypeIntern::VndOpenxmlformatsOfficedocumentWordprocessingmlTemplateMain,
+        ));
+
+        /// The `vnd.openxmlformats-officedocument.wordprocessingml.webSettings` MIME subtype.
+        pub const VND_OPENXMLFORMATS_OFFICEDOCUMENT_WORDPROCESSINGML_WEB_SETTINGS: crate::Subtype<
+            'static,
+        > = crate::Subtype(crate::Name::Interned(
+            crate::SubtypeIntern::VndOpenxmlformatsOfficedocumentWordprocessingmlWebSettings,
+        ));
+
+        /// The `vnd.openxmlformats-package.core-properties` MIME subtype.
+        pub const VND_OPENXMLFORMATS_PACKAGE_CORE_PROPERTIES: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(
+                crate::SubtypeIntern::VndOpenxmlformatsPackageCoreProperties,
+            ));
+
+        /// The `vnd.openxmlformats-package.digital-signature-xmlsignature` MIME subtype.
+        pub const VND_OPENXMLFORMATS_PACKAGE_DIGITAL_SIGNATURE_XMLSIGNATURE: crate::Subtype<
+            'static,
+        > = crate::Subtype(crate::Name::Interned(
+            crate::SubtypeIntern::VndOpenxmlformatsPackageDigitalSignatureXmlsignature,
+        ));
+
+        /// The `vnd.openxmlformats-package.relationships` MIME subtype.
+        pub const VND_OPENXMLFORMATS_PACKAGE_RELATIONSHIPS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(
+                crate::SubtypeIntern::VndOpenxmlformatsPackageRelationships,
+            ));
+
+        /// The `vnd.oracle.resource` MIME subtype.
+        pub const VND_ORACLE_RESOURCE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndOracleResource),
+        );
+
+        /// The `vnd.orange.indata` MIME subtype.
+        pub const VND_ORANGE_INDATA: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndOrangeIndata));
+
+        /// The `vnd.osa.netdeploy` MIME subtype.
+        pub const VND_OSA_NETDEPLOY: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndOsaNetdeploy));
+
+        /// The `vnd.osgeo.mapguide.package` MIME subtype.
+        pub const VND_OSGEO_MAPGUIDE_PACKAGE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndOsgeoMapguidePackage),
+        );
+
+        /// The `vnd.osgi.bundle` MIME subtype.
+        pub const VND_OSGI_BUNDLE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndOsgiBundle));
+
+        /// The `vnd.osgi.dp` MIME subtype.
+        pub const VND_OSGI_DP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndOsgiDp));
+
+        /// The `vnd.osgi.subsystem` MIME subtype.
+        pub const VND_OSGI_SUBSYSTEM: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndOsgiSubsystem),
+        );
+
+        /// The `vnd.otps.ct-kip` MIME subtype.
+        pub const VND_OTPS_CT_KIP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndOtpsCtKip));
+
+        /// The `vnd.oxli.countgraph` MIME subtype.
+        pub const VND_OXLI_COUNTGRAPH: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndOxliCountgraph),
+        );
+
+        /// The `vnd.pagerduty` MIME subtype.
+        pub const VND_PAGERDUTY: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndPagerduty));
+
+        /// The `vnd.palm` MIME subtype.
+        pub const VND_PALM: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndPalm));
+
+        /// The `vnd.panoply` MIME subtype.
+        pub const VND_PANOPLY: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndPanoply));
+
+        /// The `vnd.paos.xml` MIME subtype.
+        pub const VND_PAOS_XML: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndPaosXml));
+
+        /// The `vnd.patentdive` MIME subtype.
+        pub const VND_PATENTDIVE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndPatentdive));
+
+        /// The `vnd.patientecommsdoc` MIME subtype.
+        pub const VND_PATIENTECOMMSDOC: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndPatientecommsdoc),
+        );
+
+        /// The `vnd.pawaafile` MIME subtype.
+        pub const VND_PAWAAFILE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndPawaafile));
+
+        /// The `vnd.pcos` MIME subtype.
+        pub const VND_PCOS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndPcos));
+
+        /// The `vnd.pg.format` MIME subtype.
+        pub const VND_PG_FORMAT: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndPgFormat));
+
+        /// The `vnd.pg.osasli` MIME subtype.
+        pub const VND_PG_OSASLI: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndPgOsasli));
+
+        /// The `vnd.piaccess.application-licence` MIME subtype.
+        pub const VND_PIACCESS_APPLICATION_LICENCE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndPiaccessApplicationLicence),
+        );
+
+        /// The `vnd.picsel` MIME subtype.
+        pub const VND_PICSEL: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndPicsel));
+
+        /// The `vnd.pmi.widget` MIME subtype.
+        pub const VND_PMI_WIDGET: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndPmiWidget));
+
+        /// The `vnd.poc.group-advertisement` MIME subtype.
+        pub const VND_POC_GROUP_ADVERTISEMENT: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndPocGroupAdvertisement),
+        );
+
+        /// The `vnd.pocketlearn` MIME subtype.
+        pub const VND_POCKETLEARN: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndPocketlearn));
+
+        /// The `vnd.powerbuilder6` MIME subtype.
+        pub const VND_POWERBUILDER6: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndPowerbuilder6),
+        );
+
+        /// The `vnd.powerbuilder6-s` MIME subtype.
+        pub const VND_POWERBUILDER6_S: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndPowerbuilder6S),
+        );
+
+        /// The `vnd.powerbuilder7` MIME subtype.
+        pub const VND_POWERBUILDER7: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndPowerbuilder7),
+        );
+
+        /// The `vnd.powerbuilder7-s` MIME subtype.
+        pub const VND_POWERBUILDER7_S: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndPowerbuilder7S),
+        );
+
+        /// The `vnd.powerbuilder75` MIME subtype.
+        pub const VND_POWERBUILDER75: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndPowerbuilder75),
+        );
+
+        /// The `vnd.powerbuilder75-s` MIME subtype.
+        pub const VND_POWERBUILDER75_S: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndPowerbuilder75S),
+        );
+
+        /// The `vnd.preminet` MIME subtype.
+        pub const VND_PREMINET: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndPreminet));
+
+        /// The `vnd.previewsystems.box` MIME subtype.
+        pub const VND_PREVIEWSYSTEMS_BOX: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndPreviewsystemsBox),
+        );
+
+        /// The `vnd.proteus.magazine` MIME subtype.
+        pub const VND_PROTEUS_MAGAZINE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndProteusMagazine),
+        );
+
+        /// The `vnd.psfs` MIME subtype.
+        pub const VND_PSFS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndPsfs));
+
+        /// The `vnd.publishare-delta-tree` MIME subtype.
+        pub const VND_PUBLISHARE_DELTA_TREE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndPublishareDeltaTree),
+        );
+
+        /// The `vnd.pvi.ptid1` MIME subtype.
+        pub const VND_PVI_PTID1: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndPviPtid1));
+
+        /// The `vnd.pwg-multiplexed` MIME subtype.
+        pub const VND_PWG_MULTIPLEXED: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndPwgMultiplexed),
+        );
+
+        /// The `vnd.pwg-xhtml-print` MIME subtype.
+        pub const VND_PWG_XHTML_PRINT: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndPwgXhtmlPrint),
+        );
+
+        /// The `vnd.qualcomm.brew-app-res` MIME subtype.
+        pub const VND_QUALCOMM_BREW_APP_RES: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndQualcommBrewAppRes),
+        );
+
+        /// The `vnd.quarantainenet` MIME subtype.
+        pub const VND_QUARANTAINENET: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndQuarantainenet),
+        );
+
+        /// The `vnd.Quark.QuarkXPress` MIME subtype.
+        pub const VND_QUARK_QUARK_X_PRESS: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndQuarkQuarkXPress),
+        );
+
+        /// The `vnd.quobject-quoxdocument` MIME subtype.
+        pub const VND_QUOBJECT_QUOXDOCUMENT: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndQuobjectQuoxdocument),
+        );
+
+        /// The `vnd.radisys.moml` MIME subtype.
+        pub const VND_RADISYS_MOML: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndRadisysMoml));
+
+        /// The `vnd.radisys.msml` MIME subtype.
+        pub const VND_RADISYS_MSML: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndRadisysMsml));
+
+        /// The `vnd.radisys.msml-audit` MIME subtype.
+        pub const VND_RADISYS_MSML_AUDIT: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndRadisysMsmlAudit),
+        );
+
+        /// The `vnd.radisys.msml-audit-conf` MIME subtype.
+        pub const VND_RADISYS_MSML_AUDIT_CONF: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndRadisysMsmlAuditConf),
+        );
+
+        /// The `vnd.radisys.msml-audit-conn` MIME subtype.
+        pub const VND_RADISYS_MSML_AUDIT_CONN: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndRadisysMsmlAuditConn),
+        );
+
+        /// The `vnd.radisys.msml-audit-dialog` MIME subtype.
+        pub const VND_RADISYS_MSML_AUDIT_DIALOG: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndRadisysMsmlAuditDialog),
+        );
+
+        /// The `vnd.radisys.msml-audit-stream` MIME subtype.
+        pub const VND_RADISYS_MSML_AUDIT_STREAM: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndRadisysMsmlAuditStream),
+        );
+
+        /// The `vnd.radisys.msml-conf` MIME subtype.
+        pub const VND_RADISYS_MSML_CONF: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndRadisysMsmlConf),
+        );
+
+        /// The `vnd.radisys.msml-dialog` MIME subtype.
+        pub const VND_RADISYS_MSML_DIALOG: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndRadisysMsmlDialog),
+        );
+
+        /// The `vnd.radisys.msml-dialog-base` MIME subtype.
+        pub const VND_RADISYS_MSML_DIALOG_BASE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndRadisysMsmlDialogBase),
+        );
+
+        /// The `vnd.radisys.msml-dialog-fax-detect` MIME subtype.
+        pub const VND_RADISYS_MSML_DIALOG_FAX_DETECT: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndRadisysMsmlDialogFaxDetect),
+        );
+
+        /// The `vnd.radisys.msml-dialog-fax-sendrecv` MIME subtype.
+        pub const VND_RADISYS_MSML_DIALOG_FAX_SENDRECV: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndRadisysMsmlDialogFaxSendrecv),
+        );
+
+        /// The `vnd.radisys.msml-dialog-group` MIME subtype.
+        pub const VND_RADISYS_MSML_DIALOG_GROUP: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndRadisysMsmlDialogGroup),
+        );
+
+        /// The `vnd.radisys.msml-dialog-speech` MIME subtype.
+        pub const VND_RADISYS_MSML_DIALOG_SPEECH: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndRadisysMsmlDialogSpeech),
+        );
+
+        /// The `vnd.radisys.msml-dialog-transform` MIME subtype.
+        pub const VND_RADISYS_MSML_DIALOG_TRANSFORM: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndRadisysMsmlDialogTransform),
+        );
+
+        /// The `vnd.rainstor.data` MIME subtype.
+        pub const VND_RAINSTOR_DATA: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndRainstorData));
+
+        /// The `vnd.rapid` MIME subtype.
+        pub const VND_RAPID: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndRapid));
+
+        /// The `vnd.rar` MIME subtype.
+        pub const VND_RAR: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndRar));
+
+        /// The `vnd.realvnc.bed` MIME subtype.
+        pub const VND_REALVNC_BED: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndRealvncBed));
+
+        /// The `vnd.recordare.musicxml` MIME subtype.
+        pub const VND_RECORDARE_MUSICXML: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndRecordareMusicxml),
+        );
+
+        /// The `vnd.RenLearn.rlprint` MIME subtype.
+        pub const VND_REN_LEARN_RLPRINT: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndRenLearnRlprint),
+        );
+
+        /// The `vnd.resilient.logic` MIME subtype.
+        pub const VND_RESILIENT_LOGIC: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndResilientLogic),
+        );
+
+        /// The `vnd.restful` MIME subtype.
+        pub const VND_RESTFUL: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndRestful));
+
+        /// The `vnd.rig.cryptonote` MIME subtype.
+        pub const VND_RIG_CRYPTONOTE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndRigCryptonote),
+        );
+
+        /// The `vnd.rim.cod` MIME subtype.
+        pub const VND_RIM_COD: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndRimCod));
+
+        /// The `vnd.route66.link66` MIME subtype.
+        pub const VND_ROUTE66_LINK66: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndRoute66Link66),
+        );
+
+        /// The `vnd.rs-274x` MIME subtype.
+        pub const VND_RS_274X: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndRs274x));
+
+        /// The `vnd.ruckus.download` MIME subtype.
+        pub const VND_RUCKUS_DOWNLOAD: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndRuckusDownload),
+        );
+
+        /// The `vnd.s3sms` MIME subtype.
+        pub const VND_S3SMS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndS3sms));
+
+        /// The `vnd.sailingtracker.track` MIME subtype.
+        pub const VND_SAILINGTRACKER_TRACK: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndSailingtrackerTrack),
+        );
+
+        /// The `vnd.sar` MIME subtype.
+        pub const VND_SAR: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndSar));
+
+        /// The `vnd.sbm.cid` MIME subtype.
+        pub const VND_SBM_CID: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndSbmCid));
+
+        /// The `vnd.sbm.mid2` MIME subtype.
+        pub const VND_SBM_MID2: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndSbmMid2));
+
+        /// The `vnd.scribus` MIME subtype.
+        pub const VND_SCRIBUS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndScribus));
+
+        /// The `vnd.sealed.3df` MIME subtype.
+        pub const VND_SEALED_3DF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndSealed3df));
+
+        /// The `vnd.sealed.csf` MIME subtype.
+        pub const VND_SEALED_CSF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndSealedCsf));
+
+        /// The `vnd.sealed.doc` MIME subtype.
+        pub const VND_SEALED_DOC: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndSealedDoc));
+
+        /// The `vnd.sealed.eml` MIME subtype.
+        pub const VND_SEALED_EML: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndSealedEml));
+
+        /// The `vnd.sealed.mht` MIME subtype.
+        pub const VND_SEALED_MHT: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndSealedMht));
+
+        /// The `vnd.sealed.net` MIME subtype.
+        pub const VND_SEALED_NET: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndSealedNet));
+
+        /// The `vnd.sealed.ppt` MIME subtype.
+        pub const VND_SEALED_PPT: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndSealedPpt));
+
+        /// The `vnd.sealed.tiff` MIME subtype.
+        pub const VND_SEALED_TIFF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndSealedTiff));
+
+        /// The `vnd.sealed.xls` MIME subtype.
+        pub const VND_SEALED_XLS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndSealedXls));
+
+        /// The `vnd.sealedmedia.softseal.html` MIME subtype.
+        pub const VND_SEALEDMEDIA_SOFTSEAL_HTML: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndSealedmediaSoftsealHtml),
+        );
+
+        /// The `vnd.sealedmedia.softseal.pdf` MIME subtype.
+        pub const VND_SEALEDMEDIA_SOFTSEAL_PDF: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndSealedmediaSoftsealPdf),
+        );
+
+        /// The `vnd.seemail` MIME subtype.
+        pub const VND_SEEMAIL: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndSeemail));
+
+        /// The `vnd.seis` MIME subtype.
+        pub const VND_SEIS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndSeis));
+
+        /// The `vnd.sema` MIME subtype.
+        pub const VND_SEMA: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndSema));
+
+        /// The `vnd.semd` MIME subtype.
+        pub const VND_SEMD: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndSemd));
+
+        /// The `vnd.semf` MIME subtype.
+        pub const VND_SEMF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndSemf));
+
+        /// The `vnd.shade-save-file` MIME subtype.
+        pub const VND_SHADE_SAVE_FILE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndShadeSaveFile),
+        );
+
+        /// The `vnd.shana.informed.formdata` MIME subtype.
+        pub const VND_SHANA_INFORMED_FORMDATA: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndShanaInformedFormdata),
+        );
+
+        /// The `vnd.shana.informed.formtemplate` MIME subtype.
+        pub const VND_SHANA_INFORMED_FORMTEMPLATE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndShanaInformedFormtemplate),
+        );
+
+        /// The `vnd.shana.informed.interchange` MIME subtype.
+        pub const VND_SHANA_INFORMED_INTERCHANGE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndShanaInformedInterchange),
+        );
+
+        /// The `vnd.shana.informed.package` MIME subtype.
+        pub const VND_SHANA_INFORMED_PACKAGE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndShanaInformedPackage),
+        );
+
+        /// The `vnd.shootproof` MIME subtype.
+        pub const VND_SHOOTPROOF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndShootproof));
+
+        /// The `vnd.shopkick` MIME subtype.
+        pub const VND_SHOPKICK: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndShopkick));
+
+        /// The `vnd.shp` MIME subtype.
+        pub const VND_SHP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndShp));
+
+        /// The `vnd.shx` MIME subtype.
+        pub const VND_SHX: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndShx));
+
+        /// The `vnd.sigrok.session` MIME subtype.
+        pub const VND_SIGROK_SESSION: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndSigrokSession),
+        );
+
+        /// The `vnd.SimTech-MindMapper` MIME subtype.
+        pub const VND_SIM_TECH_MIND_MAPPER: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndSimTechMindMapper),
+        );
+
+        /// The `vnd.siren` MIME subtype.
+        pub const VND_SIREN: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndSiren));
+
+        /// The `vnd.smaf` MIME subtype.
+        pub const VND_SMAF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndSmaf));
+
+        /// The `vnd.smart.notebook` MIME subtype.
+        pub const VND_SMART_NOTEBOOK: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndSmartNotebook),
+        );
+
+        /// The `vnd.smart.teacher` MIME subtype.
+        pub const VND_SMART_TEACHER: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndSmartTeacher));
+
+        /// The `vnd.snesdev-page-table` MIME subtype.
+        pub const VND_SNESDEV_PAGE_TABLE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndSnesdevPageTable),
+        );
+
+        /// The `vnd.software602.filler.form` MIME subtype.
+        pub const VND_SOFTWARE602_FILLER_FORM: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndSoftware602FillerForm),
+        );
+
+        /// The `vnd.software602.filler.form-xml-zip` MIME subtype.
+        pub const VND_SOFTWARE602_FILLER_FORM_XML_ZIP: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndSoftware602FillerFormXmlZip),
+        );
+
+        /// The `vnd.solent.sdkm` MIME subtype.
+        pub const VND_SOLENT_SDKM: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndSolentSdkm));
+
+        /// The `vnd.spotfire.dxp` MIME subtype.
+        pub const VND_SPOTFIRE_DXP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndSpotfireDxp));
+
+        /// The `vnd.spotfire.sfs` MIME subtype.
+        pub const VND_SPOTFIRE_SFS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndSpotfireSfs));
+
+        /// The `vnd.sqlite3` MIME subtype.
+        pub const VND_SQLITE3: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndSqlite3));
+
+        /// The `vnd.sss-cod` MIME subtype.
+        pub const VND_SSS_COD: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndSssCod));
+
+        /// The `vnd.sss-dtf` MIME subtype.
+        pub const VND_SSS_DTF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndSssDtf));
+
+        /// The `vnd.sss-ntf` MIME subtype.
+        pub const VND_SSS_NTF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndSssNtf));
+
+        /// The `vnd.stardivision.calc` MIME subtype.
+        pub const VND_STARDIVISION_CALC: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndStardivisionCalc),
+        );
+
+        /// The `vnd.stardivision.chart` MIME subtype.
+        pub const VND_STARDIVISION_CHART: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndStardivisionChart),
+        );
+
+        /// The `vnd.stardivision.draw` MIME subtype.
+        pub const VND_STARDIVISION_DRAW: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndStardivisionDraw),
+        );
+
+        /// The `vnd.stardivision.impress` MIME subtype.
+        pub const VND_STARDIVISION_IMPRESS: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndStardivisionImpress),
+        );
+
+        /// The `vnd.stardivision.math` MIME subtype.
+        pub const VND_STARDIVISION_MATH: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndStardivisionMath),
+        );
+
+        /// The `vnd.stardivision.writer` MIME subtype.
+        pub const VND_STARDIVISION_WRITER: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndStardivisionWriter),
+        );
+
+        /// The `vnd.stardivision.writer-global` MIME subtype.
+        pub const VND_STARDIVISION_WRITER_GLOBAL: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndStardivisionWriterGlobal),
+        );
+
+        /// The `vnd.stepmania.package` MIME subtype.
+        pub const VND_STEPMANIA_PACKAGE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndStepmaniaPackage),
+        );
+
+        /// The `vnd.stepmania.stepchart` MIME subtype.
+        pub const VND_STEPMANIA_STEPCHART: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndStepmaniaStepchart),
+        );
+
+        /// The `vnd.street-stream` MIME subtype.
+        pub const VND_STREET_STREAM: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndStreetStream));
+
+        /// The `vnd.sun.wadl` MIME subtype.
+        pub const VND_SUN_WADL: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndSunWadl));
+
+        /// The `vnd.sun.xml.calc` MIME subtype.
+        pub const VND_SUN_XML_CALC: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndSunXmlCalc));
+
+        /// The `vnd.sun.xml.calc.template` MIME subtype.
+        pub const VND_SUN_XML_CALC_TEMPLATE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndSunXmlCalcTemplate),
+        );
+
+        /// The `vnd.sun.xml.draw` MIME subtype.
+        pub const VND_SUN_XML_DRAW: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndSunXmlDraw));
+
+        /// The `vnd.sun.xml.draw.template` MIME subtype.
+        pub const VND_SUN_XML_DRAW_TEMPLATE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndSunXmlDrawTemplate),
+        );
+
+        /// The `vnd.sun.xml.impress` MIME subtype.
+        pub const VND_SUN_XML_IMPRESS: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndSunXmlImpress),
+        );
+
+        /// The `vnd.sun.xml.impress.template` MIME subtype.
+        pub const VND_SUN_XML_IMPRESS_TEMPLATE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndSunXmlImpressTemplate),
+        );
+
+        /// The `vnd.sun.xml.math` MIME subtype.
+        pub const VND_SUN_XML_MATH: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndSunXmlMath));
+
+        /// The `vnd.sun.xml.writer` MIME subtype.
+        pub const VND_SUN_XML_WRITER: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndSunXmlWriter));
+
+        /// The `vnd.sun.xml.writer.global` MIME subtype.
+        pub const VND_SUN_XML_WRITER_GLOBAL: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndSunXmlWriterGlobal),
+        );
+
+        /// The `vnd.sun.xml.writer.template` MIME subtype.
+        pub const VND_SUN_XML_WRITER_TEMPLATE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndSunXmlWriterTemplate),
+        );
+
+        /// The `vnd.sus-calendar` MIME subtype.
+        pub const VND_SUS_CALENDAR: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndSusCalendar));
+
+        /// The `vnd.svd` MIME subtype.
+        pub const VND_SVD: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndSvd));
+
+        /// The `vnd.swiftview-ics` MIME subtype.
+        pub const VND_SWIFTVIEW_ICS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndSwiftviewIcs));
+
+        /// The `vnd.sycle` MIME subtype.
+        pub const VND_SYCLE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndSycle));
+
+        /// The `vnd.syft` MIME subtype.
+        pub const VND_SYFT: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndSyft));
+
+        /// The `vnd.symbian.install` MIME subtype.
+        pub const VND_SYMBIAN_INSTALL: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndSymbianInstall),
+        );
+
+        /// The `vnd.syncml` MIME subtype.
+        pub const VND_SYNCML: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndSyncml));
+
+        /// The `vnd.syncml.dm` MIME subtype.
+        pub const VND_SYNCML_DM: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndSyncmlDm));
+
+        /// The `vnd.syncml.dm.notification` MIME subtype.
+        pub const VND_SYNCML_DM_NOTIFICATION: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndSyncmlDmNotification),
+        );
+
+        /// The `vnd.syncml.dmddf` MIME subtype.
+        pub const VND_SYNCML_DMDDF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndSyncmlDmddf));
+
+        /// The `vnd.syncml.dmtnds` MIME subtype.
+        pub const VND_SYNCML_DMTNDS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndSyncmlDmtnds));
+
+        /// The `vnd.syncml.ds.notification` MIME subtype.
+        pub const VND_SYNCML_DS_NOTIFICATION: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndSyncmlDsNotification),
+        );
+
+        /// The `vnd.tableschema` MIME subtype.
+        pub const VND_TABLESCHEMA: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndTableschema));
+
+        /// The `vnd.tao.intent-module-archive` MIME subtype.
+        pub const VND_TAO_INTENT_MODULE_ARCHIVE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndTaoIntentModuleArchive),
+        );
+
+        /// The `vnd.tcpdump.pcap` MIME subtype.
+        pub const VND_TCPDUMP_PCAP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndTcpdumpPcap));
+
+        /// The `vnd.theqvd` MIME subtype.
+        pub const VND_THEQVD: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndTheqvd));
+
+        /// The `vnd.think-cell.ppttc` MIME subtype.
+        pub const VND_THINK_CELL_PPTTC: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndThinkCellPpttc),
+        );
+
+        /// The `vnd.tmd.mediaflex.api` MIME subtype.
+        pub const VND_TMD_MEDIAFLEX_API: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndTmdMediaflexApi),
+        );
+
+        /// The `vnd.tml` MIME subtype.
+        pub const VND_TML: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndTml));
+
+        /// The `vnd.tmobile-livetv` MIME subtype.
+        pub const VND_TMOBILE_LIVETV: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndTmobileLivetv),
+        );
+
+        /// The `vnd.tri.onesource` MIME subtype.
+        pub const VND_TRI_ONESOURCE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndTriOnesource));
+
+        /// The `vnd.trid.tpt` MIME subtype.
+        pub const VND_TRID_TPT: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndTridTpt));
+
+        /// The `vnd.triscape.mxs` MIME subtype.
+        pub const VND_TRISCAPE_MXS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndTriscapeMxs));
+
+        /// The `vnd.trueapp` MIME subtype.
+        pub const VND_TRUEAPP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndTrueapp));
+
+        /// The `vnd.truedoc` MIME subtype.
+        pub const VND_TRUEDOC: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndTruedoc));
+
+        /// The `vnd.ubisoft.webplayer` MIME subtype.
+        pub const VND_UBISOFT_WEBPLAYER: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndUbisoftWebplayer),
+        );
+
+        /// The `vnd.ufdl` MIME subtype.
+        pub const VND_UFDL: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndUfdl));
+
+        /// The `vnd.uiq.theme` MIME subtype.
+        pub const VND_UIQ_THEME: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndUiqTheme));
+
+        /// The `vnd.umajin` MIME subtype.
+        pub const VND_UMAJIN: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndUmajin));
+
+        /// The `vnd.unity` MIME subtype.
+        pub const VND_UNITY: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndUnity));
+
+        /// The `vnd.uoml` MIME subtype.
+        pub const VND_UOML: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndUoml));
+
+        /// The `vnd.uplanet.alert` MIME subtype.
+        pub const VND_UPLANET_ALERT: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndUplanetAlert));
+
+        /// The `vnd.uplanet.alert-wbxml` MIME subtype.
+        pub const VND_UPLANET_ALERT_WBXML: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndUplanetAlertWbxml),
+        );
+
+        /// The `vnd.uplanet.bearer-choice` MIME subtype.
+        pub const VND_UPLANET_BEARER_CHOICE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndUplanetBearerChoice),
+        );
+
+        /// The `vnd.uplanet.bearer-choice-wbxml` MIME subtype.
+        pub const VND_UPLANET_BEARER_CHOICE_WBXML: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndUplanetBearerChoiceWbxml),
+        );
+
+        /// The `vnd.uplanet.cacheop` MIME subtype.
+        pub const VND_UPLANET_CACHEOP: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndUplanetCacheop),
+        );
+
+        /// The `vnd.uplanet.cacheop-wbxml` MIME subtype.
+        pub const VND_UPLANET_CACHEOP_WBXML: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndUplanetCacheopWbxml),
+        );
+
+        /// The `vnd.uplanet.channel` MIME subtype.
+        pub const VND_UPLANET_CHANNEL: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndUplanetChannel),
+        );
+
+        /// The `vnd.uplanet.channel-wbxml` MIME subtype.
+        pub const VND_UPLANET_CHANNEL_WBXML: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndUplanetChannelWbxml),
+        );
+
+        /// The `vnd.uplanet.list` MIME subtype.
+        pub const VND_UPLANET_LIST: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndUplanetList));
+
+        /// The `vnd.uplanet.list-wbxml` MIME subtype.
+        pub const VND_UPLANET_LIST_WBXML: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndUplanetListWbxml),
+        );
+
+        /// The `vnd.uplanet.listcmd` MIME subtype.
+        pub const VND_UPLANET_LISTCMD: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndUplanetListcmd),
+        );
+
+        /// The `vnd.uplanet.listcmd-wbxml` MIME subtype.
+        pub const VND_UPLANET_LISTCMD_WBXML: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndUplanetListcmdWbxml),
+        );
+
+        /// The `vnd.uplanet.signal` MIME subtype.
+        pub const VND_UPLANET_SIGNAL: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndUplanetSignal),
+        );
+
+        /// The `vnd.uri-map` MIME subtype.
+        pub const VND_URI_MAP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndUriMap));
+
+        /// The `vnd.valve.source.material` MIME subtype.
+        pub const VND_VALVE_SOURCE_MATERIAL: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndValveSourceMaterial),
+        );
+
+        /// The `vnd.vcx` MIME subtype.
+        pub const VND_VCX: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndVcx));
+
+        /// The `vnd.vd-study` MIME subtype.
+        pub const VND_VD_STUDY: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndVdStudy));
+
+        /// The `vnd.vectorworks` MIME subtype.
+        pub const VND_VECTORWORKS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndVectorworks));
+
+        /// The `vnd.vel` MIME subtype.
+        pub const VND_VEL: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndVel));
+
+        /// The `vnd.verimatrix.vcas` MIME subtype.
+        pub const VND_VERIMATRIX_VCAS: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndVerimatrixVcas),
+        );
+
+        /// The `vnd.veritone.aion` MIME subtype.
+        pub const VND_VERITONE_AION: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndVeritoneAion));
+
+        /// The `vnd.veryant.thin` MIME subtype.
+        pub const VND_VERYANT_THIN: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndVeryantThin));
+
+        /// The `vnd.ves.encrypted` MIME subtype.
+        pub const VND_VES_ENCRYPTED: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndVesEncrypted));
+
+        /// The `vnd.vidsoft.vidconference` MIME subtype.
+        pub const VND_VIDSOFT_VIDCONFERENCE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndVidsoftVidconference),
+        );
+
+        /// The `vnd.visio` MIME subtype.
+        pub const VND_VISIO: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndVisio));
+
+        /// The `vnd.visionary` MIME subtype.
+        pub const VND_VISIONARY: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndVisionary));
+
+        /// The `vnd.vividence.scriptfile` MIME subtype.
+        pub const VND_VIVIDENCE_SCRIPTFILE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndVividenceScriptfile),
+        );
+
+        /// The `vnd.vsf` MIME subtype.
+        pub const VND_VSF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndVsf));
+
+        /// The `vnd.wap.sic` MIME subtype.
+        pub const VND_WAP_SIC: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndWapSic));
+
+        /// The `vnd.wap.slc` MIME subtype.
+        pub const VND_WAP_SLC: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndWapSlc));
+
+        /// The `vnd.wap.wbxml` MIME subtype.
+        pub const VND_WAP_WBXML: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndWapWbxml));
+
+        /// The `vnd.wap.wmlc` MIME subtype.
+        pub const VND_WAP_WMLC: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndWapWmlc));
+
+        /// The `vnd.wap.wmlscriptc` MIME subtype.
+        pub const VND_WAP_WMLSCRIPTC: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndWapWmlscriptc),
+        );
+
+        /// The `vnd.webturbo` MIME subtype.
+        pub const VND_WEBTURBO: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndWebturbo));
+
+        /// The `vnd.wfa.dpp` MIME subtype.
+        pub const VND_WFA_DPP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndWfaDpp));
+
+        /// The `vnd.wfa.p2p` MIME subtype.
+        pub const VND_WFA_P2P: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndWfaP2p));
+
+        /// The `vnd.wfa.wsc` MIME subtype.
+        pub const VND_WFA_WSC: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndWfaWsc));
+
+        /// The `vnd.windows.devicepairing` MIME subtype.
+        pub const VND_WINDOWS_DEVICEPAIRING: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndWindowsDevicepairing),
+        );
+
+        /// The `vnd.wmc` MIME subtype.
+        pub const VND_WMC: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndWmc));
+
+        /// The `vnd.wmf.bootstrap` MIME subtype.
+        pub const VND_WMF_BOOTSTRAP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndWmfBootstrap));
+
+        /// The `vnd.wolfram.mathematica` MIME subtype.
+        pub const VND_WOLFRAM_MATHEMATICA: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndWolframMathematica),
+        );
+
+        /// The `vnd.wolfram.mathematica.package` MIME subtype.
+        pub const VND_WOLFRAM_MATHEMATICA_PACKAGE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndWolframMathematicaPackage),
+        );
+
+        /// The `vnd.wolfram.player` MIME subtype.
+        pub const VND_WOLFRAM_PLAYER: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndWolframPlayer),
+        );
+
+        /// The `vnd.wordperfect` MIME subtype.
+        pub const VND_WORDPERFECT: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndWordperfect));
+
+        /// The `vnd.wordperfect5.1` MIME subtype.
+        pub const VND_WORDPERFECT5_1: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndWordperfect51),
+        );
+
+        /// The `vnd.wqd` MIME subtype.
+        pub const VND_WQD: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndWqd));
+
+        /// The `vnd.wrq-hp3000-labelled` MIME subtype.
+        pub const VND_WRQ_HP3000_LABELLED: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndWrqHp3000Labelled),
+        );
+
+        /// The `vnd.wt.stf` MIME subtype.
+        pub const VND_WT_STF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndWtStf));
+
+        /// The `vnd.wv.csp` MIME subtype.
+        pub const VND_WV_CSP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndWvCsp));
+
+        /// The `vnd.wv.ssp` MIME subtype.
+        pub const VND_WV_SSP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndWvSsp));
+
+        /// The `vnd.xacml` MIME subtype.
+        pub const VND_XACML: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndXacml));
+
+        /// The `vnd.xara` MIME subtype.
+        pub const VND_XARA: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndXara));
+
+        /// The `vnd.xfdl` MIME subtype.
+        pub const VND_XFDL: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndXfdl));
+
+        /// The `vnd.xfdl.webform` MIME subtype.
+        pub const VND_XFDL_WEBFORM: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndXfdlWebform));
+
+        /// The `vnd.xmi` MIME subtype.
+        pub const VND_XMI: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndXmi));
+
+        /// The `vnd.xmpie.cpkg` MIME subtype.
+        pub const VND_XMPIE_CPKG: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndXmpieCpkg));
+
+        /// The `vnd.xmpie.dpkg` MIME subtype.
+        pub const VND_XMPIE_DPKG: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndXmpieDpkg));
+
+        /// The `vnd.xmpie.plan` MIME subtype.
+        pub const VND_XMPIE_PLAN: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndXmpiePlan));
+
+        /// The `vnd.xmpie.ppkg` MIME subtype.
+        pub const VND_XMPIE_PPKG: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndXmpiePpkg));
+
+        /// The `vnd.xmpie.xlim` MIME subtype.
+        pub const VND_XMPIE_XLIM: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndXmpieXlim));
+
+        /// The `vnd.yamaha.hv-dic` MIME subtype.
+        pub const VND_YAMAHA_HV_DIC: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndYamahaHvDic));
+
+        /// The `vnd.yamaha.hv-script` MIME subtype.
+        pub const VND_YAMAHA_HV_SCRIPT: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndYamahaHvScript),
+        );
+
+        /// The `vnd.yamaha.hv-voice` MIME subtype.
+        pub const VND_YAMAHA_HV_VOICE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndYamahaHvVoice),
+        );
+
+        /// The `vnd.yamaha.openscoreformat` MIME subtype.
+        pub const VND_YAMAHA_OPENSCOREFORMAT: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndYamahaOpenscoreformat),
+        );
+
+        /// The `vnd.yamaha.openscoreformat.osfpvg` MIME subtype.
+        pub const VND_YAMAHA_OPENSCOREFORMAT_OSFPVG: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndYamahaOpenscoreformatOsfpvg),
+        );
+
+        /// The `vnd.yamaha.remote-setup` MIME subtype.
+        pub const VND_YAMAHA_REMOTE_SETUP: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndYamahaRemoteSetup),
+        );
+
+        /// The `vnd.yamaha.smaf-audio` MIME subtype.
+        pub const VND_YAMAHA_SMAF_AUDIO: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndYamahaSmafAudio),
+        );
+
+        /// The `vnd.yamaha.smaf-phrase` MIME subtype.
+        pub const VND_YAMAHA_SMAF_PHRASE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndYamahaSmafPhrase),
+        );
+
+        /// The `vnd.yamaha.through-ngn` MIME subtype.
+        pub const VND_YAMAHA_THROUGH_NGN: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndYamahaThroughNgn),
+        );
+
+        /// The `vnd.yamaha.tunnel-udpencap` MIME subtype.
+        pub const VND_YAMAHA_TUNNEL_UDPENCAP: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndYamahaTunnelUdpencap),
+        );
+
+        /// The `vnd.yaoweme` MIME subtype.
+        pub const VND_YAOWEME: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndYaoweme));
+
+        /// The `vnd.yellowriver-custom-menu` MIME subtype.
+        pub const VND_YELLOWRIVER_CUSTOM_MENU: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndYellowriverCustomMenu),
+        );
+
+        /// The `vnd.zul` MIME subtype.
+        pub const VND_ZUL: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndZul));
+
+        /// The `vnd.zzazz.deck` MIME subtype.
+        pub const VND_ZZAZZ_DECK: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndZzazzDeck));
+
+        /// The `voicexml` MIME subtype.
+        pub const VOICEXML: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Voicexml));
+
+        /// The `voucher-cms` MIME subtype.
+        pub const VOUCHER_CMS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VoucherCms));
+
+        /// The `vq-rtcpxr` MIME subtype.
+        pub const VQ_RTCPXR: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VqRtcpxr));
+
+        /// The `wasm` MIME subtype.
+        pub const WASM: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Wasm));
+
+        /// The `watcherinfo` MIME subtype.
+        pub const WATCHERINFO: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Watcherinfo));
+
+        /// The `webpush-options` MIME subtype.
+        pub const WEBPUSH_OPTIONS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::WebpushOptions));
+
+        /// The `whoispp-query` MIME subtype.
+        pub const WHOISPP_QUERY: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::WhoisppQuery));
+
+        /// The `whoispp-response` MIME subtype.
+        pub const WHOISPP_RESPONSE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::WhoisppResponse));
+
+        /// The `widget` MIME subtype.
+        pub const WIDGET: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Widget));
+
+        /// The `wita` MIME subtype.
+        pub const WITA: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Wita));
+
+        /// The `wordperfect5.1` MIME subtype.
+        pub const WORDPERFECT5_1: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Wordperfect51));
+
+        /// The `wsdl` MIME subtype.
+        pub const WSDL: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Wsdl));
+
+        /// The `wspolicy` MIME subtype.
+        pub const WSPOLICY: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Wspolicy));
+
+        /// The `x-123` MIME subtype.
+        pub const X_123: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::X123));
+
+        /// The `x-7z-compressed` MIME subtype.
+        pub const X_7Z_COMPRESSED: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::X7zCompressed));
+
+        /// The `x-abiword` MIME subtype.
+        pub const X_ABIWORD: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XAbiword));
+
+        /// The `x-apple-diskimage` MIME subtype.
+        pub const X_APPLE_DISKIMAGE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XAppleDiskimage));
+
+        /// The `x-bcpio` MIME subtype.
+        pub const X_BCPIO: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XBcpio));
+
+        /// The `x-bittorrent` MIME subtype.
+        pub const X_BITTORRENT: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XBittorrent));
+
+        /// The `x-cdf` MIME subtype.
+        pub const X_CDF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XCdf));
+
+        /// The `x-cdlink` MIME subtype.
+        pub const X_CDLINK: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XCdlink));
+
+        /// The `x-comsol` MIME subtype.
+        pub const X_COMSOL: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XComsol));
+
+        /// The `x-cpio` MIME subtype.
+        pub const X_CPIO: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XCpio));
+
+        /// The `x-csh` MIME subtype.
+        pub const X_CSH: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XCsh));
+
+        /// The `x-director` MIME subtype.
+        pub const X_DIRECTOR: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XDirector));
+
+        /// The `x-doom` MIME subtype.
+        pub const X_DOOM: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XDoom));
+
+        /// The `x-dvi` MIME subtype.
+        pub const X_DVI: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XDvi));
+
+        /// The `x-font` MIME subtype.
+        pub const X_FONT: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XFont));
+
+        /// The `x-font-pcf` MIME subtype.
+        pub const X_FONT_PCF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XFontPcf));
+
+        /// The `x-freemind` MIME subtype.
+        pub const X_FREEMIND: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XFreemind));
+
+        /// The `x-ganttproject` MIME subtype.
+        pub const X_GANTTPROJECT: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XGanttproject));
+
+        /// The `x-gnumeric` MIME subtype.
+        pub const X_GNUMERIC: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XGnumeric));
+
+        /// The `x-go-sgf` MIME subtype.
+        pub const X_GO_SGF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XGoSgf));
+
+        /// The `x-graphing-calculator` MIME subtype.
+        pub const X_GRAPHING_CALCULATOR: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::XGraphingCalculator),
+        );
+
+        /// The `x-gtar` MIME subtype.
+        pub const X_GTAR: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XGtar));
+
+        /// The `x-gtar-compressed` MIME subtype.
+        pub const X_GTAR_COMPRESSED: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XGtarCompressed));
+
+        /// The `x-hdf` MIME subtype.
+        pub const X_HDF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XHdf));
+
+        /// The `x-hwp` MIME subtype.
+        pub const X_HWP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XHwp));
+
+        /// The `x-ica` MIME subtype.
+        pub const X_ICA: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XIca));
+
+        /// The `x-info` MIME subtype.
+        pub const X_INFO: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XInfo));
+
+        /// The `x-internet-signup` MIME subtype.
+        pub const X_INTERNET_SIGNUP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XInternetSignup));
+
+        /// The `x-iphone` MIME subtype.
+        pub const X_IPHONE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XIphone));
+
+        /// The `x-iso9660-image` MIME subtype.
+        pub const X_ISO9660_IMAGE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XIso9660Image));
+
+        /// The `x-java-jnlp-file` MIME subtype.
+        pub const X_JAVA_JNLP_FILE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XJavaJnlpFile));
+
+        /// The `x-jmol` MIME subtype.
+        pub const X_JMOL: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XJmol));
+
+        /// The `x-killustrator` MIME subtype.
+        pub const X_KILLUSTRATOR: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XKillustrator));
+
+        /// The `x-latex` MIME subtype.
+        pub const X_LATEX: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XLatex));
+
+        /// The `x-lha` MIME subtype.
+        pub const X_LHA: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XLha));
+
+        /// The `x-lyx` MIME subtype.
+        pub const X_LYX: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XLyx));
+
+        /// The `x-lzh` MIME subtype.
+        pub const X_LZH: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XLzh));
+
+        /// The `x-lzx` MIME subtype.
+        pub const X_LZX: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XLzx));
+
+        /// The `x-maker` MIME subtype.
+        pub const X_MAKER: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XMaker));
+
+        /// The `x-ms-wmd` MIME subtype.
+        pub const X_MS_WMD: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XMsWmd));
+
+        /// The `x-ms-wmz` MIME subtype.
+        pub const X_MS_WMZ: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XMsWmz));
+
+        /// The `x-msdos-program` MIME subtype.
+        pub const X_MSDOS_PROGRAM: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XMsdosProgram));
+
+        /// The `x-msi` MIME subtype.
+        pub const X_MSI: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XMsi));
+
+        /// The `x-netcdf` MIME subtype.
+        pub const X_NETCDF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XNetcdf));
+
+        /// The `x-ns-proxy-autoconfig` MIME subtype.
+        pub const X_NS_PROXY_AUTOCONFIG: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::XNsProxyAutoconfig),
+        );
+
+        /// The `x-nwc` MIME subtype.
+        pub const X_NWC: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XNwc));
+
+        /// The `x-object` MIME subtype.
+        pub const X_OBJECT: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XObject));
+
+        /// The `x-oz-application` MIME subtype.
+        pub const X_OZ_APPLICATION: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XOzApplication));
+
+        /// The `x-pkcs7-certreqresp` MIME subtype.
+        pub const X_PKCS7_CERTREQRESP: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::XPkcs7Certreqresp),
+        );
+
+        /// The `x-python-code` MIME subtype.
+        pub const X_PYTHON_CODE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XPythonCode));
+
+        /// The `x-qgis` MIME subtype.
+        pub const X_QGIS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XQgis));
+
+        /// The `x-quicktimeplayer` MIME subtype.
+        pub const X_QUICKTIMEPLAYER: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::XQuicktimeplayer),
+        );
+
+        /// The `x-rdp` MIME subtype.
+        pub const X_RDP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XRdp));
+
+        /// The `x-redhat-package-manager` MIME subtype.
+        pub const X_REDHAT_PACKAGE_MANAGER: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::XRedhatPackageManager),
+        );
+
+        /// The `x-rss` MIME subtype.
+        pub const X_RSS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XRss));
+
+        /// The `x-ruby` MIME subtype.
+        pub const X_RUBY: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XRuby));
+
+        /// The `x-scilab` MIME subtype.
+        pub const X_SCILAB: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XScilab));
+
+        /// The `x-scilab-xcos` MIME subtype.
+        pub const X_SCILAB_XCOS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XScilabXcos));
+
+        /// The `x-sh` MIME subtype.
+        pub const X_SH: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XSh));
+
+        /// The `x-shar` MIME subtype.
+        pub const X_SHAR: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XShar));
+
+        /// The `x-silverlight` MIME subtype.
+        pub const X_SILVERLIGHT: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XSilverlight));
+
+        /// The `x-stuffit` MIME subtype.
+        pub const X_STUFFIT: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XStuffit));
+
+        /// The `x-sv4cpio` MIME subtype.
+        pub const X_SV4CPIO: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XSv4cpio));
+
+        /// The `x-sv4crc` MIME subtype.
+        pub const X_SV4CRC: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XSv4crc));
+
+        /// The `x-tar` MIME subtype.
+        pub const X_TAR: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XTar));
+
+        /// The `x-tcl` MIME subtype.
+        pub const X_TCL: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XTcl));
+
+        /// The `x-tex-gf` MIME subtype.
+        pub const X_TEX_GF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XTexGf));
+
+        /// The `x-tex-pk` MIME subtype.
+        pub const X_TEX_PK: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XTexPk));
+
+        /// The `x-texinfo` MIME subtype.
+        pub const X_TEXINFO: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XTexinfo));
+
+        /// The `x-trash` MIME subtype.
+        pub const X_TRASH: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XTrash));
+
+        /// The `x-troff-man` MIME subtype.
+        pub const X_TROFF_MAN: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XTroffMan));
+
+        /// The `x-troff-me` MIME subtype.
+        pub const X_TROFF_ME: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XTroffMe));
+
+        /// The `x-troff-ms` MIME subtype.
+        pub const X_TROFF_MS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XTroffMs));
+
+        /// The `x-ustar` MIME subtype.
+        pub const X_USTAR: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XUstar));
+
+        /// The `x-wais-source` MIME subtype.
+        pub const X_WAIS_SOURCE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XWaisSource));
+
+        /// The `x-wingz` MIME subtype.
+        pub const X_WINGZ: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XWingz));
+
+        /// The `x-x509-ca-cert` MIME subtype.
+        pub const X_X509_CA_CERT: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XX509CaCert));
+
+        /// The `x-xfig` MIME subtype.
+        pub const X_XFIG: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XXfig));
+
+        /// The `x-xpinstall` MIME subtype.
+        pub const X_XPINSTALL: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XXpinstall));
+
+        /// The `x-xz` MIME subtype.
+        pub const X_XZ: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XXz));
+
+        /// The `x400-bp` MIME subtype.
+        pub const X400_BP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::X400Bp));
+
+        /// The `xacml` MIME subtype.
+        pub const XACML: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Xacml));
+
+        /// The `xcap-att` MIME subtype.
+        pub const XCAP_ATT: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XcapAtt));
+
+        /// The `xcap-caps` MIME subtype.
+        pub const XCAP_CAPS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XcapCaps));
+
+        /// The `xcap-diff` MIME subtype.
+        pub const XCAP_DIFF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XcapDiff));
+
+        /// The `xcap-el` MIME subtype.
+        pub const XCAP_EL: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XcapEl));
+
+        /// The `xcap-error` MIME subtype.
+        pub const XCAP_ERROR: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XcapError));
+
+        /// The `xcap-ns` MIME subtype.
+        pub const XCAP_NS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XcapNs));
+
+        /// The `xcon-conference-info` MIME subtype.
+        pub const XCON_CONFERENCE_INFO: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::XconConferenceInfo),
+        );
+
+        /// The `xcon-conference-info-diff` MIME subtype.
+        pub const XCON_CONFERENCE_INFO_DIFF: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::XconConferenceInfoDiff),
+        );
+
+        /// The `xenc` MIME subtype.
+        pub const XENC: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Xenc));
+
+        /// The `xhtml` MIME subtype.
+        pub const XHTML: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Xhtml));
+
+        /// The `xliff` MIME subtype.
+        pub const XLIFF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Xliff));
+
+        /// The `xml` MIME subtype.
+        pub const XML: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Xml));
+
+        /// The `xml-dtd` MIME subtype.
+        pub const XML_DTD: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XmlDtd));
+
+        /// The `xml-external-parsed-entity` MIME subtype.
+        pub const XML_EXTERNAL_PARSED_ENTITY: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::XmlExternalParsedEntity),
+        );
+
+        /// The `xml-patch` MIME subtype.
+        pub const XML_PATCH: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XmlPatch));
+
+        /// The `xmpp` MIME subtype.
+        pub const XMPP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Xmpp));
+
+        /// The `xop` MIME subtype.
+        pub const XOP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Xop));
+
+        /// The `xslt` MIME subtype.
+        pub const XSLT: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Xslt));
+
+        /// The `xspf` MIME subtype.
+        pub const XSPF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Xspf));
+
+        /// The `xv` MIME subtype.
+        pub const XV: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Xv));
+
+        /// The `yang` MIME subtype.
+        pub const YANG: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Yang));
+
+        /// The `yang-data` MIME subtype.
+        pub const YANG_DATA: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::YangData));
+
+        /// The `yang-patch` MIME subtype.
+        pub const YANG_PATCH: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::YangPatch));
+
+        /// The `yin` MIME subtype.
+        pub const YIN: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Yin));
+
+        /// The `zip` MIME subtype.
+        pub const ZIP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Zip));
+
+        /// The `zlib` MIME subtype.
+        pub const ZLIB: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Zlib));
+
+        /// The `zstd` MIME subtype.
+        pub const ZSTD: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Zstd));
+
+        /// The `aac` MIME subtype.
+        pub const AAC: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Aac));
+
+        /// The `ac3` MIME subtype.
+        pub const AC3: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Ac3));
+
+        /// The `AMR` MIME subtype.
+        pub const AMR: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Amr));
+
+        /// The `AMR-WB` MIME subtype.
+        pub const AMR_WB: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::AmrWb));
+
+        /// The `aptx` MIME subtype.
+        pub const APTX: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Aptx));
+
+        /// The `asc` MIME subtype.
+        pub const ASC: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Asc));
+
+        /// The `ATRAC-ADVANCED-LOSSLESS` MIME subtype.
+        pub const ATRAC_ADVANCED_LOSSLESS: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::AtracAdvancedLossless),
+        );
+
+        /// The `ATRAC-X` MIME subtype.
+        pub const ATRAC_X: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::AtracX));
+
+        /// The `ATRAC3` MIME subtype.
+        pub const ATRAC3: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Atrac3));
+
+        /// The `basic` MIME subtype.
+        pub const BASIC: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Basic));
+
+        /// The `BV16` MIME subtype.
+        pub const BV16: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Bv16));
+
+        /// The `BV32` MIME subtype.
+        pub const BV32: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Bv32));
+
+        /// The `clearmode` MIME subtype.
+        pub const CLEARMODE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Clearmode));
+
+        /// The `CN` MIME subtype.
+        pub const CN: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Cn));
+
+        /// The `csound` MIME subtype.
+        pub const CSOUND: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Csound));
+
+        /// The `DAT12` MIME subtype.
+        pub const DAT12: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Dat12));
+
+        /// The `dls` MIME subtype.
+        pub const DLS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Dls));
+
+        /// The `dsr-es201108` MIME subtype.
+        pub const DSR_ES201108: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::DsrEs201108));
+
+        /// The `dsr-es202050` MIME subtype.
+        pub const DSR_ES202050: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::DsrEs202050));
+
+        /// The `dsr-es202211` MIME subtype.
+        pub const DSR_ES202211: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::DsrEs202211));
+
+        /// The `dsr-es202212` MIME subtype.
+        pub const DSR_ES202212: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::DsrEs202212));
+
+        /// The `DV` MIME subtype.
+        pub const DV: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Dv));
+
+        /// The `DVI4` MIME subtype.
+        pub const DVI4: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Dvi4));
+
+        /// The `eac3` MIME subtype.
+        pub const EAC3: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Eac3));
+
+        /// The `EVRC` MIME subtype.
+        pub const EVRC: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Evrc));
+
+        /// The `EVRC-QCP` MIME subtype.
+        pub const EVRC_QCP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::EvrcQcp));
+
+        /// The `EVRC0` MIME subtype.
+        pub const EVRC0: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Evrc0));
+
+        /// The `EVRC1` MIME subtype.
+        pub const EVRC1: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Evrc1));
+
+        /// The `EVRCB` MIME subtype.
+        pub const EVRCB: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Evrcb));
+
+        /// The `EVRCB0` MIME subtype.
+        pub const EVRCB0: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Evrcb0));
+
+        /// The `EVRCB1` MIME subtype.
+        pub const EVRCB1: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Evrcb1));
+
+        /// The `EVRCNW` MIME subtype.
+        pub const EVRCNW: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Evrcnw));
+
+        /// The `EVRCNW0` MIME subtype.
+        pub const EVRCNW0: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Evrcnw0));
+
+        /// The `EVRCNW1` MIME subtype.
+        pub const EVRCNW1: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Evrcnw1));
+
+        /// The `EVRCWB` MIME subtype.
+        pub const EVRCWB: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Evrcwb));
+
+        /// The `EVRCWB0` MIME subtype.
+        pub const EVRCWB0: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Evrcwb0));
+
+        /// The `EVRCWB1` MIME subtype.
+        pub const EVRCWB1: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Evrcwb1));
+
+        /// The `EVS` MIME subtype.
+        pub const EVS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Evs));
+
+        /// The `flac` MIME subtype.
+        pub const FLAC: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Flac));
+
+        /// The `fwdred` MIME subtype.
+        pub const FWDRED: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Fwdred));
+
+        /// The `G711-0` MIME subtype.
+        pub const G711_0: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::G7110));
+
+        /// The `G719` MIME subtype.
+        pub const G719: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::G719));
+
+        /// The `G722` MIME subtype.
+        pub const G722: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::G722));
+
+        /// The `G7221` MIME subtype.
+        pub const G7221: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::G7221));
+
+        /// The `G723` MIME subtype.
+        pub const G723: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::G723));
+
+        /// The `G726-16` MIME subtype.
+        pub const G726_16: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::G72616));
+
+        /// The `G726-24` MIME subtype.
+        pub const G726_24: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::G72624));
+
+        /// The `G726-32` MIME subtype.
+        pub const G726_32: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::G72632));
+
+        /// The `G726-40` MIME subtype.
+        pub const G726_40: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::G72640));
+
+        /// The `G728` MIME subtype.
+        pub const G728: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::G728));
+
+        /// The `G729` MIME subtype.
+        pub const G729: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::G729));
+
+        /// The `G7291` MIME subtype.
+        pub const G7291: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::G7291));
+
+        /// The `G729D` MIME subtype.
+        pub const G729D: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::G729d));
+
+        /// The `G729E` MIME subtype.
+        pub const G729E: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::G729e));
+
+        /// The `GSM` MIME subtype.
+        pub const GSM: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Gsm));
+
+        /// The `GSM-EFR` MIME subtype.
+        pub const GSM_EFR: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::GsmEfr));
+
+        /// The `GSM-HR-08` MIME subtype.
+        pub const GSM_HR_08: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::GsmHr08));
+
+        /// The `iLBC` MIME subtype.
+        pub const I_LBC: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::ILbc));
+
+        /// The `ip-mr_v2.5` MIME subtype.
+        pub const IP_MR_V2_5: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::IpMrV25));
+
+        /// The `L16` MIME subtype.
+        pub const L16: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::L16));
+
+        /// The `L20` MIME subtype.
+        pub const L20: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::L20));
+
+        /// The `L24` MIME subtype.
+        pub const L24: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::L24));
+
+        /// The `L8` MIME subtype.
+        pub const L8: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::L8));
+
+        /// The `LPC` MIME subtype.
+        pub const LPC: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Lpc));
+
+        /// The `MELP` MIME subtype.
+        pub const MELP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Melp));
+
+        /// The `MELP1200` MIME subtype.
+        pub const MELP1200: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Melp1200));
+
+        /// The `MELP2400` MIME subtype.
+        pub const MELP2400: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Melp2400));
+
+        /// The `MELP600` MIME subtype.
+        pub const MELP600: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Melp600));
+
+        /// The `mhas` MIME subtype.
+        pub const MHAS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Mhas));
+
+        /// The `mobile-xmf` MIME subtype.
+        pub const MOBILE_XMF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::MobileXmf));
+
+        /// The `MP4A-LATM` MIME subtype.
+        pub const MP4A_LATM: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Mp4aLatm));
+
+        /// The `MPA` MIME subtype.
+        pub const MPA: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Mpa));
+
+        /// The `mpa-robust` MIME subtype.
+        pub const MPA_ROBUST: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::MpaRobust));
+
+        /// The `mpeg` MIME subtype.
+        pub const MPEG: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Mpeg));
+
+        /// The `mpegurl` MIME subtype.
+        pub const MPEGURL: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Mpegurl));
+
+        /// The `opus` MIME subtype.
+        pub const OPUS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Opus));
+
+        /// The `PCMA` MIME subtype.
+        pub const PCMA: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Pcma));
+
+        /// The `PCMA-WB` MIME subtype.
+        pub const PCMA_WB: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::PcmaWb));
+
+        /// The `PCMU` MIME subtype.
+        pub const PCMU: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Pcmu));
+
+        /// The `PCMU-WB` MIME subtype.
+        pub const PCMU_WB: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::PcmuWb));
+
+        /// The `prs.sid` MIME subtype.
+        pub const PRS_SID: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::PrsSid));
+
+        /// The `QCELP` MIME subtype.
+        pub const QCELP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Qcelp));
+
+        /// The `RED` MIME subtype.
+        pub const RED: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Red));
+
+        /// The `rtp-enc-aescm128` MIME subtype.
+        pub const RTP_ENC_AESCM128: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::RtpEncAescm128));
+
+        /// The `rtp-midi` MIME subtype.
+        pub const RTP_MIDI: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::RtpMidi));
+
+        /// The `scip` MIME subtype.
+        pub const SCIP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Scip));
+
+        /// The `SMV` MIME subtype.
+        pub const SMV: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Smv));
+
+        /// The `SMV-QCP` MIME subtype.
+        pub const SMV_QCP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::SmvQcp));
+
+        /// The `SMV0` MIME subtype.
+        pub const SMV0: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Smv0));
+
+        /// The `sofa` MIME subtype.
+        pub const SOFA: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Sofa));
+
+        /// The `sp-midi` MIME subtype.
+        pub const SP_MIDI: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::SpMidi));
+
+        /// The `speex` MIME subtype.
+        pub const SPEEX: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Speex));
+
+        /// The `t140c` MIME subtype.
+        pub const T140C: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::T140c));
+
+        /// The `t38` MIME subtype.
+        pub const T38: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::T38));
+
+        /// The `telephone-event` MIME subtype.
+        pub const TELEPHONE_EVENT: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::TelephoneEvent));
+
+        /// The `TETRA_ACELP` MIME subtype.
+        pub const TETRA_ACELP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::TetraAcelp));
+
+        /// The `TETRA_ACELP_BB` MIME subtype.
+        pub const TETRA_ACELP_BB: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::TetraAcelpBb));
+
+        /// The `tone` MIME subtype.
+        pub const TONE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Tone));
+
+        /// The `TSVCIS` MIME subtype.
+        pub const TSVCIS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Tsvcis));
+
+        /// The `UEMCLIP` MIME subtype.
+        pub const UEMCLIP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Uemclip));
+
+        /// The `usac` MIME subtype.
+        pub const USAC: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Usac));
+
+        /// The `VDVI` MIME subtype.
+        pub const VDVI: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Vdvi));
+
+        /// The `VMR-WB` MIME subtype.
+        pub const VMR_WB: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VmrWb));
+
+        /// The `vnd.3gpp.iufp` MIME subtype.
+        pub const VND_3GPP_IUFP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Vnd3gppIufp));
+
+        /// The `vnd.4SB` MIME subtype.
+        pub const VND_4SB: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Vnd4sb));
+
+        /// The `vnd.audiokoz` MIME subtype.
+        pub const VND_AUDIOKOZ: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndAudiokoz));
+
+        /// The `vnd.CELP` MIME subtype.
+        pub const VND_CELP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndCelp));
+
+        /// The `vnd.cisco.nse` MIME subtype.
+        pub const VND_CISCO_NSE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndCiscoNse));
+
+        /// The `vnd.cmles.radio-events` MIME subtype.
+        pub const VND_CMLES_RADIO_EVENTS: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndCmlesRadioEvents),
+        );
+
+        /// The `vnd.cns.anp1` MIME subtype.
+        pub const VND_CNS_ANP1: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndCnsAnp1));
+
+        /// The `vnd.cns.inf1` MIME subtype.
+        pub const VND_CNS_INF1: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndCnsInf1));
+
+        /// The `vnd.dece.audio` MIME subtype.
+        pub const VND_DECE_AUDIO: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndDeceAudio));
+
+        /// The `vnd.digital-winds` MIME subtype.
+        pub const VND_DIGITAL_WINDS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndDigitalWinds));
+
+        /// The `vnd.dlna.adts` MIME subtype.
+        pub const VND_DLNA_ADTS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndDlnaAdts));
+
+        /// The `vnd.dolby.heaac.1` MIME subtype.
+        pub const VND_DOLBY_HEAAC_1: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndDolbyHeaac1));
+
+        /// The `vnd.dolby.heaac.2` MIME subtype.
+        pub const VND_DOLBY_HEAAC_2: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndDolbyHeaac2));
+
+        /// The `vnd.dolby.mlp` MIME subtype.
+        pub const VND_DOLBY_MLP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndDolbyMlp));
+
+        /// The `vnd.dolby.mps` MIME subtype.
+        pub const VND_DOLBY_MPS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndDolbyMps));
+
+        /// The `vnd.dolby.pl2` MIME subtype.
+        pub const VND_DOLBY_PL2: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndDolbyPl2));
+
+        /// The `vnd.dolby.pl2x` MIME subtype.
+        pub const VND_DOLBY_PL2X: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndDolbyPl2x));
+
+        /// The `vnd.dolby.pl2z` MIME subtype.
+        pub const VND_DOLBY_PL2Z: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndDolbyPl2z));
+
+        /// The `vnd.dolby.pulse.1` MIME subtype.
+        pub const VND_DOLBY_PULSE_1: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndDolbyPulse1));
+
+        /// The `vnd.dra` MIME subtype.
+        pub const VND_DRA: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndDra));
+
+        /// The `vnd.dts` MIME subtype.
+        pub const VND_DTS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndDts));
+
+        /// The `vnd.dts.hd` MIME subtype.
+        pub const VND_DTS_HD: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndDtsHd));
+
+        /// The `vnd.dts.uhd` MIME subtype.
+        pub const VND_DTS_UHD: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndDtsUhd));
+
+        /// The `vnd.dvb.file` MIME subtype.
+        pub const VND_DVB_FILE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndDvbFile));
+
+        /// The `vnd.everad.plj` MIME subtype.
+        pub const VND_EVERAD_PLJ: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndEveradPlj));
+
+        /// The `vnd.hns.audio` MIME subtype.
+        pub const VND_HNS_AUDIO: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndHnsAudio));
+
+        /// The `vnd.lucent.voice` MIME subtype.
+        pub const VND_LUCENT_VOICE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndLucentVoice));
+
+        /// The `vnd.ms-playready.media.pya` MIME subtype.
+        pub const VND_MS_PLAYREADY_MEDIA_PYA: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndMsPlayreadyMediaPya),
+        );
+
+        /// The `vnd.nokia.mobile-xmf` MIME subtype.
+        pub const VND_NOKIA_MOBILE_XMF: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndNokiaMobileXmf),
+        );
+
+        /// The `vnd.nortel.vbk` MIME subtype.
+        pub const VND_NORTEL_VBK: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndNortelVbk));
+
+        /// The `vnd.nuera.ecelp4800` MIME subtype.
+        pub const VND_NUERA_ECELP4800: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndNueraEcelp4800),
+        );
+
+        /// The `vnd.nuera.ecelp7470` MIME subtype.
+        pub const VND_NUERA_ECELP7470: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndNueraEcelp7470),
+        );
+
+        /// The `vnd.nuera.ecelp9600` MIME subtype.
+        pub const VND_NUERA_ECELP9600: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndNueraEcelp9600),
+        );
+
+        /// The `vnd.octel.sbc` MIME subtype.
+        pub const VND_OCTEL_SBC: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndOctelSbc));
+
+        /// The `vnd.presonus.multitrack` MIME subtype.
+        pub const VND_PRESONUS_MULTITRACK: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndPresonusMultitrack),
+        );
+
+        /// The `vnd.rhetorex.32kadpcm` MIME subtype.
+        pub const VND_RHETOREX_32KADPCM: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndRhetorex32kadpcm),
+        );
+
+        /// The `vnd.rip` MIME subtype.
+        pub const VND_RIP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndRip));
+
+        /// The `vnd.sealedmedia.softseal.mpeg` MIME subtype.
+        pub const VND_SEALEDMEDIA_SOFTSEAL_MPEG: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndSealedmediaSoftsealMpeg),
+        );
+
+        /// The `vnd.vmx.cvsd` MIME subtype.
+        pub const VND_VMX_CVSD: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndVmxCvsd));
+
+        /// The `vorbis` MIME subtype.
+        pub const VORBIS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Vorbis));
+
+        /// The `vorbis-config` MIME subtype.
+        pub const VORBIS_CONFIG: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VorbisConfig));
+
+        /// The `x-aiff` MIME subtype.
+        pub const X_AIFF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XAiff));
+
+        /// The `x-gsm` MIME subtype.
+        pub const X_GSM: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XGsm));
+
+        /// The `x-ms-wax` MIME subtype.
+        pub const X_MS_WAX: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XMsWax));
+
+        /// The `x-ms-wma` MIME subtype.
+        pub const X_MS_WMA: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XMsWma));
+
+        /// The `x-pn-realaudio` MIME subtype.
+        pub const X_PN_REALAUDIO: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XPnRealaudio));
+
+        /// The `x-scpls` MIME subtype.
+        pub const X_SCPLS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XScpls));
+
+        /// The `x-sd2` MIME subtype.
+        pub const X_SD2: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XSd2));
+
+        /// The `x-wav` MIME subtype.
+        pub const X_WAV: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XWav));
+
+        /// The `x-alchemy` MIME subtype.
+        pub const X_ALCHEMY: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XAlchemy));
+
+        /// The `x-cache` MIME subtype.
+        pub const X_CACHE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XCache));
+
+        /// The `x-cache-csf` MIME subtype.
+        pub const X_CACHE_CSF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XCacheCsf));
+
+        /// The `x-cactvs-binary` MIME subtype.
+        pub const X_CACTVS_BINARY: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XCactvsBinary));
+
+        /// The `x-cdx` MIME subtype.
+        pub const X_CDX: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XCdx));
+
+        /// The `x-cerius` MIME subtype.
+        pub const X_CERIUS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XCerius));
+
+        /// The `x-chem3d` MIME subtype.
+        pub const X_CHEM3D: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XChem3d));
+
+        /// The `x-chemdraw` MIME subtype.
+        pub const X_CHEMDRAW: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XChemdraw));
+
+        /// The `x-cif` MIME subtype.
+        pub const X_CIF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XCif));
+
+        /// The `x-cmdf` MIME subtype.
+        pub const X_CMDF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XCmdf));
+
+        /// The `x-cml` MIME subtype.
+        pub const X_CML: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XCml));
+
+        /// The `x-compass` MIME subtype.
+        pub const X_COMPASS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XCompass));
+
+        /// The `x-crossfire` MIME subtype.
+        pub const X_CROSSFIRE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XCrossfire));
+
+        /// The `x-csml` MIME subtype.
+        pub const X_CSML: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XCsml));
+
+        /// The `x-ctx` MIME subtype.
+        pub const X_CTX: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XCtx));
+
+        /// The `x-cxf` MIME subtype.
+        pub const X_CXF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XCxf));
+
+        /// The `x-embl-dl-nucleotide` MIME subtype.
+        pub const X_EMBL_DL_NUCLEOTIDE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::XEmblDlNucleotide),
+        );
+
+        /// The `x-galactic-spc` MIME subtype.
+        pub const X_GALACTIC_SPC: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XGalacticSpc));
+
+        /// The `x-gamess-input` MIME subtype.
+        pub const X_GAMESS_INPUT: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XGamessInput));
+
+        /// The `x-gaussian-checkpoint` MIME subtype.
+        pub const X_GAUSSIAN_CHECKPOINT: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::XGaussianCheckpoint),
+        );
+
+        /// The `x-gaussian-cube` MIME subtype.
+        pub const X_GAUSSIAN_CUBE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XGaussianCube));
+
+        /// The `x-gaussian-input` MIME subtype.
+        pub const X_GAUSSIAN_INPUT: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XGaussianInput));
+
+        /// The `x-gaussian-log` MIME subtype.
+        pub const X_GAUSSIAN_LOG: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XGaussianLog));
+
+        /// The `x-gcg8-sequence` MIME subtype.
+        pub const X_GCG8_SEQUENCE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XGcg8Sequence));
+
+        /// The `x-genbank` MIME subtype.
+        pub const X_GENBANK: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XGenbank));
+
+        /// The `x-hin` MIME subtype.
+        pub const X_HIN: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XHin));
+
+        /// The `x-isostar` MIME subtype.
+        pub const X_ISOSTAR: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XIsostar));
+
+        /// The `x-jcamp-dx` MIME subtype.
+        pub const X_JCAMP_DX: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XJcampDx));
+
+        /// The `x-kinemage` MIME subtype.
+        pub const X_KINEMAGE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XKinemage));
+
+        /// The `x-macmolecule` MIME subtype.
+        pub const X_MACMOLECULE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XMacmolecule));
+
+        /// The `x-macromodel-input` MIME subtype.
+        pub const X_MACROMODEL_INPUT: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::XMacromodelInput),
+        );
+
+        /// The `x-mdl-molfile` MIME subtype.
+        pub const X_MDL_MOLFILE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XMdlMolfile));
+
+        /// The `x-mdl-rdfile` MIME subtype.
+        pub const X_MDL_RDFILE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XMdlRdfile));
+
+        /// The `x-mdl-rxnfile` MIME subtype.
+        pub const X_MDL_RXNFILE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XMdlRxnfile));
+
+        /// The `x-mdl-sdfile` MIME subtype.
+        pub const X_MDL_SDFILE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XMdlSdfile));
+
+        /// The `x-mdl-tgf` MIME subtype.
+        pub const X_MDL_TGF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XMdlTgf));
+
+        /// The `x-mmcif` MIME subtype.
+        pub const X_MMCIF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XMmcif));
+
+        /// The `x-mol2` MIME subtype.
+        pub const X_MOL2: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XMol2));
+
+        /// The `x-molconn-Z` MIME subtype.
+        pub const X_MOLCONN_Z: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XMolconnZ));
+
+        /// The `x-mopac-graph` MIME subtype.
+        pub const X_MOPAC_GRAPH: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XMopacGraph));
+
+        /// The `x-mopac-input` MIME subtype.
+        pub const X_MOPAC_INPUT: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XMopacInput));
+
+        /// The `x-mopac-out` MIME subtype.
+        pub const X_MOPAC_OUT: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XMopacOut));
+
+        /// The `x-mopac-vib` MIME subtype.
+        pub const X_MOPAC_VIB: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XMopacVib));
+
+        /// The `x-ncbi-asn1` MIME subtype.
+        pub const X_NCBI_ASN1: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XNcbiAsn1));
+
+        /// The `x-ncbi-asn1-ascii` MIME subtype.
+        pub const X_NCBI_ASN1_ASCII: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XNcbiAsn1Ascii));
+
+        /// The `x-ncbi-asn1-binary` MIME subtype.
+        pub const X_NCBI_ASN1_BINARY: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XNcbiAsn1Binary));
+
+        /// The `x-ncbi-asn1-spec` MIME subtype.
+        pub const X_NCBI_ASN1_SPEC: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XNcbiAsn1Spec));
+
+        /// The `x-pdb` MIME subtype.
+        pub const X_PDB: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XPdb));
+
+        /// The `x-rosdal` MIME subtype.
+        pub const X_ROSDAL: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XRosdal));
+
+        /// The `x-swissprot` MIME subtype.
+        pub const X_SWISSPROT: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XSwissprot));
+
+        /// The `x-vamas-iso14976` MIME subtype.
+        pub const X_VAMAS_ISO14976: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XVamasIso14976));
+
+        /// The `x-vmd` MIME subtype.
+        pub const X_VMD: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XVmd));
+
+        /// The `x-xtel` MIME subtype.
+        pub const X_XTEL: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XXtel));
+
+        /// The `x-xyz` MIME subtype.
+        pub const X_XYZ: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XXyz));
+
+        /// The `collection` MIME subtype.
+        pub const COLLECTION: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Collection));
+
+        /// The `otf` MIME subtype.
+        pub const OTF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Otf));
+
+        /// The `sfnt` MIME subtype.
+        pub const SFNT: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Sfnt));
+
+        /// The `ttf` MIME subtype.
+        pub const TTF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Ttf));
+
+        /// The `woff` MIME subtype.
+        pub const WOFF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Woff));
+
+        /// The `woff2` MIME subtype.
+        pub const WOFF2: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Woff2));
+
+        /// The `aces` MIME subtype.
+        pub const ACES: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Aces));
+
+        /// The `avci` MIME subtype.
+        pub const AVCI: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Avci));
+
+        /// The `avcs` MIME subtype.
+        pub const AVCS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Avcs));
+
+        /// The `avif` MIME subtype.
+        pub const AVIF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Avif));
+
+        /// The `bmp` MIME subtype.
+        pub const BMP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Bmp));
+
+        /// The `cgm` MIME subtype.
+        pub const CGM: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Cgm));
+
+        /// The `dicom-rle` MIME subtype.
+        pub const DICOM_RLE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::DicomRle));
+
+        /// The `emf` MIME subtype.
+        pub const EMF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Emf));
+
+        /// The `g3fax` MIME subtype.
+        pub const G3FAX: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::G3fax));
+
+        /// The `gif` MIME subtype.
+        pub const GIF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Gif));
+
+        /// The `heic` MIME subtype.
+        pub const HEIC: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Heic));
+
+        /// The `heic-sequence` MIME subtype.
+        pub const HEIC_SEQUENCE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::HeicSequence));
+
+        /// The `heif` MIME subtype.
+        pub const HEIF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Heif));
+
+        /// The `heif-sequence` MIME subtype.
+        pub const HEIF_SEQUENCE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::HeifSequence));
+
+        /// The `hej2k` MIME subtype.
+        pub const HEJ2K: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Hej2k));
+
+        /// The `hsj2` MIME subtype.
+        pub const HSJ2: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Hsj2));
+
+        /// The `ief` MIME subtype.
+        pub const IEF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Ief));
+
+        /// The `jls` MIME subtype.
+        pub const JLS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Jls));
+
+        /// The `jp2` MIME subtype.
+        pub const JP2: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Jp2));
+
+        /// The `jpeg` MIME subtype.
+        pub const JPEG: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Jpeg));
+
+        /// The `jph` MIME subtype.
+        pub const JPH: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Jph));
+
+        /// The `jphc` MIME subtype.
+        pub const JPHC: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Jphc));
+
+        /// The `jpm` MIME subtype.
+        pub const JPM: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Jpm));
+
+        /// The `jpx` MIME subtype.
+        pub const JPX: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Jpx));
+
+        /// The `jxl` MIME subtype.
+        pub const JXL: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Jxl));
+
+        /// The `jxr` MIME subtype.
+        pub const JXR: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Jxr));
+
+        /// The `jxrA` MIME subtype.
+        pub const JXR_A: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::JxrA));
+
+        /// The `jxrS` MIME subtype.
+        pub const JXR_S: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::JxrS));
+
+        /// The `jxs` MIME subtype.
+        pub const JXS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Jxs));
+
+        /// The `jxsc` MIME subtype.
+        pub const JXSC: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Jxsc));
+
+        /// The `jxsi` MIME subtype.
+        pub const JXSI: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Jxsi));
+
+        /// The `jxss` MIME subtype.
+        pub const JXSS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Jxss));
+
+        /// The `ktx` MIME subtype.
+        pub const KTX: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Ktx));
+
+        /// The `ktx2` MIME subtype.
+        pub const KTX2: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Ktx2));
+
+        /// The `naplps` MIME subtype.
+        pub const NAPLPS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Naplps));
+
+        /// The `png` MIME subtype.
+        pub const PNG: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Png));
+
+        /// The `prs.btif` MIME subtype.
+        pub const PRS_BTIF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::PrsBtif));
+
+        /// The `prs.pti` MIME subtype.
+        pub const PRS_PTI: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::PrsPti));
+
+        /// The `pwg-raster` MIME subtype.
+        pub const PWG_RASTER: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::PwgRaster));
+
+        /// The `svg` MIME subtype.
+        pub const SVG: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Svg));
+
+        /// The `tiff` MIME subtype.
+        pub const TIFF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Tiff));
+
+        /// The `tiff-fx` MIME subtype.
+        pub const TIFF_FX: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::TiffFx));
+
+        /// The `vnd.adobe.photoshop` MIME subtype.
+        pub const VND_ADOBE_PHOTOSHOP: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndAdobePhotoshop),
+        );
+
+        /// The `vnd.airzip.accelerator.azv` MIME subtype.
+        pub const VND_AIRZIP_ACCELERATOR_AZV: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndAirzipAcceleratorAzv),
+        );
+
+        /// The `vnd.cns.inf2` MIME subtype.
+        pub const VND_CNS_INF2: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndCnsInf2));
+
+        /// The `vnd.dece.graphic` MIME subtype.
+        pub const VND_DECE_GRAPHIC: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndDeceGraphic));
+
+        /// The `vnd.djvu` MIME subtype.
+        pub const VND_DJVU: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndDjvu));
+
+        /// The `vnd.dvb.subtitle` MIME subtype.
+        pub const VND_DVB_SUBTITLE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndDvbSubtitle));
+
+        /// The `vnd.dwg` MIME subtype.
+        pub const VND_DWG: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndDwg));
+
+        /// The `vnd.dxf` MIME subtype.
+        pub const VND_DXF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndDxf));
+
+        /// The `vnd.fastbidsheet` MIME subtype.
+        pub const VND_FASTBIDSHEET: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndFastbidsheet));
+
+        /// The `vnd.fpx` MIME subtype.
+        pub const VND_FPX: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndFpx));
+
+        /// The `vnd.fst` MIME subtype.
+        pub const VND_FST: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndFst));
+
+        /// The `vnd.fujixerox.edmics-mmr` MIME subtype.
+        pub const VND_FUJIXEROX_EDMICS_MMR: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndFujixeroxEdmicsMmr),
+        );
+
+        /// The `vnd.fujixerox.edmics-rlc` MIME subtype.
+        pub const VND_FUJIXEROX_EDMICS_RLC: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndFujixeroxEdmicsRlc),
+        );
+
+        /// The `vnd.globalgraphics.pgb` MIME subtype.
+        pub const VND_GLOBALGRAPHICS_PGB: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndGlobalgraphicsPgb),
+        );
+
+        /// The `vnd.microsoft.icon` MIME subtype.
+        pub const VND_MICROSOFT_ICON: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndMicrosoftIcon),
+        );
+
+        /// The `vnd.mix` MIME subtype.
+        pub const VND_MIX: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndMix));
+
+        /// The `vnd.mozilla.apng` MIME subtype.
+        pub const VND_MOZILLA_APNG: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndMozillaApng));
+
+        /// The `vnd.ms-modi` MIME subtype.
+        pub const VND_MS_MODI: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndMsModi));
+
+        /// The `vnd.net-fpx` MIME subtype.
+        pub const VND_NET_FPX: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndNetFpx));
+
+        /// The `vnd.pco.b16` MIME subtype.
+        pub const VND_PCO_B16: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndPcoB16));
+
+        /// The `vnd.radiance` MIME subtype.
+        pub const VND_RADIANCE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndRadiance));
+
+        /// The `vnd.sealed.png` MIME subtype.
+        pub const VND_SEALED_PNG: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndSealedPng));
+
+        /// The `vnd.sealedmedia.softseal.gif` MIME subtype.
+        pub const VND_SEALEDMEDIA_SOFTSEAL_GIF: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndSealedmediaSoftsealGif),
+        );
+
+        /// The `vnd.sealedmedia.softseal.jpg` MIME subtype.
+        pub const VND_SEALEDMEDIA_SOFTSEAL_JPG: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndSealedmediaSoftsealJpg),
+        );
+
+        /// The `vnd.svf` MIME subtype.
+        pub const VND_SVF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndSvf));
+
+        /// The `vnd.tencent.tap` MIME subtype.
+        pub const VND_TENCENT_TAP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndTencentTap));
+
+        /// The `vnd.valve.source.texture` MIME subtype.
+        pub const VND_VALVE_SOURCE_TEXTURE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndValveSourceTexture),
+        );
+
+        /// The `vnd.wap.wbmp` MIME subtype.
+        pub const VND_WAP_WBMP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndWapWbmp));
+
+        /// The `vnd.xiff` MIME subtype.
+        pub const VND_XIFF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndXiff));
+
+        /// The `vnd.zbrush.pcx` MIME subtype.
+        pub const VND_ZBRUSH_PCX: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndZbrushPcx));
+
+        /// The `wmf` MIME subtype.
+        pub const WMF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Wmf));
+
+        /// The `x-canon-cr2` MIME subtype.
+        pub const X_CANON_CR2: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XCanonCr2));
+
+        /// The `x-canon-crw` MIME subtype.
+        pub const X_CANON_CRW: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XCanonCrw));
+
+        /// The `x-cmu-raster` MIME subtype.
+        pub const X_CMU_RASTER: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XCmuRaster));
+
+        /// The `x-coreldraw` MIME subtype.
+        pub const X_CORELDRAW: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XCoreldraw));
+
+        /// The `x-coreldrawpattern` MIME subtype.
+        pub const X_CORELDRAWPATTERN: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::XCoreldrawpattern),
+        );
+
+        /// The `x-coreldrawtemplate` MIME subtype.
+        pub const X_CORELDRAWTEMPLATE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::XCoreldrawtemplate),
+        );
+
+        /// The `x-corelphotopaint` MIME subtype.
+        pub const X_CORELPHOTOPAINT: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::XCorelphotopaint),
+        );
+
+        /// The `x-epson-erf` MIME subtype.
+        pub const X_EPSON_ERF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XEpsonErf));
+
+        /// The `x-jg` MIME subtype.
+        pub const X_JG: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XJg));
+
+        /// The `x-jng` MIME subtype.
+        pub const X_JNG: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XJng));
+
+        /// The `x-nikon-nef` MIME subtype.
+        pub const X_NIKON_NEF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XNikonNef));
+
+        /// The `x-olympus-orf` MIME subtype.
+        pub const X_OLYMPUS_ORF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XOlympusOrf));
+
+        /// The `x-portable-anymap` MIME subtype.
+        pub const X_PORTABLE_ANYMAP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XPortableAnymap));
+
+        /// The `x-portable-bitmap` MIME subtype.
+        pub const X_PORTABLE_BITMAP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XPortableBitmap));
+
+        /// The `x-portable-graymap` MIME subtype.
+        pub const X_PORTABLE_GRAYMAP: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::XPortableGraymap),
+        );
+
+        /// The `x-portable-pixmap` MIME subtype.
+        pub const X_PORTABLE_PIXMAP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XPortablePixmap));
+
+        /// The `x-rgb` MIME subtype.
+        pub const X_RGB: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XRgb));
+
+        /// The `x-xbitmap` MIME subtype.
+        pub const X_XBITMAP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XXbitmap));
+
+        /// The `x-xcf` MIME subtype.
+        pub const X_XCF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XXcf));
+
+        /// The `x-xpixmap` MIME subtype.
+        pub const X_XPIXMAP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XXpixmap));
+
+        /// The `x-xwindowdump` MIME subtype.
+        pub const X_XWINDOWDUMP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XXwindowdump));
+
+        /// The `blockdevice` MIME subtype.
+        pub const BLOCKDEVICE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Blockdevice));
+
+        /// The `chardevice` MIME subtype.
+        pub const CHARDEVICE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Chardevice));
+
+        /// The `directory` MIME subtype.
+        pub const DIRECTORY: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Directory));
+
+        /// The `directory-locked` MIME subtype.
+        pub const DIRECTORY_LOCKED: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::DirectoryLocked));
+
+        /// The `fifo` MIME subtype.
+        pub const FIFO: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Fifo));
+
+        /// The `socket` MIME subtype.
+        pub const SOCKET: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Socket));
+
+        /// The `CPIM` MIME subtype.
+        pub const CPIM: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Cpim));
+
+        /// The `delivery-status` MIME subtype.
+        pub const DELIVERY_STATUS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::DeliveryStatus));
+
+        /// The `disposition-notification` MIME subtype.
+        pub const DISPOSITION_NOTIFICATION: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::DispositionNotification),
+        );
+
+        /// The `external-body` MIME subtype.
+        pub const EXTERNAL_BODY: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::ExternalBody));
+
+        /// The `feedback-report` MIME subtype.
+        pub const FEEDBACK_REPORT: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::FeedbackReport));
+
+        /// The `global` MIME subtype.
+        pub const GLOBAL: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Global));
+
+        /// The `global-delivery-status` MIME subtype.
+        pub const GLOBAL_DELIVERY_STATUS: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::GlobalDeliveryStatus),
+        );
+
+        /// The `global-disposition-notification` MIME subtype.
+        pub const GLOBAL_DISPOSITION_NOTIFICATION: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::GlobalDispositionNotification),
+        );
+
+        /// The `global-headers` MIME subtype.
+        pub const GLOBAL_HEADERS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::GlobalHeaders));
+
+        /// The `imdn` MIME subtype.
+        pub const IMDN: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Imdn));
+
+        /// The `partial` MIME subtype.
+        pub const PARTIAL: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Partial));
+
+        /// The `rfc822` MIME subtype.
+        pub const RFC822: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Rfc822));
+
+        /// The `s-http` MIME subtype.
+        pub const S_HTTP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::SHttp));
+
+        /// The `sip` MIME subtype.
+        pub const SIP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Sip));
+
+        /// The `sipfrag` MIME subtype.
+        pub const SIPFRAG: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Sipfrag));
+
+        /// The `tracking-status` MIME subtype.
+        pub const TRACKING_STATUS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::TrackingStatus));
+
+        /// The `e57` MIME subtype.
+        pub const E57: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::E57));
+
+        /// The `gltf` MIME subtype.
+        pub const GLTF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Gltf));
+
+        /// The `gltf-binary` MIME subtype.
+        pub const GLTF_BINARY: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::GltfBinary));
+
+        /// The `mesh` MIME subtype.
+        pub const MESH: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Mesh));
+
+        /// The `mtl` MIME subtype.
+        pub const MTL: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Mtl));
+
+        /// The `obj` MIME subtype.
+        pub const OBJ: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Obj));
+
+        /// The `prc` MIME subtype.
+        pub const PRC: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Prc));
+
+        /// The `step` MIME subtype.
+        pub const STEP: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Step));
+
+        /// The `step-xml` MIME subtype.
+        pub const STEP_XML: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::StepXml));
+
+        /// The `stl` MIME subtype.
+        pub const STL: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Stl));
+
+        /// The `u3d` MIME subtype.
+        pub const U3D: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::U3d));
+
+        /// The `vnd.collada` MIME subtype.
+        pub const VND_COLLADA: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndCollada));
+
+        /// The `vnd.dwf` MIME subtype.
+        pub const VND_DWF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndDwf));
+
+        /// The `vnd.flatland.3dml` MIME subtype.
+        pub const VND_FLATLAND_3DML: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndFlatland3dml));
+
+        /// The `vnd.gdl` MIME subtype.
+        pub const VND_GDL: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndGdl));
+
+        /// The `vnd.gs-gdl` MIME subtype.
+        pub const VND_GS_GDL: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndGsGdl));
+
+        /// The `vnd.gtw` MIME subtype.
+        pub const VND_GTW: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndGtw));
+
+        /// The `vnd.moml` MIME subtype.
+        pub const VND_MOML: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndMoml));
+
+        /// The `vnd.mts` MIME subtype.
+        pub const VND_MTS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndMts));
+
+        /// The `vnd.opengex` MIME subtype.
+        pub const VND_OPENGEX: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndOpengex));
+
+        /// The `vnd.parasolid.transmit.binary` MIME subtype.
+        pub const VND_PARASOLID_TRANSMIT_BINARY: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndParasolidTransmitBinary),
+        );
+
+        /// The `vnd.parasolid.transmit.text` MIME subtype.
+        pub const VND_PARASOLID_TRANSMIT_TEXT: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndParasolidTransmitText),
+        );
+
+        /// The `vnd.pytha.pyox` MIME subtype.
+        pub const VND_PYTHA_PYOX: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndPythaPyox));
+
+        /// The `vnd.rosette.annotated-data-model` MIME subtype.
+        pub const VND_ROSETTE_ANNOTATED_DATA_MODEL: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndRosetteAnnotatedDataModel),
+        );
+
+        /// The `vnd.sap.vds` MIME subtype.
+        pub const VND_SAP_VDS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndSapVds));
+
+        /// The `vnd.usdz` MIME subtype.
+        pub const VND_USDZ: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndUsdz));
+
+        /// The `vnd.valve.source.compiled-map` MIME subtype.
+        pub const VND_VALVE_SOURCE_COMPILED_MAP: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndValveSourceCompiledMap),
+        );
+
+        /// The `vnd.vtu` MIME subtype.
+        pub const VND_VTU: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndVtu));
+
+        /// The `vrml` MIME subtype.
+        pub const VRML: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Vrml));
+
+        /// The `x3d` MIME subtype.
+        pub const X3D: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::X3d));
+
+        /// The `x3d-vrml` MIME subtype.
+        pub const X3D_VRML: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::X3dVrml));
+
+        /// The `alternative` MIME subtype.
+        pub const ALTERNATIVE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Alternative));
+
+        /// The `appledouble` MIME subtype.
+        pub const APPLEDOUBLE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Appledouble));
+
+        /// The `byteranges` MIME subtype.
+        pub const BYTERANGES: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Byteranges));
+
+        /// The `digest` MIME subtype.
+        pub const DIGEST: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Digest));
+
+        /// The `encrypted` MIME subtype.
+        pub const ENCRYPTED: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Encrypted));
+
+        /// The `form-data` MIME subtype.
+        pub const FORM_DATA: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::FormData));
+
+        /// The `header-set` MIME subtype.
+        pub const HEADER_SET: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::HeaderSet));
+
+        /// The `mixed` MIME subtype.
+        pub const MIXED: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Mixed));
+
+        /// The `multilingual` MIME subtype.
+        pub const MULTILINGUAL: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Multilingual));
+
+        /// The `parallel` MIME subtype.
+        pub const PARALLEL: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Parallel));
+
+        /// The `related` MIME subtype.
+        pub const RELATED: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Related));
+
+        /// The `report` MIME subtype.
+        pub const REPORT: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Report));
+
+        /// The `signed` MIME subtype.
+        pub const SIGNED: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Signed));
+
+        /// The `vnd.bint.med-plus` MIME subtype.
+        pub const VND_BINT_MED_PLUS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndBintMedPlus));
+
+        /// The `voice-message` MIME subtype.
+        pub const VOICE_MESSAGE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VoiceMessage));
+
+        /// The `x-mixed-replace` MIME subtype.
+        pub const X_MIXED_REPLACE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XMixedReplace));
+
+        /// The `cache-manifest` MIME subtype.
+        pub const CACHE_MANIFEST: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::CacheManifest));
+
+        /// The `cql` MIME subtype.
+        pub const CQL: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Cql));
+
+        /// The `cql-extension` MIME subtype.
+        pub const CQL_EXTENSION: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::CqlExtension));
+
+        /// The `cql-identifier` MIME subtype.
+        pub const CQL_IDENTIFIER: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::CqlIdentifier));
+
+        /// The `css` MIME subtype.
+        pub const CSS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Css));
+
+        /// The `csv` MIME subtype.
+        pub const CSV: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Csv));
+
+        /// The `csv-schema` MIME subtype.
+        pub const CSV_SCHEMA: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::CsvSchema));
+
+        /// The `enriched` MIME subtype.
+        pub const ENRICHED: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Enriched));
+
+        /// The `fhirpath` MIME subtype.
+        pub const FHIRPATH: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Fhirpath));
+
+        /// The `gff3` MIME subtype.
+        pub const GFF3: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Gff3));
+
+        /// The `grammar-ref-list` MIME subtype.
+        pub const GRAMMAR_REF_LIST: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::GrammarRefList));
+
+        /// The `html` MIME subtype.
+        pub const HTML: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Html));
+
+        /// The `javascript` MIME subtype.
+        pub const JAVASCRIPT: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Javascript));
+
+        /// The `jcr-cnd` MIME subtype.
+        pub const JCR_CND: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::JcrCnd));
+
+        /// The `markdown` MIME subtype.
+        pub const MARKDOWN: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Markdown));
+
+        /// The `mizar` MIME subtype.
+        pub const MIZAR: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Mizar));
+
+        /// The `n3` MIME subtype.
+        pub const N3: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::N3));
+
+        /// The `parameters` MIME subtype.
+        pub const PARAMETERS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Parameters));
+
+        /// The `plain` MIME subtype.
+        pub const PLAIN: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Plain));
+
+        /// The `provenance-notation` MIME subtype.
+        pub const PROVENANCE_NOTATION: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::ProvenanceNotation),
+        );
+
+        /// The `prs.fallenstein.rst` MIME subtype.
+        pub const PRS_FALLENSTEIN_RST: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::PrsFallensteinRst),
+        );
+
+        /// The `prs.lines.tag` MIME subtype.
+        pub const PRS_LINES_TAG: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::PrsLinesTag));
+
+        /// The `prs.prop.logic` MIME subtype.
+        pub const PRS_PROP_LOGIC: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::PrsPropLogic));
+
+        /// The `rfc822-headers` MIME subtype.
+        pub const RFC822_HEADERS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Rfc822Headers));
+
+        /// The `shaclc` MIME subtype.
+        pub const SHACLC: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Shaclc));
+
+        /// The `shex` MIME subtype.
+        pub const SHEX: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Shex));
+
+        /// The `strings` MIME subtype.
+        pub const STRINGS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Strings));
+
+        /// The `t140` MIME subtype.
+        pub const T140: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::T140));
+
+        /// The `tab-separated-values` MIME subtype.
+        pub const TAB_SEPARATED_VALUES: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::TabSeparatedValues),
+        );
+
+        /// The `texmacs` MIME subtype.
+        pub const TEXMACS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Texmacs));
+
+        /// The `troff` MIME subtype.
+        pub const TROFF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Troff));
+
+        /// The `turtle` MIME subtype.
+        pub const TURTLE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Turtle));
+
+        /// The `uri-list` MIME subtype.
+        pub const URI_LIST: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::UriList));
+
+        /// The `vnd.a` MIME subtype.
+        pub const VND_A: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndA));
+
+        /// The `vnd.abc` MIME subtype.
+        pub const VND_ABC: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndAbc));
+
+        /// The `vnd.ascii-art` MIME subtype.
+        pub const VND_ASCII_ART: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndAsciiArt));
+
+        /// The `vnd.debian.copyright` MIME subtype.
+        pub const VND_DEBIAN_COPYRIGHT: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndDebianCopyright),
+        );
+
+        /// The `vnd.DMClientScript` MIME subtype.
+        pub const VND_DM_CLIENT_SCRIPT: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndDmClientScript),
+        );
+
+        /// The `vnd.esmertec.theme-descriptor` MIME subtype.
+        pub const VND_ESMERTEC_THEME_DESCRIPTOR: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndEsmertecThemeDescriptor),
+        );
+
+        /// The `vnd.ficlab.flt` MIME subtype.
+        pub const VND_FICLAB_FLT: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndFiclabFlt));
+
+        /// The `vnd.fly` MIME subtype.
+        pub const VND_FLY: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndFly));
+
+        /// The `vnd.fmi.flexstor` MIME subtype.
+        pub const VND_FMI_FLEXSTOR: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndFmiFlexstor));
+
+        /// The `vnd.gml` MIME subtype.
+        pub const VND_GML: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndGml));
+
+        /// The `vnd.graphviz` MIME subtype.
+        pub const VND_GRAPHVIZ: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndGraphviz));
+
+        /// The `vnd.hans` MIME subtype.
+        pub const VND_HANS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndHans));
+
+        /// The `vnd.hgl` MIME subtype.
+        pub const VND_HGL: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndHgl));
+
+        /// The `vnd.in3d.3dml` MIME subtype.
+        pub const VND_IN3D_3DML: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndIn3d3dml));
+
+        /// The `vnd.in3d.spot` MIME subtype.
+        pub const VND_IN3D_SPOT: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndIn3dSpot));
+
+        /// The `vnd.IPTC.NewsML` MIME subtype.
+        pub const VND_IPTC_NEWS_ML: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndIptcNewsMl));
+
+        /// The `vnd.IPTC.NITF` MIME subtype.
+        pub const VND_IPTC_NITF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndIptcNitf));
+
+        /// The `vnd.latex-z` MIME subtype.
+        pub const VND_LATEX_Z: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndLatexZ));
+
+        /// The `vnd.motorola.reflex` MIME subtype.
+        pub const VND_MOTOROLA_REFLEX: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndMotorolaReflex),
+        );
+
+        /// The `vnd.ms-mediapackage` MIME subtype.
+        pub const VND_MS_MEDIAPACKAGE: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndMsMediapackage),
+        );
+
+        /// The `vnd.net2phone.commcenter.command` MIME subtype.
+        pub const VND_NET2PHONE_COMMCENTER_COMMAND: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndNet2phoneCommcenterCommand),
+        );
+
+        /// The `vnd.radisys.msml-basic-layout` MIME subtype.
+        pub const VND_RADISYS_MSML_BASIC_LAYOUT: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndRadisysMsmlBasicLayout),
+        );
+
+        /// The `vnd.senx.warpscript` MIME subtype.
+        pub const VND_SENX_WARPSCRIPT: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndSenxWarpscript),
+        );
+
+        /// The `vnd.sosi` MIME subtype.
+        pub const VND_SOSI: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndSosi));
+
+        /// The `vnd.sun.j2me.app-descriptor` MIME subtype.
+        pub const VND_SUN_J2ME_APP_DESCRIPTOR: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndSunJ2meAppDescriptor),
+        );
+
+        /// The `vnd.trolltech.linguist` MIME subtype.
+        pub const VND_TROLLTECH_LINGUIST: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndTrolltechLinguist),
+        );
+
+        /// The `vnd.wap.si` MIME subtype.
+        pub const VND_WAP_SI: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndWapSi));
+
+        /// The `vnd.wap.sl` MIME subtype.
+        pub const VND_WAP_SL: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndWapSl));
+
+        /// The `vnd.wap.wml` MIME subtype.
+        pub const VND_WAP_WML: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndWapWml));
+
+        /// The `vnd.wap.wmlscript` MIME subtype.
+        pub const VND_WAP_WMLSCRIPT: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndWapWmlscript));
+
+        /// The `vtt` MIME subtype.
+        pub const VTT: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Vtt));
+
+        /// The `x-bibtex` MIME subtype.
+        pub const X_BIBTEX: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XBibtex));
+
+        /// The `x-boo` MIME subtype.
+        pub const X_BOO: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XBoo));
+
+        /// The `x-c` MIME subtype.
+        pub const X_C: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XC));
+
+        /// The `x-chdr` MIME subtype.
+        pub const X_CHDR: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XChdr));
+
+        /// The `x-component` MIME subtype.
+        pub const X_COMPONENT: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XComponent));
+
+        /// The `x-csrc` MIME subtype.
+        pub const X_CSRC: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XCsrc));
+
+        /// The `x-diff` MIME subtype.
+        pub const X_DIFF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XDiff));
+
+        /// The `x-dsrc` MIME subtype.
+        pub const X_DSRC: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XDsrc));
+
+        /// The `x-haskell` MIME subtype.
+        pub const X_HASKELL: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XHaskell));
+
+        /// The `x-java` MIME subtype.
+        pub const X_JAVA: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XJava));
+
+        /// The `x-lilypond` MIME subtype.
+        pub const X_LILYPOND: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XLilypond));
+
+        /// The `x-literate-haskell` MIME subtype.
+        pub const X_LITERATE_HASKELL: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::XLiterateHaskell),
+        );
+
+        /// The `x-moc` MIME subtype.
+        pub const X_MOC: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XMoc));
+
+        /// The `x-pascal` MIME subtype.
+        pub const X_PASCAL: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XPascal));
+
+        /// The `x-pcs-gcd` MIME subtype.
+        pub const X_PCS_GCD: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XPcsGcd));
+
+        /// The `x-perl` MIME subtype.
+        pub const X_PERL: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XPerl));
+
+        /// The `x-python` MIME subtype.
+        pub const X_PYTHON: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XPython));
+
+        /// The `x-scala` MIME subtype.
+        pub const X_SCALA: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XScala));
+
+        /// The `x-setext` MIME subtype.
+        pub const X_SETEXT: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XSetext));
+
+        /// The `x-sfv` MIME subtype.
+        pub const X_SFV: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XSfv));
+
+        /// The `x-tex` MIME subtype.
+        pub const X_TEX: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XTex));
+
+        /// The `x-vcalendar` MIME subtype.
+        pub const X_VCALENDAR: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XVcalendar));
+
+        /// The `AV1` MIME subtype.
+        pub const AV1: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Av1));
+
+        /// The `BMPEG` MIME subtype.
+        pub const BMPEG: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Bmpeg));
+
+        /// The `BT656` MIME subtype.
+        pub const BT656: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Bt656));
+
+        /// The `CelB` MIME subtype.
+        pub const CEL_B: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::CelB));
+
+        /// The `dl` MIME subtype.
+        pub const DL: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Dl));
+
+        /// The `FFV1` MIME subtype.
+        pub const FFV1: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Ffv1));
+
+        /// The `fli` MIME subtype.
+        pub const FLI: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Fli));
+
+        /// The `gl` MIME subtype.
+        pub const GL: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Gl));
+
+        /// The `H261` MIME subtype.
+        pub const H261: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::H261));
+
+        /// The `H263` MIME subtype.
+        pub const H263: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::H263));
+
+        /// The `H263-1998` MIME subtype.
+        pub const H263_1998: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::H2631998));
+
+        /// The `H263-2000` MIME subtype.
+        pub const H263_2000: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::H2632000));
+
+        /// The `H264` MIME subtype.
+        pub const H264: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::H264));
+
+        /// The `H264-RCDO` MIME subtype.
+        pub const H264_RCDO: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::H264Rcdo));
+
+        /// The `H264-SVC` MIME subtype.
+        pub const H264_SVC: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::H264Svc));
+
+        /// The `H265` MIME subtype.
+        pub const H265: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::H265));
+
+        /// The `iso.segment` MIME subtype.
+        pub const ISO_SEGMENT: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::IsoSegment));
+
+        /// The `jpeg2000` MIME subtype.
+        pub const JPEG2000: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Jpeg2000));
+
+        /// The `jxsv` MIME subtype.
+        pub const JXSV: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Jxsv));
+
+        /// The `mj2` MIME subtype.
+        pub const MJ2: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Mj2));
+
+        /// The `MP1S` MIME subtype.
+        pub const MP1S: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Mp1s));
+
+        /// The `MP2P` MIME subtype.
+        pub const MP2P: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Mp2p));
+
+        /// The `MP2T` MIME subtype.
+        pub const MP2T: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Mp2t));
+
+        /// The `MP4V-ES` MIME subtype.
+        pub const MP4V_ES: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Mp4vEs));
+
+        /// The `MPV` MIME subtype.
+        pub const MPV: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Mpv));
+
+        /// The `nv` MIME subtype.
+        pub const NV: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Nv));
+
+        /// The `pointer` MIME subtype.
+        pub const POINTER: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Pointer));
+
+        /// The `quicktime` MIME subtype.
+        pub const QUICKTIME: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Quicktime));
+
+        /// The `raw` MIME subtype.
+        pub const RAW: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Raw));
+
+        /// The `smpte291` MIME subtype.
+        pub const SMPTE291: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Smpte291));
+
+        /// The `SMPTE292M` MIME subtype.
+        pub const SMPTE292M: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Smpte292m));
+
+        /// The `vc1` MIME subtype.
+        pub const VC1: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Vc1));
+
+        /// The `vc2` MIME subtype.
+        pub const VC2: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Vc2));
+
+        /// The `vnd.CCTV` MIME subtype.
+        pub const VND_CCTV: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndCctv));
+
+        /// The `vnd.dece.hd` MIME subtype.
+        pub const VND_DECE_HD: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndDeceHd));
+
+        /// The `vnd.dece.mobile` MIME subtype.
+        pub const VND_DECE_MOBILE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndDeceMobile));
+
+        /// The `vnd.dece.mp4` MIME subtype.
+        pub const VND_DECE_MP4: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndDeceMp4));
+
+        /// The `vnd.dece.pd` MIME subtype.
+        pub const VND_DECE_PD: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndDecePd));
+
+        /// The `vnd.dece.sd` MIME subtype.
+        pub const VND_DECE_SD: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndDeceSd));
+
+        /// The `vnd.dece.video` MIME subtype.
+        pub const VND_DECE_VIDEO: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndDeceVideo));
+
+        /// The `vnd.directv.mpeg` MIME subtype.
+        pub const VND_DIRECTV_MPEG: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndDirectvMpeg));
+
+        /// The `vnd.directv.mpeg-tts` MIME subtype.
+        pub const VND_DIRECTV_MPEG_TTS: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndDirectvMpegTts),
+        );
+
+        /// The `vnd.dlna.mpeg-tts` MIME subtype.
+        pub const VND_DLNA_MPEG_TTS: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndDlnaMpegTts));
+
+        /// The `vnd.fvt` MIME subtype.
+        pub const VND_FVT: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndFvt));
+
+        /// The `vnd.hns.video` MIME subtype.
+        pub const VND_HNS_VIDEO: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndHnsVideo));
+
+        /// The `vnd.iptvforum.1dparityfec-1010` MIME subtype.
+        pub const VND_IPTVFORUM_1DPARITYFEC_1010: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndIptvforum1dparityfec1010),
+        );
+
+        /// The `vnd.iptvforum.1dparityfec-2005` MIME subtype.
+        pub const VND_IPTVFORUM_1DPARITYFEC_2005: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndIptvforum1dparityfec2005),
+        );
+
+        /// The `vnd.iptvforum.2dparityfec-1010` MIME subtype.
+        pub const VND_IPTVFORUM_2DPARITYFEC_1010: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndIptvforum2dparityfec1010),
+        );
+
+        /// The `vnd.iptvforum.2dparityfec-2005` MIME subtype.
+        pub const VND_IPTVFORUM_2DPARITYFEC_2005: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndIptvforum2dparityfec2005),
+        );
+
+        /// The `vnd.iptvforum.ttsavc` MIME subtype.
+        pub const VND_IPTVFORUM_TTSAVC: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndIptvforumTtsavc),
+        );
+
+        /// The `vnd.iptvforum.ttsmpeg2` MIME subtype.
+        pub const VND_IPTVFORUM_TTSMPEG2: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndIptvforumTtsmpeg2),
+        );
+
+        /// The `vnd.motorola.video` MIME subtype.
+        pub const VND_MOTOROLA_VIDEO: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndMotorolaVideo),
+        );
+
+        /// The `vnd.motorola.videop` MIME subtype.
+        pub const VND_MOTOROLA_VIDEOP: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndMotorolaVideop),
+        );
+
+        /// The `vnd.mpegurl` MIME subtype.
+        pub const VND_MPEGURL: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndMpegurl));
+
+        /// The `vnd.ms-playready.media.pyv` MIME subtype.
+        pub const VND_MS_PLAYREADY_MEDIA_PYV: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndMsPlayreadyMediaPyv),
+        );
+
+        /// The `vnd.nokia.interleaved-multimedia` MIME subtype.
+        pub const VND_NOKIA_INTERLEAVED_MULTIMEDIA: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndNokiaInterleavedMultimedia),
+        );
+
+        /// The `vnd.nokia.mp4vr` MIME subtype.
+        pub const VND_NOKIA_MP4VR: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndNokiaMp4vr));
+
+        /// The `vnd.nokia.videovoip` MIME subtype.
+        pub const VND_NOKIA_VIDEOVOIP: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndNokiaVideovoip),
+        );
+
+        /// The `vnd.objectvideo` MIME subtype.
+        pub const VND_OBJECTVIDEO: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndObjectvideo));
+
+        /// The `vnd.radgamettools.bink` MIME subtype.
+        pub const VND_RADGAMETTOOLS_BINK: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndRadgamettoolsBink),
+        );
+
+        /// The `vnd.radgamettools.smacker` MIME subtype.
+        pub const VND_RADGAMETTOOLS_SMACKER: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndRadgamettoolsSmacker),
+        );
+
+        /// The `vnd.sealed.mpeg1` MIME subtype.
+        pub const VND_SEALED_MPEG1: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndSealedMpeg1));
+
+        /// The `vnd.sealed.mpeg4` MIME subtype.
+        pub const VND_SEALED_MPEG4: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndSealedMpeg4));
+
+        /// The `vnd.sealed.swf` MIME subtype.
+        pub const VND_SEALED_SWF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndSealedSwf));
+
+        /// The `vnd.sealedmedia.softseal.mov` MIME subtype.
+        pub const VND_SEALEDMEDIA_SOFTSEAL_MOV: crate::Subtype<'static> = crate::Subtype(
+            crate::Name::Interned(crate::SubtypeIntern::VndSealedmediaSoftsealMov),
+        );
+
+        /// The `vnd.uvvu.mp4` MIME subtype.
+        pub const VND_UVVU_MP4: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndUvvuMp4));
+
+        /// The `vnd.vivo` MIME subtype.
+        pub const VND_VIVO: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndVivo));
+
+        /// The `vnd.youtube.yt` MIME subtype.
+        pub const VND_YOUTUBE_YT: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::VndYoutubeYt));
+
+        /// The `VP8` MIME subtype.
+        pub const VP8: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Vp8));
+
+        /// The `VP9` MIME subtype.
+        pub const VP9: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Vp9));
+
+        /// The `webm` MIME subtype.
+        pub const WEBM: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::Webm));
+
+        /// The `x-flv` MIME subtype.
+        pub const X_FLV: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XFlv));
+
+        /// The `x-la-asf` MIME subtype.
+        pub const X_LA_ASF: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XLaAsf));
+
+        /// The `x-matroska` MIME subtype.
+        pub const X_MATROSKA: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XMatroska));
+
+        /// The `x-mng` MIME subtype.
+        pub const X_MNG: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XMng));
+
+        /// The `x-ms-wm` MIME subtype.
+        pub const X_MS_WM: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XMsWm));
+
+        /// The `x-ms-wmv` MIME subtype.
+        pub const X_MS_WMV: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XMsWmv));
+
+        /// The `x-ms-wmx` MIME subtype.
+        pub const X_MS_WMX: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XMsWmx));
+
+        /// The `x-ms-wvx` MIME subtype.
+        pub const X_MS_WVX: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XMsWvx));
+
+        /// The `x-msvideo` MIME subtype.
+        pub const X_MSVIDEO: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XMsvideo));
+
+        /// The `x-sgi-movie` MIME subtype.
+        pub const X_SGI_MOVIE: crate::Subtype<'static> =
+            crate::Subtype(crate::Name::Interned(crate::SubtypeIntern::XSgiMovie));
+    }
+
+    /// Common MIME suffixes.
+    pub mod suffixes {
+        /// The `xml` MIME suffix.
+        pub const XML: crate::Suffix<'static> =
+            crate::Suffix(crate::Name::Interned(crate::SuffixIntern::Xml));
+
+        /// The `json` MIME suffix.
+        pub const JSON: crate::Suffix<'static> =
+            crate::Suffix(crate::Name::Interned(crate::SuffixIntern::Json));
+
+        /// The `cbor` MIME suffix.
+        pub const CBOR: crate::Suffix<'static> =
+            crate::Suffix(crate::Name::Interned(crate::SuffixIntern::Cbor));
+
+        /// The `jwt` MIME suffix.
+        pub const JWT: crate::Suffix<'static> =
+            crate::Suffix(crate::Name::Interned(crate::SuffixIntern::Jwt));
+
+        /// The `zip` MIME suffix.
+        pub const ZIP: crate::Suffix<'static> =
+            crate::Suffix(crate::Name::Interned(crate::SuffixIntern::Zip));
+
+        /// The `der` MIME suffix.
+        pub const DER: crate::Suffix<'static> =
+            crate::Suffix(crate::Name::Interned(crate::SuffixIntern::Der));
+
+        /// The `json-seq` MIME suffix.
+        pub const JSON_SEQ: crate::Suffix<'static> =
+            crate::Suffix(crate::Name::Interned(crate::SuffixIntern::JsonSeq));
+
+        /// The `sqlite3` MIME suffix.
+        pub const SQLITE3: crate::Suffix<'static> =
+            crate::Suffix(crate::Name::Interned(crate::SuffixIntern::Sqlite3));
+
+        /// The `cbor-seq` MIME suffix.
+        pub const CBOR_SEQ: crate::Suffix<'static> =
+            crate::Suffix(crate::Name::Interned(crate::SuffixIntern::CborSeq));
+
+        /// The `fastinfoset` MIME suffix.
+        pub const FASTINFOSET: crate::Suffix<'static> =
+            crate::Suffix(crate::Name::Interned(crate::SuffixIntern::Fastinfoset));
+
+        /// The `gzip` MIME suffix.
+        pub const GZIP: crate::Suffix<'static> =
+            crate::Suffix(crate::Name::Interned(crate::SuffixIntern::Gzip));
+
+        /// The `wbxml` MIME suffix.
+        pub const WBXML: crate::Suffix<'static> =
+            crate::Suffix(crate::Name::Interned(crate::SuffixIntern::Wbxml));
+
+        /// The `tlv` MIME suffix.
+        pub const TLV: crate::Suffix<'static> =
+            crate::Suffix(crate::Name::Interned(crate::SuffixIntern::Tlv));
+    }
+
     /// `application/A2L`
     pub const APPLICATION_A2L: crate::Mime<'static> = crate::Mime(crate::Repr::Parts {
         ty: crate::Name::Interned(super::TypeIntern::Application),
@@ -94817,4 +103990,16656 @@ pub mod constants {
             Ok(VIDEO_X_SGI_MOVIE)
         );
     }
+}
+pub(super) fn guess_mime_type(ext: &str) -> Option<&'static [crate::Mime<'static>]> {
+    const GRAPH: intern_str::Graph<
+        'static,
+        'static,
+        intern_str::CaseInsensitive<&'static str>,
+        Option<&'static [crate::Mime<'static>]>,
+    > = {
+        const NODES: &[intern_str::Node<'static, intern_str::CaseInsensitive<&'static str>, Option<&'static [crate::Mime<'static>]>>] = &[
+        intern_str::Node::new(
+            &[
+            ],
+            None,
+            0,
+            18446744073709551615,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_X_TRASH]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_LOTUS_1_2_3]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_IEEE_1905]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("5.1"), 3),
+            ],
+            None,
+            0,
+            3,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_CLR]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("r"), 5),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_1000MINDS_DECISION_MODEL_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("23"), 2),
+                (intern_str::CaseInsensitive("90"), 4),
+                (intern_str::CaseInsensitive("cl"), 6),
+                (intern_str::CaseInsensitive("km"), 7),
+            ],
+            None,
+            0,
+            2,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_P21]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("10"), 9),
+            ],
+            None,
+            0,
+            2,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::TEXT_VND_IN3D_3DML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("l"), 11),
+            ],
+            Some(&[constants::TEXT_VND_IN3D_3DML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_MS_3MFDOCUMENT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_MAXAR_ARCHIVE_3TZ_ZIP]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("dm"), 12),
+                (intern_str::CaseInsensitive("mf"), 13),
+                (intern_str::CaseInsensitive("tz"), 14),
+            ],
+            None,
+            0,
+            2,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_X_7Z_COMPRESSED]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("z"), 16),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_A2L]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("l"), 18),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::AUDIO_ATRAC3]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::AUDIO_AAC]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::AUDIO_ATRAC_ADVANCED_LOSSLESS]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("3"), 20),
+                (intern_str::CaseInsensitive("c"), 21),
+                (intern_str::CaseInsensitive("l"), 22),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::TEXT_VND_ABC]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_X_ABIWORD]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("c"), 24),
+                (intern_str::CaseInsensitive("w"), 25),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_BANANA_ACCOUNTING]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::AUDIO_AC3]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_AMERICANDYNAMICS_ACC]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::AUDIO_ASC]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_ACUCORP]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("tc"), 31),
+            ],
+            Some(&[constants::APPLICATION_VND_ACUCOBOL]),
+            0,
+            2,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("2"), 27),
+                (intern_str::CaseInsensitive("3"), 28),
+                (intern_str::CaseInsensitive("c"), 29),
+                (intern_str::CaseInsensitive("n"), 30),
+                (intern_str::CaseInsensitive("u"), 32),
+            ],
+            Some(&[constants::APPLICATION_PKIX_ATTR_CERT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::AUDIO_AAC]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("ts"), 34),
+            ],
+            None,
+            0,
+            2,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_AUDIOGRAPH]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("p"), 36),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_AFPC_MODCA]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("p"), 38),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_AGE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("e"), 40),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_AHEAD_SPACE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("ead"), 42),
+            ],
+            None,
+            0,
+            3,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::AUDIO_X_AIFF]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::AUDIO_X_AIFF]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("c"), 44),
+                (intern_str::CaseInsensitive("f"), 45),
+            ],
+            Some(&[constants::AUDIO_X_AIFF]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_VERITONE_AION_JSON]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("n"), 47),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_DVB_AIT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("f"), 46),
+                (intern_str::CaseInsensitive("o"), 48),
+                (intern_str::CaseInsensitive("t"), 49),
+            ],
+            Some(&[constants::APPLICATION_POSTSCRIPT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::CHEMICAL_X_ALCHEMY]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("c"), 51),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_AMIGA_AMI]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_AML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::AUDIO_AMR]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("i"), 53),
+                (intern_str::CaseInsensitive("l"), 54),
+                (intern_str::CaseInsensitive("r"), 55),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_ANNODEX]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("x"), 57),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_ANKI]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("g"), 59),
+            ],
+            Some(&[constants::APPLICATION_VND_ANDROID_PACKAGE_ARCHIVE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_VND_MOZILLA_APNG]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("g"), 61),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::TEXT_CACHE_MANIFEST]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("cache"), 63),
+            ],
+            None,
+            0,
+            5,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_LOTUS_APPROACH]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_AUTH_POLICY_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("ml"), 66),
+            ],
+            None,
+            0,
+            2,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("k"), 60),
+                (intern_str::CaseInsensitive("n"), 62),
+                (intern_str::CaseInsensitive("p"), 64),
+                (intern_str::CaseInsensitive("r"), 65),
+                (intern_str::CaseInsensitive("x"), 67),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_APACHE_ARROW_STREAM]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("s"), 69),
+            ],
+            Some(&[constants::APPLICATION_VND_APACHE_ARROW_FILE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("ow"), 70),
+            ],
+            None,
+            0,
+            2,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_ARTISAN_JSON]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("isan"), 72),
+            ],
+            Some(&[constants::IMAGE_X_JG, constants::MESSAGE_RFC822]),
+            0,
+            4,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("r"), 71),
+                (intern_str::CaseInsensitive("t"), 73),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::TEXT_VND_ASCII_ART]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("ii"), 75),
+            ],
+            Some(&[constants::APPLICATION_PGP_KEYS]),
+            0,
+            2,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_MS_ASF]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_ETSI_ASIC_E_ZIP]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_ETSI_ASIC_S_ZIP]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("e"), 78),
+                (intern_str::CaseInsensitive("s"), 79),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("c"), 80),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::CHEMICAL_X_NCBI_ASN1, constants::CHEMICAL_X_NCBI_ASN1_SPEC]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_ACCPAC_SIMPLY_ASO, constants::CHEMICAL_X_NCBI_ASN1_BINARY]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::AUDIO_AAC]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("c"), 76),
+                (intern_str::CaseInsensitive("f"), 77),
+                (intern_str::CaseInsensitive("i"), 81),
+                (intern_str::CaseInsensitive("n"), 82),
+                (intern_str::CaseInsensitive("o"), 83),
+                (intern_str::CaseInsensitive("s"), 84),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::AUDIO_ATRAC3]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_ACUCORP]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_ATFX]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("x"), 88),
+            ],
+            Some(&[constants::APPLICATION_ATF]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_ATOMCAT_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("at"), 90),
+            ],
+            None,
+            0,
+            2,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_ATOMDELETED_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("eleted"), 92),
+            ],
+            None,
+            0,
+            6,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_ATOMSERV_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_ATOMSVC_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("rv"), 94),
+                (intern_str::CaseInsensitive("vc"), 95),
+            ],
+            None,
+            0,
+            2,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("c"), 91),
+                (intern_str::CaseInsensitive("d"), 93),
+                (intern_str::CaseInsensitive("s"), 96),
+            ],
+            Some(&[constants::APPLICATION_ATOM_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("m"), 97),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_ATXML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("ml"), 99),
+            ],
+            Some(&[constants::AUDIO_ATRAC_X]),
+            0,
+            2,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("3"), 86),
+                (intern_str::CaseInsensitive("c"), 87),
+                (intern_str::CaseInsensitive("f"), 89),
+                (intern_str::CaseInsensitive("o"), 98),
+                (intern_str::CaseInsensitive("x"), 100),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_TAMP_APEX_UPDATE_CONFIRM]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("c"), 102),
+            ],
+            Some(&[constants::AUDIO_BASIC]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_AVCI]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_AVCS]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("i"), 104),
+                (intern_str::CaseInsensitive("s"), 105),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_AVIF]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("f"), 107),
+            ],
+            Some(&[constants::VIDEO_X_MSVIDEO]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("c"), 106),
+                (intern_str::CaseInsensitive("i"), 108),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::AUDIO_AMR_WB]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("b"), 110),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::AUDIO_ANNODEX]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::VIDEO_ANNODEX]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("a"), 112),
+                (intern_str::CaseInsensitive("v"), 113),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_AIRZIP_FILESECURE_AZF]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_AIRZIP_FILESECURE_AZS]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_VND_AIRZIP_ACCELERATOR_AZV]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_AMAZON_MOBI8_EBOOK]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("3"), 118),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("f"), 115),
+                (intern_str::CaseInsensitive("s"), 116),
+                (intern_str::CaseInsensitive("v"), 117),
+                (intern_str::CaseInsensitive("w"), 119),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("2"), 19),
+                (intern_str::CaseInsensitive("a"), 23),
+                (intern_str::CaseInsensitive("b"), 26),
+                (intern_str::CaseInsensitive("c"), 33),
+                (intern_str::CaseInsensitive("d"), 35),
+                (intern_str::CaseInsensitive("e"), 37),
+                (intern_str::CaseInsensitive("f"), 39),
+                (intern_str::CaseInsensitive("g"), 41),
+                (intern_str::CaseInsensitive("h"), 43),
+                (intern_str::CaseInsensitive("i"), 50),
+                (intern_str::CaseInsensitive("l"), 52),
+                (intern_str::CaseInsensitive("m"), 56),
+                (intern_str::CaseInsensitive("n"), 58),
+                (intern_str::CaseInsensitive("p"), 68),
+                (intern_str::CaseInsensitive("r"), 74),
+                (intern_str::CaseInsensitive("s"), 85),
+                (intern_str::CaseInsensitive("t"), 101),
+                (intern_str::CaseInsensitive("u"), 103),
+                (intern_str::CaseInsensitive("v"), 109),
+                (intern_str::CaseInsensitive("w"), 111),
+                (intern_str::CaseInsensitive("x"), 114),
+                (intern_str::CaseInsensitive("z"), 120),
+            ],
+            Some(&[constants::TEXT_VND_A]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_VND_PCO_B16]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("6"), 122),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_X_TRASH]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_QUALCOMM_BREW_APP_RES]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_X_MSDOS_PROGRAM]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("k"), 124),
+                (intern_str::CaseInsensitive("r"), 125),
+                (intern_str::CaseInsensitive("t"), 126),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_X_BCPIO]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("pio"), 128),
+            ],
+            None,
+            0,
+            3,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_SYNCML_DM_WBXML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("m"), 130),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_REALVNC_BED]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("d"), 132),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_FUJITSU_OASYSPRS]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("2"), 134),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::TEXT_X_BIBTEX]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::VIDEO_VND_RADGAMETTOOLS_BINK]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_OCTET_STREAM]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("b"), 136),
+                (intern_str::CaseInsensitive("k"), 137),
+                (intern_str::CaseInsensitive("n"), 138),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::VIDEO_VND_RADGAMETTOOLS_BINK]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_NERVANA]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("2"), 140),
+                (intern_str::CaseInsensitive("m"), 141),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::MULTIPART_VND_BINT_MED_PLUS]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("d"), 143),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_BMI]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_BALSAMIQ_BMML_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("l"), 146),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_BALSAMIQ_BMPR]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("r"), 148),
+            ],
+            Some(&[constants::IMAGE_BMP]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("e"), 144),
+                (intern_str::CaseInsensitive("i"), 145),
+                (intern_str::CaseInsensitive("m"), 147),
+                (intern_str::CaseInsensitive("p"), 149),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_X_MAKER]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("k"), 151),
+            ],
+            Some(&[constants::TEXT_X_BOO]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_PREVIEWSYSTEMS_BOX]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("o"), 152),
+                (intern_str::CaseInsensitive("x"), 153),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_HBCI]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("d"), 155),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::TEXT_PLAIN]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("f"), 157),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::CHEMICAL_X_CROSSFIRE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::MODEL_VND_VALVE_SOURCE_COMPILED_MAP]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("d"), 159),
+                (intern_str::CaseInsensitive("p"), 160),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_PRS_BTIF]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_PRS_BTIF]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("f"), 163),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("f"), 162),
+                (intern_str::CaseInsensitive("i"), 164),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("1"), 123),
+                (intern_str::CaseInsensitive("a"), 127),
+                (intern_str::CaseInsensitive("c"), 129),
+                (intern_str::CaseInsensitive("d"), 131),
+                (intern_str::CaseInsensitive("e"), 133),
+                (intern_str::CaseInsensitive("h"), 135),
+                (intern_str::CaseInsensitive("i"), 139),
+                (intern_str::CaseInsensitive("k"), 142),
+                (intern_str::CaseInsensitive("m"), 150),
+                (intern_str::CaseInsensitive("o"), 154),
+                (intern_str::CaseInsensitive("p"), 156),
+                (intern_str::CaseInsensitive("r"), 158),
+                (intern_str::CaseInsensitive("s"), 161),
+                (intern_str::CaseInsensitive("t"), 165),
+            ],
+            Some(&[constants::CHEMICAL_X_MOLCONN_Z]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_CLUETRUST_CARTOMOBILE_CONFIG]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_CLUETRUST_CARTOMOBILE_CONFIG_PKG]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("c"), 167),
+                (intern_str::CaseInsensitive("z"), 168),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("1am"), 169),
+            ],
+            None,
+            0,
+            3,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::CHEMICAL_X_CHEM3D]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_CCCEX]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("x"), 172),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("d"), 171),
+                (intern_str::CaseInsensitive("e"), 173),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_CLONK_C4GROUP]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_CLONK_C4GROUP]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_CLONK_C4GROUP]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_CLONK_C4GROUP]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_CLONK_C4GROUP]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("d"), 175),
+                (intern_str::CaseInsensitive("f"), 176),
+                (intern_str::CaseInsensitive("g"), 177),
+                (intern_str::CaseInsensitive("p"), 178),
+                (intern_str::CaseInsensitive("u"), 179),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_CRYPTOMATOR_ENCRYPTED]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_CRYPTOMATOR_ENCRYPTED]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("r"), 181),
+                (intern_str::CaseInsensitive("s"), 182),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_MS_CAB_COMPRESSED]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::CHEMICAL_X_CACHE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("he"), 185),
+            ],
+            Some(&[constants::CHEMICAL_X_CACHE]),
+            0,
+            2,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_TCPDUMP_PCAP]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_EU_KASPARIAN_CAR_JSON]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("json"), 188),
+            ],
+            None,
+            0,
+            4,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::CHEMICAL_X_CACTVS_BINARY]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("cii"), 190),
+            ],
+            None,
+            0,
+            3,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_MS_PKI_SECCAT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("b"), 184),
+                (intern_str::CaseInsensitive("c"), 186),
+                (intern_str::CaseInsensitive("p"), 187),
+                (intern_str::CaseInsensitive("r"), 189),
+                (intern_str::CaseInsensitive("s"), 191),
+                (intern_str::CaseInsensitive("t"), 192),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::CHEMICAL_X_CACTVS_BINARY]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("n"), 194),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_CBOR]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("r"), 196),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_COMICBOOK_RAR]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_COMICBOOK_ZIP]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("i"), 195),
+                (intern_str::CaseInsensitive("o"), 197),
+                (intern_str::CaseInsensitive("r"), 198),
+                (intern_str::CaseInsensitive("z"), 199),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::TEXT_VND_NET2PHONE_COMMCENTER_COMMAND]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_CCMP_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("p"), 202),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_CCXML_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("ml"), 204),
+            ],
+            None,
+            0,
+            2,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("c"), 201),
+                (intern_str::CaseInsensitive("m"), 203),
+                (intern_str::CaseInsensitive("x"), 205),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_X_CDF]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_CONTACT_CMSG]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("cmsg"), 208),
+            ],
+            None,
+            0,
+            4,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_CDFX_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("x"), 210),
+            ],
+            Some(&[constants::APPLICATION_X_CDF]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_MEDIASTATION_CDKEY]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("ey"), 212),
+            ],
+            None,
+            0,
+            2,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_CDMI_CAPABILITY]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_CDMI_CONTAINER]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_CDMI_DOMAIN]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_CDMI_OBJECT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_CDMI_QUEUE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("a"), 214),
+                (intern_str::CaseInsensitive("c"), 215),
+                (intern_str::CaseInsensitive("d"), 216),
+                (intern_str::CaseInsensitive("o"), 217),
+                (intern_str::CaseInsensitive("q"), 218),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("i"), 219),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_X_CORELDRAW]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_X_CORELDRAWTEMPLATE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_CHEMDRAW_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("ml"), 223),
+            ],
+            Some(&[constants::CHEMICAL_X_CDX]),
+            0,
+            2,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_CINDERELLA]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("a"), 207),
+                (intern_str::CaseInsensitive("b"), 209),
+                (intern_str::CaseInsensitive("f"), 211),
+                (intern_str::CaseInsensitive("k"), 213),
+                (intern_str::CaseInsensitive("m"), 220),
+                (intern_str::CaseInsensitive("r"), 221),
+                (intern_str::CaseInsensitive("t"), 222),
+                (intern_str::CaseInsensitive("x"), 224),
+                (intern_str::CaseInsensitive("y"), 225),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_CEA]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::CHEMICAL_X_CXF]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_CELLML_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("lml"), 229),
+            ],
+            None,
+            0,
+            3,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_PKIX_CERT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("a"), 227),
+                (intern_str::CaseInsensitive("f"), 228),
+                (intern_str::CaseInsensitive("l"), 230),
+                (intern_str::CaseInsensitive("r"), 231),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_CGM]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("m"), 233),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_MS_HTMLHELP, constants::CHEMICAL_X_CHEMDRAW]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_KDE_KCHART]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("t"), 236),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("m"), 235),
+                (intern_str::CaseInsensitive("r"), 237),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_MULTIAD_CREATOR_CIF, constants::CHEMICAL_X_CIF]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_ANSER_WEB_CERTIFICATE_ISSUE_INITIATION]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_MS_ARTGALRY]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("f"), 239),
+                (intern_str::CaseInsensitive("i"), 240),
+                (intern_str::CaseInsensitive("l"), 241),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_JAVA_VM]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("ss"), 243),
+            ],
+            Some(&[constants::APPLICATION_VND_CLAYMORE]),
+            0,
+            2,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_CRICK_CLICKER_KEYBOARD]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_CRICK_CLICKER_PALETTE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_CRICK_CLICKER_TEMPLATE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_CRICK_CLICKER_WORDBANK]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_CRICK_CLICKER]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("k"), 245),
+                (intern_str::CaseInsensitive("p"), 246),
+                (intern_str::CaseInsensitive("t"), 247),
+                (intern_str::CaseInsensitive("w"), 248),
+                (intern_str::CaseInsensitive("x"), 249),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::TEXT_X_TEX]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_CLUE_INFO_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("e"), 252),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("a"), 244),
+                (intern_str::CaseInsensitive("k"), 250),
+                (intern_str::CaseInsensitive("s"), 251),
+                (intern_str::CaseInsensitive("u"), 253),
+            ],
+            Some(&[constants::APPLICATION_SIMPLE_FILTER_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_COSMOCALLER]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::CHEMICAL_X_CMDF]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("f"), 256),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_CELLML_XML, constants::CHEMICAL_X_CML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_YELLOWRIVER_CUSTOM_MENU]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_CMS]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("c"), 260),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("c"), 255),
+                (intern_str::CaseInsensitive("d"), 257),
+                (intern_str::CaseInsensitive("l"), 258),
+                (intern_str::CaseInsensitive("p"), 259),
+                (intern_str::CaseInsensitive("s"), 261),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::TEXT_JCR_CND]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("d"), 263),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_RIM_COD]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_COFFEESCRIPT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("fee"), 266),
+            ],
+            None,
+            0,
+            3,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_X_MSDOS_PROGRAM]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::TEXT_VND_DEBIAN_COPYRIGHT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("yright"), 269),
+            ],
+            None,
+            0,
+            6,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("d"), 265),
+                (intern_str::CaseInsensitive("f"), 267),
+                (intern_str::CaseInsensitive("m"), 268),
+                (intern_str::CaseInsensitive("p"), 270),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::CHEMICAL_X_COMPASS]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_X_CPIO]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("o"), 273),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_XMPIE_CPKG]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("g"), 275),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_CPL_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_MAC_COMPACTPRO, constants::IMAGE_X_CORELPHOTOPAINT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("a"), 272),
+                (intern_str::CaseInsensitive("i"), 274),
+                (intern_str::CaseInsensitive("k"), 276),
+                (intern_str::CaseInsensitive("l"), 277),
+                (intern_str::CaseInsensitive("t"), 278),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::TEXT_CQL]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("l"), 280),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_X_CANON_CR2]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_PKIX_CRL]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_MULTIAD_CREATOR]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("r"), 284),
+            ],
+            Some(&[constants::APPLICATION_X_X509_CA_CERT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_X_CANON_CRW]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_CRYPTOMATOR_VAULT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("r"), 287),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_RIG_CRYPTONOTE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("mato"), 288),
+                (intern_str::CaseInsensitive("note"), 289),
+            ],
+            None,
+            0,
+            4,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("pto"), 290),
+            ],
+            None,
+            0,
+            3,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("2"), 282),
+                (intern_str::CaseInsensitive("l"), 283),
+                (intern_str::CaseInsensitive("t"), 285),
+                (intern_str::CaseInsensitive("w"), 286),
+                (intern_str::CaseInsensitive("y"), 291),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::AUDIO_CSOUND]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::CHEMICAL_X_CACHE_CSF]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_X_CSH, constants::TEXT_X_CSH]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_CITATIONSTYLES_STYLE_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::CHEMICAL_X_CSML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("l"), 297),
+            ],
+            Some(&[constants::CHEMICAL_X_CSML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_COMMONSPACE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_CSRATTRS]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("attrs"), 300),
+            ],
+            None,
+            0,
+            5,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::TEXT_CSS]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_COMMONSPACE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::TEXT_CSV_SCHEMA]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("s"), 304),
+            ],
+            Some(&[constants::TEXT_CSV]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("d"), 293),
+                (intern_str::CaseInsensitive("f"), 294),
+                (intern_str::CaseInsensitive("h"), 295),
+                (intern_str::CaseInsensitive("l"), 296),
+                (intern_str::CaseInsensitive("m"), 298),
+                (intern_str::CaseInsensitive("p"), 299),
+                (intern_str::CaseInsensitive("r"), 301),
+                (intern_str::CaseInsensitive("s"), 302),
+                (intern_str::CaseInsensitive("t"), 303),
+                (intern_str::CaseInsensitive("v"), 305),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::CHEMICAL_X_CACTVS_BINARY]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("b"), 307),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::CHEMICAL_X_CTX]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("a"), 308),
+                (intern_str::CaseInsensitive("x"), 309),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::CHEMICAL_X_GAUSSIAN_CUBE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_TAMP_COMMUNITY_UPDATE_CONFIRM]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::TEXT_VND_CURL]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("l"), 313),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("b"), 311),
+                (intern_str::CaseInsensitive("c"), 312),
+                (intern_str::CaseInsensitive("r"), 314),
+            ],
+            Some(&[constants::APPLICATION_CU_SEEME]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_PRS_CWW]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("w"), 316),
+            ],
+            Some(&[constants::APPLICATION_PRS_CWW]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::CHEMICAL_X_CXF]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("f"), 318),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("1"), 170),
+                (intern_str::CaseInsensitive("3"), 174),
+                (intern_str::CaseInsensitive("4"), 180),
+                (intern_str::CaseInsensitive("9"), 183),
+                (intern_str::CaseInsensitive("a"), 193),
+                (intern_str::CaseInsensitive("b"), 200),
+                (intern_str::CaseInsensitive("c"), 206),
+                (intern_str::CaseInsensitive("d"), 226),
+                (intern_str::CaseInsensitive("e"), 232),
+                (intern_str::CaseInsensitive("g"), 234),
+                (intern_str::CaseInsensitive("h"), 238),
+                (intern_str::CaseInsensitive("i"), 242),
+                (intern_str::CaseInsensitive("l"), 254),
+                (intern_str::CaseInsensitive("m"), 262),
+                (intern_str::CaseInsensitive("n"), 264),
+                (intern_str::CaseInsensitive("o"), 271),
+                (intern_str::CaseInsensitive("p"), 279),
+                (intern_str::CaseInsensitive("q"), 281),
+                (intern_str::CaseInsensitive("r"), 292),
+                (intern_str::CaseInsensitive("s"), 306),
+                (intern_str::CaseInsensitive("t"), 310),
+                (intern_str::CaseInsensitive("u"), 315),
+                (intern_str::CaseInsensitive("w"), 317),
+                (intern_str::CaseInsensitive("x"), 319),
+            ],
+            Some(&[constants::TEXT_X_CSRC]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::MODEL_VND_COLLADA_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_MOBIUS_DAF]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_DART]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("t"), 323),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_FDSN_SEED]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("aless"), 325),
+            ],
+            None,
+            0,
+            5,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_DAVMOUNT_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("mount"), 327),
+            ],
+            None,
+            0,
+            5,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("e"), 321),
+                (intern_str::CaseInsensitive("f"), 322),
+                (intern_str::CaseInsensitive("r"), 324),
+                (intern_str::CaseInsensitive("t"), 326),
+                (intern_str::CaseInsensitive("v"), 328),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_DBF]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("f"), 330),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_DCD]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_DICOM]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_X_DIRECTOR]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("d"), 332),
+                (intern_str::CaseInsensitive("m"), 333),
+                (intern_str::CaseInsensitive("r"), 334),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_OMA_DD2_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_FUJIXEROX_DDD]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_DEBIAN_BINARY_PACKAGE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("b"), 338),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_SYNCML_DMDDF_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("2"), 336),
+                (intern_str::CaseInsensitive("d"), 337),
+                (intern_str::CaseInsensitive("e"), 339),
+                (intern_str::CaseInsensitive("f"), 340),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_DEBIAN_BINARY_PACKAGE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_OCTET_STREAM]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("loy"), 343),
+            ],
+            None,
+            0,
+            3,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("b"), 342),
+                (intern_str::CaseInsensitive("p"), 344),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_DREAMFACTORY]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("ac"), 346),
+            ],
+            None,
+            0,
+            2,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::TEXT_X_DIFF]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("f"), 348),
+            ],
+            Some(&[constants::VIDEO_DV]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_DII]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_FASTCOPY_DISK_IMAGE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_X_DIRECTOR]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_APPLE_INSTALLER_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("z"), 353),
+            ],
+            Some(&[constants::APPLICATION_VND_APPLE_INSTALLER_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("t"), 354),
+            ],
+            Some(&[constants::APPLICATION_VND_MOBIUS_DIS]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_DIT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_PATENTDIVE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("e"), 357),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("f"), 349),
+                (intern_str::CaseInsensitive("i"), 350),
+                (intern_str::CaseInsensitive("m"), 351),
+                (intern_str::CaseInsensitive("r"), 352),
+                (intern_str::CaseInsensitive("s"), 355),
+                (intern_str::CaseInsensitive("t"), 356),
+                (intern_str::CaseInsensitive("v"), 358),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_VND_DJVU]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("u"), 360),
+            ],
+            Some(&[constants::IMAGE_VND_DJVU]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("v"), 361),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_X_MSDOS_PROGRAM]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::AUDIO_DLS]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("l"), 363),
+                (intern_str::CaseInsensitive("s"), 364),
+            ],
+            Some(&[constants::VIDEO_DL]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_X_APPLE_DISKIMAGE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_TCPDUMP_PCAP]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::TEXT_VND_DM_CLIENT_SCRIPT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("g"), 366),
+                (intern_str::CaseInsensitive("p"), 367),
+                (intern_str::CaseInsensitive("s"), 368),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_DNA]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("a"), 370),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_DOCUMENT_JSON]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("son"), 372),
+            ],
+            None,
+            0,
+            3,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_MS_WORD_DOCUMENT_MACRO_ENABLED_12]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_OPENXMLFORMATS_OFFICEDOCUMENT_WORDPROCESSINGML_DOCUMENT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("j"), 373),
+                (intern_str::CaseInsensitive("m"), 374),
+                (intern_str::CaseInsensitive("x"), 375),
+            ],
+            Some(&[constants::APPLICATION_MSWORD]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::MODEL_VND_GDL]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_MS_WORD_TEMPLATE_MACRO_ENABLED_12]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_OPENXMLFORMATS_OFFICEDOCUMENT_WORDPROCESSINGML_TEMPLATE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("m"), 378),
+                (intern_str::CaseInsensitive("x"), 379),
+            ],
+            Some(&[constants::TEXT_VND_GRAPHVIZ]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("c"), 376),
+                (intern_str::CaseInsensitive("r"), 377),
+                (intern_str::CaseInsensitive("t"), 380),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_DPGRAPH]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("raph"), 382),
+            ],
+            Some(&[constants::APPLICATION_VND_DPGRAPH]),
+            0,
+            4,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_XMPIE_DPKG]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("g"), 384),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("g"), 383),
+                (intern_str::CaseInsensitive("k"), 385),
+            ],
+            Some(&[constants::APPLICATION_VND_OSGI_DP]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_DICOM_RLE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("le"), 387),
+            ],
+            None,
+            0,
+            2,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::TEXT_PRS_LINES_TAG]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_DESMUME_MOVIE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_DSSC_DER]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("c"), 391),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("c"), 389),
+                (intern_str::CaseInsensitive("m"), 390),
+                (intern_str::CaseInsensitive("s"), 392),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_XML_DTD]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::AUDIO_VND_DTS_HD]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("hd"), 395),
+            ],
+            Some(&[constants::AUDIO_VND_DTS]),
+            0,
+            2,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("d"), 394),
+                (intern_str::CaseInsensitive("s"), 396),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::VIDEO_VND_DVB_FILE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_DVCS]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_X_DVI]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("b"), 398),
+                (intern_str::CaseInsensitive("c"), 399),
+                (intern_str::CaseInsensitive("i"), 400),
+            ],
+            Some(&[constants::VIDEO_DV]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_ATSC_DWD_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::MODEL_VND_DWF]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_VND_DWG]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("d"), 402),
+                (intern_str::CaseInsensitive("f"), 403),
+                (intern_str::CaseInsensitive("g"), 404),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_VND_DXF]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_SPOTFIRE_DXP]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_X_DIRECTOR]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("f"), 406),
+                (intern_str::CaseInsensitive("p"), 407),
+                (intern_str::CaseInsensitive("r"), 408),
+            ],
+            Some(&[constants::CHEMICAL_X_JCAMP_DX]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_DZR]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("r"), 410),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("a"), 329),
+                (intern_str::CaseInsensitive("b"), 331),
+                (intern_str::CaseInsensitive("c"), 335),
+                (intern_str::CaseInsensitive("d"), 341),
+                (intern_str::CaseInsensitive("e"), 345),
+                (intern_str::CaseInsensitive("f"), 347),
+                (intern_str::CaseInsensitive("i"), 359),
+                (intern_str::CaseInsensitive("j"), 362),
+                (intern_str::CaseInsensitive("l"), 365),
+                (intern_str::CaseInsensitive("m"), 369),
+                (intern_str::CaseInsensitive("n"), 371),
+                (intern_str::CaseInsensitive("o"), 381),
+                (intern_str::CaseInsensitive("p"), 386),
+                (intern_str::CaseInsensitive("r"), 388),
+                (intern_str::CaseInsensitive("s"), 393),
+                (intern_str::CaseInsensitive("t"), 397),
+                (intern_str::CaseInsensitive("v"), 401),
+                (intern_str::CaseInsensitive("w"), 405),
+                (intern_str::CaseInsensitive("x"), 409),
+                (intern_str::CaseInsensitive("z"), 411),
+            ],
+            Some(&[constants::TEXT_X_DSRC]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::AUDIO_VND_NUERA_ECELP4800]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::AUDIO_VND_NUERA_ECELP7470]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::AUDIO_VND_NUERA_ECELP9600]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("4800"), 413),
+                (intern_str::CaseInsensitive("7470"), 414),
+                (intern_str::CaseInsensitive("9600"), 415),
+            ],
+            None,
+            0,
+            4,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("p"), 416),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_EVOLV_ECIG_PROFILE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("le"), 418),
+            ],
+            None,
+            0,
+            2,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_EVOLV_ECIG_THEME]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("profi"), 419),
+                (intern_str::CaseInsensitive("theme"), 420),
+            ],
+            Some(&[constants::APPLICATION_VND_EVOLV_ECIG_SETTINGS]),
+            0,
+            5,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("el"), 417),
+                (intern_str::CaseInsensitive("ig"), 421),
+            ],
+            None,
+            0,
+            2,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_NOVADIGM_EDM]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_NOVADIGM_EDX]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("m"), 423),
+                (intern_str::CaseInsensitive("x"), 424),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_PICSEL]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("f"), 426),
+            ],
+            Some(&[constants::APPLICATION_EFI]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("i"), 427),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_PG_OSASLI]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("6"), 429),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::CHEMICAL_X_EMBL_DL_NUCLEOTIDE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("l"), 431),
+            ],
+            Some(&[constants::CHEMICAL_X_EMBL_DL_NUCLEOTIDE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_EMF]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::MESSAGE_RFC822]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_EMMA_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("a"), 435),
+            ],
+            Some(&[constants::APPLICATION_VND_IBM_ELECTRONIC_MEDIA]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_EMOTIONML_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("tionml"), 437),
+            ],
+            None,
+            0,
+            6,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("b"), 432),
+                (intern_str::CaseInsensitive("f"), 433),
+                (intern_str::CaseInsensitive("l"), 434),
+                (intern_str::CaseInsensitive("m"), 436),
+                (intern_str::CaseInsensitive("o"), 438),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_NERVANA]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("ity"), 440),
+            ],
+            Some(&[constants::APPLICATION_XML_EXTERNAL_PARSED_ENTITY]),
+            0,
+            3,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::AUDIO_EVRCNW]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("t"), 441),
+                (intern_str::CaseInsensitive("w"), 442),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::AUDIO_VND_DIGITAL_WINDS]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_MS_FONTOBJECT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("l"), 444),
+                (intern_str::CaseInsensitive("t"), 445),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_POSTSCRIPT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_POSTSCRIPT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_POSTSCRIPT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_POSTSCRIPT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("2"), 447),
+                (intern_str::CaseInsensitive("3"), 448),
+                (intern_str::CaseInsensitive("f"), 449),
+                (intern_str::CaseInsensitive("i"), 450),
+            ],
+            Some(&[constants::APPLICATION_POSTSCRIPT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_EPUB_ZIP]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("b"), 452),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("s"), 451),
+                (intern_str::CaseInsensitive("u"), 453),
+            ],
+            Some(&[constants::APPLICATION_VND_BLUETOOTH_EP_OOB]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_X_EPSON_ERF]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("f"), 455),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_ESZIGNO3_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_OSGI_SUBSYSTEM]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_EPSON_ESF]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_ESPASS_ESPASS_ZIP]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("ass"), 460),
+            ],
+            None,
+            0,
+            3,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("3"), 457),
+                (intern_str::CaseInsensitive("a"), 458),
+                (intern_str::CaseInsensitive("f"), 459),
+                (intern_str::CaseInsensitive("p"), 461),
+            ],
+            Some(&[constants::TEXT_JAVASCRIPT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_ESZIGNO3_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::TEXT_X_SETEXT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("3"), 463),
+                (intern_str::CaseInsensitive("x"), 464),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::AUDIO_EVRCB]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::AUDIO_EVRC]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::AUDIO_EVRCWB]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("b"), 466),
+                (intern_str::CaseInsensitive("c"), 467),
+                (intern_str::CaseInsensitive("w"), 468),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_X_MSDOS_PROGRAM]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_EXI]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_EXPRESS]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_ACES]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_NOVADIGM_EXT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("e"), 470),
+                (intern_str::CaseInsensitive("i"), 471),
+                (intern_str::CaseInsensitive("p"), 472),
+                (intern_str::CaseInsensitive("r"), 473),
+                (intern_str::CaseInsensitive("t"), 474),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_EZPIX_ALBUM]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_EZPIX_PACKAGE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("2"), 476),
+                (intern_str::CaseInsensitive("3"), 477),
+            ],
+            Some(&[constants::APPLICATION_ANDREW_INSET]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("c"), 422),
+                (intern_str::CaseInsensitive("d"), 425),
+                (intern_str::CaseInsensitive("f"), 428),
+                (intern_str::CaseInsensitive("i"), 430),
+                (intern_str::CaseInsensitive("m"), 439),
+                (intern_str::CaseInsensitive("n"), 443),
+                (intern_str::CaseInsensitive("o"), 446),
+                (intern_str::CaseInsensitive("p"), 454),
+                (intern_str::CaseInsensitive("r"), 456),
+                (intern_str::CaseInsensitive("s"), 462),
+                (intern_str::CaseInsensitive("t"), 465),
+                (intern_str::CaseInsensitive("v"), 469),
+                (intern_str::CaseInsensitive("x"), 475),
+                (intern_str::CaseInsensitive("z"), 478),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_X_MAKER]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("oc"), 480),
+            ],
+            None,
+            0,
+            2,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_VND_FASTBIDSHEET]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("d"), 481),
+                (intern_str::CaseInsensitive("s"), 482),
+            ],
+            Some(&[constants::APPLICATION_X_MAKER]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_ADOBE_FORMSCENTRAL_FCDT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("t"), 484),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::CHEMICAL_X_GAUSSIAN_CHECKPOINT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("k"), 486),
+            ],
+            Some(&[constants::CHEMICAL_X_GAUSSIAN_CHECKPOINT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_ISAC_FCS]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("d"), 485),
+                (intern_str::CaseInsensitive("h"), 487),
+                (intern_str::CaseInsensitive("s"), 488),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_FDF]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_FDT_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("f"), 490),
+                (intern_str::CaseInsensitive("t"), 491),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_DENOVO_FCSELAYOUT_LINK]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("_launch"), 493),
+            ],
+            None,
+            0,
+            7,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_FUJITSU_OASYSGP]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("5"), 495),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_X_XFIG]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_FASTINFOSET]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("f"), 498),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_FITS]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("s"), 500),
+            ],
+            Some(&[constants::IMAGE_FITS]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("g"), 497),
+                (intern_str::CaseInsensitive("n"), 499),
+                (intern_str::CaseInsensitive("t"), 501),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::AUDIO_FLAC]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("c"), 503),
+            ],
+            Some(&[constants::APPLICATION_VND_DTG_LOCAL_FLASH]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_FICLAB_FLB_ZIP]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::VIDEO_FLI]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_MICROGRAFX_FLO]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::TEXT_VND_FICLAB_FLT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::VIDEO_X_FLV]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_KDE_KIVIO]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::TEXT_VND_FMI_FLEXSTOR]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::TEXT_VND_FLY]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("a"), 504),
+                (intern_str::CaseInsensitive("b"), 505),
+                (intern_str::CaseInsensitive("i"), 506),
+                (intern_str::CaseInsensitive("o"), 507),
+                (intern_str::CaseInsensitive("t"), 508),
+                (intern_str::CaseInsensitive("v"), 509),
+                (intern_str::CaseInsensitive("w"), 510),
+                (intern_str::CaseInsensitive("x"), 511),
+                (intern_str::CaseInsensitive("y"), 512),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_FRAMEMAKER, constants::APPLICATION_X_MAKER]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_SOFTWARE602_FILLER_FORM_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_VND_FPX]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("x"), 516),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_X_MAKER]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("me"), 518),
+            ],
+            None,
+            0,
+            2,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_UFDL, constants::APPLICATION_X_MAKER]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("a"), 519),
+                (intern_str::CaseInsensitive("m"), 520),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_FSC_WEBLAUNCH]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_VND_FST]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("c"), 522),
+                (intern_str::CaseInsensitive("t"), 523),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_FLUXTIME_CLIP]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_ANSER_WEB_FUNDS_TRANSFER_INITIATION]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_FITS]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("c"), 525),
+                (intern_str::CaseInsensitive("i"), 526),
+                (intern_str::CaseInsensitive("s"), 527),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::VIDEO_VND_FVT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("t"), 529),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_ADOBE_FXP]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("l"), 531),
+            ],
+            Some(&[constants::APPLICATION_VND_ADOBE_FXP]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("p"), 532),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_FUZZYSHEET]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("s"), 534),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("b"), 483),
+                (intern_str::CaseInsensitive("c"), 489),
+                (intern_str::CaseInsensitive("d"), 492),
+                (intern_str::CaseInsensitive("e"), 494),
+                (intern_str::CaseInsensitive("g"), 496),
+                (intern_str::CaseInsensitive("i"), 502),
+                (intern_str::CaseInsensitive("l"), 513),
+                (intern_str::CaseInsensitive("m"), 514),
+                (intern_str::CaseInsensitive("o"), 515),
+                (intern_str::CaseInsensitive("p"), 517),
+                (intern_str::CaseInsensitive("r"), 521),
+                (intern_str::CaseInsensitive("s"), 524),
+                (intern_str::CaseInsensitive("t"), 528),
+                (intern_str::CaseInsensitive("v"), 530),
+                (intern_str::CaseInsensitive("x"), 533),
+                (intern_str::CaseInsensitive("z"), 535),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_GEOPLAN]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("w"), 537),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_GEOSPACE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("w"), 539),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_GROOVE_ACCOUNT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::CHEMICAL_X_GAUSSIAN_LOG]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::CHEMICAL_X_GAMESS_INPUT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("in"), 543),
+            ],
+            Some(&[constants::CHEMICAL_X_GAMESS_INPUT]),
+            0,
+            2,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_X_GANTTPROJECT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::CHEMICAL_X_GAUSSIAN_INPUT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("c"), 541),
+                (intern_str::CaseInsensitive("l"), 542),
+                (intern_str::CaseInsensitive("m"), 544),
+                (intern_str::CaseInsensitive("n"), 545),
+                (intern_str::CaseInsensitive("u"), 546),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_RPKI_GHOSTBUSTERS]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("r"), 548),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::TEXT_X_PCS_GCD]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_X_GRAPHING_CALCULATOR]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::CHEMICAL_X_GCG8_SEQUENCE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("d"), 550),
+                (intern_str::CaseInsensitive("f"), 551),
+                (intern_str::CaseInsensitive("g"), 552),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::MODEL_VND_GDL]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_FAMILYSEARCH_GEDCOM_ZIP]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("l"), 554),
+                (intern_str::CaseInsensitive("z"), 555),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::TEXT_VND_FAMILYSEARCH_GEDCOM]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::CHEMICAL_X_GENBANK]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_GEO_JSON]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("json"), 559),
+            ],
+            Some(&[constants::APPLICATION_VND_DYNAGEO]),
+            0,
+            4,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_GEOMETRY_EXPLORER]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("d"), 557),
+                (intern_str::CaseInsensitive("n"), 558),
+                (intern_str::CaseInsensitive("o"), 560),
+                (intern_str::CaseInsensitive("x"), 561),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::TEXT_GFF3]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("f3"), 563),
+            ],
+            Some(&[constants::APPLICATION_X_TEX_GF]),
+            0,
+            2,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_GEOGEBRA_FILE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_GEOGEBRA_SLIDES]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_GEOGEBRA_TOOL]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("b"), 565),
+                (intern_str::CaseInsensitive("s"), 566),
+                (intern_str::CaseInsensitive("t"), 567),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_GROOVE_HELP]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("f"), 569),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_GIF]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_GROOVE_IDENTITY_MESSAGE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("f"), 571),
+                (intern_str::CaseInsensitive("m"), 572),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::CHEMICAL_X_GAUSSIAN_INPUT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::CHEMICAL_X_GAUSSIAN_INPUT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("c"), 574),
+                (intern_str::CaseInsensitive("f"), 575),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_GLTF_BUFFER]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_GLTF_BUFFER]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("in"), 577),
+                (intern_str::CaseInsensitive("uf"), 578),
+            ],
+            Some(&[constants::MODEL_GLTF_BINARY]),
+            0,
+            2,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::MODEL_GLTF_JSON]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("f"), 580),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("b"), 579),
+                (intern_str::CaseInsensitive("t"), 581),
+            ],
+            Some(&[constants::VIDEO_GL]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_GML_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("l"), 583),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_X_GNUMERIC]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("umeric"), 585),
+            ],
+            None,
+            0,
+            6,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_FLO_GRAPH_IT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_GEOPACKAGE_SQLITE3]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("g"), 588),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::CHEMICAL_X_MOPAC_GRAPH]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("h"), 587),
+                (intern_str::CaseInsensitive("k"), 589),
+                (intern_str::CaseInsensitive("t"), 590),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_GRAFEQ]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_GRAFEQ]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("f"), 592),
+                (intern_str::CaseInsensitive("s"), 593),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_SRGS]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("m"), 595),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_GEOMETRY_EXPLORER]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_GROOVE_INJECTOR]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_SRGS_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("ml"), 599),
+            ],
+            None,
+            0,
+            2,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("a"), 596),
+                (intern_str::CaseInsensitive("e"), 597),
+                (intern_str::CaseInsensitive("v"), 598),
+                (intern_str::CaseInsensitive("x"), 600),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_X_FONT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_URC_GRPSHEET_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("eet"), 603),
+            ],
+            None,
+            0,
+            3,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::AUDIO_X_GSM, constants::MODEL_VND_GDL]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("f"), 602),
+                (intern_str::CaseInsensitive("h"), 604),
+                (intern_str::CaseInsensitive("m"), 605),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_X_GTAR]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("r"), 607),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_GROOVE_TOOL_MESSAGE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::MODEL_VND_GTW]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("a"), 608),
+                (intern_str::CaseInsensitive("m"), 609),
+                (intern_str::CaseInsensitive("w"), 610),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::TEXT_VND_GRAPHVIZ]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_GEONEXT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("t"), 613),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_GZIP]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("2"), 538),
+                (intern_str::CaseInsensitive("3"), 540),
+                (intern_str::CaseInsensitive("a"), 547),
+                (intern_str::CaseInsensitive("b"), 549),
+                (intern_str::CaseInsensitive("c"), 553),
+                (intern_str::CaseInsensitive("d"), 556),
+                (intern_str::CaseInsensitive("e"), 562),
+                (intern_str::CaseInsensitive("f"), 564),
+                (intern_str::CaseInsensitive("g"), 568),
+                (intern_str::CaseInsensitive("h"), 570),
+                (intern_str::CaseInsensitive("i"), 573),
+                (intern_str::CaseInsensitive("j"), 576),
+                (intern_str::CaseInsensitive("l"), 582),
+                (intern_str::CaseInsensitive("m"), 584),
+                (intern_str::CaseInsensitive("n"), 586),
+                (intern_str::CaseInsensitive("p"), 591),
+                (intern_str::CaseInsensitive("q"), 594),
+                (intern_str::CaseInsensitive("r"), 601),
+                (intern_str::CaseInsensitive("s"), 606),
+                (intern_str::CaseInsensitive("t"), 611),
+                (intern_str::CaseInsensitive("v"), 612),
+                (intern_str::CaseInsensitive("x"), 614),
+                (intern_str::CaseInsensitive("z"), 615),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_HAL_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::TEXT_VND_HANS]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("s"), 618),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("l"), 617),
+                (intern_str::CaseInsensitive("n"), 619),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_HBCI]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("i"), 621),
+            ],
+            Some(&[constants::APPLICATION_VND_HBCI]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("c"), 622),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_X_HDF]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_VND_RADIANCE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_HDT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("f"), 624),
+                (intern_str::CaseInsensitive("r"), 625),
+                (intern_str::CaseInsensitive("t"), 626),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_HEIC_SEQUENCE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("s"), 628),
+            ],
+            Some(&[constants::IMAGE_HEIC]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_HEIF_SEQUENCE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("s"), 630),
+            ],
+            Some(&[constants::IMAGE_HEIF]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("c"), 629),
+                (intern_str::CaseInsensitive("f"), 631),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_HEJ2K]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("2"), 633),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_ATSC_HELD_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("d"), 635),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("i"), 632),
+                (intern_str::CaseInsensitive("j"), 634),
+                (intern_str::CaseInsensitive("l"), 636),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::TEXT_VND_HGL]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("l"), 638),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_AVIF]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::CHEMICAL_X_HIN]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("f"), 640),
+                (intern_str::CaseInsensitive("n"), 641),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_HP_HPGL]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("l"), 643),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_HP_HPID]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("d"), 645),
+            ],
+            Some(&[constants::APPLICATION_VND_HP_HPID]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_HP_HPS]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_PRS_HPUB_ZIP]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("b"), 648),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("g"), 644),
+                (intern_str::CaseInsensitive("i"), 646),
+                (intern_str::CaseInsensitive("s"), 647),
+                (intern_str::CaseInsensitive("u"), 649),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_MAC_BINHEX40]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("x"), 651),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_HSJ2]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("j2"), 653),
+            ],
+            Some(&[constants::TEXT_X_HASKELL]),
+            0,
+            2,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_HTA]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::TEXT_X_COMPONENT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_KENAMEAAPP]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("e"), 657),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::TEXT_HTML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("l"), 659),
+            ],
+            Some(&[constants::TEXT_HTML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("a"), 655),
+                (intern_str::CaseInsensitive("c"), 656),
+                (intern_str::CaseInsensitive("k"), 658),
+                (intern_str::CaseInsensitive("m"), 660),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_YAMAHA_HV_DIC]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_YAMAHA_HV_VOICE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_YAMAHA_HV_SCRIPT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("d"), 662),
+                (intern_str::CaseInsensitive("p"), 663),
+                (intern_str::CaseInsensitive("s"), 664),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_X_HWP]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("p"), 666),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("a"), 620),
+                (intern_str::CaseInsensitive("b"), 623),
+                (intern_str::CaseInsensitive("d"), 627),
+                (intern_str::CaseInsensitive("e"), 637),
+                (intern_str::CaseInsensitive("g"), 639),
+                (intern_str::CaseInsensitive("i"), 642),
+                (intern_str::CaseInsensitive("p"), 650),
+                (intern_str::CaseInsensitive("q"), 652),
+                (intern_str::CaseInsensitive("s"), 654),
+                (intern_str::CaseInsensitive("t"), 661),
+                (intern_str::CaseInsensitive("v"), 665),
+                (intern_str::CaseInsensitive("w"), 667),
+            ],
+            Some(&[constants::TEXT_X_CHDR]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_INTERGEO]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("g"), 669),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_COMMERCE_BATTELLE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_COMMERCE_BATTELLE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_COMMERCE_BATTELLE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_COMMERCE_BATTELLE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_COMMERCE_BATTELLE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_COMMERCE_BATTELLE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_COMMERCE_BATTELLE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_COMMERCE_BATTELLE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_COMMERCE_BATTELLE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_X_ICA]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_ICCPROFILE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_COMMERCE_BATTELLE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_COMMERCE_BATTELLE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_ICCPROFILE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_VND_MICROSOFT_ICON]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::TEXT_CALENDAR]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("0"), 671),
+                (intern_str::CaseInsensitive("1"), 672),
+                (intern_str::CaseInsensitive("2"), 673),
+                (intern_str::CaseInsensitive("3"), 674),
+                (intern_str::CaseInsensitive("4"), 675),
+                (intern_str::CaseInsensitive("5"), 676),
+                (intern_str::CaseInsensitive("6"), 677),
+                (intern_str::CaseInsensitive("7"), 678),
+                (intern_str::CaseInsensitive("8"), 679),
+                (intern_str::CaseInsensitive("a"), 680),
+                (intern_str::CaseInsensitive("c"), 681),
+                (intern_str::CaseInsensitive("d"), 682),
+                (intern_str::CaseInsensitive("f"), 683),
+                (intern_str::CaseInsensitive("m"), 684),
+                (intern_str::CaseInsensitive("o"), 685),
+                (intern_str::CaseInsensitive("s"), 686),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_IEF]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("f"), 688),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::TEXT_CALENDAR]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_P21]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_SHANA_INFORMED_FORMDATA]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("b"), 690),
+                (intern_str::CaseInsensitive("c"), 691),
+                (intern_str::CaseInsensitive("m"), 692),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::MODEL_IGES]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("s"), 694),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_IGLOADER]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_INSORS_IGM]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_COREOS_IGNITION_JSON]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("ition"), 698),
+            ],
+            Some(&[constants::APPLICATION_VND_COREOS_IGNITION_JSON]),
+            0,
+            5,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::MODEL_IGES]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_MICROGRAFX_IGX]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("e"), 695),
+                (intern_str::CaseInsensitive("l"), 696),
+                (intern_str::CaseInsensitive("m"), 697),
+                (intern_str::CaseInsensitive("n"), 699),
+                (intern_str::CaseInsensitive("s"), 700),
+                (intern_str::CaseInsensitive("x"), 701),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_SHANA_INFORMED_INTERCHANGE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_X_IPHONE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("f"), 703),
+                (intern_str::CaseInsensitive("i"), 704),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_IMAGEMETER_FOLDER_ZIP]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_3LIGHTSSOFTWARE_IMAGESCAL]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("cal"), 707),
+            ],
+            None,
+            0,
+            3,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_IMAGEMETER_IMAGE_ZIP]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_ACCPAC_SIMPLY_IMP]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_IMS_IMSCCV1P1]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("cc"), 711),
+            ],
+            Some(&[constants::APPLICATION_VND_MS_IMS]),
+            0,
+            2,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("f"), 706),
+                (intern_str::CaseInsensitive("g"), 708),
+                (intern_str::CaseInsensitive("i"), 709),
+                (intern_str::CaseInsensitive("p"), 710),
+                (intern_str::CaseInsensitive("s"), 712),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_X_INFO]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("o"), 714),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_INKML_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("ml"), 716),
+            ],
+            Some(&[constants::APPLICATION_INKML_XML]),
+            0,
+            2,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::CHEMICAL_X_GAMESS_INPUT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_X_INTERNET_SIGNUP]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("f"), 715),
+                (intern_str::CaseInsensitive("k"), 717),
+                (intern_str::CaseInsensitive("p"), 718),
+                (intern_str::CaseInsensitive("s"), 719),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_ASTRAEA_SOFTWARE_IOTA]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("ta"), 721),
+            ],
+            None,
+            0,
+            2,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_IPFIX]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("ix"), 723),
+            ],
+            None,
+            0,
+            2,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_SHANA_INFORMED_PACKAGE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("f"), 724),
+                (intern_str::CaseInsensitive("k"), 725),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_IBM_RIGHTS_MANAGEMENT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_IREPOSITORY_PACKAGE_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("m"), 727),
+                (intern_str::CaseInsensitive("p"), 728),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::MODEL_VND_GDL]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_X_ISO9660_IMAGE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_X_INTERNET_SIGNUP]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_VERYANT_THIN]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::CHEMICAL_X_ISOSTAR]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("c"), 733),
+                (intern_str::CaseInsensitive("r"), 734),
+            ],
+            Some(&[constants::CHEMICAL_X_ISOSTAR]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_VERYANT_THIN]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("s"), 736),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("m"), 730),
+                (intern_str::CaseInsensitive("o"), 731),
+                (intern_str::CaseInsensitive("p"), 732),
+                (intern_str::CaseInsensitive("t"), 735),
+                (intern_str::CaseInsensitive("w"), 737),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_SHANA_INFORMED_FORMTEMPLATE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_ITS_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("p"), 739),
+                (intern_str::CaseInsensitive("s"), 740),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_IMMERVISION_IVP]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_IMMERVISION_IVU]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("p"), 742),
+                (intern_str::CaseInsensitive("u"), 743),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("2"), 670),
+                (intern_str::CaseInsensitive("c"), 687),
+                (intern_str::CaseInsensitive("e"), 689),
+                (intern_str::CaseInsensitive("f"), 693),
+                (intern_str::CaseInsensitive("g"), 702),
+                (intern_str::CaseInsensitive("i"), 705),
+                (intern_str::CaseInsensitive("m"), 713),
+                (intern_str::CaseInsensitive("n"), 720),
+                (intern_str::CaseInsensitive("o"), 722),
+                (intern_str::CaseInsensitive("p"), 726),
+                (intern_str::CaseInsensitive("r"), 729),
+                (intern_str::CaseInsensitive("s"), 738),
+                (intern_str::CaseInsensitive("t"), 741),
+                (intern_str::CaseInsensitive("v"), 744),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::TEXT_VND_SUN_J2ME_APP_DESCRIPTOR]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_JAM]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_JAVA_ARCHIVE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::TEXT_X_JAVA]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("a"), 749),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("d"), 746),
+                (intern_str::CaseInsensitive("m"), 747),
+                (intern_str::CaseInsensitive("r"), 748),
+                (intern_str::CaseInsensitive("v"), 750),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::CHEMICAL_X_JCAMP_DX]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("x"), 752),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_JPEG]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("if"), 754),
+            ],
+            None,
+            0,
+            2,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_JPHC]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("c"), 756),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_JISP]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("sp"), 758),
+            ],
+            None,
+            0,
+            2,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_JLS]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_HP_JLYT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("s"), 760),
+                (intern_str::CaseInsensitive("t"), 761),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_X_JMOL]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("z"), 763),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_X_JNG]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_X_JAVA_JNLP_FILE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("p"), 766),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("g"), 765),
+                (intern_str::CaseInsensitive("l"), 767),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_JOOST_JODA_ARCHIVE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("da"), 769),
+            ],
+            None,
+            0,
+            2,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_JP2]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_JPEG]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("g"), 772),
+            ],
+            Some(&[constants::IMAGE_JPEG]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_JPX]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_JP2]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_JPM]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("2"), 775),
+                (intern_str::CaseInsensitive("m"), 776),
+            ],
+            Some(&[constants::IMAGE_JPEG]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_JPHC]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("c"), 778),
+            ],
+            Some(&[constants::IMAGE_JPH]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_JPM]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_JPX]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("2"), 771),
+                (intern_str::CaseInsensitive("e"), 773),
+                (intern_str::CaseInsensitive("f"), 774),
+                (intern_str::CaseInsensitive("g"), 777),
+                (intern_str::CaseInsensitive("h"), 779),
+                (intern_str::CaseInsensitive("m"), 780),
+                (intern_str::CaseInsensitive("x"), 781),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_JRD_JSON]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("d"), 783),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_JSON_PATCH_JSON]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("atch"), 785),
+            ],
+            None,
+            0,
+            4,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_LD_JSON]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_TD_JSON]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("-p"), 786),
+                (intern_str::CaseInsensitive("ld"), 787),
+                (intern_str::CaseInsensitive("td"), 788),
+            ],
+            Some(&[constants::APPLICATION_JSON]),
+            0,
+            2,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("on"), 789),
+            ],
+            Some(&[constants::TEXT_JAVASCRIPT]),
+            0,
+            2,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::TEXT_VND_ESMERTEC_THEME_DESCRIPTOR]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("d"), 791),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_JXL]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_JXR_A]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_JXR_S]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("a"), 794),
+                (intern_str::CaseInsensitive("s"), 795),
+            ],
+            Some(&[constants::IMAGE_JXR]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_JXSC]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_JXSI]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_JXSS]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("c"), 797),
+                (intern_str::CaseInsensitive("i"), 798),
+                (intern_str::CaseInsensitive("s"), 799),
+            ],
+            Some(&[constants::IMAGE_JXS]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("l"), 793),
+                (intern_str::CaseInsensitive("r"), 796),
+                (intern_str::CaseInsensitive("s"), 800),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("a"), 751),
+                (intern_str::CaseInsensitive("d"), 753),
+                (intern_str::CaseInsensitive("f"), 755),
+                (intern_str::CaseInsensitive("h"), 757),
+                (intern_str::CaseInsensitive("i"), 759),
+                (intern_str::CaseInsensitive("l"), 762),
+                (intern_str::CaseInsensitive("m"), 764),
+                (intern_str::CaseInsensitive("n"), 768),
+                (intern_str::CaseInsensitive("o"), 770),
+                (intern_str::CaseInsensitive("p"), 782),
+                (intern_str::CaseInsensitive("r"), 784),
+                (intern_str::CaseInsensitive("s"), 790),
+                (intern_str::CaseInsensitive("t"), 792),
+                (intern_str::CaseInsensitive("x"), 801),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_KDE_KARBON]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("rbon"), 803),
+            ],
+            None,
+            0,
+            4,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_NERVANA]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("m"), 805),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_APPLE_KEYNOTE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("note"), 807),
+            ],
+            Some(&[constants::APPLICATION_PGP_KEYS]),
+            0,
+            4,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("y"), 808),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_KDE_KFORMULA]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("o"), 810),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_KIDSPIRATION]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_X_KILLUSTRATOR]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::CHEMICAL_X_KINEMAGE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("a"), 812),
+                (intern_str::CaseInsensitive("l"), 813),
+                (intern_str::CaseInsensitive("n"), 814),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_GOOGLE_EARTH_KML_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_GOOGLE_EARTH_KMZ]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("l"), 816),
+                (intern_str::CaseInsensitive("z"), 817),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_KINAR]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_KINAR]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("e"), 819),
+                (intern_str::CaseInsensitive("p"), 820),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_HBCI]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_KDE_KONTOUR]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::AUDIO_VND_AUDIOKOZ]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("m"), 822),
+                (intern_str::CaseInsensitive("n"), 823),
+                (intern_str::CaseInsensitive("z"), 824),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_KDE_KPRESENTER]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_KDE_KPRESENTER]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("r"), 826),
+                (intern_str::CaseInsensitive("t"), 827),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_KDE_KSPREAD]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("p"), 829),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_KAHOOTZ]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_KTX2]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("2"), 832),
+            ],
+            Some(&[constants::IMAGE_KTX]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_KAHOOTZ]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("r"), 831),
+                (intern_str::CaseInsensitive("x"), 833),
+                (intern_str::CaseInsensitive("z"), 834),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_KDE_KWORD]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_KDE_KWORD]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("d"), 836),
+                (intern_str::CaseInsensitive("t"), 837),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("a"), 804),
+                (intern_str::CaseInsensitive("c"), 806),
+                (intern_str::CaseInsensitive("e"), 809),
+                (intern_str::CaseInsensitive("f"), 811),
+                (intern_str::CaseInsensitive("i"), 815),
+                (intern_str::CaseInsensitive("m"), 818),
+                (intern_str::CaseInsensitive("n"), 821),
+                (intern_str::CaseInsensitive("o"), 825),
+                (intern_str::CaseInsensitive("p"), 828),
+                (intern_str::CaseInsensitive("s"), 830),
+                (intern_str::CaseInsensitive("t"), 835),
+                (intern_str::CaseInsensitive("w"), 838),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::AUDIO_L16]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("6"), 840),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_LAS_LAS_JSON]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("n"), 842),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_LAS_LAS_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("jso"), 843),
+                (intern_str::CaseInsensitive("xml"), 844),
+            ],
+            Some(&[constants::APPLICATION_VND_LAS]),
+            0,
+            3,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_X_LATEX]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("ex"), 846),
+            ],
+            None,
+            0,
+            2,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("s"), 845),
+                (intern_str::CaseInsensitive("t"), 847),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::AUDIO_I_LBC]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_LLAMAGRAPHICS_LIFE_BALANCE_DESKTOP]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_LLAMAGRAPHICS_LIFE_BALANCE_EXCHANGE_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("c"), 849),
+                (intern_str::CaseInsensitive("d"), 850),
+                (intern_str::CaseInsensitive("e"), 851),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_LOGIPIPE_CIRCUIT_ZIP]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_LOGIPIPE_CIRCUIT_ZIP]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("a"), 853),
+                (intern_str::CaseInsensitive("s"), 854),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_HHE_LESSON_PLAYER]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("s"), 856),
+            ],
+            Some(&[constants::APPLICATION_VND_BLUETOOTH_LE_OOB]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_LGR_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("r"), 858),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_X_LHA]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::TEXT_X_LITERATE_HASKELL]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("a"), 860),
+                (intern_str::CaseInsensitive("s"), 861),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_NEBUMIND_LINE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_ROUTE66_LINK66_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("66"), 864),
+            ],
+            None,
+            0,
+            2,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("e"), 863),
+                (intern_str::CaseInsensitive("k"), 865),
+            ],
+            Some(&[constants::APPLICATION_BBOLIN]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_AFPC_MODCA]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("0"), 867),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_AFPC_MODCA]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("382"), 868),
+                (intern_str::CaseInsensitive("afp"), 869),
+            ],
+            None,
+            0,
+            3,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("t"), 870),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("n"), 866),
+                (intern_str::CaseInsensitive("s"), 871),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::MODEL_VND_GDL]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("p"), 873),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::AUDIO_USAC]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_LOOM]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_LOSTSYNC_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("cxml"), 877),
+            ],
+            None,
+            0,
+            4,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_LOST_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("syn"), 878),
+                (intern_str::CaseInsensitive("xml"), 879),
+            ],
+            None,
+            0,
+            3,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("as"), 875),
+                (intern_str::CaseInsensitive("om"), 876),
+                (intern_str::CaseInsensitive("st"), 880),
+            ],
+            None,
+            0,
+            2,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_LPF_ZIP]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("f"), 882),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_MS_LRM]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("m"), 884),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::VIDEO_X_LA_ASF]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::VIDEO_X_LA_ASF]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("f"), 886),
+                (intern_str::CaseInsensitive("x"), 887),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::TEXT_X_TEX]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("x"), 889),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::AUDIO_VND_LUCENT_VOICE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("p"), 891),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_LOTUS_WORDPRO]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("p"), 893),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_LXF]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("f"), 895),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_X_LYX]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("x"), 897),
+            ],
+            Some(&[constants::TEXT_X_LILYPOND]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_X_LZH]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_X_LZX]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("h"), 899),
+                (intern_str::CaseInsensitive("x"), 900),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("1"), 841),
+                (intern_str::CaseInsensitive("a"), 848),
+                (intern_str::CaseInsensitive("b"), 852),
+                (intern_str::CaseInsensitive("c"), 855),
+                (intern_str::CaseInsensitive("e"), 857),
+                (intern_str::CaseInsensitive("g"), 859),
+                (intern_str::CaseInsensitive("h"), 862),
+                (intern_str::CaseInsensitive("i"), 872),
+                (intern_str::CaseInsensitive("m"), 874),
+                (intern_str::CaseInsensitive("o"), 881),
+                (intern_str::CaseInsensitive("p"), 883),
+                (intern_str::CaseInsensitive("r"), 885),
+                (intern_str::CaseInsensitive("s"), 888),
+                (intern_str::CaseInsensitive("t"), 890),
+                (intern_str::CaseInsensitive("v"), 892),
+                (intern_str::CaseInsensitive("w"), 894),
+                (intern_str::CaseInsensitive("x"), 896),
+                (intern_str::CaseInsensitive("y"), 898),
+                (intern_str::CaseInsensitive("z"), 901),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::VIDEO_MPEG]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("v"), 903),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_MP21]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::VIDEO_MPEG]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("1"), 905),
+                (intern_str::CaseInsensitive("v"), 906),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_M3G]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_APPLE_MPEGURL]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("8"), 909),
+            ],
+            Some(&[constants::AUDIO_MPEGURL]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("g"), 908),
+                (intern_str::CaseInsensitive("u"), 910),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::AUDIO_MP4]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::VIDEO_ISO_SEGMENT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::VIDEO_VND_MPEGURL]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::VIDEO_MP4]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("a"), 912),
+                (intern_str::CaseInsensitive("s"), 913),
+                (intern_str::CaseInsensitive("u"), 914),
+                (intern_str::CaseInsensitive("v"), 915),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_MADS_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("s"), 917),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_MMT_AEI_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("i"), 919),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_ECOWIN_CHART]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::MESSAGE_RFC822]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("l"), 922),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_X_MAKER]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("er"), 924),
+            ],
+            None,
+            0,
+            2,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::TEXT_CACHE_MANIFEST]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("ifest"), 926),
+            ],
+            Some(&[constants::APPLICATION_X_TROFF_MAN]),
+            0,
+            5,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::TEXT_MARKDOWN]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("kdown"), 928),
+            ],
+            None,
+            0,
+            5,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("d"), 918),
+                (intern_str::CaseInsensitive("e"), 920),
+                (intern_str::CaseInsensitive("g"), 921),
+                (intern_str::CaseInsensitive("i"), 923),
+                (intern_str::CaseInsensitive("k"), 925),
+                (intern_str::CaseInsensitive("n"), 927),
+                (intern_str::CaseInsensitive("r"), 929),
+            ],
+            Some(&[constants::APPLICATION_MATHEMATICA]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_MOBIUS_MBK]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_MBOX]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("x"), 932),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("k"), 931),
+                (intern_str::CaseInsensitive("o"), 933),
+            ],
+            Some(&[constants::APPLICATION_MATHEMATICA]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_MEDCALCDATA]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::TEXT_VND_SENX_WARPSCRIPT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_MCD]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::CHEMICAL_X_MMCIF]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("f"), 938),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::CHEMICAL_X_MACMOLECULE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("1"), 935),
+                (intern_str::CaseInsensitive("2"), 936),
+                (intern_str::CaseInsensitive("d"), 937),
+                (intern_str::CaseInsensitive("i"), 939),
+                (intern_str::CaseInsensitive("m"), 940),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_MSACCESS]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_MARLIN_DRM_MDCF]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_VND_MS_MODI]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("b"), 942),
+                (intern_str::CaseInsensitive("c"), 943),
+                (intern_str::CaseInsensitive("i"), 944),
+            ],
+            Some(&[constants::TEXT_MARKDOWN]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::MODEL_MESH]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("h"), 946),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_METALINK4_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("4"), 948),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_METS_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("a"), 949),
+                (intern_str::CaseInsensitive("s"), 950),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("s"), 947),
+                (intern_str::CaseInsensitive("t"), 951),
+            ],
+            Some(&[constants::APPLICATION_X_TROFF_ME]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_MF4]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_MFMP]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_RPKI_MANIFEST]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("4"), 953),
+                (intern_str::CaseInsensitive("m"), 954),
+                (intern_str::CaseInsensitive("t"), 955),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_OSGEO_MAPGUIDE_PACKAGE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_PROTEUS_MAGAZINE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("p"), 957),
+                (intern_str::CaseInsensitive("z"), 958),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::AUDIO_MHAS]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("as"), 960),
+            ],
+            None,
+            0,
+            2,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::AUDIO_SP_MIDI]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_MIF]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::TEXT_MIZAR]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("d"), 962),
+                (intern_str::CaseInsensitive("f"), 963),
+                (intern_str::CaseInsensitive("z"), 964),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::VIDEO_MJ2]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::VIDEO_MJ2]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("2"), 967),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::TEXT_JAVASCRIPT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("2"), 966),
+                (intern_str::CaseInsensitive("p"), 968),
+                (intern_str::CaseInsensitive("s"), 969),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::VIDEO_X_MATROSKA]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("v"), 971),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::AUDIO_VND_DOLBY_MLP]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("p"), 973),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_MAXMIND_MAXMIND_DB]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("b"), 975),
+            ],
+            Some(&[constants::APPLICATION_VND_CHIPNUTS_KARAOKE_MMD]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_SMAF]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_MATHML_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::CHEMICAL_X_MACROMODEL_INPUT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("d"), 979),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_VND_FUJIXEROX_EDMICS_MMR]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("d"), 976),
+                (intern_str::CaseInsensitive("f"), 977),
+                (intern_str::CaseInsensitive("l"), 978),
+                (intern_str::CaseInsensitive("o"), 980),
+                (intern_str::CaseInsensitive("r"), 981),
+            ],
+            Some(&[constants::APPLICATION_X_FREEMIND]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::VIDEO_X_MNG]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("g"), 983),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::TEXT_X_MOC]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_VD_STUDY]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("l-inter"), 986),
+            ],
+            None,
+            0,
+            7,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_MODS_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("e"), 987),
+                (intern_str::CaseInsensitive("s"), 988),
+            ],
+            Some(&[constants::APPLICATION_XML_DTD]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::CHEMICAL_X_MOL2]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("2"), 990),
+            ],
+            Some(&[constants::CHEMICAL_X_MDL_MOLFILE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::MODEL_VND_MOML_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("l"), 992),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::CHEMICAL_X_MOPAC_OUT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::CHEMICAL_X_MOPAC_INPUT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("crt"), 995),
+            ],
+            Some(&[constants::CHEMICAL_X_MOPAC_INPUT]),
+            0,
+            3,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::VIDEO_X_SGI_MOVIE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("ie"), 997),
+            ],
+            Some(&[constants::VIDEO_QUICKTIME]),
+            0,
+            2,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("c"), 985),
+                (intern_str::CaseInsensitive("d"), 989),
+                (intern_str::CaseInsensitive("l"), 991),
+                (intern_str::CaseInsensitive("m"), 993),
+                (intern_str::CaseInsensitive("o"), 994),
+                (intern_str::CaseInsensitive("p"), 996),
+                (intern_str::CaseInsensitive("v"), 998),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::AUDIO_MPEG]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_MP21]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("1"), 1001),
+            ],
+            Some(&[constants::AUDIO_MPEG]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::AUDIO_MPEG]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::VIDEO_MP4]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_MOPHUN_CERTIFICATE, constants::CHEMICAL_X_MOPAC_INPUT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_DASHDELTA]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("d"), 1006),
+            ],
+            Some(&[constants::APPLICATION_DASH_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::AUDIO_MPEG]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("a"), 1008),
+            ],
+            Some(&[constants::VIDEO_MPEG]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("g"), 1009),
+            ],
+            Some(&[constants::VIDEO_MPEG]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::TEXT_VND_MS_MEDIAPACKAGE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::VIDEO_MP4]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::AUDIO_MPEG]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("4"), 1012),
+                (intern_str::CaseInsensitive("a"), 1013),
+            ],
+            Some(&[constants::VIDEO_MPEG]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_X_COMSOL]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_APPLE_INSTALLER_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("g"), 1016),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_BLUEICE_MULTIPASS]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_MOPHUN_APPLICATION]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_MS_PROJECT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_MS_PROJECT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::VIDEO_X_MATROSKA]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_EXSTREAM_EMPOWER_ZIP]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_IBM_MINI_PAY]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("1"), 1000),
+                (intern_str::CaseInsensitive("2"), 1002),
+                (intern_str::CaseInsensitive("3"), 1003),
+                (intern_str::CaseInsensitive("4"), 1004),
+                (intern_str::CaseInsensitive("c"), 1005),
+                (intern_str::CaseInsensitive("d"), 1007),
+                (intern_str::CaseInsensitive("e"), 1010),
+                (intern_str::CaseInsensitive("f"), 1011),
+                (intern_str::CaseInsensitive("g"), 1014),
+                (intern_str::CaseInsensitive("h"), 1015),
+                (intern_str::CaseInsensitive("k"), 1017),
+                (intern_str::CaseInsensitive("m"), 1018),
+                (intern_str::CaseInsensitive("n"), 1019),
+                (intern_str::CaseInsensitive("p"), 1020),
+                (intern_str::CaseInsensitive("t"), 1021),
+                (intern_str::CaseInsensitive("v"), 1022),
+                (intern_str::CaseInsensitive("w"), 1023),
+                (intern_str::CaseInsensitive("y"), 1024),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_MOBIUS_MQY]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("y"), 1026),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_MARCXML_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("x"), 1028),
+            ],
+            Some(&[constants::APPLICATION_MARC]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("c"), 1029),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_MSA_DISK_IMAGE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_FDSN_MSEED]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_FDSN_MSEED]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("d"), 1033),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_MSEQ]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("e"), 1034),
+                (intern_str::CaseInsensitive("q"), 1035),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_EPSON_MSF]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::MODEL_MESH]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_X_MSI]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_MOBIUS_MSL]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::MODEL_VND_GDL]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_OCTET_STREAM]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_MUVEE_STYLE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("y"), 1043),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_OCTET_STREAM]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("a"), 1031),
+                (intern_str::CaseInsensitive("d"), 1032),
+                (intern_str::CaseInsensitive("e"), 1036),
+                (intern_str::CaseInsensitive("f"), 1037),
+                (intern_str::CaseInsensitive("h"), 1038),
+                (intern_str::CaseInsensitive("i"), 1039),
+                (intern_str::CaseInsensitive("l"), 1040),
+                (intern_str::CaseInsensitive("m"), 1041),
+                (intern_str::CaseInsensitive("p"), 1042),
+                (intern_str::CaseInsensitive("t"), 1044),
+                (intern_str::CaseInsensitive("u"), 1045),
+            ],
+            Some(&[constants::APPLICATION_X_TROFF_MS]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::MODEL_MTL]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::MODEL_VND_MTS]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("l"), 1047),
+                (intern_str::CaseInsensitive("s"), 1048),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::AUDIO_VND_PRESONUS_MULTITRACK]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("titrack"), 1050),
+            ],
+            None,
+            0,
+            7,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_MMT_USD_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("d"), 1052),
+            ],
+            Some(&[constants::APPLICATION_VND_MUSICIAN]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("l"), 1051),
+                (intern_str::CaseInsensitive("s"), 1053),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::CHEMICAL_X_MOPAC_VIB]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_MAPBOX_VECTOR_TILE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("b"), 1055),
+                (intern_str::CaseInsensitive("t"), 1056),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_DPGRAPH]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_MFER]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("c"), 1058),
+                (intern_str::CaseInsensitive("f"), 1059),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_MXF]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_VD_STUDY]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_RECORDARE_MUSICXML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::AUDIO_MOBILE_XMF]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_XV_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("f"), 1064),
+                (intern_str::CaseInsensitive("l"), 1065),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_TRISCAPE_MXS]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::VIDEO_VND_MPEGURL]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("f"), 1061),
+                (intern_str::CaseInsensitive("i"), 1062),
+                (intern_str::CaseInsensitive("l"), 1063),
+                (intern_str::CaseInsensitive("m"), 1066),
+                (intern_str::CaseInsensitive("s"), 1067),
+                (intern_str::CaseInsensitive("u"), 1068),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("1"), 904),
+                (intern_str::CaseInsensitive("2"), 907),
+                (intern_str::CaseInsensitive("3"), 911),
+                (intern_str::CaseInsensitive("4"), 916),
+                (intern_str::CaseInsensitive("a"), 930),
+                (intern_str::CaseInsensitive("b"), 934),
+                (intern_str::CaseInsensitive("c"), 941),
+                (intern_str::CaseInsensitive("d"), 945),
+                (intern_str::CaseInsensitive("e"), 952),
+                (intern_str::CaseInsensitive("f"), 956),
+                (intern_str::CaseInsensitive("g"), 959),
+                (intern_str::CaseInsensitive("h"), 961),
+                (intern_str::CaseInsensitive("i"), 965),
+                (intern_str::CaseInsensitive("j"), 970),
+                (intern_str::CaseInsensitive("k"), 972),
+                (intern_str::CaseInsensitive("l"), 974),
+                (intern_str::CaseInsensitive("m"), 982),
+                (intern_str::CaseInsensitive("n"), 984),
+                (intern_str::CaseInsensitive("o"), 999),
+                (intern_str::CaseInsensitive("p"), 1025),
+                (intern_str::CaseInsensitive("q"), 1027),
+                (intern_str::CaseInsensitive("r"), 1030),
+                (intern_str::CaseInsensitive("s"), 1046),
+                (intern_str::CaseInsensitive("t"), 1049),
+                (intern_str::CaseInsensitive("u"), 1054),
+                (intern_str::CaseInsensitive("v"), 1057),
+                (intern_str::CaseInsensitive("w"), 1060),
+                (intern_str::CaseInsensitive("x"), 1069),
+            ],
+            Some(&[constants::APPLICATION_VND_WOLFRAM_MATHEMATICA_PACKAGE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::TEXT_N3]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_WOLFRAM_PLAYER]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("p"), 1072),
+            ],
+            Some(&[constants::APPLICATION_VND_WOLFRAM_MATHEMATICA]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_X_NETCDF]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_OSA_NETDEPLOY]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_LOTUS_NOTES]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_NINTENDO_NITRO_ROM]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("c"), 1075),
+                (intern_str::CaseInsensitive("l"), 1076),
+                (intern_str::CaseInsensitive("s"), 1077),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_NEBUMIND_LINE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("ul"), 1079),
+            ],
+            None,
+            0,
+            2,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_X_NIKON_NEF]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("b"), 1080),
+                (intern_str::CaseInsensitive("f"), 1081),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_NOKIA_N_GAGE_DATA]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("dat"), 1083),
+            ],
+            None,
+            0,
+            3,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_NIMN]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("n"), 1085),
+            ],
+            Some(&[constants::VIDEO_VND_NOKIA_INTERLEAVED_MULTIMEDIA]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_NITF]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("f"), 1087),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("m"), 1086),
+                (intern_str::CaseInsensitive("t"), 1088),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_NEUROLANGUAGE_NLU]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("u"), 1090),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_ENLIVEN]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("l"), 1092),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_NOBLENET_DIRECTORY]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_NOBLENET_SEALER]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_NOBLENET_WEB]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("d"), 1094),
+                (intern_str::CaseInsensitive("s"), 1095),
+                (intern_str::CaseInsensitive("w"), 1096),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_SMART_NOTEBOOK]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("tebook"), 1098),
+            ],
+            None,
+            0,
+            6,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_N_QUADS]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_LOTUS_NOTES]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_LOTUS_NOTES]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_LOTUS_NOTES]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_LOTUS_NOTES]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_LOTUS_NOTES]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_LOTUS_NOTES]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("2"), 1101),
+                (intern_str::CaseInsensitive("3"), 1102),
+                (intern_str::CaseInsensitive("4"), 1103),
+                (intern_str::CaseInsensitive("f"), 1104),
+                (intern_str::CaseInsensitive("g"), 1105),
+                (intern_str::CaseInsensitive("h"), 1106),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_LOTUS_NOTES]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("f"), 1108),
+            ],
+            Some(&[constants::APPLICATION_N_TRIPLES]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_APPLE_NUMBERS]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("mbers"), 1110),
+            ],
+            None,
+            0,
+            5,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_X_NWC]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("c"), 1112),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("3"), 1071),
+                (intern_str::CaseInsensitive("b"), 1073),
+                (intern_str::CaseInsensitive("c"), 1074),
+                (intern_str::CaseInsensitive("d"), 1078),
+                (intern_str::CaseInsensitive("e"), 1082),
+                (intern_str::CaseInsensitive("g"), 1084),
+                (intern_str::CaseInsensitive("i"), 1089),
+                (intern_str::CaseInsensitive("l"), 1091),
+                (intern_str::CaseInsensitive("m"), 1093),
+                (intern_str::CaseInsensitive("n"), 1097),
+                (intern_str::CaseInsensitive("o"), 1099),
+                (intern_str::CaseInsensitive("q"), 1100),
+                (intern_str::CaseInsensitive("s"), 1107),
+                (intern_str::CaseInsensitive("t"), 1109),
+                (intern_str::CaseInsensitive("u"), 1111),
+                (intern_str::CaseInsensitive("w"), 1113),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_FUJITSU_OASYS2]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_FUJITSU_OASYS3]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_FUJITSU_OASYS]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("2"), 1115),
+                (intern_str::CaseInsensitive("3"), 1116),
+                (intern_str::CaseInsensitive("s"), 1117),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_OPENBLOX_GAME_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("x"), 1119),
+            ],
+            Some(&[constants::APPLICATION_VND_OPENBLOX_GAME_BINARY]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::MODEL_OBJ]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("g"), 1120),
+                (intern_str::CaseInsensitive("j"), 1121),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_ODA]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_OASIS_OPENDOCUMENT_DATABASE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_OASIS_OPENDOCUMENT_CHART]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_TEI_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_OASIS_OPENDOCUMENT_FORMULA]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_OASIS_OPENDOCUMENT_GRAPHICS]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_OASIS_OPENDOCUMENT_IMAGE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_OASIS_OPENDOCUMENT_TEXT_MASTER]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_OASIS_OPENDOCUMENT_PRESENTATION]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_OASIS_OPENDOCUMENT_SPREADSHEET]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_OASIS_OPENDOCUMENT_TEXT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_ODX]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("a"), 1123),
+                (intern_str::CaseInsensitive("b"), 1124),
+                (intern_str::CaseInsensitive("c"), 1125),
+                (intern_str::CaseInsensitive("d"), 1126),
+                (intern_str::CaseInsensitive("f"), 1127),
+                (intern_str::CaseInsensitive("g"), 1128),
+                (intern_str::CaseInsensitive("i"), 1129),
+                (intern_str::CaseInsensitive("m"), 1130),
+                (intern_str::CaseInsensitive("p"), 1131),
+                (intern_str::CaseInsensitive("s"), 1132),
+                (intern_str::CaseInsensitive("t"), 1133),
+                (intern_str::CaseInsensitive("x"), 1134),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_OPENEYE_OEB]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("b"), 1136),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::AUDIO_OGG]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::MODEL_VND_OPENGEX]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("x"), 1139),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::AUDIO_OGG]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::VIDEO_OGG]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_OGG]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("a"), 1138),
+                (intern_str::CaseInsensitive("e"), 1140),
+                (intern_str::CaseInsensitive("g"), 1141),
+                (intern_str::CaseInsensitive("v"), 1142),
+                (intern_str::CaseInsensitive("x"), 1143),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_X_TRASH]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("d"), 1145),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::AUDIO_ATRAC3]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("g"), 1147),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_ONENOTE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("kg"), 1149),
+            ],
+            None,
+            0,
+            2,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_ONENOTE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_ONENOTE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("2"), 1152),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("mp"), 1151),
+                (intern_str::CaseInsensitive("oc"), 1153),
+            ],
+            None,
+            0,
+            2,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("p"), 1150),
+                (intern_str::CaseInsensitive("t"), 1154),
+            ],
+            Some(&[constants::APPLICATION_ONENOTE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("e"), 1155),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_OEBPS_PACKAGE_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_PALM]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("c"), 1158),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::AUDIO_OGG]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("s"), 1160),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("f"), 1157),
+                (intern_str::CaseInsensitive("r"), 1159),
+                (intern_str::CaseInsensitive("u"), 1161),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_LOTUS_ORGANIZER]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_LOTUS_ORGANIZER]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::AUDIO_CSOUND]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_X_OLYMPUS_ORF]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_LOTUS_ORGANIZER]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_OCSP_REQUEST]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_OCSP_RESPONSE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("2"), 1163),
+                (intern_str::CaseInsensitive("3"), 1164),
+                (intern_str::CaseInsensitive("c"), 1165),
+                (intern_str::CaseInsensitive("f"), 1166),
+                (intern_str::CaseInsensitive("g"), 1167),
+                (intern_str::CaseInsensitive("q"), 1168),
+                (intern_str::CaseInsensitive("s"), 1169),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_YAMAHA_OPENSCOREFORMAT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_OPENSTREETMAP_DATA_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("f"), 1171),
+                (intern_str::CaseInsensitive("m"), 1172),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_ANDROID_OTA]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_OASIS_OPENDOCUMENT_CHART_TEMPLATE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::FONT_OTF]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_OASIS_OPENDOCUMENT_GRAPHICS_TEMPLATE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_OASIS_OPENDOCUMENT_TEXT_WEB]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_OASIS_OPENDOCUMENT_IMAGE_TEMPLATE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_OASIS_OPENDOCUMENT_PRESENTATION_TEMPLATE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_OASIS_OPENDOCUMENT_SPREADSHEET_TEMPLATE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_OASIS_OPENDOCUMENT_TEXT_TEMPLATE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("a"), 1174),
+                (intern_str::CaseInsensitive("c"), 1175),
+                (intern_str::CaseInsensitive("f"), 1176),
+                (intern_str::CaseInsensitive("g"), 1177),
+                (intern_str::CaseInsensitive("h"), 1178),
+                (intern_str::CaseInsensitive("i"), 1179),
+                (intern_str::CaseInsensitive("p"), 1180),
+                (intern_str::CaseInsensitive("s"), 1181),
+                (intern_str::CaseInsensitive("t"), 1182),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_AFPC_MODCA_OVERLAY]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("l"), 1184),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_OXLI_COUNTGRAPH]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("icg"), 1186),
+            ],
+            None,
+            0,
+            3,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_OXPS]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("s"), 1188),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_OPENOFFICEORG_EXTENSION]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("l"), 1187),
+                (intern_str::CaseInsensitive("p"), 1189),
+                (intern_str::CaseInsensitive("t"), 1190),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_X_OZ_APPLICATION]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("a"), 1192),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("a"), 1118),
+                (intern_str::CaseInsensitive("b"), 1122),
+                (intern_str::CaseInsensitive("d"), 1135),
+                (intern_str::CaseInsensitive("e"), 1137),
+                (intern_str::CaseInsensitive("g"), 1144),
+                (intern_str::CaseInsensitive("l"), 1146),
+                (intern_str::CaseInsensitive("m"), 1148),
+                (intern_str::CaseInsensitive("n"), 1156),
+                (intern_str::CaseInsensitive("p"), 1162),
+                (intern_str::CaseInsensitive("r"), 1170),
+                (intern_str::CaseInsensitive("s"), 1173),
+                (intern_str::CaseInsensitive("t"), 1183),
+                (intern_str::CaseInsensitive("v"), 1185),
+                (intern_str::CaseInsensitive("x"), 1191),
+                (intern_str::CaseInsensitive("z"), 1193),
+            ],
+            Some(&[constants::APPLICATION_X_OBJECT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_PKCS10]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_PKCS12]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("0"), 1195),
+                (intern_str::CaseInsensitive("2"), 1196),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_P21]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_WFA_P2P]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("1"), 1198),
+                (intern_str::CaseInsensitive("p"), 1199),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_PKCS7_MIME]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_PKCS7_MIME]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_X_PKCS7_CERTREQRESP]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_PKCS7_SIGNATURE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_PKCS7_MIME]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("c"), 1201),
+                (intern_str::CaseInsensitive("m"), 1202),
+                (intern_str::CaseInsensitive("r"), 1203),
+                (intern_str::CaseInsensitive("s"), 1204),
+                (intern_str::CaseInsensitive("z"), 1205),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_PKCS8_ENCRYPTED]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("e"), 1207),
+            ],
+            Some(&[constants::APPLICATION_PKCS8]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_AUTOPACKAGE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("kage"), 1209),
+            ],
+            Some(&[constants::APPLICATION_X_NS_PROXY_AUTOCONFIG]),
+            0,
+            4,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_APPLE_PAGES]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("es"), 1211),
+            ],
+            None,
+            0,
+            2,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::TEXT_X_PASCAL]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::TEXT_X_DIFF]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("ch"), 1214),
+            ],
+            Some(&[constants::IMAGE_X_CORELDRAWPATTERN]),
+            0,
+            2,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_PAWAAFILE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("c"), 1210),
+                (intern_str::CaseInsensitive("g"), 1212),
+                (intern_str::CaseInsensitive("s"), 1213),
+                (intern_str::CaseInsensitive("t"), 1215),
+                (intern_str::CaseInsensitive("w"), 1216),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_POWERBUILDER6]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_X_PORTABLE_BITMAP]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("d"), 1218),
+                (intern_str::CaseInsensitive("m"), 1219),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_TCPDUMP_PCAP]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("p"), 1221),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_X_FONT_PCF]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive(".z"), 1223),
+            ],
+            Some(&[constants::APPLICATION_X_FONT_PCF]),
+            0,
+            2,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_HP_PCL]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_VND_ZBRUSH_PCX]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("a"), 1222),
+                (intern_str::CaseInsensitive("f"), 1224),
+                (intern_str::CaseInsensitive("l"), 1225),
+                (intern_str::CaseInsensitive("x"), 1226),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_PALM, constants::CHEMICAL_X_PDB]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_PDF]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_PDX]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("b"), 1228),
+                (intern_str::CaseInsensitive("f"), 1229),
+                (intern_str::CaseInsensitive("x"), 1230),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_PEM_CERTIFICATE_CHAIN]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("m"), 1232),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_X_FONT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_X_FONT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_FONT_TDPFR]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_PKCS12]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("a"), 1234),
+                (intern_str::CaseInsensitive("b"), 1235),
+                (intern_str::CaseInsensitive("r"), 1236),
+                (intern_str::CaseInsensitive("x"), 1237),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_VND_GLOBALGRAPHICS_PGB]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_X_PORTABLE_GRAYMAP]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_CHESS_PGN]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_PGP_ENCRYPTED]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("b"), 1239),
+                (intern_str::CaseInsensitive("m"), 1240),
+                (intern_str::CaseInsensitive("n"), 1241),
+                (intern_str::CaseInsensitive("p"), 1242),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_PIACCESS_APPLICATION_LICENCE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("l"), 1244),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_HBCI]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_APPLE_INSTALLER_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_PKIX_PKIPATH]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("path"), 1248),
+            ],
+            Some(&[constants::APPLICATION_PKIXCMP]),
+            0,
+            4,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("d"), 1246),
+                (intern_str::CaseInsensitive("g"), 1247),
+                (intern_str::CaseInsensitive("i"), 1249),
+            ],
+            Some(&[constants::APPLICATION_X_TEX_PK]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_3GPP_PIC_BW_LARGE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_MOBIUS_PLC]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_POCKETLEARN]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::AUDIO_VND_EVERAD_PLJ]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_PANOPLY]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::AUDIO_X_SCPLS]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("b"), 1251),
+                (intern_str::CaseInsensitive("c"), 1252),
+                (intern_str::CaseInsensitive("f"), 1253),
+                (intern_str::CaseInsensitive("j"), 1254),
+                (intern_str::CaseInsensitive("p"), 1255),
+                (intern_str::CaseInsensitive("s"), 1256),
+            ],
+            Some(&[constants::TEXT_X_PERL]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_CTC_POSML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("l"), 1258),
+            ],
+            Some(&[constants::TEXT_X_PERL]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_PNG]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_X_PORTABLE_ANYMAP]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("g"), 1260),
+                (intern_str::CaseInsensitive("m"), 1261),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_MACPORTS_PORTPKG]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("tpkg"), 1263),
+            ],
+            None,
+            0,
+            4,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_MS_POWERPOINT_TEMPLATE_MACRO_ENABLED_12]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_OPENXMLFORMATS_OFFICEDOCUMENT_PRESENTATIONML_TEMPLATE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("m"), 1265),
+                (intern_str::CaseInsensitive("x"), 1266),
+            ],
+            Some(&[constants::TEXT_PLAIN]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("r"), 1264),
+                (intern_str::CaseInsensitive("t"), 1267),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_MS_POWERPOINT_ADDIN_MACRO_ENABLED_12]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("m"), 1269),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_CUPS_PPD]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_XMPIE_PPKG]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("g"), 1272),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_X_PORTABLE_PIXMAP]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_MS_POWERPOINT_SLIDESHOW_MACRO_ENABLED_12]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_OPENXMLFORMATS_OFFICEDOCUMENT_PRESENTATIONML_SLIDESHOW]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("m"), 1275),
+                (intern_str::CaseInsensitive("x"), 1276),
+            ],
+            Some(&[constants::APPLICATION_VND_MS_POWERPOINT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_MS_POWERPOINT_PRESENTATION_MACRO_ENABLED_12]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_THINK_CELL_PPTTC_JSON]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("c"), 1279),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_OPENXMLFORMATS_OFFICEDOCUMENT_PRESENTATIONML_PRESENTATION]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("m"), 1278),
+                (intern_str::CaseInsensitive("t"), 1280),
+                (intern_str::CaseInsensitive("x"), 1281),
+            ],
+            Some(&[constants::APPLICATION_VND_MS_POWERPOINT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("a"), 1270),
+                (intern_str::CaseInsensitive("d"), 1271),
+                (intern_str::CaseInsensitive("k"), 1273),
+                (intern_str::CaseInsensitive("m"), 1274),
+                (intern_str::CaseInsensitive("s"), 1277),
+                (intern_str::CaseInsensitive("t"), 1282),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_PALM]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("a"), 1284),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::MODEL_PRC]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_PREMINET]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("minet"), 1287),
+            ],
+            Some(&[constants::APPLICATION_VND_LOTUS_FREELANCE]),
+            0,
+            5,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_PICS_RULES]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::TEXT_PROVENANCE_NOTATION]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_PROVENANCE_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("n"), 1290),
+                (intern_str::CaseInsensitive("x"), 1291),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("v"), 1292),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::CHEMICAL_X_NCBI_ASN1_ASCII]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_LOTUS_FREELANCE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("c"), 1286),
+                (intern_str::CaseInsensitive("e"), 1288),
+                (intern_str::CaseInsensitive("f"), 1289),
+                (intern_str::CaseInsensitive("o"), 1293),
+                (intern_str::CaseInsensitive("t"), 1294),
+                (intern_str::CaseInsensitive("z"), 1295),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_3GPP_PIC_BW_SMALL]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_VND_ADOBE_PHOTOSHOP]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_AFPC_MODCA]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("g3820"), 1299),
+            ],
+            None,
+            0,
+            5,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_PSFS]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("s"), 1301),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_AFPC_MODCA_PAGESEGMENT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::AUDIO_PRS_SID]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("d"), 1304),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_PSKC_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("cxml"), 1306),
+            ],
+            None,
+            0,
+            4,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("b"), 1297),
+                (intern_str::CaseInsensitive("d"), 1298),
+                (intern_str::CaseInsensitive("e"), 1300),
+                (intern_str::CaseInsensitive("f"), 1302),
+                (intern_str::CaseInsensitive("g"), 1303),
+                (intern_str::CaseInsensitive("i"), 1305),
+                (intern_str::CaseInsensitive("k"), 1307),
+            ],
+            Some(&[constants::APPLICATION_POSTSCRIPT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_PVI_PTID1]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("d"), 1309),
+            ],
+            Some(&[constants::IMAGE_PRS_PTI]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_SNESDEV_PAGE_TABLE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("om"), 1311),
+            ],
+            None,
+            0,
+            2,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("i"), 1310),
+                (intern_str::CaseInsensitive("r"), 1312),
+            ],
+            Some(&[constants::APPLICATION_VND_SNESDEV_PAGE_TABLE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_EXSTREAM_PACKAGE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("b"), 1314),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_3GPP_PIC_BW_VAR]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("b"), 1316),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_3M_POST_IT_NOTES]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("n"), 1318),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::AUDIO_VND_MS_PLAYREADY_MEDIA_PYA]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_X_PYTHON_CODE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::MODEL_VND_PYTHA_PYOX]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("x"), 1322),
+            ],
+            Some(&[constants::APPLICATION_X_PYTHON_CODE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::VIDEO_VND_MS_PLAYREADY_MEDIA_PYV]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("a"), 1320),
+                (intern_str::CaseInsensitive("c"), 1321),
+                (intern_str::CaseInsensitive("o"), 1323),
+                (intern_str::CaseInsensitive("v"), 1324),
+            ],
+            Some(&[constants::TEXT_X_PYTHON]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("1"), 1197),
+                (intern_str::CaseInsensitive("2"), 1200),
+                (intern_str::CaseInsensitive("7"), 1206),
+                (intern_str::CaseInsensitive("8"), 1208),
+                (intern_str::CaseInsensitive("a"), 1217),
+                (intern_str::CaseInsensitive("b"), 1220),
+                (intern_str::CaseInsensitive("c"), 1227),
+                (intern_str::CaseInsensitive("d"), 1231),
+                (intern_str::CaseInsensitive("e"), 1233),
+                (intern_str::CaseInsensitive("f"), 1238),
+                (intern_str::CaseInsensitive("g"), 1243),
+                (intern_str::CaseInsensitive("i"), 1245),
+                (intern_str::CaseInsensitive("k"), 1250),
+                (intern_str::CaseInsensitive("l"), 1257),
+                (intern_str::CaseInsensitive("m"), 1259),
+                (intern_str::CaseInsensitive("n"), 1262),
+                (intern_str::CaseInsensitive("o"), 1268),
+                (intern_str::CaseInsensitive("p"), 1283),
+                (intern_str::CaseInsensitive("q"), 1285),
+                (intern_str::CaseInsensitive("r"), 1296),
+                (intern_str::CaseInsensitive("s"), 1308),
+                (intern_str::CaseInsensitive("t"), 1313),
+                (intern_str::CaseInsensitive("u"), 1315),
+                (intern_str::CaseInsensitive("v"), 1317),
+                (intern_str::CaseInsensitive("w"), 1319),
+                (intern_str::CaseInsensitive("y"), 1325),
+            ],
+            Some(&[constants::TEXT_X_PASCAL]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_EPSON_QUICKANIME]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("m"), 1327),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_INTU_QBO]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("o"), 1329),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_ERICSSON_QUICKCALL]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("ll"), 1331),
+            ],
+            Some(&[constants::APPLICATION_VND_ERICSSON_QUICKCALL]),
+            0,
+            2,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::AUDIO_EVRC_QCP]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("a"), 1332),
+                (intern_str::CaseInsensitive("p"), 1333),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_INTU_QFX]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("x"), 1335),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_X_QGIS]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("s"), 1337),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_PUBLISHARE_DELTA_TREE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("s"), 1339),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_X_QUICKTIMEPLAYER]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("l"), 1341),
+            ],
+            Some(&[constants::VIDEO_QUICKTIME]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_QUOBJECT_QUOXDOCUMENT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_QUOBJECT_QUOXDOCUMENT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("iz"), 1343),
+                (intern_str::CaseInsensitive("ox"), 1344),
+            ],
+            None,
+            0,
+            2,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_THEQVD]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("d"), 1346),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_QUARK_QUARK_X_PRESS]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_QUARK_QUARK_X_PRESS]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("d"), 1348),
+                (intern_str::CaseInsensitive("t"), 1349),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_QUARK_QUARK_X_PRESS]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_QUARK_QUARK_X_PRESS]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_QUARK_QUARK_X_PRESS]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_QUARK_QUARK_X_PRESS]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("b"), 1351),
+                (intern_str::CaseInsensitive("d"), 1352),
+                (intern_str::CaseInsensitive("l"), 1353),
+                (intern_str::CaseInsensitive("t"), 1354),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("a"), 1328),
+                (intern_str::CaseInsensitive("b"), 1330),
+                (intern_str::CaseInsensitive("c"), 1334),
+                (intern_str::CaseInsensitive("f"), 1336),
+                (intern_str::CaseInsensitive("g"), 1338),
+                (intern_str::CaseInsensitive("p"), 1340),
+                (intern_str::CaseInsensitive("t"), 1342),
+                (intern_str::CaseInsensitive("u"), 1345),
+                (intern_str::CaseInsensitive("v"), 1347),
+                (intern_str::CaseInsensitive("w"), 1350),
+                (intern_str::CaseInsensitive("x"), 1355),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::AUDIO_X_PN_REALAUDIO]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_ROUTE_APD_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("d"), 1358),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_RAR]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_X_CMU_RASTER]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("m"), 1357),
+                (intern_str::CaseInsensitive("p"), 1359),
+                (intern_str::CaseInsensitive("r"), 1360),
+                (intern_str::CaseInsensitive("s"), 1361),
+            ],
+            Some(&[constants::AUDIO_X_PN_REALAUDIO]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_X_RUBY]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_IPUNPLUGGED_RCPROFILE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("rofile"), 1364),
+            ],
+            None,
+            0,
+            6,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_PRS_NPREND]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("p"), 1365),
+                (intern_str::CaseInsensitive("t"), 1366),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_PRS_RDF_XML_CRYPT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("-crypt"), 1368),
+            ],
+            Some(&[constants::APPLICATION_RDF_XML]),
+            0,
+            6,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_X_RDP]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_DATA_VISION_RDZ]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("f"), 1369),
+                (intern_str::CaseInsensitive("p"), 1370),
+                (intern_str::CaseInsensitive("z"), 1371),
+            ],
+            Some(&[constants::CHEMICAL_X_MDL_RDFILE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_RESILIENT_LOGIC]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("ad"), 1373),
+            ],
+            Some(&[constants::APPLICATION_P2P_OVERLAY_XML]),
+            0,
+            2,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("o"), 1374),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_BUSINESSOBJECTS]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_NERVANA]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("uest"), 1377),
+            ],
+            None,
+            0,
+            4,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("l"), 1375),
+                (intern_str::CaseInsensitive("p"), 1376),
+                (intern_str::CaseInsensitive("q"), 1378),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_RFC_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("cxml"), 1380),
+            ],
+            None,
+            0,
+            4,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_VND_RADIANCE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("e"), 1382),
+            ],
+            Some(&[constants::IMAGE_X_RGB]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("b"), 1383),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_REGINFO_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::AUDIO_VND_RIP]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("f"), 1385),
+                (intern_str::CaseInsensitive("p"), 1386),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_VND_FUJIXEROX_EDMICS_RLC]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_RESOURCE_LISTS_DIFF_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_RESILIENT_LOGIC]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("c"), 1388),
+                (intern_str::CaseInsensitive("d"), 1389),
+                (intern_str::CaseInsensitive("m"), 1390),
+            ],
+            Some(&[constants::APPLICATION_RESOURCE_LISTS_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_JCP_JAVAME_MIDLET_RMS]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("s"), 1392),
+            ],
+            Some(&[constants::AUDIO_X_PN_REALAUDIO]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_RELAX_NG_COMPACT_SYNTAX]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_PRS_NPREND]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("c"), 1394),
+                (intern_str::CaseInsensitive("d"), 1395),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_RPKI_ROA]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::TEXT_TROFF]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("f"), 1398),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::CHEMICAL_X_ROSDAL]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("a"), 1397),
+                (intern_str::CaseInsensitive("f"), 1399),
+                (intern_str::CaseInsensitive("s"), 1400),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_CLOANTO_RP9]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_X_REDHAT_PACKAGE_MANAGER]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_NOKIA_RADIO_PRESETS]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_NOKIA_RADIO_PRESET]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("s"), 1404),
+                (intern_str::CaseInsensitive("t"), 1405),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("9"), 1402),
+                (intern_str::CaseInsensitive("m"), 1403),
+                (intern_str::CaseInsensitive("s"), 1406),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_SPARQL_QUERY]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_ATSC_RSAT_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("t"), 1409),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_URC_RESSHEET_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("eet"), 1411),
+            ],
+            None,
+            0,
+            3,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::MODEL_VND_GDL]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_X_RSS_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::TEXT_PRS_FALLENSTEIN_RST]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("a"), 1410),
+                (intern_str::CaseInsensitive("h"), 1412),
+                (intern_str::CaseInsensitive("m"), 1413),
+                (intern_str::CaseInsensitive("s"), 1414),
+                (intern_str::CaseInsensitive("t"), 1415),
+            ],
+            Some(&[constants::APPLICATION_RLS_SERVICES_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_RTF]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("f"), 1417),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_ROUTE_USD_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("sd"), 1419),
+            ],
+            None,
+            0,
+            2,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::CHEMICAL_X_MDL_RXNFILE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("n"), 1421),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("a"), 1362),
+                (intern_str::CaseInsensitive("b"), 1363),
+                (intern_str::CaseInsensitive("c"), 1367),
+                (intern_str::CaseInsensitive("d"), 1372),
+                (intern_str::CaseInsensitive("e"), 1379),
+                (intern_str::CaseInsensitive("f"), 1381),
+                (intern_str::CaseInsensitive("g"), 1384),
+                (intern_str::CaseInsensitive("i"), 1387),
+                (intern_str::CaseInsensitive("l"), 1391),
+                (intern_str::CaseInsensitive("m"), 1393),
+                (intern_str::CaseInsensitive("n"), 1396),
+                (intern_str::CaseInsensitive("o"), 1401),
+                (intern_str::CaseInsensitive("p"), 1407),
+                (intern_str::CaseInsensitive("q"), 1408),
+                (intern_str::CaseInsensitive("s"), 1416),
+                (intern_str::CaseInsensitive("t"), 1418),
+                (intern_str::CaseInsensitive("u"), 1420),
+                (intern_str::CaseInsensitive("x"), 1422),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::VIDEO_VND_SEALED_MPEG1]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::VIDEO_VND_SEALED_MPEG4]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_SEALEDMEDIA_SOFTSEAL_PDF]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_SEALED_XLS]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_VND_SEALEDMEDIA_SOFTSEAL_GIF]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_SEALEDMEDIA_SOFTSEAL_HTML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_VND_SEALEDMEDIA_SOFTSEAL_JPG]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::AUDIO_VND_SEALEDMEDIA_SOFTSEAL_MPEG]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_VND_SEALED_PNG]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_SEALED_PPT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::VIDEO_VND_SEALEDMEDIA_SOFTSEAL_MOV]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_SEALED_DOC]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("1"), 1424),
+                (intern_str::CaseInsensitive("4"), 1425),
+                (intern_str::CaseInsensitive("a"), 1426),
+                (intern_str::CaseInsensitive("e"), 1427),
+                (intern_str::CaseInsensitive("g"), 1428),
+                (intern_str::CaseInsensitive("h"), 1429),
+                (intern_str::CaseInsensitive("j"), 1430),
+                (intern_str::CaseInsensitive("m"), 1431),
+                (intern_str::CaseInsensitive("n"), 1432),
+                (intern_str::CaseInsensitive("p"), 1433),
+                (intern_str::CaseInsensitive("q"), 1434),
+                (intern_str::CaseInsensitive("w"), 1435),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_SEALED_3DF]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("df"), 1437),
+            ],
+            None,
+            0,
+            2,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_TAMP_SEQUENCE_ADJUST_CONFIRM]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_YAMAHA_SMAF_AUDIO]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_LOTUS_WORDPRO]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_SARIF_EXTERNAL_PROPERTIES_JSON]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive(".json"), 1442),
+            ],
+            Some(&[constants::APPLICATION_SARIF_EXTERNAL_PROPERTIES_JSON]),
+            0,
+            5,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("rnal-properties"), 1443),
+            ],
+            None,
+            0,
+            15,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_SARIF_JSON]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("-exte"), 1444),
+                (intern_str::CaseInsensitive(".json"), 1445),
+            ],
+            Some(&[constants::APPLICATION_SARIF_JSON]),
+            0,
+            5,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("if"), 1446),
+            ],
+            Some(&[constants::APPLICATION_VND_SAR]),
+            0,
+            2,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("c"), 1439),
+                (intern_str::CaseInsensitive("f"), 1440),
+                (intern_str::CaseInsensitive("m"), 1441),
+                (intern_str::CaseInsensitive("r"), 1447),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::TEXT_X_SCALA]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("la"), 1449),
+            ],
+            None,
+            0,
+            2,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_SCRIBUS]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_ETSI_ASIC_E_ZIP, constants::APPLICATION_X_SCILAB]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_SCIM_JSON]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("m"), 1453),
+            ],
+            Some(&[constants::APPLICATION_X_SCILAB]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_DOREMIR_SCORECLOUD_BINARY_DOCUMENT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("d"), 1455),
+            ],
+            Some(&[constants::APPLICATION_VND_SYCLE_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_LOTUS_SCREENCAM]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::AUDIO_CSOUND]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_SCVP_CV_REQUEST]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_X_SILVERLIGHT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_SEALED_CSF]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("f"), 1461),
+            ],
+            Some(&[constants::APPLICATION_SCVP_CV_RESPONSE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("a"), 1450),
+                (intern_str::CaseInsensitive("d"), 1451),
+                (intern_str::CaseInsensitive("e"), 1452),
+                (intern_str::CaseInsensitive("i"), 1454),
+                (intern_str::CaseInsensitive("l"), 1456),
+                (intern_str::CaseInsensitive("m"), 1457),
+                (intern_str::CaseInsensitive("o"), 1458),
+                (intern_str::CaseInsensitive("q"), 1459),
+                (intern_str::CaseInsensitive("r"), 1460),
+                (intern_str::CaseInsensitive("s"), 1462),
+            ],
+            Some(&[constants::APPLICATION_VND_IBM_SECURE_CONTAINER]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::AUDIO_X_SD2]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_STARDIVISION_DRAW]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_STARDIVISION_CALC]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_STARDIVISION_IMPRESS]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_KINAR, constants::CHEMICAL_X_MDL_SDFILE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_SOLENT_SDKM_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_SOLENT_SDKM_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("d"), 1469),
+                (intern_str::CaseInsensitive("m"), 1470),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_SEALED_DOC]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("c"), 1472),
+            ],
+            Some(&[constants::APPLICATION_VND_SEALED_DOC]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_SDP]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_STARDIVISION_CHART]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_STARDIVISION_WRITER]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("2"), 1464),
+                (intern_str::CaseInsensitive("a"), 1465),
+                (intern_str::CaseInsensitive("c"), 1466),
+                (intern_str::CaseInsensitive("d"), 1467),
+                (intern_str::CaseInsensitive("f"), 1468),
+                (intern_str::CaseInsensitive("k"), 1471),
+                (intern_str::CaseInsensitive("o"), 1473),
+                (intern_str::CaseInsensitive("p"), 1474),
+                (intern_str::CaseInsensitive("s"), 1475),
+                (intern_str::CaseInsensitive("w"), 1476),
+            ],
+            Some(&[constants::CHEMICAL_X_MDL_SDFILE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_FDSN_SEED]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("d"), 1478),
+            ],
+            Some(&[constants::APPLICATION_VND_SEEMAIL]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_SEMA]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_SEMD]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_SEMF]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_SEALED_EML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("a"), 1480),
+                (intern_str::CaseInsensitive("d"), 1481),
+                (intern_str::CaseInsensitive("f"), 1482),
+                (intern_str::CaseInsensitive("l"), 1483),
+            ],
+            Some(&[constants::APPLICATION_VND_SEALED_EML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_SENML_ETCH_CBOR]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_SENML_ETCH_JSON]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("c"), 1485),
+                (intern_str::CaseInsensitive("j"), 1486),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("etch"), 1487),
+            ],
+            None,
+            0,
+            4,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_SENML_CBOR]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_SENML_EXI]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_SENML_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("-"), 1488),
+                (intern_str::CaseInsensitive("c"), 1489),
+                (intern_str::CaseInsensitive("e"), 1490),
+                (intern_str::CaseInsensitive("x"), 1491),
+            ],
+            Some(&[constants::APPLICATION_SENML_JSON]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_SENSML_CBOR]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_SENSML_EXI]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_SENSML_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("c"), 1493),
+                (intern_str::CaseInsensitive("e"), 1494),
+                (intern_str::CaseInsensitive("x"), 1495),
+            ],
+            Some(&[constants::APPLICATION_SENSML_JSON]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("l"), 1496),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("ml"), 1492),
+                (intern_str::CaseInsensitive("sm"), 1497),
+            ],
+            None,
+            0,
+            2,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_JAVA_SERIALIZED_OBJECT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("e"), 1479),
+                (intern_str::CaseInsensitive("m"), 1484),
+                (intern_str::CaseInsensitive("n"), 1498),
+                (intern_str::CaseInsensitive("r"), 1499),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_NINTENDO_SNES_ROM]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_HYDROSTATIX_SOF_DATA]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("-hdstx"), 1502),
+            ],
+            Some(&[constants::APPLICATION_VND_FONT_FONTFORGE_SFD]),
+            0,
+            6,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_SPOTFIRE_SFS]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::TEXT_X_SFV]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("c"), 1501),
+                (intern_str::CaseInsensitive("d"), 1503),
+                (intern_str::CaseInsensitive("s"), 1504),
+                (intern_str::CaseInsensitive("v"), 1505),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_X_GO_SGF]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_VND_SEALEDMEDIA_SOFTSEAL_GIF]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("f"), 1508),
+            ],
+            Some(&[constants::IMAGE_VND_SEALEDMEDIA_SOFTSEAL_GIF]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_STARDIVISION_WRITER_GLOBAL]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::TEXT_SGML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("l"), 1511),
+            ],
+            Some(&[constants::TEXT_SGML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("f"), 1507),
+                (intern_str::CaseInsensitive("i"), 1509),
+                (intern_str::CaseInsensitive("l"), 1510),
+                (intern_str::CaseInsensitive("m"), 1512),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::TEXT_SHACLC]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("lc"), 1514),
+            ],
+            None,
+            0,
+            2,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_X_SHAR]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("c"), 1515),
+                (intern_str::CaseInsensitive("r"), 1516),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::TEXT_SHACLC]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::TEXT_SHEX]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("x"), 1519),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_SHF_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_SHP, constants::APPLICATION_X_QGIS]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::TEXT_HTML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("ml"), 1523),
+            ],
+            None,
+            0,
+            2,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_SHX, constants::APPLICATION_X_QGIS]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("a"), 1517),
+                (intern_str::CaseInsensitive("c"), 1518),
+                (intern_str::CaseInsensitive("e"), 1520),
+                (intern_str::CaseInsensitive("f"), 1521),
+                (intern_str::CaseInsensitive("p"), 1522),
+                (intern_str::CaseInsensitive("t"), 1524),
+                (intern_str::CaseInsensitive("x"), 1525),
+            ],
+            Some(&[constants::APPLICATION_X_SH, constants::TEXT_X_SH]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_WAP_SIC]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::AUDIO_PRS_SID]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_SIEVE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("ve"), 1529),
+            ],
+            None,
+            0,
+            2,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_PGP_SIGNATURE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_X_TRASH]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::MODEL_MESH]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("o"), 1533),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_SYMBIAN_INSTALL]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_X_STUFFIT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("x"), 1536),
+            ],
+            Some(&[constants::APPLICATION_X_STUFFIT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_SIEVE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("c"), 1527),
+                (intern_str::CaseInsensitive("d"), 1528),
+                (intern_str::CaseInsensitive("e"), 1530),
+                (intern_str::CaseInsensitive("g"), 1531),
+                (intern_str::CaseInsensitive("k"), 1532),
+                (intern_str::CaseInsensitive("l"), 1534),
+                (intern_str::CaseInsensitive("s"), 1535),
+                (intern_str::CaseInsensitive("t"), 1537),
+                (intern_str::CaseInsensitive("v"), 1538),
+            ],
+            Some(&[constants::TEXT_VND_WAP_SI]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_VND_SEALEDMEDIA_SOFTSEAL_JPG]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("g"), 1540),
+            ],
+            Some(&[constants::IMAGE_VND_SEALEDMEDIA_SOFTSEAL_JPG]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("p"), 1541),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_KOAN]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_KOAN]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_KOAN]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_KOAN]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("d"), 1543),
+                (intern_str::CaseInsensitive("m"), 1544),
+                (intern_str::CaseInsensitive("p"), 1545),
+                (intern_str::CaseInsensitive("t"), 1546),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_SCRIBUS]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("z"), 1548),
+            ],
+            Some(&[constants::APPLICATION_VND_SCRIBUS]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_WAP_SLC]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_MS_POWERPOINT_SLIDE_MACRO_ENABLED_12]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_OPENXMLFORMATS_OFFICEDOCUMENT_PRESENTATIONML_SLIDE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("m"), 1551),
+                (intern_str::CaseInsensitive("x"), 1552),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_ROUTE_S_TSID_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_EPSON_SALT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("a"), 1549),
+                (intern_str::CaseInsensitive("c"), 1550),
+                (intern_str::CaseInsensitive("d"), 1553),
+                (intern_str::CaseInsensitive("s"), 1554),
+                (intern_str::CaseInsensitive("t"), 1555),
+            ],
+            Some(&[constants::TEXT_VND_WAP_SL]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_NINTENDO_SNES_ROM]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_STARDIVISION_MATH]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_SEALED_MHT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("t"), 1559),
+            ],
+            Some(&[constants::APPLICATION_VND_SEALED_MHT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_SMIL_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("l"), 1561),
+            ],
+            Some(&[constants::APPLICATION_SMIL_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::VIDEO_VND_RADGAMETTOOLS_SMACKER]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_SMIL_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::VIDEO_VND_SEALEDMEDIA_SOFTSEAL_MOV]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("v"), 1565),
+            ],
+            Some(&[constants::VIDEO_VND_SEALEDMEDIA_SOFTSEAL_MOV]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::AUDIO_VND_SEALEDMEDIA_SOFTSEAL_MPEG]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::VIDEO_VND_SEALED_MPEG1]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("3"), 1567),
+                (intern_str::CaseInsensitive("g"), 1568),
+            ],
+            Some(&[constants::AUDIO_VND_SEALEDMEDIA_SOFTSEAL_MPEG]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_3GPP2_SMS]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::AUDIO_SMV]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_STEPMANIA_PACKAGE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("ip"), 1572),
+            ],
+            None,
+            0,
+            2,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("c"), 1557),
+                (intern_str::CaseInsensitive("f"), 1558),
+                (intern_str::CaseInsensitive("h"), 1560),
+                (intern_str::CaseInsensitive("i"), 1562),
+                (intern_str::CaseInsensitive("k"), 1563),
+                (intern_str::CaseInsensitive("l"), 1564),
+                (intern_str::CaseInsensitive("o"), 1566),
+                (intern_str::CaseInsensitive("p"), 1569),
+                (intern_str::CaseInsensitive("s"), 1570),
+                (intern_str::CaseInsensitive("v"), 1571),
+                (intern_str::CaseInsensitive("z"), 1573),
+            ],
+            Some(&[constants::APPLICATION_VND_STEPMANIA_STEPCHART]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::AUDIO_BASIC]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("d"), 1575),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::TEXT_DNS]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_SGML_OPEN_CATALOG]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::AUDIO_SOFA]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("a"), 1579),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::TEXT_VND_SOSI]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("a"), 1577),
+                (intern_str::CaseInsensitive("c"), 1578),
+                (intern_str::CaseInsensitive("f"), 1580),
+                (intern_str::CaseInsensitive("s"), 1581),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::CHEMICAL_X_GALACTIC_SPC]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_SEALEDMEDIA_SOFTSEAL_PDF]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_SPDX_JSON]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive(".json"), 1585),
+            ],
+            Some(&[constants::TEXT_SPDX]),
+            0,
+            5,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("f"), 1584),
+                (intern_str::CaseInsensitive("x"), 1586),
+            ],
+            Some(&[constants::APPLICATION_VND_SEALEDMEDIA_SOFTSEAL_PDF]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_YAMAHA_SMAF_PHRASE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_FUTURESPLASH]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_VND_SEALED_PNG]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("g"), 1590),
+            ],
+            Some(&[constants::IMAGE_VND_SEALED_PNG]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::TEXT_VND_IN3D_SPOT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("t"), 1592),
+            ],
+            Some(&[constants::TEXT_VND_IN3D_SPOT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_SEALED_PPT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("t"), 1594),
+            ],
+            Some(&[constants::APPLICATION_SCVP_VP_RESPONSE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_SCVP_VP_REQUEST]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::AUDIO_OGG]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("c"), 1583),
+                (intern_str::CaseInsensitive("d"), 1587),
+                (intern_str::CaseInsensitive("f"), 1588),
+                (intern_str::CaseInsensitive("l"), 1589),
+                (intern_str::CaseInsensitive("n"), 1591),
+                (intern_str::CaseInsensitive("o"), 1593),
+                (intern_str::CaseInsensitive("p"), 1595),
+                (intern_str::CaseInsensitive("q"), 1596),
+                (intern_str::CaseInsensitive("x"), 1597),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_SQLITE3]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("3"), 1599),
+            ],
+            Some(&[constants::APPLICATION_VND_SQLITE3]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("ite"), 1600),
+            ],
+            Some(&[constants::APPLICATION_SQL]),
+            0,
+            3,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("l"), 1601),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_X_WAIS_SOURCE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::TEXT_PLAIN]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_SRU_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_SPARQL_RESULTS_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("c"), 1603),
+                (intern_str::CaseInsensitive("t"), 1604),
+                (intern_str::CaseInsensitive("u"), 1605),
+                (intern_str::CaseInsensitive("x"), 1606),
+            ],
+            Some(&[constants::APPLICATION_VND_SIGROK_SESSION]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_KODAK_DESCRIPTOR]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_EPSON_SSF]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_SSML_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("l"), 1610),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_CRYPTO_SHADE_FILE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("c"), 1612),
+            ],
+            Some(&[constants::APPLICATION_VND_SHADE_SAVE_FILE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::VIDEO_VND_SEALED_SWF]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("f"), 1614),
+            ],
+            Some(&[constants::VIDEO_VND_SEALED_SWF]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("e"), 1608),
+                (intern_str::CaseInsensitive("f"), 1609),
+                (intern_str::CaseInsensitive("m"), 1611),
+                (intern_str::CaseInsensitive("v"), 1613),
+                (intern_str::CaseInsensitive("w"), 1615),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_SUN_XML_CALC_TEMPLATE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_SUN_XML_DRAW_TEMPLATE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::MODEL_STEP]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("p"), 1619),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_WT_STF]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_SEALED_TIFF]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_STIX_JSON]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("f"), 1622),
+                (intern_str::CaseInsensitive("x"), 1623),
+            ],
+            Some(&[constants::APPLICATION_VND_SUN_XML_IMPRESS_TEMPLATE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_HYPERSTUDIO]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::MODEL_STL]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_SEALEDMEDIA_SOFTSEAL_HTML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("l"), 1627),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_P21]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("c"), 1629),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::MODEL_STEP_XML_ZIP]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("z"), 1631),
+            ],
+            Some(&[constants::MODEL_STEP_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::MODEL_STEP_ZIP]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("n"), 1630),
+                (intern_str::CaseInsensitive("x"), 1632),
+                (intern_str::CaseInsensitive("z"), 1633),
+            ],
+            Some(&[constants::MODEL_STEP]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_PG_FORMAT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_VD_STUDY]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("dy-inter"), 1636),
+            ],
+            None,
+            0,
+            8,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_SUN_XML_WRITER_TEMPLATE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::TEXT_X_TEX]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("c"), 1617),
+                (intern_str::CaseInsensitive("d"), 1618),
+                (intern_str::CaseInsensitive("e"), 1620),
+                (intern_str::CaseInsensitive("f"), 1621),
+                (intern_str::CaseInsensitive("i"), 1624),
+                (intern_str::CaseInsensitive("k"), 1625),
+                (intern_str::CaseInsensitive("l"), 1626),
+                (intern_str::CaseInsensitive("m"), 1628),
+                (intern_str::CaseInsensitive("p"), 1634),
+                (intern_str::CaseInsensitive("r"), 1635),
+                (intern_str::CaseInsensitive("u"), 1637),
+                (intern_str::CaseInsensitive("w"), 1638),
+                (intern_str::CaseInsensitive("y"), 1639),
+            ],
+            Some(&[constants::APPLICATION_VND_SAILINGTRACKER_TRACK]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_SUS_CALENDAR]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("p"), 1641),
+            ],
+            Some(&[constants::APPLICATION_VND_SUS_CALENDAR]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("s"), 1642),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_X_SV4CPIO]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("o"), 1644),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_X_SV4CRC]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("pi"), 1645),
+                (intern_str::CaseInsensitive("rc"), 1646),
+            ],
+            None,
+            0,
+            2,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("c"), 1647),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_DVB_SERVICE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_SVG_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("z"), 1650),
+            ],
+            Some(&[constants::IMAGE_SVG_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("4"), 1648),
+                (intern_str::CaseInsensitive("c"), 1649),
+                (intern_str::CaseInsensitive("g"), 1651),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_ADOBE_FLASH_MOVIE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_SWID_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("dtag"), 1654),
+            ],
+            Some(&[constants::APPLICATION_VND_ARISTANETWORKS_SWI]),
+            0,
+            4,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("f"), 1653),
+                (intern_str::CaseInsensitive("i"), 1655),
+            ],
+            Some(&[constants::CHEMICAL_X_SWISSPROT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_SUN_XML_CALC]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_SUN_XML_DRAW]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_SUN_XML_WRITER_GLOBAL]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_SUN_XML_IMPRESS]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_SEALED_XLS]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("s"), 1661),
+            ],
+            Some(&[constants::APPLICATION_VND_SEALED_XLS]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_SUN_XML_MATH]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_SUN_XML_WRITER]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("c"), 1657),
+                (intern_str::CaseInsensitive("d"), 1658),
+                (intern_str::CaseInsensitive("g"), 1659),
+                (intern_str::CaseInsensitive("i"), 1660),
+                (intern_str::CaseInsensitive("l"), 1662),
+                (intern_str::CaseInsensitive("m"), 1663),
+                (intern_str::CaseInsensitive("w"), 1664),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_SYFT_JSON]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("ft.json"), 1666),
+            ],
+            None,
+            0,
+            7,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("1"), 1436),
+                (intern_str::CaseInsensitive("3"), 1438),
+                (intern_str::CaseInsensitive("a"), 1448),
+                (intern_str::CaseInsensitive("c"), 1463),
+                (intern_str::CaseInsensitive("d"), 1477),
+                (intern_str::CaseInsensitive("e"), 1500),
+                (intern_str::CaseInsensitive("f"), 1506),
+                (intern_str::CaseInsensitive("g"), 1513),
+                (intern_str::CaseInsensitive("h"), 1526),
+                (intern_str::CaseInsensitive("i"), 1539),
+                (intern_str::CaseInsensitive("j"), 1542),
+                (intern_str::CaseInsensitive("k"), 1547),
+                (intern_str::CaseInsensitive("l"), 1556),
+                (intern_str::CaseInsensitive("m"), 1574),
+                (intern_str::CaseInsensitive("n"), 1576),
+                (intern_str::CaseInsensitive("o"), 1582),
+                (intern_str::CaseInsensitive("p"), 1598),
+                (intern_str::CaseInsensitive("q"), 1602),
+                (intern_str::CaseInsensitive("r"), 1607),
+                (intern_str::CaseInsensitive("s"), 1616),
+                (intern_str::CaseInsensitive("t"), 1640),
+                (intern_str::CaseInsensitive("u"), 1643),
+                (intern_str::CaseInsensitive("v"), 1652),
+                (intern_str::CaseInsensitive("w"), 1656),
+                (intern_str::CaseInsensitive("x"), 1665),
+                (intern_str::CaseInsensitive("y"), 1667),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_MYNFC]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("let"), 1669),
+            ],
+            Some(&[constants::TEXT_PRS_LINES_TAG]),
+            0,
+            3,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_ONEPAGERTAMP]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_ONEPAGERTAMX]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("p"), 1671),
+                (intern_str::CaseInsensitive("x"), 1672),
+            ],
+            Some(&[constants::APPLICATION_VND_ONEPAGER]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_TAO_INTENT_MODULE_ARCHIVE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_VND_TENCENT_TAP]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_X_TAR]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_ONEPAGERTATP]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_ONEPAGERTATX]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("p"), 1677),
+                (intern_str::CaseInsensitive("x"), 1678),
+            ],
+            Some(&[constants::APPLICATION_VND_ONEPAGERTAT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_TAMP_APEX_UPDATE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_X_GTAR_COMPRESSED]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("g"), 1670),
+                (intern_str::CaseInsensitive("m"), 1673),
+                (intern_str::CaseInsensitive("o"), 1674),
+                (intern_str::CaseInsensitive("p"), 1675),
+                (intern_str::CaseInsensitive("r"), 1676),
+                (intern_str::CaseInsensitive("t"), 1679),
+                (intern_str::CaseInsensitive("u"), 1680),
+                (intern_str::CaseInsensitive("z"), 1681),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_3GPP2_TCAP]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("p"), 1683),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_X_TCL, constants::TEXT_X_TCL]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_TAMP_COMMUNITY_UPDATE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("a"), 1684),
+                (intern_str::CaseInsensitive("l"), 1685),
+                (intern_str::CaseInsensitive("u"), 1686),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_URC_TARGETDESC_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_SMART_TEACHER]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("cher"), 1689),
+            ],
+            None,
+            0,
+            4,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_TEI_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("corpus"), 1691),
+            ],
+            Some(&[constants::APPLICATION_TEI_XML]),
+            0,
+            6,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_TAMP_ERROR]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_X_TEXINFO]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("nfo"), 1694),
+            ],
+            Some(&[constants::APPLICATION_X_TEXINFO]),
+            0,
+            3,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::TEXT_PLAIN]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("i"), 1695),
+                (intern_str::CaseInsensitive("t"), 1696),
+            ],
+            Some(&[constants::TEXT_X_TEX]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("a"), 1690),
+                (intern_str::CaseInsensitive("i"), 1692),
+                (intern_str::CaseInsensitive("r"), 1693),
+                (intern_str::CaseInsensitive("x"), 1697),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_THRAUD_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_TIFF_FX]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("i"), 1699),
+                (intern_str::CaseInsensitive("x"), 1700),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::CHEMICAL_X_MDL_TGF]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_X_GTAR_COMPRESSED]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("f"), 1702),
+                (intern_str::CaseInsensitive("z"), 1703),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_MS_OFFICETHEME]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("mx"), 1705),
+            ],
+            None,
+            0,
+            2,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_TIFF]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("f"), 1707),
+            ],
+            Some(&[constants::IMAGE_TIFF]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("f"), 1708),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::TEXT_X_TCL]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_CENDIO_THINLINC_CLIENTCONF]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("client"), 1711),
+            ],
+            None,
+            0,
+            6,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_TMOBILE_LIVETV]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("o"), 1713),
+            ],
+            Some(&[constants::TEXT_TEXMACS]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_MS_TNEF]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("f"), 1715),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_MS_TNEF]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("e"), 1716),
+                (intern_str::CaseInsensitive("f"), 1717),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_X_BITTORRENT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("rrent"), 1719),
+            ],
+            None,
+            0,
+            5,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_GROOVE_TOOL_TEMPLATE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_TRID_TPT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("l"), 1721),
+                (intern_str::CaseInsensitive("t"), 1722),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_TRUEAPP]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_RAINSTOR_DATA]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("e"), 1725),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_TRIG]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("g"), 1727),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("a"), 1724),
+                (intern_str::CaseInsensitive("e"), 1726),
+                (intern_str::CaseInsensitive("i"), 1728),
+            ],
+            Some(&[constants::TEXT_TROFF]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_TAMP_SEQUENCE_ADJUST]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_TIMESTAMPED_DATA]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_DSPTYPE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_TIMESTAMP_QUERY]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_TIMESTAMP_REPLY]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_ETSI_TIMESTAMP_TOKEN]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::TEXT_TAB_SEPARATED_VALUES]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("a"), 1730),
+                (intern_str::CaseInsensitive("d"), 1731),
+                (intern_str::CaseInsensitive("p"), 1732),
+                (intern_str::CaseInsensitive("q"), 1733),
+                (intern_str::CaseInsensitive("r"), 1734),
+                (intern_str::CaseInsensitive("t"), 1735),
+                (intern_str::CaseInsensitive("v"), 1736),
+            ],
+            Some(&[constants::TEXT_VND_TROLLTECH_LINGUIST]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::FONT_COLLECTION]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::FONT_TTF]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::TEXT_TURTLE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_TTML_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("l"), 1741),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("c"), 1738),
+                (intern_str::CaseInsensitive("f"), 1739),
+                (intern_str::CaseInsensitive("l"), 1740),
+                (intern_str::CaseInsensitive("m"), 1742),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_TAMP_UPDATE_CONFIRM]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_TAMP_UPDATE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("c"), 1744),
+                (intern_str::CaseInsensitive("r"), 1745),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_SIM_TECH_MIND_MAPPER]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("s"), 1747),
+            ],
+            Some(&[constants::APPLICATION_VND_SIM_TECH_MIND_MAPPER]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("d"), 1748),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_GENOMATIX_TUXEDO]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_MOBIUS_TXF]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::TEXT_PLAIN]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("d"), 1750),
+                (intern_str::CaseInsensitive("f"), 1751),
+                (intern_str::CaseInsensitive("t"), 1752),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("a"), 1682),
+                (intern_str::CaseInsensitive("c"), 1687),
+                (intern_str::CaseInsensitive("d"), 1688),
+                (intern_str::CaseInsensitive("e"), 1698),
+                (intern_str::CaseInsensitive("f"), 1701),
+                (intern_str::CaseInsensitive("g"), 1704),
+                (intern_str::CaseInsensitive("h"), 1706),
+                (intern_str::CaseInsensitive("i"), 1709),
+                (intern_str::CaseInsensitive("k"), 1710),
+                (intern_str::CaseInsensitive("l"), 1712),
+                (intern_str::CaseInsensitive("m"), 1714),
+                (intern_str::CaseInsensitive("n"), 1718),
+                (intern_str::CaseInsensitive("o"), 1720),
+                (intern_str::CaseInsensitive("p"), 1723),
+                (intern_str::CaseInsensitive("r"), 1729),
+                (intern_str::CaseInsensitive("s"), 1737),
+                (intern_str::CaseInsensitive("t"), 1743),
+                (intern_str::CaseInsensitive("u"), 1746),
+                (intern_str::CaseInsensitive("w"), 1749),
+                (intern_str::CaseInsensitive("x"), 1753),
+            ],
+            Some(&[constants::TEXT_TROFF]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::MODEL_U3D]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("d"), 1755),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::MESSAGE_GLOBAL_DELIVERY_STATUS]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("sn"), 1757),
+            ],
+            None,
+            0,
+            2,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::MESSAGE_GLOBAL_HEADERS]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("dr"), 1759),
+            ],
+            None,
+            0,
+            2,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::MESSAGE_GLOBAL_DISPOSITION_NOTIFICATION]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::MESSAGE_GLOBAL]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("dn"), 1761),
+                (intern_str::CaseInsensitive("sg"), 1762),
+            ],
+            None,
+            0,
+            2,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("d"), 1758),
+                (intern_str::CaseInsensitive("h"), 1760),
+                (intern_str::CaseInsensitive("m"), 1763),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_DEBIAN_BINARY_PACKAGE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("eb"), 1765),
+            ],
+            None,
+            0,
+            2,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_UFDL]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("l"), 1767),
+            ],
+            Some(&[constants::APPLICATION_VND_UFDL]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("d"), 1768),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_URC_UISOCKETDESC_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("s"), 1770),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_UMAJIN]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("j"), 1772),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_UNITY]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("ityweb"), 1774),
+            ],
+            None,
+            0,
+            6,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_UOML_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("ml"), 1776),
+            ],
+            Some(&[constants::APPLICATION_VND_UOML_XML]),
+            0,
+            2,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_HBCI]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("a"), 1778),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_URI_MAP]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("ap"), 1780),
+            ],
+            Some(&[constants::APPLICATION_VND_URI_MAP]),
+            0,
+            2,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::TEXT_URI_LIST]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("m"), 1781),
+                (intern_str::CaseInsensitive("s"), 1782),
+            ],
+            Some(&[constants::TEXT_URI_LIST]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("i"), 1783),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::MODEL_VND_USDZ_ZIP]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_X_USTAR]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("r"), 1786),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("dz"), 1785),
+                (intern_str::CaseInsensitive("ta"), 1787),
+            ],
+            None,
+            0,
+            2,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_UIQ_THEME]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("z"), 1789),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::AUDIO_VND_DECE_AUDIO]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_DECE_DATA]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_DECE_DATA]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_VND_DECE_GRAPHIC]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::VIDEO_VND_DECE_HD]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_VND_DECE_GRAPHIC]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::VIDEO_VND_DECE_MOBILE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::VIDEO_VND_DECE_PD]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::VIDEO_VND_DECE_SD]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_DECE_TTML_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::VIDEO_VND_DECE_MP4]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::AUDIO_VND_DECE_AUDIO]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_DECE_DATA]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_DECE_DATA]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_VND_DECE_GRAPHIC]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::VIDEO_VND_DECE_HD]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_VND_DECE_GRAPHIC]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::VIDEO_VND_DECE_MOBILE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::VIDEO_VND_DECE_PD]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::VIDEO_VND_DECE_SD]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_DECE_TTML_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::VIDEO_VND_DECE_MP4]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::VIDEO_VND_DECE_VIDEO]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_DECE_UNSPECIFIED]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_DECE_ZIP]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("a"), 1802),
+                (intern_str::CaseInsensitive("d"), 1803),
+                (intern_str::CaseInsensitive("f"), 1804),
+                (intern_str::CaseInsensitive("g"), 1805),
+                (intern_str::CaseInsensitive("h"), 1806),
+                (intern_str::CaseInsensitive("i"), 1807),
+                (intern_str::CaseInsensitive("m"), 1808),
+                (intern_str::CaseInsensitive("p"), 1809),
+                (intern_str::CaseInsensitive("s"), 1810),
+                (intern_str::CaseInsensitive("t"), 1811),
+                (intern_str::CaseInsensitive("u"), 1812),
+                (intern_str::CaseInsensitive("v"), 1813),
+                (intern_str::CaseInsensitive("x"), 1814),
+                (intern_str::CaseInsensitive("z"), 1815),
+            ],
+            Some(&[constants::VIDEO_VND_DECE_VIDEO]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_DECE_UNSPECIFIED]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_DECE_ZIP]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("a"), 1791),
+                (intern_str::CaseInsensitive("d"), 1792),
+                (intern_str::CaseInsensitive("f"), 1793),
+                (intern_str::CaseInsensitive("g"), 1794),
+                (intern_str::CaseInsensitive("h"), 1795),
+                (intern_str::CaseInsensitive("i"), 1796),
+                (intern_str::CaseInsensitive("m"), 1797),
+                (intern_str::CaseInsensitive("p"), 1798),
+                (intern_str::CaseInsensitive("s"), 1799),
+                (intern_str::CaseInsensitive("t"), 1800),
+                (intern_str::CaseInsensitive("u"), 1801),
+                (intern_str::CaseInsensitive("v"), 1816),
+                (intern_str::CaseInsensitive("x"), 1817),
+                (intern_str::CaseInsensitive("z"), 1818),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("3"), 1756),
+                (intern_str::CaseInsensitive("8"), 1764),
+                (intern_str::CaseInsensitive("d"), 1766),
+                (intern_str::CaseInsensitive("f"), 1769),
+                (intern_str::CaseInsensitive("i"), 1771),
+                (intern_str::CaseInsensitive("m"), 1773),
+                (intern_str::CaseInsensitive("n"), 1775),
+                (intern_str::CaseInsensitive("o"), 1777),
+                (intern_str::CaseInsensitive("p"), 1779),
+                (intern_str::CaseInsensitive("r"), 1784),
+                (intern_str::CaseInsensitive("s"), 1788),
+                (intern_str::CaseInsensitive("t"), 1790),
+                (intern_str::CaseInsensitive("v"), 1819),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::CHEMICAL_X_NCBI_ASN1_BINARY]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("l"), 1821),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::AUDIO_VND_NORTEL_VBK]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_PREVIEWSYSTEMS_BOX]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("x"), 1824),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("k"), 1823),
+                (intern_str::CaseInsensitive("o"), 1825),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::TEXT_VCARD]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("rd"), 1827),
+            ],
+            None,
+            0,
+            2,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_X_CDLINK]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::TEXT_VCARD]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_GROOVE_VCARD]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VOUCHER_CMS_JSON]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::TEXT_X_VCALENDAR]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_VCX]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("a"), 1828),
+                (intern_str::CaseInsensitive("d"), 1829),
+                (intern_str::CaseInsensitive("f"), 1830),
+                (intern_str::CaseInsensitive("g"), 1831),
+                (intern_str::CaseInsensitive("j"), 1832),
+                (intern_str::CaseInsensitive("s"), 1833),
+                (intern_str::CaseInsensitive("x"), 1834),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::MODEL_VND_SAP_VDS]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("s"), 1836),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_VES_ENCRYPTED]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_LOTUS_APPROACH]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("s"), 1838),
+                (intern_str::CaseInsensitive("w"), 1839),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_TML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("r"), 1841),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_TML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("frame"), 1843),
+            ],
+            None,
+            0,
+            5,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_VISIONARY]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::VIDEO_VND_VIVO]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("a"), 1844),
+                (intern_str::CaseInsensitive("s"), 1845),
+                (intern_str::CaseInsensitive("v"), 1846),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::CHEMICAL_X_VMD]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::CHEMICAL_X_VAMAS_ISO14976]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_VALVE_SOURCE_MATERIAL]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("d"), 1848),
+                (intern_str::CaseInsensitive("s"), 1849),
+                (intern_str::CaseInsensitive("t"), 1850),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::MULTIPART_VOICE_MESSAGE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("m"), 1852),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::MODEL_VRML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("l"), 1854),
+            ],
+            Some(&[constants::MODEL_VRML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("m"), 1855),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_VIDSOFT_VIDCONFERENCE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_VISIO]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_VSF]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_VISIO]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_VISIO]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_VISIO]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("c"), 1857),
+                (intern_str::CaseInsensitive("d"), 1858),
+                (intern_str::CaseInsensitive("f"), 1859),
+                (intern_str::CaseInsensitive("s"), 1860),
+                (intern_str::CaseInsensitive("t"), 1861),
+                (intern_str::CaseInsensitive("w"), 1862),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_VND_VALVE_SOURCE_TEXTURE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_VERITONE_AION_JSON]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("std"), 1865),
+            ],
+            None,
+            0,
+            3,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::TEXT_VTT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::MODEL_VND_VTU]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("f"), 1864),
+                (intern_str::CaseInsensitive("n"), 1866),
+                (intern_str::CaseInsensitive("t"), 1867),
+                (intern_str::CaseInsensitive("u"), 1868),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_VECTORWORKS]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("x"), 1870),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VOICEXML_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("ml"), 1872),
+            ],
+            None,
+            0,
+            2,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("a"), 1822),
+                (intern_str::CaseInsensitive("b"), 1826),
+                (intern_str::CaseInsensitive("c"), 1835),
+                (intern_str::CaseInsensitive("d"), 1837),
+                (intern_str::CaseInsensitive("e"), 1840),
+                (intern_str::CaseInsensitive("f"), 1842),
+                (intern_str::CaseInsensitive("i"), 1847),
+                (intern_str::CaseInsensitive("m"), 1851),
+                (intern_str::CaseInsensitive("p"), 1853),
+                (intern_str::CaseInsensitive("r"), 1856),
+                (intern_str::CaseInsensitive("s"), 1863),
+                (intern_str::CaseInsensitive("t"), 1869),
+                (intern_str::CaseInsensitive("w"), 1871),
+                (intern_str::CaseInsensitive("x"), 1873),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_SUN_WADL_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("l"), 1875),
+            ],
+            Some(&[constants::APPLICATION_X_DOOM]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_WASM]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("m"), 1877),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::AUDIO_X_WAV]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::AUDIO_X_MS_WAX]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("d"), 1876),
+                (intern_str::CaseInsensitive("s"), 1878),
+                (intern_str::CaseInsensitive("v"), 1879),
+                (intern_str::CaseInsensitive("x"), 1880),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_VND_WAP_WBMP]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("p"), 1882),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_CRITICALTOOLS_WBS_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_WAP_WBXML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("ml"), 1885),
+            ],
+            None,
+            0,
+            2,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("m"), 1883),
+                (intern_str::CaseInsensitive("s"), 1884),
+                (intern_str::CaseInsensitive("x"), 1886),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_MS_WORKS]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("m"), 1888),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_MS_WORKS]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("b"), 1890),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_MANIFEST_JSON]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("anifest"), 1892),
+            ],
+            Some(&[constants::VIDEO_WEBM]),
+            0,
+            7,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("bm"), 1893),
+            ],
+            None,
+            0,
+            2,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_WIDGET]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("t"), 1895),
+            ],
+            Some(&[constants::APPLICATION_VND_PMI_WIDGET]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_WATCHERINFO_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::MODEL_VND_GDL]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("f"), 1897),
+                (intern_str::CaseInsensitive("n"), 1898),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_LOTUS_1_2_3]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_LOTUS_1_2_3]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_LOTUS_1_2_3]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_MS_WORKS]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("1"), 1900),
+                (intern_str::CaseInsensitive("3"), 1901),
+                (intern_str::CaseInsensitive("4"), 1902),
+                (intern_str::CaseInsensitive("s"), 1903),
+            ],
+            Some(&[constants::APPLICATION_X_123]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_LINK_FORMAT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("nk"), 1905),
+            ],
+            None,
+            0,
+            2,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::AUDIO_X_MS_WMA]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_WMC]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_X_MS_WMD]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_WMF]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_WAP_WMLC]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_WAP_WMLSCRIPTC]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("c"), 1912),
+            ],
+            Some(&[constants::TEXT_VND_WAP_WMLSCRIPT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("c"), 1911),
+                (intern_str::CaseInsensitive("s"), 1913),
+            ],
+            Some(&[constants::TEXT_VND_WAP_WML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::VIDEO_X_MS_WMV]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::VIDEO_X_MS_WMX]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_X_MS_WMZ]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("a"), 1907),
+                (intern_str::CaseInsensitive("c"), 1908),
+                (intern_str::CaseInsensitive("d"), 1909),
+                (intern_str::CaseInsensitive("f"), 1910),
+                (intern_str::CaseInsensitive("l"), 1914),
+                (intern_str::CaseInsensitive("v"), 1915),
+                (intern_str::CaseInsensitive("x"), 1916),
+                (intern_str::CaseInsensitive("z"), 1917),
+            ],
+            Some(&[constants::VIDEO_X_MS_WM]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::FONT_WOFF2]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("2"), 1919),
+            ],
+            Some(&[constants::FONT_WOFF]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("ff"), 1920),
+            ],
+            None,
+            0,
+            2,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_WORDPERFECT5_1]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_WORDPERFECT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_MS_WPL]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_MS_WORKS]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("5"), 1922),
+                (intern_str::CaseInsensitive("d"), 1923),
+                (intern_str::CaseInsensitive("l"), 1924),
+                (intern_str::CaseInsensitive("s"), 1925),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_WQD]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("d"), 1927),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::MODEL_VRML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("l"), 1929),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_WFA_WSC]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_WSDL_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("l"), 1932),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_WSPOLICY_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("olicy"), 1934),
+            ],
+            None,
+            0,
+            5,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("c"), 1931),
+                (intern_str::CaseInsensitive("d"), 1933),
+                (intern_str::CaseInsensitive("p"), 1935),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_WEBTURBO]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("b"), 1937),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::VIDEO_X_MS_WVX]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("x"), 1939),
+            ],
+            Some(&[constants::APPLICATION_VND_WV_CSP_WBXML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_X_WINGZ]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("a"), 1881),
+                (intern_str::CaseInsensitive("b"), 1887),
+                (intern_str::CaseInsensitive("c"), 1889),
+                (intern_str::CaseInsensitive("d"), 1891),
+                (intern_str::CaseInsensitive("e"), 1894),
+                (intern_str::CaseInsensitive("g"), 1896),
+                (intern_str::CaseInsensitive("i"), 1899),
+                (intern_str::CaseInsensitive("k"), 1904),
+                (intern_str::CaseInsensitive("l"), 1906),
+                (intern_str::CaseInsensitive("m"), 1918),
+                (intern_str::CaseInsensitive("o"), 1921),
+                (intern_str::CaseInsensitive("p"), 1926),
+                (intern_str::CaseInsensitive("q"), 1928),
+                (intern_str::CaseInsensitive("r"), 1930),
+                (intern_str::CaseInsensitive("s"), 1936),
+                (intern_str::CaseInsensitive("t"), 1938),
+                (intern_str::CaseInsensitive("v"), 1940),
+                (intern_str::CaseInsensitive("z"), 1941),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::MODEL_X3D_FASTINFOSET]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::MODEL_X3D_VRML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("z"), 1944),
+            ],
+            Some(&[constants::MODEL_X3D_VRML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::MODEL_X3D_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("b"), 1943),
+                (intern_str::CaseInsensitive("v"), 1945),
+                (intern_str::CaseInsensitive("z"), 1946),
+            ],
+            Some(&[constants::MODEL_X3D_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("d"), 1947),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::MODEL_VND_PARASOLID_TRANSMIT_BINARY]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::MODEL_VND_PARASOLID_TRANSMIT_TEXT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("b"), 1949),
+                (intern_str::CaseInsensitive("t"), 1950),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_XARA]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_XCAP_ATT_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("r"), 1952),
+                (intern_str::CaseInsensitive("v"), 1953),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_FUJIXEROX_DOCUWORKS_BINDER]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_X_XBITMAP]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("d"), 1955),
+                (intern_str::CaseInsensitive("m"), 1956),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_XCAP_CAPS_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_X_XCF]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_X_SCILAB_XCOS]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("s"), 1960),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_CALENDAR_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_FUJIXEROX_DOCUWORKS_CONTAINER]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("a"), 1958),
+                (intern_str::CaseInsensitive("f"), 1959),
+                (intern_str::CaseInsensitive("o"), 1961),
+                (intern_str::CaseInsensitive("s"), 1962),
+                (intern_str::CaseInsensitive("t"), 1963),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_BACNET_XDD_ZIP]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_XCAP_DIFF_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_SYNCML_DM_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_ADOBE_XDP_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_DSSC_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("sc"), 1969),
+            ],
+            None,
+            0,
+            2,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_FUJIXEROX_DOCUWORKS]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("d"), 1965),
+                (intern_str::CaseInsensitive("f"), 1966),
+                (intern_str::CaseInsensitive("m"), 1967),
+                (intern_str::CaseInsensitive("p"), 1968),
+                (intern_str::CaseInsensitive("s"), 1970),
+                (intern_str::CaseInsensitive("w"), 1971),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_XCAP_EL_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_XCAP_ERROR_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("l"), 1973),
+                (intern_str::CaseInsensitive("r"), 1974),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_ADOBE_XFDF]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_XFDL]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("f"), 1976),
+                (intern_str::CaseInsensitive("l"), 1977),
+            ],
+            Some(&[constants::APPLICATION_VND_XFDL]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("d"), 1978),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::AUDIO_USAC]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_XHTML_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("l"), 1981),
+            ],
+            Some(&[constants::APPLICATION_XHTML_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("m"), 1982),
+            ],
+            Some(&[constants::APPLICATION_XHTML_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_XV_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("ml"), 1984),
+            ],
+            None,
+            0,
+            2,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("e"), 1980),
+                (intern_str::CaseInsensitive("t"), 1983),
+                (intern_str::CaseInsensitive("v"), 1985),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_VND_XIFF]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("f"), 1987),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_MS_EXCEL_ADDIN_MACRO_ENABLED_12]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("m"), 1989),
+            ],
+            Some(&[constants::APPLICATION_VND_MS_EXCEL]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_MS_EXCEL]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_XLIFF_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_XMPIE_XLIM]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("m"), 1993),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_MS_EXCEL]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_MS_EXCEL_SHEET_BINARY_MACRO_ENABLED_12]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_MS_EXCEL_SHEET_MACRO_ENABLED_12]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_OPENXMLFORMATS_OFFICEDOCUMENT_SPREADSHEETML_SHEET]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("b"), 1996),
+                (intern_str::CaseInsensitive("m"), 1997),
+                (intern_str::CaseInsensitive("x"), 1998),
+            ],
+            Some(&[constants::APPLICATION_VND_MS_EXCEL]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_MS_EXCEL_TEMPLATE_MACRO_ENABLED_12]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_OPENXMLFORMATS_OFFICEDOCUMENT_SPREADSHEETML_TEMPLATE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("m"), 2000),
+                (intern_str::CaseInsensitive("x"), 2001),
+            ],
+            Some(&[constants::APPLICATION_VND_MS_EXCEL]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_MS_EXCEL]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("a"), 1990),
+                (intern_str::CaseInsensitive("c"), 1991),
+                (intern_str::CaseInsensitive("f"), 1992),
+                (intern_str::CaseInsensitive("i"), 1994),
+                (intern_str::CaseInsensitive("m"), 1995),
+                (intern_str::CaseInsensitive("s"), 1999),
+                (intern_str::CaseInsensitive("t"), 2002),
+                (intern_str::CaseInsensitive("w"), 2003),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_DSKPP_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("s"), 2005),
+            ],
+            Some(&[constants::APPLICATION_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::MODEL_VND_PARASOLID_TRANSMIT_BINARY]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::MODEL_VND_PARASOLID_TRANSMIT_TEXT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("bin"), 2007),
+                (intern_str::CaseInsensitive("txt"), 2008),
+            ],
+            None,
+            0,
+            3,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("_"), 2009),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("l"), 2006),
+                (intern_str::CaseInsensitive("t"), 2010),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_XCAP_NS_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("s"), 2012),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_COLLABIO_XODOCUMENTS_PRESENTATION]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_COLLABIO_XODOCUMENTS_SPREADSHEET]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_COLLABIO_XODOCUMENTS_DOCUMENT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("p"), 2014),
+                (intern_str::CaseInsensitive("s"), 2015),
+                (intern_str::CaseInsensitive("t"), 2016),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_XOP_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_COLLABIO_XODOCUMENTS_PRESENTATION_TEMPLATE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_COLLABIO_XODOCUMENTS_SPREADSHEET_TEMPLATE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_COLLABIO_XODOCUMENTS_DOCUMENT_TEMPLATE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("p"), 2019),
+                (intern_str::CaseInsensitive("s"), 2020),
+                (intern_str::CaseInsensitive("t"), 2021),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("d"), 2017),
+                (intern_str::CaseInsensitive("p"), 2018),
+                (intern_str::CaseInsensitive("t"), 2022),
+            ],
+            Some(&[constants::APPLICATION_VND_OLPC_SUGAR]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_X_XPINSTALL]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_X_XPIXMAP]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_IS_XPR]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_MS_XPSDOCUMENT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_INTERCON_FORMNET]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_INTERCON_FORMNET]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("i"), 2024),
+                (intern_str::CaseInsensitive("m"), 2025),
+                (intern_str::CaseInsensitive("r"), 2026),
+                (intern_str::CaseInsensitive("s"), 2027),
+                (intern_str::CaseInsensitive("w"), 2028),
+                (intern_str::CaseInsensitive("x"), 2029),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_PRS_XSF_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_XSLT_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("t"), 2032),
+            ],
+            Some(&[constants::APPLICATION_XSLT_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_SYNCML_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_XSPF_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("f"), 2035),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("f"), 2031),
+                (intern_str::CaseInsensitive("l"), 2033),
+                (intern_str::CaseInsensitive("m"), 2034),
+                (intern_str::CaseInsensitive("p"), 2036),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::CHEMICAL_X_XTEL]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("el"), 2038),
+            ],
+            None,
+            0,
+            2,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_MOZILLA_XUL_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("l"), 2040),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_XV_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("l"), 2042),
+            ],
+            Some(&[constants::APPLICATION_XV_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("m"), 2043),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_X_XWINDOWDUMP]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("d"), 2045),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::IMAGE_VND_RADIANCE]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("e"), 2047),
+            ],
+            Some(&[constants::CHEMICAL_X_XYZ]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("z"), 2048),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_X_XZ]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("3"), 1948),
+                (intern_str::CaseInsensitive("_"), 1951),
+                (intern_str::CaseInsensitive("a"), 1954),
+                (intern_str::CaseInsensitive("b"), 1957),
+                (intern_str::CaseInsensitive("c"), 1964),
+                (intern_str::CaseInsensitive("d"), 1972),
+                (intern_str::CaseInsensitive("e"), 1975),
+                (intern_str::CaseInsensitive("f"), 1979),
+                (intern_str::CaseInsensitive("h"), 1986),
+                (intern_str::CaseInsensitive("i"), 1988),
+                (intern_str::CaseInsensitive("l"), 2004),
+                (intern_str::CaseInsensitive("m"), 2011),
+                (intern_str::CaseInsensitive("n"), 2013),
+                (intern_str::CaseInsensitive("o"), 2023),
+                (intern_str::CaseInsensitive("p"), 2030),
+                (intern_str::CaseInsensitive("s"), 2037),
+                (intern_str::CaseInsensitive("t"), 2039),
+                (intern_str::CaseInsensitive("u"), 2041),
+                (intern_str::CaseInsensitive("v"), 2044),
+                (intern_str::CaseInsensitive("w"), 2046),
+                (intern_str::CaseInsensitive("y"), 2049),
+                (intern_str::CaseInsensitive("z"), 2050),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_YANG]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("ng"), 2052),
+            ],
+            None,
+            0,
+            2,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_YIN_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("n"), 2054),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_YAOWEME]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("e"), 2056),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::VIDEO_VND_YOUTUBE_YT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("a"), 2053),
+                (intern_str::CaseInsensitive("i"), 2055),
+                (intern_str::CaseInsensitive("m"), 2057),
+                (intern_str::CaseInsensitive("t"), 2058),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_ZZAZZ_DECK_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("z"), 2060),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_FILMIT_ZFC]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_SOFTWARE602_FILLER_FORM_XML_ZIP]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("c"), 2062),
+                (intern_str::CaseInsensitive("o"), 2063),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_ZIP]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_ZUL]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("z"), 2066),
+            ],
+            Some(&[constants::APPLICATION_VND_ZUL]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("p"), 2065),
+                (intern_str::CaseInsensitive("r"), 2067),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_VND_HAND_HELD_ENTERTAINMENT_XML]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::CHEMICAL_X_MOPAC_INPUT]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("m"), 2069),
+                (intern_str::CaseInsensitive("t"), 2070),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::TEXT_DNS]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("ne"), 2072),
+            ],
+            None,
+            0,
+            2,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_ZSTD]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("t"), 2074),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("a"), 2061),
+                (intern_str::CaseInsensitive("f"), 2064),
+                (intern_str::CaseInsensitive("i"), 2068),
+                (intern_str::CaseInsensitive("m"), 2071),
+                (intern_str::CaseInsensitive("o"), 2073),
+                (intern_str::CaseInsensitive("s"), 2075),
+            ],
+            None,
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+            ],
+            Some(&[constants::APPLICATION_X_TRASH]),
+            0,
+            1,
+        ),
+        intern_str::Node::new(
+            &[
+                (intern_str::CaseInsensitive("%"), 1),
+                (intern_str::CaseInsensitive("1"), 8),
+                (intern_str::CaseInsensitive("2"), 10),
+                (intern_str::CaseInsensitive("3"), 15),
+                (intern_str::CaseInsensitive("7"), 17),
+                (intern_str::CaseInsensitive("a"), 121),
+                (intern_str::CaseInsensitive("b"), 166),
+                (intern_str::CaseInsensitive("c"), 320),
+                (intern_str::CaseInsensitive("d"), 412),
+                (intern_str::CaseInsensitive("e"), 479),
+                (intern_str::CaseInsensitive("f"), 536),
+                (intern_str::CaseInsensitive("g"), 616),
+                (intern_str::CaseInsensitive("h"), 668),
+                (intern_str::CaseInsensitive("i"), 745),
+                (intern_str::CaseInsensitive("j"), 802),
+                (intern_str::CaseInsensitive("k"), 839),
+                (intern_str::CaseInsensitive("l"), 902),
+                (intern_str::CaseInsensitive("m"), 1070),
+                (intern_str::CaseInsensitive("n"), 1114),
+                (intern_str::CaseInsensitive("o"), 1194),
+                (intern_str::CaseInsensitive("p"), 1326),
+                (intern_str::CaseInsensitive("q"), 1356),
+                (intern_str::CaseInsensitive("r"), 1423),
+                (intern_str::CaseInsensitive("s"), 1668),
+                (intern_str::CaseInsensitive("t"), 1754),
+                (intern_str::CaseInsensitive("u"), 1820),
+                (intern_str::CaseInsensitive("v"), 1874),
+                (intern_str::CaseInsensitive("w"), 1942),
+                (intern_str::CaseInsensitive("x"), 2051),
+                (intern_str::CaseInsensitive("y"), 2059),
+                (intern_str::CaseInsensitive("z"), 2076),
+                (intern_str::CaseInsensitive("~"), 2077),
+            ],
+            None,
+            0,
+            1,
+        ),
+    ];
+        const GRAPH: intern_str::Graph<
+            'static,
+            'static,
+            intern_str::CaseInsensitive<&'static str>,
+            Option<&'static [crate::Mime<'static>]>,
+        > = intern_str::Graph::new(NODES, 2078);
+        GRAPH
+    };
+    GRAPH
+        .process(intern_str::CaseInsensitive(ext))
+        .as_ref()
+        .copied()
 }

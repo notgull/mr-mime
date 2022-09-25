@@ -136,7 +136,11 @@ impl<'a> Mime<'a> {
     /// ```rust
     /// use mr_mime::{Mime, constants};
     ///
-    /// let my_type = Mime::new("text", "plain", None, &[]);
+    /// let my_type = Mime::new("text".into(), "plain".into(), None, &[]);
+    /// assert_eq!(my_type, constants::TEXT_PLAIN);
+    ///
+    /// // We can also use the constants directly.
+    /// let my_type = Mime::new(constants::types::TEXT, constants::subtypes::PLAIN, None, &[]);
     /// assert_eq!(my_type, constants::TEXT_PLAIN);
     /// ```
     pub fn new(
@@ -228,7 +232,7 @@ impl<'a> Mime<'a> {
     /// use mr_mime::constants;
     ///
     /// assert_eq!(constants::TEXT_PLAIN.suffix(), None);
-    /// assert_eq!(constants::IMAGE_SVG_XML.suffix(), Some("xml"));
+    /// assert_eq!(constants::IMAGE_SVG_XML.suffix().map(|s| s.into_str()), Some("xml"));
     /// ```
     pub fn suffix(&self) -> Option<Suffix<'_>> {
         self.suffix_name().map(|s| s.into())
@@ -340,6 +344,33 @@ impl<'a> Mime<'a> {
                 plus.map(|plus| Name::Dynamic(&buffer[plus + 1..end]))
             }
         }
+    }
+}
+
+impl Mime<'static> {
+    /// Guess the MIME type of a file by its extension.
+    ///
+    /// This library maintains a map of popular extensions to the MIME types that they may
+    /// represent. This function preforms a lookup into that list and returns an iterator
+    /// over the possible MIME types that the extension may represent.
+    ///
+    /// Remember that this function only inspects the extension, not the actual contents
+    /// of the file. Despite what a file's extension says, it may or may not be a valid
+    /// file of that type. For untrusted user input, you should always check the file's
+    /// contents to ensure that it is valid.
+    ///
+    /// ## Example
+    ///
+    /// ```rust
+    /// use mr_mime::{Mime, constants};
+    ///
+    /// assert_eq!(Mime::guess("html").next(), Some(constants::TEXT_HTML));
+    /// ```
+    pub fn guess(extension: &str) -> impl ExactSizeIterator<Item = Mime<'static>> + FusedIterator {
+        segments::guess_mime_type(extension)
+            .unwrap_or(&[])
+            .iter()
+            .copied()
     }
 }
 
@@ -531,6 +562,18 @@ macro_rules! name_wrappers {
             impl<'a> From<Name<'a, $ty>> for $name<'a> {
                 fn from(name: Name<'a, $ty>) -> Self {
                     Self(name)
+                }
+            }
+
+            impl PartialEq<&str> for $name<'_> {
+                fn eq(&self, other: &&str) -> bool {
+                    self.0.into_str().eq_ignore_ascii_case(other)
+                }
+            }
+
+            impl<'a> From<&'a str> for $name<'a> {
+                fn from(s: &'a str) -> Self {
+                    Self::new(s)
                 }
             }
         )*
