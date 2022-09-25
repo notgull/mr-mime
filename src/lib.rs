@@ -1,4 +1,35 @@
 //! Parser and handler for MIME types.
+//! 
+//! This crate provides a type, [`Mime`], which represents a MIME type as defined in
+//! [RFC 2045](https://tools.ietf.org/html/rfc2045) and [RFC 2046](https://tools.ietf.org/html/rfc2046).
+//! The aim of this library is to provide strongly typed MIME types that are an overall improvement over
+//! just repesenting MIME types as strings.
+//! 
+//! ## Example
+//! 
+//! ```rust
+//! use mr_mime::{Mime, constants};
+//! 
+//! // Parse a MIME type from a string.
+//! let my_type = Mime::parse("text/html; charset=utf-8").unwrap();
+//! 
+//! // Get the "essence" of a MIME type.
+//! let essence = my_type.essence();
+//! 
+//! // Compare it to a wide variety of constants.
+//! assert_eq!(essence, constants::TEXT_HTML);
+//! ```
+//! 
+//! ## Features
+//! 
+//! This crate has the following features:
+//! 
+//! - `std`, enabled by default, which enables the standard library. This is used to implement 
+//!   [`std::error::Error`] for [`ParseError`].
+//! - `alloc`, enabled by default, which enables the `alloc` crate. This is used to implement
+//!   hashing for MIME types. By default, the hashing algorithm tries to use stack space, but for
+//!   strings longer than 128 bytes this can lead to a panic. The `alloc` feature ameliorates this
+//!   by using the heap instead.
 
 #![no_std]
 #![forbid(
@@ -53,6 +84,8 @@ impl fmt::Display for ParseError {
 impl std::error::Error for ParseError {}
 
 /// A MIME type.
+/// 
+/// See the [crate-level documentation](../index.html) for more information.
 #[derive(Clone, Copy)]
 pub struct Mime<'a>(Repr<'a>);
 
@@ -97,6 +130,15 @@ impl<'a> fmt::Debug for Mime<'a> {
 
 impl<'a> Mime<'a> {
     /// Create a new MIME type from its component parts.
+    /// 
+    /// ## Example
+    /// 
+    /// ```rust
+    /// use mr_mime::{Mime, constants};
+    /// 
+    /// let my_type = Mime::new("text", "plain", None, &[]);
+    /// assert_eq!(my_type, constants::TEXT_PLAIN);
+    /// ```
     pub fn new(
         ty: &'a str,
         subtype: &'a str,
@@ -112,6 +154,15 @@ impl<'a> Mime<'a> {
     }
 
     /// Create a new MIME type parsed from a string.
+    /// 
+    /// ## Example
+    /// 
+    /// ```rust
+    /// use mr_mime::{Mime, constants};
+    /// 
+    /// let my_type = Mime::parse("text/plain").unwrap();
+    /// assert_eq!(my_type, constants::TEXT_PLAIN);
+    /// ```
     pub fn parse(source: &'a str) -> Result<Self, ParseError> {
         let slash = source.find('/').ok_or(ParseError::NoSlash)?;
         let plus = source.find('+');
@@ -144,21 +195,56 @@ impl<'a> Mime<'a> {
     }
 
     /// Get the type of this MIME type.
+    /// 
+    /// ## Example
+    /// 
+    /// ```rust
+    /// use mr_mime::constants;
+    /// 
+    /// assert_eq!(constants::TEXT_PLAIN.r#type(), "text");
+    /// ```
     pub fn r#type(&self) -> &str {
         self.type_name().into_str()
     }
 
     /// Get the subtype of this MIME type.
+    /// 
+    /// ## Example
+    /// 
+    /// ```rust
+    /// use mr_mime::constants;
+    /// 
+    /// assert_eq!(constants::TEXT_PLAIN.subtype(), "plain");
+    /// ```
     pub fn subtype(&self) -> &str {
         self.subtype_name().into_str()
     }
 
     /// Get the suffix of this MIME type.
+    /// 
+    /// ## Example
+    /// 
+    /// ```rust
+    /// use mr_mime::constants;
+    /// 
+    /// assert_eq!(constants::TEXT_PLAIN.suffix(), None);
+    /// assert_eq!(constants::IMAGE_SVG_XML.suffix(), Some("xml"));
+    /// ```
     pub fn suffix(&self) -> Option<&str> {
         self.suffix_name().map(|s| s.into_str())
     }
 
     /// Iterate over the parameters of this MIME type.
+    /// 
+    /// ## Example
+    /// 
+    /// ```rust
+    /// use mr_mime::{Mime, constants};
+    /// 
+    /// let mut ty = Mime::parse("text/plain; charset=utf-8").unwrap();
+    /// assert_eq!(ty.parameters().count(), 1);
+    /// assert_eq!(ty.parameters().next(), Some(("charset", "utf-8")));
+    /// ```
     pub fn parameters(&self) -> impl DoubleEndedIterator<Item = (&str, &str)> + FusedIterator {
         match self.0 {
             Repr::Parts { parameters, .. } => Either::Left(parameters.iter().copied()),
@@ -170,8 +256,8 @@ impl<'a> Mime<'a> {
 
                 semicolons.map(|semicolon| {
                     let mut parts = semicolon.split('=');
-                    let key = parts.next().unwrap();
-                    let value = parts.next().unwrap();
+                    let key = parts.next().unwrap().trim();
+                    let value = parts.next().unwrap().trim();
                     (key, value)
                 })
             }),
@@ -182,6 +268,15 @@ impl<'a> Mime<'a> {
     ///
     /// The resulting MIME type only contains the type and the subtype, without the suffix or
     /// the parameters.
+    /// 
+    /// ## Example
+    /// 
+    /// ```rust
+    /// use mr_mime::{Mime, constants};
+    /// 
+    /// let my_type = Mime::parse("text/plain;charset=utf-8").unwrap();
+    /// assert_eq!(my_type.essence(), constants::TEXT_PLAIN);
+    /// ```
     pub fn essence(&self) -> Mime<'a> {
         match self.0 {
             Repr::Parts { ty, subtype, .. } => Mime(Repr::Parts {
@@ -245,6 +340,14 @@ impl<'a> Mime<'a> {
 
 impl<'a, 'b> PartialEq<&'a str> for Mime<'b> {
     /// Compare a MIME type to a string.
+    /// 
+    /// ## Example
+    /// 
+    /// ```rust
+    /// use mr_mime::{Mime, constants};
+    /// 
+    /// assert_eq!(constants::TEXT_PLAIN, "text/plain");
+    /// ```
     fn eq(&self, other: &&'a str) -> bool {
         let mut other = *other;
 
