@@ -1,6 +1,7 @@
 //! Generates the `segments.rs` file for interned strings.
 
-use heck::{AsShoutySnakeCase, AsUpperCamelCase, ToUpperCamelCase};
+use fastrand::Rng;
+use heck::{AsShoutySnakeCase, AsSnakeCase, AsUpperCamelCase, ToUpperCamelCase};
 use intern_str::builder::{Builder, IgnoreCase, Utf8Graph};
 use memchr::memchr;
 
@@ -11,6 +12,9 @@ use std::fs::File;
 use std::io::{self, prelude::*, BufReader, BufWriter};
 
 fn main() -> io::Result<()> {
+    // Ensure that the process is deterministic using a set key.
+    let rng = Rng::with_seed(0xD3ADB33F);
+
     // Determine the files to read from/write to.
     let mut args = env::args_os().skip(1);
     let input = args.next().unwrap_or_else(|| "mime.types".into());
@@ -48,13 +52,21 @@ fn main() -> io::Result<()> {
     )?;
 
     // Write enums for the MIME types.
-    write_mime_part(&mut output, "Type", &mime_types, |ty| Some(&ty.ty), true)?;
+    write_mime_part(
+        &mut output,
+        "Type",
+        &mime_types,
+        |ty| Some(&ty.ty),
+        true,
+        &rng,
+    )?;
     write_mime_part(
         &mut output,
         "Subtype",
         &mime_types,
         |ty| Some(&ty.subtype),
         true,
+        &rng,
     )?;
     write_mime_part(
         &mut output,
@@ -62,6 +74,7 @@ fn main() -> io::Result<()> {
         &mime_types,
         |ty| ty.suffix.as_deref(),
         false,
+        &rng,
     )?;
 
     // Write `MIME` type constants.
@@ -139,6 +152,31 @@ fn main() -> io::Result<()> {
         writeln!(output, "{}parameters: &[]", Indent(2))?;
         writeln!(output, "{}}});", Indent(1))?;
         writeln!(output)?;
+
+        writeln!(output, "{}#[test]", Indent(1))?;
+        writeln!(output, "{}fn {}_parse() {{", Indent(1), AsSnakeCase(&name))?;
+
+        // Parse the MIME type as a string.
+        let mime_txt = mime.to_string();
+        writeln!(
+            output,
+            "{}assert_eq!(crate::Mime::parse(\"{}\"), Ok({}));",
+            Indent(2),
+            &mime_txt,
+            name,
+        )?;
+
+        let mime_text = random_case_str(&mime_txt, &rng);
+        writeln!(
+            output,
+            "{}assert_eq!(crate::Mime::parse(\"{}\"), Ok({}));",
+            Indent(2),
+            mime_text,
+            name,
+        )?;
+
+        writeln!(output, "{}}}", Indent(1))?;
+        writeln!(output)?;
     }
 
     writeln!(output, "}}")?;
@@ -152,6 +190,7 @@ fn write_mime_part(
     types: &[Mime],
     get_field: impl Fn(&Mime) -> Option<&str>,
     has_star: bool,
+    rng: &Rng,
 ) -> io::Result<()> {
     // Get an iterator over every possible value.
     let mut types = types
@@ -163,10 +202,10 @@ fn write_mime_part(
                 .filter(|c| c.is_ascii_alphabetic())
                 .is_some()
         })
-        .map(|name| name.to_upper_camel_case())
+        .map(|name| (name, name.to_upper_camel_case()))
         .collect::<Vec<_>>();
-    types.sort_unstable();
-    types.dedup();
+    types.sort_unstable_by(|a, b| a.1.cmp(&b.1));
+    types.dedup_by(|a, b| a.1 == b.1);
 
     // Write out the enum.
     writeln!(
@@ -181,7 +220,7 @@ fn write_mime_part(
     }
 
     // Write out each member.
-    for field in &types {
+    for (_, field) in &types {
         writeln!(output, "{}{},", Indent(1), field)?;
     }
 
@@ -203,8 +242,15 @@ fn write_mime_part(
         writeln!(output, "{}{}::Star => \"*\",", Indent(3), name)?;
     }
 
-    for field in &types {
-        writeln!(output, "{}{}::{} => \"{}\",", Indent(3), name, field, field,)?;
+    for (realtext, field) in &types {
+        writeln!(
+            output,
+            "{}{}::{} => \"{}\",",
+            Indent(3),
+            name,
+            field,
+            realtext
+        )?;
     }
 
     writeln!(output, "{}}}", Indent(2))?;
@@ -228,8 +274,8 @@ fn write_mime_part(
         builder.add("*".to_string(), "Star").ok();
     }
 
-    for field in &types {
-        builder.add(field.to_string(), field).ok();
+    for (realtext, field) in &types {
+        builder.add(realtext.to_string(), field).ok();
     }
 
     let mut buffer = vec![];
@@ -261,6 +307,48 @@ fn write_mime_part(
         Indent(2)
     )?;
     writeln!(output, "{}}}", Indent(1))?;
+
+    writeln!(output, "}}")?;
+    writeln!(output)?;
+
+    // Add a test for the string parser.
+    writeln!(output, "#[test]")?;
+    writeln!(output, "fn {}_from_str() {{", AsSnakeCase(name))?;
+
+    if has_star {
+        writeln!(
+            output,
+            "{}assert_eq!(\"*\".parse::<{}>(), Ok({}::Star));",
+            Indent(1),
+            name,
+            name
+        )?;
+    }
+
+    for (realtext, field) in &types {
+        writeln!(
+            output,
+            "{}assert_eq!(\"{}\".parse::<{}>(), Ok({}::{}));",
+            Indent(1),
+            realtext,
+            name,
+            name,
+            field,
+        )?;
+
+        // We should also parse with random spacing.
+        let field_next = random_case_str(realtext, rng);
+
+        writeln!(
+            output,
+            "{}assert_eq!(\"{}\".parse::<{}>(), Ok({}::{}));",
+            Indent(1),
+            field_next,
+            name,
+            name,
+            field,
+        )?;
+    }
 
     writeln!(output, "}}")?;
     writeln!(output)?;
@@ -352,4 +440,17 @@ impl fmt::Display for Indent {
         }
         Ok(())
     }
+}
+
+/// Randomize the case of a string.
+fn random_case_str(a: &str, rng: &Rng) -> String {
+    a.chars()
+        .map(|c| {
+            if rng.bool() {
+                c.to_ascii_lowercase()
+            } else {
+                c.to_ascii_uppercase()
+            }
+        })
+        .collect()
 }

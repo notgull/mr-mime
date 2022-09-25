@@ -363,7 +363,7 @@ impl<'a> Hash for Mime<'a> {
         self.suffix_name().hash(state);
         for (key, value) in self.parameters() {
             hash_ignore_case(key, state);
-            hash_ignore_case(value, state);
+            value.hash(state);
         }
     }
 }
@@ -524,9 +524,12 @@ fn cmp_str_ignore_case(a: &str, b: &str) -> cmp::Ordering {
 
 /// Compare two sets of parameters, ignoring case.
 fn cmp_params_ignore_case<'a, 'b, 'c, 'd>(
-    mut left: impl Iterator<Item = (&'a str, &'b str)>,
-    mut right: impl Iterator<Item = (&'c str, &'d str)>,
+    left: impl Iterator<Item = (&'a str, &'b str)>,
+    right: impl Iterator<Item = (&'c str, &'d str)>,
 ) -> cmp::Ordering {
+    let mut left = left.fuse();
+    let mut right = right.fuse();
+
     for (left, right) in left.by_ref().zip(right.by_ref()) {
         match cmp_str_ignore_case(left.0, right.0) {
             cmp::Ordering::Equal => {}
@@ -592,7 +595,10 @@ trait Comparison: Sized {
 
 impl Comparison for bool {
     fn and_then(self, other: impl FnOnce() -> Self) -> Self {
-        self && other()
+        match self {
+            true => other(),
+            false => false,
+        }
     }
 }
 
@@ -616,6 +622,7 @@ impl Comparison for cmp::Ordering {
 }
 
 /// Error for generated code to use for unmatched names.
+#[derive(Debug, PartialEq, Eq)]
 struct InvalidName;
 
 enum Either<A, B> {
