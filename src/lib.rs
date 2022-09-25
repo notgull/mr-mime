@@ -1,30 +1,30 @@
 //! Parser and handler for MIME types.
-//! 
+//!
 //! This crate provides a type, [`Mime`], which represents a MIME type as defined in
 //! [RFC 2045](https://tools.ietf.org/html/rfc2045) and [RFC 2046](https://tools.ietf.org/html/rfc2046).
 //! The aim of this library is to provide strongly typed MIME types that are an overall improvement over
 //! just repesenting MIME types as strings.
-//! 
+//!
 //! ## Example
-//! 
+//!
 //! ```rust
 //! use mr_mime::{Mime, constants};
-//! 
+//!
 //! // Parse a MIME type from a string.
 //! let my_type = Mime::parse("text/html; charset=utf-8").unwrap();
-//! 
+//!
 //! // Get the "essence" of a MIME type.
 //! let essence = my_type.essence();
-//! 
+//!
 //! // Compare it to a wide variety of constants.
 //! assert_eq!(essence, constants::TEXT_HTML);
 //! ```
-//! 
+//!
 //! ## Features
-//! 
+//!
 //! This crate has the following features:
-//! 
-//! - `std`, enabled by default, which enables the standard library. This is used to implement 
+//!
+//! - `std`, enabled by default, which enables the standard library. This is used to implement
 //!   [`std::error::Error`] for [`ParseError`].
 //! - `alloc`, enabled by default, which enables the `alloc` crate. This is used to implement
 //!   hashing for MIME types. By default, the hashing algorithm tries to use stack space, but for
@@ -46,7 +46,7 @@ extern crate std;
 #[rustfmt::ignore]
 mod segments;
 pub use segments::constants;
-use segments::{Subtype, Suffix, Type};
+use segments::{SubtypeIntern, SuffixIntern, TypeIntern};
 
 use core::cell::Cell;
 use core::cmp;
@@ -84,7 +84,7 @@ impl fmt::Display for ParseError {
 impl std::error::Error for ParseError {}
 
 /// A MIME type.
-/// 
+///
 /// See the [crate-level documentation](../index.html) for more information.
 #[derive(Clone, Copy)]
 pub struct Mime<'a>(Repr<'a>);
@@ -130,36 +130,36 @@ impl<'a> fmt::Debug for Mime<'a> {
 
 impl<'a> Mime<'a> {
     /// Create a new MIME type from its component parts.
-    /// 
+    ///
     /// ## Example
-    /// 
+    ///
     /// ```rust
     /// use mr_mime::{Mime, constants};
-    /// 
+    ///
     /// let my_type = Mime::new("text", "plain", None, &[]);
     /// assert_eq!(my_type, constants::TEXT_PLAIN);
     /// ```
     pub fn new(
-        ty: &'a str,
-        subtype: &'a str,
-        suffix: Option<&'a str>,
+        ty: Type<'a>,
+        subtype: Subtype<'a>,
+        suffix: Option<Suffix<'a>>,
         parameters: &'a [(&'a str, &'a str)],
     ) -> Self {
         Self(Repr::Parts {
-            ty: Name::new(ty),
-            subtype: Name::new(subtype),
-            suffix: suffix.map(Name::new),
+            ty: ty.0,
+            subtype: subtype.0,
+            suffix: suffix.map(|s| s.0),
             parameters,
         })
     }
 
     /// Create a new MIME type parsed from a string.
-    /// 
+    ///
     /// ## Example
-    /// 
+    ///
     /// ```rust
     /// use mr_mime::{Mime, constants};
-    /// 
+    ///
     /// let my_type = Mime::parse("text/plain").unwrap();
     /// assert_eq!(my_type, constants::TEXT_PLAIN);
     /// ```
@@ -195,52 +195,52 @@ impl<'a> Mime<'a> {
     }
 
     /// Get the type of this MIME type.
-    /// 
+    ///
     /// ## Example
-    /// 
+    ///
     /// ```rust
     /// use mr_mime::constants;
-    /// 
+    ///
     /// assert_eq!(constants::TEXT_PLAIN.r#type(), "text");
     /// ```
-    pub fn r#type(&self) -> &str {
-        self.type_name().into_str()
+    pub fn r#type(&self) -> Type<'_> {
+        self.type_name().into()
     }
 
     /// Get the subtype of this MIME type.
-    /// 
+    ///
     /// ## Example
-    /// 
+    ///
     /// ```rust
     /// use mr_mime::constants;
-    /// 
+    ///
     /// assert_eq!(constants::TEXT_PLAIN.subtype(), "plain");
     /// ```
-    pub fn subtype(&self) -> &str {
-        self.subtype_name().into_str()
+    pub fn subtype(&self) -> Subtype<'_> {
+        self.subtype_name().into()
     }
 
     /// Get the suffix of this MIME type.
-    /// 
+    ///
     /// ## Example
-    /// 
+    ///
     /// ```rust
     /// use mr_mime::constants;
-    /// 
+    ///
     /// assert_eq!(constants::TEXT_PLAIN.suffix(), None);
     /// assert_eq!(constants::IMAGE_SVG_XML.suffix(), Some("xml"));
     /// ```
-    pub fn suffix(&self) -> Option<&str> {
-        self.suffix_name().map(|s| s.into_str())
+    pub fn suffix(&self) -> Option<Suffix<'_>> {
+        self.suffix_name().map(|s| s.into())
     }
 
     /// Iterate over the parameters of this MIME type.
-    /// 
+    ///
     /// ## Example
-    /// 
+    ///
     /// ```rust
     /// use mr_mime::{Mime, constants};
-    /// 
+    ///
     /// let mut ty = Mime::parse("text/plain; charset=utf-8").unwrap();
     /// assert_eq!(ty.parameters().count(), 1);
     /// assert_eq!(ty.parameters().next(), Some(("charset", "utf-8")));
@@ -268,12 +268,12 @@ impl<'a> Mime<'a> {
     ///
     /// The resulting MIME type only contains the type and the subtype, without the suffix or
     /// the parameters.
-    /// 
+    ///
     /// ## Example
-    /// 
+    ///
     /// ```rust
     /// use mr_mime::{Mime, constants};
-    /// 
+    ///
     /// let my_type = Mime::parse("text/plain;charset=utf-8").unwrap();
     /// assert_eq!(my_type.essence(), constants::TEXT_PLAIN);
     /// ```
@@ -293,19 +293,24 @@ impl<'a> Mime<'a> {
             } => {
                 let end = plus.unwrap_or(semicolon);
 
-                Self::new(&buffer[..slash], &buffer[slash + 1..end], None, &[])
+                Self::new(
+                    Type::new(&buffer[..slash]),
+                    Subtype::new(&buffer[slash + 1..end]),
+                    None,
+                    &[],
+                )
             }
         }
     }
 
-    fn type_name(&self) -> Name<'a, Type> {
+    fn type_name(&self) -> Name<'a, TypeIntern> {
         match self.0 {
             Repr::Parts { ty, .. } => ty,
             Repr::Buffer { buffer, slash, .. } => Name::Dynamic(&buffer[..slash]),
         }
     }
 
-    fn subtype_name(&self) -> Name<'a, Subtype> {
+    fn subtype_name(&self) -> Name<'a, SubtypeIntern> {
         match self.0 {
             Repr::Parts { subtype, .. } => subtype,
             Repr::Buffer {
@@ -321,7 +326,7 @@ impl<'a> Mime<'a> {
         }
     }
 
-    fn suffix_name(&self) -> Option<Name<'a, Suffix>> {
+    fn suffix_name(&self) -> Option<Name<'a, SuffixIntern>> {
         match self.0 {
             Repr::Parts { suffix, .. } => suffix,
             Repr::Buffer {
@@ -340,19 +345,19 @@ impl<'a> Mime<'a> {
 
 impl<'a, 'b> PartialEq<&'a str> for Mime<'b> {
     /// Compare a MIME type to a string.
-    /// 
+    ///
     /// ## Example
-    /// 
+    ///
     /// ```rust
     /// use mr_mime::{Mime, constants};
-    /// 
+    ///
     /// assert_eq!(constants::TEXT_PLAIN, "text/plain");
     /// ```
     fn eq(&self, other: &&'a str) -> bool {
         let mut other = *other;
 
         // See if the type names match.
-        let ty = self.r#type();
+        let ty = self.r#type().into_str();
         let ty_len = ty.len();
 
         if !other.starts_with(ty) {
@@ -366,7 +371,7 @@ impl<'a, 'b> PartialEq<&'a str> for Mime<'b> {
 
         // Next string should be the subtype.
         other = &other[ty_len + 1..];
-        let subtype = self.subtype();
+        let subtype = self.subtype().into_str();
         let subtype_len = subtype.len();
 
         if !other.starts_with(subtype) {
@@ -375,6 +380,7 @@ impl<'a, 'b> PartialEq<&'a str> for Mime<'b> {
 
         // If we have a suffix, the next char is a plus.
         if let Some(suffix) = self.suffix() {
+            let suffix = suffix.into_str();
             if other.as_bytes()[subtype_len] != b'+' {
                 return false;
             }
@@ -471,6 +477,75 @@ impl<'a> Hash for Mime<'a> {
     }
 }
 
+/// Wrapper types for `Name<'a, T>`.
+macro_rules! name_wrappers {
+    (
+        $(
+            $(#[$outer:meta])*
+            $name: ident <'a> => Name<'a, $ty: ty>
+        ),* $(,)?
+    ) => {
+        $(
+            $(#[$outer])*
+            #[derive(Copy, Clone, PartialEq, Eq, PartialOrd, Ord, Hash)]
+            pub struct $name <'a> ( Name<'a, $ty> );
+
+            impl<'a> $name<'a> {
+                #[doc = concat!("Create a new `", stringify!($name), "` from a string.")]
+                ///
+                /// ## Example
+                ///
+                pub fn new(s: &'a str) -> Self {
+                    Self(Name::new(s))
+                }
+
+                #[doc = concat!("Get the `", stringify!($name), "` as a string slice.")]
+                ///
+                /// ## Example
+                ///
+                pub fn into_str(self) -> &'a str {
+                    self.0.into_str()
+                }
+            }
+
+            impl fmt::Debug for $name <'_> {
+                fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+                    f.debug_tuple(stringify!($name))
+                        .field(&self.0.into_str())
+                        .finish()
+                }
+            }
+
+            impl fmt::Display for $name <'_> {
+                fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+                    f.write_str(self.0.into_str())
+                }
+            }
+
+            impl AsRef<str> for $name <'_> {
+                fn as_ref(&self) -> &str {
+                    self.0.into_str()
+                }
+            }
+
+            impl<'a> From<Name<'a, $ty>> for $name<'a> {
+                fn from(name: Name<'a, $ty>) -> Self {
+                    Self(name)
+                }
+            }
+        )*
+    }
+}
+
+name_wrappers! {
+    /// The type name of a MIME type.
+    Type<'a> => Name<'a, TypeIntern>,
+    /// The subtype name of a MIME type.
+    Subtype<'a> => Name<'a, SubtypeIntern>,
+    /// The suffix name of a MIME type.
+    Suffix<'a> => Name<'a, SuffixIntern>
+}
+
 /// Inner representation for the MIME type.
 #[derive(Clone, Copy)]
 enum Repr<'a> {
@@ -481,13 +556,13 @@ enum Repr<'a> {
     /// purposes.
     Parts {
         /// The type of the MIME type.
-        ty: Name<'a, Type>,
+        ty: Name<'a, TypeIntern>,
 
         /// The subtype of the MIME type.
-        subtype: Name<'a, Subtype>,
+        subtype: Name<'a, SubtypeIntern>,
 
         /// The suffix of the MIME type.
-        suffix: Option<Name<'a, Suffix>>,
+        suffix: Option<Name<'a, SuffixIntern>>,
 
         /// The parameters of the MIME type.
         parameters: &'a [(&'a str, &'a str)],

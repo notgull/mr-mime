@@ -54,7 +54,7 @@ fn main() -> io::Result<()> {
     // Write enums for the MIME types.
     write_mime_part(
         &mut output,
-        "Type",
+        "TypeIntern",
         &mime_types,
         |ty| Some(&ty.ty),
         true,
@@ -62,7 +62,7 @@ fn main() -> io::Result<()> {
     )?;
     write_mime_part(
         &mut output,
-        "Subtype",
+        "SubtypeIntern",
         &mime_types,
         |ty| Some(&ty.subtype),
         true,
@@ -70,7 +70,7 @@ fn main() -> io::Result<()> {
     )?;
     write_mime_part(
         &mut output,
-        "Suffix",
+        "SuffixIntern",
         &mime_types,
         |ty| ty.suffix.as_deref(),
         false,
@@ -127,13 +127,13 @@ fn main() -> io::Result<()> {
         )?;
         writeln!(
             output,
-            "{}ty: crate::Name::Interned(super::Type::{}),",
+            "{}ty: crate::Name::Interned(super::TypeIntern::{}),",
             Indent(2),
             AsUpperCamelCase(&mime.ty),
         )?;
         writeln!(
             output,
-            "{}subtype: crate::Name::Interned(super::Subtype::{}),",
+            "{}subtype: crate::Name::Interned(super::SubtypeIntern::{}),",
             Indent(2),
             AsUpperCamelCase(&mime.subtype),
         )?;
@@ -143,7 +143,7 @@ fn main() -> io::Result<()> {
             Indent(2),
             match mime.suffix {
                 Some(ref suffix) => format!(
-                    "Some(crate::Name::Interned(super::Suffix::{}))",
+                    "Some(crate::Name::Interned(super::SuffixIntern::{}))",
                     AsUpperCamelCase(suffix)
                 ),
                 None => "None".to_string(),
