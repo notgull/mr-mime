@@ -10,6 +10,10 @@
 * `mr-mime` is `forbid(unsafe_code)`, meaning that is contains no unsafe code. This reduces the potential surface where a memory vulnerability can occur.
 * `mr-mime` interns and provides constants for a wider variety of MIME types.
 
+## MSRV
+
+The Minimum Supported Rust Version (MSRV) for this crate is 1.32.0. This MSRV will not be changed without a minor version bump.
+
 ## License
 
 `mr-mime` is licensed under one of the following licenses, at your option:
