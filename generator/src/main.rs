@@ -5,7 +5,7 @@
 
 use fastrand::Rng;
 use heck::{AsShoutySnakeCase, AsSnakeCase, AsUpperCamelCase, ToUpperCamelCase};
-use intern_str::builder::{Builder, IgnoreCase, Utf8Graph};
+use intern_str::builder::{AsciiGraph, Builder, IgnoreCase, Utf8Graph};
 use memchr::memchr;
 
 use std::collections::{
@@ -222,19 +222,19 @@ fn main() -> io::Result<()> {
         writeln!(output, "{}/// `{}`", Indent(1), mime,)?;
         writeln!(
             output,
-            "{}pub const {}: crate::Mime<'static> = crate::Mime(crate::Repr::Parts {{",
+            "{}pub const {}: crate::Mime<'static> = crate::Mime {{",
             Indent(1),
             name,
         )?;
         writeln!(
             output,
-            "{}ty: crate::Name::Interned(super::TypeIntern::{}),",
+            "{}ty: crate::Type(crate::Name::Interned(super::TypeIntern::{})),",
             Indent(2),
             AsUpperCamelCase(&mime.ty),
         )?;
         writeln!(
             output,
-            "{}subtype: crate::Name::Interned(super::SubtypeIntern::{}),",
+            "{}subtype: crate::Subtype(crate::Name::Interned(super::SubtypeIntern::{})),",
             Indent(2),
             AsUpperCamelCase(&mime.subtype),
         )?;
@@ -244,14 +244,18 @@ fn main() -> io::Result<()> {
             Indent(2),
             match mime.suffix {
                 Some(ref suffix) => format!(
-                    "Some(crate::Name::Interned(super::SuffixIntern::{}))",
+                    "Some(crate::Suffix(crate::Name::Interned(super::SuffixIntern::{})))",
                     AsUpperCamelCase(suffix)
                 ),
                 None => "None".to_string(),
             },
         )?;
-        writeln!(output, "{}parameters: &[]", Indent(2))?;
-        writeln!(output, "{}}});", Indent(1))?;
+        writeln!(
+            output,
+            "{}parameters: crate::Parameters::Slice(&[])",
+            Indent(2)
+        )?;
+        writeln!(output, "{}}};", Indent(1))?;
         writeln!(output)?;
 
         writeln!(output, "{}#[test]", Indent(1))?;
@@ -360,20 +364,16 @@ fn write_mime_part(
 
     writeln!(output, "{}}}", Indent(2))?;
     writeln!(output, "{}}}", Indent(1))?;
-    writeln!(output, "}}")?;
-
-    // Write out a "from_str" method.
-    writeln!(output, "impl core::str::FromStr for {} {{", name)?;
-    writeln!(output, "{}type Err = crate::InvalidName;", Indent(1))?;
     writeln!(output)?;
+
     writeln!(
         output,
-        "{}fn from_str(s: &str) -> Result<Self, Self::Err> {{",
+        "{}fn from_bytes(s: &[u8]) -> Option<Self> {{",
         Indent(1)
     )?;
 
     // Begin creating the graph.
-    let mut builder = Builder::<_, IgnoreCase<Utf8Graph>>::new();
+    let mut builder = Builder::<_, IgnoreCase<AsciiGraph>>::new();
 
     if has_star {
         builder.add("*".to_string(), "Star").ok();
@@ -390,7 +390,7 @@ fn write_mime_part(
     let outname = format!("Option<{}>", name);
     let generated = intern_str_codegen::generate(
         &graph,
-        "intern_str::CaseInsensitive<&'static str>",
+        "intern_str::CaseInsensitive<&'static [u8]>",
         &outname,
         |f, n| match n.as_ref() {
             None => write!(f, "None"),
@@ -399,7 +399,7 @@ fn write_mime_part(
     );
     writeln!(
         output,
-        "{}const GRAPH: intern_str::Graph<'static, 'static, intern_str::CaseInsensitive<&'static str>, {}> = {};",
+        "{}const GRAPH: intern_str::Graph<'static, 'static, intern_str::CaseInsensitive<&'static [u8]>, {}> = {};",
         Indent(2),
         &outname,
         generated
@@ -408,13 +408,48 @@ fn write_mime_part(
     // Write out the lookup.
     writeln!(
         output,
-        "{}GRAPH.process(intern_str::CaseInsensitive(s)).as_ref().map(|&c| c).ok_or(crate::InvalidName)",
+        "{}GRAPH.process(intern_str::CaseInsensitive(s)).as_ref().map(|&c| c)",
         Indent(2)
     )?;
     writeln!(output, "{}}}", Indent(1))?;
 
     writeln!(output, "}}")?;
     writeln!(output)?;
+
+    // Add a FromStr implementation.
+    writeln!(output, "impl core::str::FromStr for {} {{", name)?;
+    writeln!(output, "{}type Err = crate::InvalidName;", Indent(1))?;
+    writeln!(output)?;
+    writeln!(
+        output,
+        "{}fn from_str(s: &str) -> Result<Self, Self::Err> {{",
+        Indent(1)
+    )?;
+    writeln!(
+        output,
+        "{}Self::from_bytes(s.as_bytes()).ok_or(crate::InvalidName)",
+        Indent(2)
+    )?;
+    writeln!(output, "{}}}", Indent(1))?;
+    writeln!(output, "}}")?;
+    writeln!(output)?;
+
+    // Add a TryFrom<[u8]> implementation.
+    writeln!(output, "impl core::convert::TryFrom<&[u8]> for {} {{", name)?;
+    writeln!(output, "{}type Error = crate::InvalidName;", Indent(1))?;
+    writeln!(output)?;
+    writeln!(
+        output,
+        "{}fn try_from(s: &[u8]) -> Result<Self, Self::Error> {{",
+        Indent(1)
+    )?;
+    writeln!(
+        output,
+        "{}Self::from_bytes(s).ok_or(crate::InvalidName)",
+        Indent(2)
+    )?;
+    writeln!(output, "{}}}", Indent(1))?;
+    writeln!(output, "}}")?;
 
     // Add a test for the string parser.
     writeln!(output, "#[test]")?;

@@ -12,7 +12,7 @@
 
 ## MSRV
 
-The Minimum Supported Rust Version (MSRV) for this crate is 1.32.0. This MSRV will not be changed without a minor version bump.
+The Minimum Supported Rust Version (MSRV) for this crate is 1.41.0. This MSRV will not be changed without a minor version bump.
 
 ## License
 
