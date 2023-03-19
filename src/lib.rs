@@ -65,7 +65,7 @@ use core::write;
 use memchr::{memchr, memchr2};
 
 macro_rules! matches {
-    ($expr: expr, $($pat:pat)|+) => {{
+    ($expr: expr, $($pat:pat_param)|+) => {{
         match ($expr) {
             $($pat)|+ => true,
             _ => false,
