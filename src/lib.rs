@@ -362,6 +362,80 @@ impl<'a> Mime<'a> {
             parameters: Parameters::Slice(&[]),
         }
     }
+
+    /// Calculate the length of this MIME type.
+    ///
+    /// This returns the length for this given MIME type as if it had been formatted using its
+    /// Display trait. This length will thus include any suffix or parameters that it contains. See
+    /// essence() to get a slimmed down version of the MIME type.
+    pub fn len(&self) -> usize {
+        let suffix_length = match self.suffix() {
+            Some(s) => s.into_str().len() + 1,
+            _ => 0,
+        };
+
+        let param_length: usize = self
+            .parameters()
+            .map(|(k, v)| k.len() + FormatQuotedString(v).len() + 2)
+            .sum();
+
+        self.r#type().into_str().len()
+            + self.subtype().into_str().len()
+            + 1 // slash
+            + suffix_length
+            + param_length
+    }
+
+    /// Checks whether this MIME type is empty or not.
+    ///
+    /// This function always returns false as it is not possible to construct an empty MIME type.
+    /// It is only implemented to make clippy happy.
+    pub fn is_empty(&self) -> bool {
+        false
+    }
+}
+
+#[cfg(test)]
+mod mime_test {
+    use super::*;
+
+    #[test]
+    fn mime_len_handles_basic_type() {
+        assert_eq!(constants::TEXT_PLAIN.len(), "text/plain".len());
+    }
+
+    #[test]
+    fn mime_len_handles_suffix() {
+        assert_eq!(constants::IMAGE_SVG_XML.len(), "image/svg+xml".len());
+    }
+
+    #[test]
+    fn mime_len_handles_param() {
+        assert_eq!(
+            Mime::parse("text/html; charset=utf-8").unwrap().len(),
+            "text/html;charset=utf-8".len()
+        );
+    }
+
+    #[test]
+    fn mime_len_handles_multiple_params() {
+        assert_eq!(
+            Mime::parse("text/html; charset=utf-8; foo=bar")
+                .unwrap()
+                .len(),
+            "text/html;charset=utf-8;foo=bar".len()
+        );
+    }
+
+    #[test]
+    fn mime_len_handles_suffixes_and_params() {
+        assert_eq!(
+            Mime::parse("image/svg+xml; charset=utf-8; foo=bar")
+                .unwrap()
+                .len(),
+            "image/svg+xml;charset=utf-8;foo=bar".len()
+        );
+    }
 }
 
 impl Mime<'static> {
@@ -1095,6 +1169,15 @@ where
 /// - An HTTP quoted string.
 struct FormatQuotedString<'a>(&'a [u8]);
 
+impl<'a> FormatQuotedString<'a> {
+    pub fn len(&self) -> usize {
+        self.0
+            .iter()
+            .flat_map(|&c| core::ascii::escape_default(c))
+            .count()
+    }
+}
+
 impl<'a> fmt::Display for FormatQuotedString<'a> {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         for ch in self.0.iter().flat_map(|&c| core::ascii::escape_default(c)) {
@@ -1108,5 +1191,34 @@ impl<'a> fmt::Display for FormatQuotedString<'a> {
 impl<'a> fmt::Debug for FormatQuotedString<'a> {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         fmt::Display::fmt(self, f)
+    }
+}
+
+#[cfg(test)]
+mod fqs_test {
+    use super::*;
+
+    #[test]
+    fn fqs_len_handles_empty_array() {
+        assert_eq!(FormatQuotedString(&[]).len(), 0);
+    }
+
+    #[test]
+    fn fqs_len_handles_quoted_string() {
+        let input =
+            b"this%20is%20http%20encoded%E2%80%A6%20or%20is%20it%3F%20%C5%B6%C4%99%C5%A1%20it%20is";
+        assert_eq!(FormatQuotedString(input).len(), 84);
+    }
+
+    #[test]
+    fn fqs_len_handles_standard_ascii() {
+        let input = b"this is not encoded or special at all";
+        assert_eq!(FormatQuotedString(input).len(), 37);
+    }
+
+    #[test]
+    fn fqs_len_handles_utf8() {
+        let input = b"\xC5\xB6'\"\\";
+        assert_eq!(FormatQuotedString(input).len(), 14);
     }
 }
